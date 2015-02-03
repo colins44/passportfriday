@@ -3,8 +3,9 @@
   <component name="DataSourceManagerImpl" format="xml" hash="1297673182">
     <data-source source="LOCAL" name="Django default" uuid="8bf44dc1-de2b-406a-a94f-bbfcc47240e2">
       <driver-ref>sqlite.xerial</driver-ref>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/passportfridays/db.sqlite3</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://db/postgres</jdbc-url>
+      <user-name>postgres</user-name>
       <libraries />
     </data-source>
   </component>

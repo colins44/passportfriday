@@ -4,14 +4,17 @@
     <ul>
     {%  for route in routes %}
     <h2>Flight</h2>
-    <li>Flight pk:{{ route }}</li>
+    <p>{{ route.pk }}</p>
+    <li>Route pk:{{ route }}</li>
         <h3>Outbound Flights</h3>
-        {% for flight in route.oubound_flights.all %}
-            <li>{{ flight }}</li>
+        {% for flight in route.outbound_flights.all %}
+            <li>{{ flight.departure_airport }}</li>
+            <li>{{ flight.arrival_airport }}</li>
         {%  endfor %}
-        <h3>Inbound Flights<h3>
+        <h3>Inbound Flights</h3>
         {% for flight in route.inbound_flights.all %}
-            <li>{{ flight }}</li>
+            <li>{{ flight.departure_airport }}</li>
+            <li>{{ flight.arrival_airport }}</li>
         {%  endfor %}
     {% endfor %}
     </ul>
