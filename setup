@@ -1,0 +1,16 @@
+passportfridays is set up using fig and docker, to get the repo running follow these steps
+
+1. git clone the repo
+
+2. install boot2docker and fig
+
+3 within the passportfridays dirctory run: $ boot2docker init
+4. then: $ boot2docker up
+5. then (boot2docker shellinit) 
+this sets the enviroment variables that allows docker and fig to speak to it
+
+6. run $:fig up    (this should now check the DockerFile and download all the images needed)
+
+7. Once fig up has run do: $ boot2docker ip this checks the docker virtual machine for its ip address
+
+8. run: $ fig run web manage.py runserver 
