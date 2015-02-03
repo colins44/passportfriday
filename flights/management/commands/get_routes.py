@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
-from flights.models import Flight, Airport, RoundTrip, Route
+from flights.models import Flight, Airport, Route
 from flights.flightdata import inbound_flights, outbound_flights
 from django.core.exceptions import ObjectDoesNotExist
 
