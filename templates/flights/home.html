@@ -1,0 +1,18 @@
+<h1>home</h1>
+
+{%  if routes %}
+    <ul>
+    {%  for route in routes %}
+    <h2>Flight</h2>
+    <li>Flight pk:{{ route }}</li>
+        <h3>Outbound Flights</h3>
+        {% for flight in route.oubound_flights.all %}
+            <li>{{ flight }}</li>
+        {%  endfor %}
+        <h3>Inbound Flights<h3>
+        {% for flight in route.inbound_flights.all %}
+            <li>{{ flight }}</li>
+        {%  endfor %}
+    {% endfor %}
+    </ul>
+{%  endif %}

@@ -1,13 +1,21 @@
 from .models import  Route
 from django.http import HttpResponse
+from django.views.generic import ListView
 
-def index(request):
-    routes =  Route.objects.all()
+class Index(ListView):
 
-    print a.parent_content_object.departure_airport
-    print type(a)
+    context_object_name = 'routes'
+    queryset = Route.objects.all()
+    template_name = "flights/home.html"
 
-    print round_trips.inbound_flights.all()
-
-    return HttpResponse(a)
+# def index(request):
+#     routes =  Route.objects.all()
+#     round_trips = RoundTrip.objects.get(id=1)
+#     a = round_trips.inbound_flights.all()[0]
+#     print a.parent_content_object.departure_airport
+#     print type(a)
+#
+#     print round_trips.inbound_flights.all()
+#
+#     return HttpResponse(a)
 
