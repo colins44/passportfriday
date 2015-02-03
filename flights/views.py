@@ -1,9 +1,9 @@
-from .models import RoundTrip
+from .models import  Route
 from django.http import HttpResponse
 
 def index(request):
-    round_trips = RoundTrip.objects.get(id=1)
-    a = round_trips.inbound_flights.all()[0]
+    routes =  Route.objects.all()
+
     print a.parent_content_object.departure_airport
     print type(a)
 

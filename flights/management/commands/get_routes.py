@@ -49,11 +49,7 @@ class Command(BaseCommand):
             if len(airport_inbound_flights) != 0:
                 route.inbound_flights.add(airport_inbound_flights[0])
             route.save()
-            # Route.objects.create(outbound_flights=airport_outbound_flights, inbound_flights=airport_inbound_flights)
 
-            # round_trip = RoundTrip.objects.get_or_create()
-            # q = OutboundFlights.objects.create(parent_content_object=flight, content_type_id=flight.id)
-            # RoundTrip.objects.get_or_create(inbound_flights__content_type=Flight, inbound_flights__object_id=flight.id)
 
 
 
