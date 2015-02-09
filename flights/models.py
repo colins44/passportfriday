@@ -12,6 +12,11 @@ class Airport(models.Model):
 class Flight(models.Model):
     departure_airport = models.ForeignKey(Airport, related_name='departure_airport')
     arrival_airport = models.ForeignKey(Airport, related_name='arrival_airport')
+    departure_time = models.DateTimeField(blank=True, null=True)
+    flight_no = models.IntegerField(blank=True, null=True)
+    carrier_code = models.CharField(max_length=5, blank=True, null=True)
+    arrival_time = models.DateTimeField(blank=True, null=True)
+    stops = models.IntegerField(blank=True, null=True)
 
     def get_outbound_flights(self):
         return Flight.objects.filter(departure_airport=self.departure_airport)

@@ -3,6 +3,7 @@ from flights.views import Index
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from flights.api import RouteResource
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -17,4 +18,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^$', views.index, name='index'),
     url(r'^$', Index.as_view(), name='index'),
+    url(r'^api/routes/', include(RouteResource.urls())),
 )
