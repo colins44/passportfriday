@@ -3,18 +3,20 @@
 {%  if routes %}
     <ul>
     {%  for route in routes %}
-    <h2>Flight</h2>
-    <p>{{ route.pk }}</p>
-    <li>Route pk:{{ route }}</li>
-        <h3>Outbound Flights</h3>
+    <h1>Route</h1>
+        <h4>Outbound Flights</h4>
         {% for flight in route.outbound_flights.all %}
-            <li>{{ flight.departure_airport }}</li>
-            <li>{{ flight.arrival_airport }}</li>
+            <li>From: {{ flight.departure_airport }}</li>
+            <li>{{ flight.carrier_code }} {{ flight.flight_no }}</li>
+            <li>{{ flight.departure_time }}</li>
+            <li>To: {{ flight.arrival_airport }}</li>
         {%  endfor %}
-        <h3>Inbound Flights</h3>
+        <h4>Inbound Flights</h4>
         {% for flight in route.inbound_flights.all %}
-            <li>{{ flight.departure_airport }}</li>
-            <li>{{ flight.arrival_airport }}</li>
+            <li>From: {{ flight.departure_airport }}</li>
+            <li>{{ flight.carrier_code }} {{ flight.flight_no }}</li>
+            <li>{{ flight.departure_time }}</li>
+            <li>To: {{ flight.arrival_airport }}</li>
         {%  endfor %}
     {% endfor %}
     </ul>

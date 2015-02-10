@@ -55,8 +55,8 @@ class Command(BaseCommand):
         airports = Airport.objects.all()
 
         for airport in airports:
-            airport_inbound_flights = Flight.objects.filter(arrival_airport=airport)
-            airport_outbound_flights = Flight.objects.filter(departure_airport=airport)
+            airport_outbound_flights = Flight.objects.filter(arrival_airport=airport)
+            airport_inbound_flights = Flight.objects.filter(departure_airport=airport)
 
             #get or create round trip
             route = Route(airport = airport)

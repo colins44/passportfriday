@@ -39,10 +39,10 @@ def make_dict(body, base, to):
         'airline': airlines[index].contents[0],
         'price': prices[index].contents[0],
         'departure_time': departure_times[index].contents[0],
-        'departure_city': base,
+        'departure_airport': base,
         'flight_time': flight_times[index].contents[0],
         'arrival_time': arrival_times[index].contents[0],
-        'arrival_city': to,
+        'arrival_airport': to,
         }
         flights[index] = flight
     print flights
