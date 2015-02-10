@@ -53,14 +53,16 @@ class Command(BaseCommand):
             except ObjectDoesNotExist:
                 print 'we could not find your airport, or more than one airport was returned'
 
-        airports = Airport.objects.all()
+        airports = Airport.objects.exclude(code=outbound_flights['scheduledFlights'][0]['departureAirportFsCode'])
 
         for airport in airports:
-            airport_inbound_flights = Flight.objects.filter(arrival_airport=airport)
-            airport_outbound_flights = Flight.objects.filter(departure_airport=airport)
+            #this is the airport to which the flight is going to
+            airport_inbound_flights = Flight.objects.filter(departure_airport=airport)
+            airport_outbound_flights = Flight.objects.filter(arrival_airport=airport)
 
 
             #get or create round trip
+            #this is the airport to which the flight is going to
             route = Route(airport = airport)
             route.save()
             if len(airport_outbound_flights) != 0:

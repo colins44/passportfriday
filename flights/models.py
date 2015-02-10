@@ -29,7 +29,7 @@ class Flight(models.Model):
         return "%s to %s" % (self.departure_airport, self.arrival_airport)
 
 class Route(models.Model):
-    airport = models.ForeignKey(Airport)
+    airport = models.ForeignKey(Airport) #airport to which the flight is going to
     outbound_flights = models.ManyToManyField(Flight, related_name='outbound flights')
     inbound_flights = models.ManyToManyField(Flight, related_name='inbound flights')
 

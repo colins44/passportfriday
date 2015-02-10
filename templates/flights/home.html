@@ -4,6 +4,7 @@
     <ul>
     {%  for route in routes %}
     <h1>Route</h1>
+        <h3>{{ route.airport }}</h3>
         <h4>Outbound Flights</h4>
         {% for flight in route.outbound_flights.all %}
             <li>From: {{ flight.departure_airport }}</li>
