@@ -3,6 +3,7 @@ from flights.models import Flight, Airport, Route
 from flights.flightdata import inbound_flights, outbound_flights
 from django.core.exceptions import ObjectDoesNotExist
 from datetime import datetime
+from time import sleep
 
 # def build_route(self, content_type, object_id, ):
 
@@ -55,8 +56,9 @@ class Command(BaseCommand):
         airports = Airport.objects.all()
 
         for airport in airports:
-            airport_outbound_flights = Flight.objects.filter(arrival_airport=airport)
-            airport_inbound_flights = Flight.objects.filter(departure_airport=airport)
+            airport_inbound_flights = Flight.objects.filter(arrival_airport=airport)
+            airport_outbound_flights = Flight.objects.filter(departure_airport=airport)
+
 
             #get or create round trip
             route = Route(airport = airport)
@@ -67,6 +69,8 @@ class Command(BaseCommand):
             if len(airport_inbound_flights) != 0:
                 route.inbound_flights.add(airport_inbound_flights[0])
             route.save()
+
+
 
 
 

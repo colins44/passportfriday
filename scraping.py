@@ -15,7 +15,7 @@ def get_data(base, to, depart_date, return_date ,stops=0, time_out='1800-2400', 
     sess = dryscrape.Session(base_url=url)
     sess.set_header('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36')
     sess.visit('')
-    sleep(3)
+    sleep(1)
     print url
     return sess.body(), base, to
 
