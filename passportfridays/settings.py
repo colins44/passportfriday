@@ -125,6 +125,9 @@ INSTALLED_APPS = (
     'genericadmin',
 )
 
+FLIGHTSTATS_APPID = '92c5179a'
+FLIGHTSTATS_APPKEY = 'c4d1675d8482e35d11d7af0000618e78'
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
