@@ -26,7 +26,7 @@ class Command(BaseCommand):
                 if len(airport_outbound_flights)>0 and len(airport_inbound_flights)>0:
                     if airport_inbound_flights[0].carrier_code == airport_outbound_flights[0].carrier_code:
 
-    
+
                         #get or create round trip
                         #this is the airport to which the flight is going to
                         route = Route(airport = airport)
