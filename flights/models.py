@@ -17,6 +17,7 @@ class Flight(models.Model):
     carrier_code = models.CharField(max_length=5, blank=True, null=True)
     arrival_time = models.DateTimeField(blank=True, null=True)
     stops = models.IntegerField(blank=True, null=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
 
     def get_outbound_flights(self):
         return Flight.objects.filter(departure_airport=self.departure_airport)

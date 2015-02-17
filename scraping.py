@@ -60,9 +60,8 @@ def make_dict(body, base, to):
 
 
 
-
-destination = raw_input('what airport would you like to go to: ')
 origin = raw_input('what airport do you want to fly from: ')
+destination = raw_input('what airport would you like to go to: ')
 leaving_date = raw_input('what is your leaving date: ')
 returning_date = raw_input('what is your returing date: ')
 airline = raw_input('what airline are you flying: ')

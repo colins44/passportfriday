@@ -11,16 +11,27 @@ class RouteResource(DjangoResource):
 
     def prepare(self, data):
         ret ={}
-        for outbound_flight in data.outbound_flights.all():
-            ret['departure_airport'] = outbound_flight.departure_airport.code
-            ret['arrival_airport'] = outbound_flight.arrival_airport.code
+        outbound_flight = {}
+        inbound_flight = {}
+        for flight in data.outbound_flights.all():
+            outbound_flight['departure_airport'] = flight.departure_airport.code
+            outbound_flight['departure_time'] = flight.departure_time
+            outbound_flight['carrier_code'] = flight.carrier_code
+            outbound_flight['arrival_airport'] = flight.arrival_airport.code
+        for flight in data.inbound_flights.all():
+            inbound_flight['departure_airport'] = flight.departure_airport.code
+            inbound_flight['departure_time'] = flight.departure_time
+            inbound_flight['carrier_code'] = flight.carrier_code
+            inbound_flight['arrival_airport'] = flight.arrival_airport.code
+        ret['outbound_flight'] = outbound_flight
+        ret['inbound_flight'] = inbound_flight
         return ret
 
 
 
     # GET /
     def list(self):
-        return Route.objects.all()
+        return Route.objects.all()[2:4]
 
     # GET /pk/
     def detail(self, pk):
