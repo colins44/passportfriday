@@ -6,8 +6,8 @@ import json
 from time import sleep
 from flights.models import Airport, Flight
 
-leaving_hours =(18, 19, 20, 21, 22, 23, 24)
-airports =['LHR','LGW','STN','LCY','LTN']
+leaving_hours =(18,)
+airports =['HRE',]
 
 class Command(BaseCommand):
 
@@ -21,14 +21,15 @@ class Command(BaseCommand):
         for airport in airports:
             for hour in leaving_hours:
                 url = "https://api.flightstats.com/flex/schedules/rest/v1/json/from/%s/departing/%s/%s/%s/%d?appId=%s&appKey=%s" % (airport, month_from_now.year, month_from_now.month, month_from_now.day, hour, settings.FLIGHTSTATS_APPID, settings.FLIGHTSTATS_APPKEY)
+                print url
                 r = requests.get(url)
                 outbound_flights = json.loads(r.content)
                 sleep(2)
 
                 for flight in outbound_flights['scheduledFlights']:
 
-                    departure_airport = Airport.objects.get_or_create(code=flight['departureAirportFsCode'])
-                    arrival_airport = Airport.objects.get_or_create(code=flight['arrivalAirportFsCode'])
+                    Airport.objects.get_or_create(code=flight['departureAirportFsCode'])
+                    Airport.objects.get_or_create(code=flight['arrivalAirportFsCode'])
 
                     departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
                     arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
@@ -46,14 +47,15 @@ class Command(BaseCommand):
 
             for hour in leaving_hours:
                 url = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/%s/arriving/%s/%s/%s/%d?appId=%s&appKey=%s" % (airport, month_from_now.year, month_from_now.month, month_from_now.day, hour, settings.FLIGHTSTATS_APPID, settings.FLIGHTSTATS_APPKEY)
+                print url
                 r = requests.get(url)
                 inbound_flights = json.loads(r.content)
                 sleep(2)
 
                 for flight in inbound_flights['scheduledFlights']:
 
-                    departure_airport = Airport.objects.get_or_create(code=flight['departureAirportFsCode'])
-                    arrival_airport = Airport.objects.get_or_create(code=flight['arrivalAirportFsCode'])
+                    Airport.objects.get_or_create(code=flight['departureAirportFsCode'])
+                    Airport.objects.get_or_create(code=flight['arrivalAirportFsCode'])
 
                     departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
                     arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')

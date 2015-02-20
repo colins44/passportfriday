@@ -31,7 +31,7 @@ class RouteResource(DjangoResource):
 
     # GET /
     def list(self):
-        return Route.objects.all()[2:4]
+        return Route.objects.all()
 
     # GET /pk/
     def detail(self, pk):
