@@ -9,8 +9,16 @@ class RouteResource(DjangoResource):
     #     # 'inbound_flights': 'inbound_flights',
     # })
 
+    def is_authenticated(self):
+        # Open everything wide!
+        # DANGEROUS, DO NOT DO IN PRODUCTION.
+        return True
+
     def prepare(self, data):
         ret ={}
+        ret['pk'] = data.pk
+        ret['weekend_destination'] = data.airport.code
+        ret['price'] = data.price
         outbound_flight = {}
         inbound_flight = {}
         for flight in data.outbound_flights.all():
@@ -36,4 +44,14 @@ class RouteResource(DjangoResource):
     # GET /pk/
     def detail(self, pk):
         return Route.objects.get(id=pk)
+
+    # Add this!
+    # PUT /api/route/<pk>/
+    def update(self, pk):
+        route = Route.objects.get(id=pk)
+        route.price = self.data['price']
+        route.save()
+        return route
+
+
 
