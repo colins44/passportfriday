@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import dryscrape
 from bs4 import BeautifulSoup
 import datetime
@@ -29,7 +30,7 @@ def get_data(base, to, depart_date, return_date ,stops=0, time_out='1800-2400', 
     return sess.body(), base, to
 
 
-def make_dict(body, base, to):
+def make_dict(body, base, to, pk):
     '''function takes the html body of the webpage to be scraped and retuns
     a dict ready to be posted to the API'''
     soup = BeautifulSoup(body, 'html.parser')
@@ -44,16 +45,24 @@ def make_dict(body, base, to):
     for price in prices:
         index = prices.index(price)
         # route = routes[index].contents[0].split('-')
+        price = prices[index].contents[0]
+        pound_sign = ('£').decode("utf8")
+        print price.replace(pound_sign,'')
         flight = {
-        'airline': airlines[index].contents[0],
-        'price': prices[index].contents[0],
-        'departure_time': departure_times[index].contents[0],
-        'departure_airport': base,
-        'flight_time': flight_times[index].contents[0],
-        'arrival_time': arrival_times[index].contents[0],
-        'arrival_airport': to,
+        # 'airline': airlines[index].contents[0],
+        'price': price.replace(pound_sign,''),
+        # 'departure_time': departure_times[index].contents[0],
+        # 'departure_airport': base,
+        # 'flight_time': flight_times[index].contents[0],
+        # 'arrival_time': arrival_times[index].contents[0],
+        # 'arrival_airport': to,
         }
         flights[index] = flight
+        if flight != {}:
+            url = 'http://192.168.59.103:8000/api/routes/%s/' % pk
+            r = requests.put(url, data=json.dumps(flight))
+            print r.status_code
+
     print flights
     return flights
 
@@ -65,6 +74,7 @@ destination = raw_input('what airport would you like to go to: ')
 leaving_date = raw_input('what is your leaving date: ')
 returning_date = raw_input('what is your returing date: ')
 airline = raw_input('what airline are you flying: ')
+pk =raw_input("what is the pk: ")
 body = get_data(origin, destination, leaving_date, returning_date, '0', '1800-2400', '1800-2400', airline)
-data = make_dict(body[0], body[1], body[2])
+data = make_dict(body[0], body[1], body[2], pk)
 

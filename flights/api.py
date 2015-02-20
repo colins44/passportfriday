@@ -48,6 +48,7 @@ class RouteResource(DjangoResource):
     # Add this!
     # PUT /api/route/<pk>/
     def update(self, pk):
+        self.data['price'].decode('utf8')
         route = Route.objects.get(id=pk)
         route.price = self.data['price']
         route.save()
