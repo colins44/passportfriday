@@ -26,7 +26,6 @@ class Flight(models.Model):
 
     def __unicode__(self):
         return unicode(self.id)
-        return "%s to %s" % (self.departure_airport, self.arrival_airport)
 
 class Route(models.Model):
     airport = models.ForeignKey(Airport) #airport to which the flight is going to
