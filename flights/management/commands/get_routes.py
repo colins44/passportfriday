@@ -8,7 +8,7 @@ from time import sleep
 # def build_route(self, content_type, object_id, ):
 
 # london_airports = ['LHR','LGW','STN','LCY','LTN']
-london_airports =['HRE']
+london_airports =['LHR', 'LGW']
 
 class Command(BaseCommand):
     help = 'Creates the routes to and from each airport'

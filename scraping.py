@@ -59,9 +59,12 @@ def make_dict(body, base, to, pk):
         }
         flights[index] = flight
         if flight != {}:
-            url = 'http://192.168.59.103:8000/api/routes/%s/' % pk
-            r = requests.put(url, data=json.dumps(flight))
-            print r.status_code
+            try:
+                url = 'http://192.168.59.103:8000/api/routes/%s/' % pk
+                r = requests.put(url, data=json.dumps(flight))
+                print r.status_code
+            except:
+                pass
 
     print flights
     return flights
