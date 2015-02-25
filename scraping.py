@@ -25,16 +25,15 @@ def get_data(base, to, depart_date, return_date ,stops=0, time_out='1800-2400', 
     sess.visit(url)
     sleep(10)
     print url
-    print sess.status_code()
 
     return sess.body(), base, to
 
 
-def make_dict(body, base, to, pk):
+def make_dict(body, base, to, pk, airline, departure_date, return_date):
     '''function takes the html body of the webpage to be scraped and retuns
     a dict ready to be posted to the API'''
     soup = BeautifulSoup(body, 'html.parser')
-    prices = soup.findAll("div", { "class" : "KFHXXID-c-ob" })
+    prices = soup.findAll("div", { "class" : "KFHXXID-c-pb" })
     airlines = soup.find_all('div', {'class': "KFHXXID-c-j"})
     routes = soup.find_all('div', {'class': "KFHXXID-c-wb"})
     times = soup.find_all('span',{'tooltip':True})
@@ -50,21 +49,27 @@ def make_dict(body, base, to, pk):
         print price.replace(pound_sign,'')
         flight = {
         # 'airline': airlines[index].contents[0],
+        'airline_code': airline,
         'price': price.replace(pound_sign,''),
-        # 'departure_time': departure_times[index].contents[0],
-        # 'departure_airport': base,
-        # 'flight_time': flight_times[index].contents[0],
-        # 'arrival_time': arrival_times[index].contents[0],
-        # 'arrival_airport': to,
+        'departure_time': departure_times[index].contents[0],
+        'departure_date':departure_date,
+        'return_date': return_date,
+        'departure_airport': base,
+        'flight_time': flight_times[index].contents[0],
+        'arrival_time': arrival_times[index].contents[0],
+        'arrival_airport': to,
         }
         flights[index] = flight
         if flight != {}:
-            try:
-                url = 'http://192.168.59.103:8000/api/routes/%s/' % pk
-                r = requests.put(url, data=json.dumps(flight))
-                print r.status_code
-            except:
-                pass
+            print
+            for key, value in flight.items():
+                url = 'http://192.168.59.103:8000/api/routes/'
+                r = requests.put(url, data=json.dumps(value))
+            # try:
+            #     url = 'http://192.168.59.103:8000/api/routes/%s/' % pk
+            #     r = requests.put(url, data=json.dumps(flight))
+            # except:
+            #     pass
 
     print flights
     return flights
@@ -79,5 +84,5 @@ returning_date = raw_input('what is your returing date: ')
 airline = raw_input('what airline are you flying: ')
 pk =raw_input("what is the pk: ")
 body = get_data(origin, destination, leaving_date, returning_date, '0', '1800-2400', '1800-2400', airline)
-data = make_dict(body[0], body[1], body[2], pk)
+data = make_dict(body[0], body[1], body[2], pk, airline, leaving_date, returning_date)
 

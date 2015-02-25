@@ -32,10 +32,12 @@ class Command(BaseCommand):
                 route = Route(airport = airport)
                 route.save()
                 if len(airport_outbound_flights) != 0:
-                    route.outbound_flights.add(airport_outbound_flights[0])
+                    for flight in airport_outbound_flights:
+                        route.outbound_flights.add(flight)
 
                 if len(airport_inbound_flights) != 0:
-                    route.inbound_flights.add(airport_inbound_flights[0])
+                    for flight in airport_inbound_flights:
+                        route.inbound_flights.add(flight)
                 route.save()
 
 

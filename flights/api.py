@@ -19,21 +19,28 @@ class RouteResource(DjangoResource):
         ret['pk'] = data.pk
         ret['weekend_destination'] = data.airport.code
         ret['price'] = data.price
-        outbound_flight = {}
-        inbound_flight = {}
+        outbound_flights = []
+        inbound_flights = []
         for flight in data.outbound_flights.all():
+            outbound_flight={}
             outbound_flight['departure_airport'] = flight.departure_airport.code
             outbound_flight['departure_time'] = flight.departure_time
             outbound_flight['carrier_code'] = flight.carrier_code
             outbound_flight['arrival_airport'] = flight.arrival_airport.code
+            outbound_flights.append(dict(outbound_flight))
         for flight in data.inbound_flights.all():
+            inbound_flight={}
             inbound_flight['departure_airport'] = flight.departure_airport.code
             inbound_flight['departure_time'] = flight.departure_time
             inbound_flight['carrier_code'] = flight.carrier_code
             inbound_flight['arrival_airport'] = flight.arrival_airport.code
-        ret['outbound_flight'] = outbound_flight
-        ret['inbound_flight'] = inbound_flight
+            inbound_flights.append(dict(inbound_flight))
+        ret['outbound_flights'] = outbound_flights
+        ret['inbound_flights'] = inbound_flights
         return ret
+
+    def create(self, data):
+        pass
 
 
 
