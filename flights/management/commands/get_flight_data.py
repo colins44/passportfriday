@@ -6,8 +6,8 @@ import json
 from time import sleep
 from flights.models import Airport, Flight
 
-leaving_hours =(18,)
-airports =['HRE',]
+leaving_hours =(18,19,20,21,22,23)
+airports =['LHR', 'LGW']
 
 class Command(BaseCommand):
 
