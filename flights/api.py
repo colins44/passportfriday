@@ -1,6 +1,7 @@
 from restless.dj import DjangoResource
 from restless.preparers import FieldsPreparer
-from .models import Route
+from .models import Route, Flight
+from datetime import datetime
 
 class RouteResource(DjangoResource):
     # Controls what data is included in the serialized output.
@@ -47,20 +48,37 @@ class RouteResource(DjangoResource):
 
     # GET /
     def list(self):
-        return Route.objects.all()
+        return Route.objects.all()[2:5]
 
     # GET /pk/
     def detail(self, pk):
         return Route.objects.get(id=pk)
 
-    # Add this!
+
     # PUT /api/route/<pk>/
     def update(self, pk):
-        self.data['price'].decode('utf8')
-        route = Route.objects.get(id=pk)
-        route.price = self.data['price']
-        route.save()
-        return route
+        print 'colin is here'
+    #     # self.data['price'].decode('utf8')
+    #     route = Route.objects.get(id=pk)
+        print '$$$$$$$$$$$'
+        print self.data
+        print '$$$$$$$$$$$'
+
+        for flight in self.data:
+            print 'are we getting here'
+            print flight['departure_date']
+            departure_date = datetime.strptime(flight['departure_date'], '%Y-%m-%d %H:%M')
+            print departure_date
+    #         print flight['departure_date']
+            # try:
+            #     flight = Flight.objects.get(carrier_code=flight['airline_code'],
+            #                                 departure_airport=flight['departure_airport'],
+            #                                 arrival_airport=flight['arrival_airport'],
+            #                                 departure_date=flight['departure_date'],)
+            # except:
+            #     print 'cannot find flight'
+        #
+        # return route
 
 
 

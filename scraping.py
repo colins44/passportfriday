@@ -51,8 +51,8 @@ def make_dict(body, base, to, pk, airline, departure_date, return_date):
         # 'airline': airlines[index].contents[0],
         'airline_code': airline,
         'price': price.replace(pound_sign,''),
-        'departure_time': departure_times[index].contents[0],
-        'departure_date':departure_date,
+        # 'departure_time': departure_times[index].contents[0],
+        'departure_date':departure_date+' '+departure_times[index].contents[0],
         'return_date': return_date,
         'departure_airport': base,
         'flight_time': flight_times[index].contents[0],
@@ -60,16 +60,10 @@ def make_dict(body, base, to, pk, airline, departure_date, return_date):
         'arrival_airport': to,
         }
         flights.append(dict(flight))
-        # if flight != {}:
-        #     print
-        #     for key, value in flight.items():
-        #         url = 'http://192.168.59.103:8000/api/routes/'
-        #         r = requests.put(url, data=json.dumps(value))
-        #     # try:
-        #     #     url = 'http://192.168.59.103:8000/api/routes/%s/' % pk
-        #     #     r = requests.put(url, data=json.dumps(flight))
-        #     # except:
-        #     #     pass
+    if flights != []:
+        url = 'http://192.168.59.103:8000/api/routes/%s/' % pk
+        r = requests.put(url, data=json.dumps(flights))
+
 
     print flights
     return flights
