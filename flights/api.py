@@ -27,6 +27,7 @@ class RouteResource(DjangoResource):
             outbound_flight['departure_time'] = flight.departure_time
             outbound_flight['carrier_code'] = flight.carrier_code
             outbound_flight['arrival_airport'] = flight.arrival_airport.code
+            outbound_flight['pk'] = flight.pk
             outbound_flights.append(dict(outbound_flight))
         for flight in data.inbound_flights.all():
             inbound_flight={}

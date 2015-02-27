@@ -20,11 +20,13 @@ r = requests.get(url)
 data = json.loads(r.content)
 
 for x in data['objects']:
-    child = subprocess.Popen(['python',"scraping.py"], stdin=subprocess.PIPE)
+    for inbound_flight in x['inbound_flights']:
+        return_date = inbound_flight['departure_time'][:10]
+    for x in x['outbound_flights']:
+        child = subprocess.Popen(['python',"scraping.py"], stdin=subprocess.PIPE)
 
-    child.communicate(os.linesep.join([x['outbound_flight']['departure_airport'], x['outbound_flight']['arrival_airport'], x['outbound_flight']['departure_time'][:10], x['inbound_flight']['departure_time'][:10], x['outbound_flight']['carrier_code'], str(x['pk'])]))
-    print '$$$$$$$$$'
-    print '$$$$$$$$$'
-    print '$$$$$$$$$'
-    print '$$$$$$$$$'
-    print x['outbound_flight']
+        child.communicate(os.linesep.join([x['departure_airport'], x['arrival_airport'], x['departure_time'][:10], return_date, x['carrier_code'], str(x['pk'])]))
+        print '$$$$$$$$$'
+        print '$$$$$$$$$'
+        print '$$$$$$$$$'
+        print '$$$$$$$$$'

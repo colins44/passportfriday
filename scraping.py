@@ -40,7 +40,7 @@ def make_dict(body, base, to, pk, airline, departure_date, return_date):
     departure_times = times[::2]
     arrival_times = times[1::2]
     flight_times = soup.find_all('div', {'class': "KFHXXID-c-y"})
-    flights = {}
+    flights = []
     for price in prices:
         index = prices.index(price)
         # route = routes[index].contents[0].split('-')
@@ -59,17 +59,17 @@ def make_dict(body, base, to, pk, airline, departure_date, return_date):
         'arrival_time': arrival_times[index].contents[0],
         'arrival_airport': to,
         }
-        flights[index] = flight
-        if flight != {}:
-            print
-            for key, value in flight.items():
-                url = 'http://192.168.59.103:8000/api/routes/'
-                r = requests.put(url, data=json.dumps(value))
-            # try:
-            #     url = 'http://192.168.59.103:8000/api/routes/%s/' % pk
-            #     r = requests.put(url, data=json.dumps(flight))
-            # except:
-            #     pass
+        flights.append(dict(flight))
+        # if flight != {}:
+        #     print
+        #     for key, value in flight.items():
+        #         url = 'http://192.168.59.103:8000/api/routes/'
+        #         r = requests.put(url, data=json.dumps(value))
+        #     # try:
+        #     #     url = 'http://192.168.59.103:8000/api/routes/%s/' % pk
+        #     #     r = requests.put(url, data=json.dumps(flight))
+        #     # except:
+        #     #     pass
 
     print flights
     return flights
