@@ -1,10 +1,8 @@
 <h1>{{ title }}</h1>
 
-{%  if routes %}
+
     <ul>
     {%  for route in routes %}
-
-<h2>price{{ route.price }}</h2>
     <h1>Route</h1>
         <h3>{{ route.airport }}</h3>
         <h4>Outbound Flights</h4>
@@ -13,6 +11,8 @@
             <li>{{ flight.carrier_code }} {{ flight.flight_no }}</li>
             <li>{{ flight.departure_time }}</li>
             <li>To: {{ flight.arrival_airport }}</li>
+            <h4>price{{ flight.price }}</h4>
+            <br>
         {%  endfor %}
         <h4>Inbound Flights</h4>
         {% for flight in route.inbound_flights.all %}
@@ -23,4 +23,3 @@
         {%  endfor %}
     {% endfor %}
     </ul>
-{%  endif %}

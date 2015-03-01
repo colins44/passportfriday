@@ -2,7 +2,6 @@
 
 
 <h3>{{ route.airport }}</h3>
-<h2>price{{ route.price }}</h2>
 <h4>Outbound Flights</h4>
 {% for flight in route.outbound_flights.all %}
     <li>From: {{ flight.departure_airport }}</li>

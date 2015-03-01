@@ -1,15 +1,21 @@
 # -*- coding: utf-8 -*-
 import dryscrape
 from bs4 import BeautifulSoup
-import datetime
 import requests
 import json
-from webkit_server import Server
 from time import sleep
-import random
+import smtplib
+smtp_host = 'smtp.gmail.com'
+smtp_port = 587
+username = 'colin.pringle-wood@ostmodern.co.uk'
+password = '44aberdeen'
+msg = 'looks like the scraping of google flights is not working'
+subject = 'PROBLEM WITH GOOGLE SCRAPPER'
+fromaddr = 'colin.pringle-wood@ostmodern.co.uk'
+toaddrs = 'colin.pringlewood@gmail.com'
+message = 'Subject: %s\n\n%s' % (subject, msg)
+count = 0
 
-total_count = 0
-empty_count = 0
 
 
 def get_data(base, to, depart_date, return_date ,stops=0, time_out='1800-2400', time_in='1800-2400', airline='BA'):
@@ -33,33 +39,42 @@ def make_dict(body, base, to, pk, airline, departure_date, return_date):
     '''function takes the html body of the webpage to be scraped and retuns
     a dict ready to be posted to the API'''
     soup = BeautifulSoup(body, 'html.parser')
-    prices = soup.findAll("div", { "class" : "KFHXXID-c-pb" })
-    airlines = soup.find_all('div', {'class': "KFHXXID-c-j"})
-    routes = soup.find_all('div', {'class': "KFHXXID-c-wb"})
+    prices = soup.findAll("div", { "class" : "KFHXXID-c-pb"})
     times = soup.find_all('span',{'tooltip':True})
     departure_times = times[::2]
     arrival_times = times[1::2]
     flight_times = soup.find_all('div', {'class': "KFHXXID-c-y"})
     flights = []
     for price in prices:
-        index = prices.index(price)
-        # route = routes[index].contents[0].split('-')
-        price = prices[index].contents[0]
-        pound_sign = ('£').decode("utf8")
-        print price.replace(pound_sign,'')
-        flight = {
-        # 'airline': airlines[index].contents[0],
-        'airline_code': airline,
-        'price': price.replace(pound_sign,''),
-        # 'departure_time': departure_times[index].contents[0],
-        'departure_date':departure_date+' '+departure_times[index].contents[0],
-        'return_date': return_date,
-        'departure_airport': base,
-        'flight_time': flight_times[index].contents[0],
-        'arrival_time': arrival_times[index].contents[0],
-        'arrival_airport': to,
-        }
-        flights.append(dict(flight))
+        try:
+            #make a dict for all flight data scrapped from the website
+            index = prices.index(price)
+            price = prices[index].contents[0]
+            pound_sign = ('£').decode("utf8")
+            flight = {
+            'airline_code': airline,
+            'price': price.replace(pound_sign,''),
+            'departure_date':departure_date+' '+departure_times[index].contents[0],
+            'return_date': return_date,
+            'departure_airport': base,
+            'flight_time': flight_times[index].contents[0],
+            'arrival_time': arrival_times[index].contents[0],
+            'arrival_airport': to,
+            }
+            flights.append(dict(flight))
+        except IndexError:
+            global count
+            count +=1
+            if count ==1 or count ==2:
+                #if there is an index error the scrapper is not working, send an email to notify about it
+                server = smtplib.SMTP()
+                server.connect(smtp_host,smtp_port)
+                server.ehlo()
+                server.starttls()
+                server.login(username,password)
+                server.sendmail(fromaddr, toaddrs, msg)
+                server.close()
+                print 'need to sort out the sending of emails here'
     if flights != []:
         url = 'http://192.168.59.103:8000/api/routes/%s/' % pk
         r = requests.put(url, data=json.dumps(flights))
@@ -79,4 +94,3 @@ airline = raw_input('what airline are you flying: ')
 pk =raw_input("what is the pk: ")
 body = get_data(origin, destination, leaving_date, returning_date, '0', '1800-2400', '1800-2400', airline)
 data = make_dict(body[0], body[1], body[2], pk, airline, leaving_date, returning_date)
-
