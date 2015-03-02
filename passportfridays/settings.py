@@ -127,6 +127,7 @@ INSTALLED_APPS = (
 
 FLIGHTSTATS_APPID = '92c5179a'
 FLIGHTSTATS_APPKEY = 'c4d1675d8482e35d11d7af0000618e78'
+QPX_APIKEY ='AIzaSyCyEO6Vp6MxuKYnEOlvVJV-TyaAgXyZJZc'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
