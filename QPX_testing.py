@@ -1,7 +1,6 @@
 import requests
 import json
 from passportfridays.settings import QPX_APIKEY
-import urllib2
 
 code = {
   "request": {
