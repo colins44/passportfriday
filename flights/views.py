@@ -11,7 +11,7 @@ class Index(ListView, SortMixin, FilterMixin):
     template_name = "flights/home.html"
 
     def get_queryset(self):
-        return Route.objects.all().order_by('-price')
+        return Route.objects.all().order_by('-price')[:20]
 
     def get_context_data(self, **kwargs):
         context = super(Index, self).get_context_data(**kwargs)
@@ -20,7 +20,7 @@ class Index(ListView, SortMixin, FilterMixin):
             context['routes'] = Route.objects.filter(price__lte=self.kwargs['price'])
         else:
             context['title'] = 'home'
-            context['routes'] = Route.objects.all()
+            context['routes'] = Route.objects.all()[:20]
 
         return context
 
