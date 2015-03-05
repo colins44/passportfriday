@@ -39,5 +39,5 @@ class Detail(DetailView):
 
 class Contact(TemplateView):
 
-    template_name = 'flights/contact.html'
+    template_name = 'flights/index.html'
 
