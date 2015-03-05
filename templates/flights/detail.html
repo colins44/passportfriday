@@ -1,4 +1,9 @@
-<h1>detail</h1>
+{% extends 'flights/base.html' %}
+{% block content %}
+<header>
+<h1>{{ title }}</h1>
+</header>
+
 
 
 <h3>{{ route.airport }}</h3>
@@ -16,3 +21,6 @@
     <li>{{ flight.departure_time }}</li>
     <li>To: {{ flight.arrival_airport }}</li>
 {%  endfor %}
+{% endblock %}
+
+

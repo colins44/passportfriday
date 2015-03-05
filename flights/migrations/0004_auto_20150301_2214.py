@@ -11,14 +11,14 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='flight',
-            name='price',
-        ),
-        migrations.AddField(
-            model_name='route',
-            name='price',
-            field=models.DecimalField(null=True, max_digits=6, decimal_places=2, blank=True),
-            preserve_default=True,
-        ),
+        # migrations.RemoveField(
+        #     model_name='flight',
+        #     name='price',
+        # ),
+        # migrations.AddField(
+        #     model_name='route',
+        #     name='price',
+        #     field=models.DecimalField(null=True, max_digits=6, decimal_places=2, blank=True),
+        #     preserve_default=True,
+        # ),
     ]

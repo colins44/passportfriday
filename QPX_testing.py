@@ -27,3 +27,9 @@ r = requests.post(url, data = jsonreq, headers =headers)
 print r.status_code
 returned_data = json.loads(r.content)
 print returned_data
+
+
+'''either book tickets through the website or offer customers to redirect to the airlines website'''
+#http://www.ypsilon.net/
+#http://xmldocs.travelfusion.com/
+#https://developer.sabre.com/

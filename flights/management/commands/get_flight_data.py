@@ -29,21 +29,22 @@ class Command(BaseCommand):
                 sleep(2)
 
                 for flight in outbound_flights['scheduledFlights']:
+                    if flight["isCodeshare"] is False:
 
-                    Airport.objects.get_or_create(code=flight['departureAirportFsCode'])
-                    Airport.objects.get_or_create(code=flight['arrivalAirportFsCode'])
+                        Airport.objects.get_or_create(code=flight['departureAirportFsCode'])
+                        Airport.objects.get_or_create(code=flight['arrivalAirportFsCode'])
 
-                    departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
-                    arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
-                    departure_airport = Airport.objects.get(code=flight['departureAirportFsCode'])
-                    arrival_airport = Airport.objects.get(code=flight['arrivalAirportFsCode'])
-                    Flight.objects.create(departure_airport=departure_airport,
-                                          arrival_airport=arrival_airport,
-                                          departure_time=departure_date,
-                                          flight_no= flight['flightNumber'],
-                                          carrier_code= flight['carrierFsCode'],
-                                          arrival_time= arrival_date,
-                                          stops= flight['stops'],)
+                        departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
+                        arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
+                        departure_airport = Airport.objects.get(code=flight['departureAirportFsCode'])
+                        arrival_airport = Airport.objects.get(code=flight['arrivalAirportFsCode'])
+                        Flight.objects.create(departure_airport=departure_airport,
+                                              arrival_airport=arrival_airport,
+                                              departure_time=departure_date,
+                                              flight_no= flight['flightNumber'],
+                                              carrier_code= flight['carrierFsCode'],
+                                              arrival_time= arrival_date,
+                                              stops= flight['stops'],)
 
             month_from_now +=datetime.timedelta(2)
 
@@ -55,21 +56,22 @@ class Command(BaseCommand):
                 sleep(2)
 
                 for flight in inbound_flights['scheduledFlights']:
+                    if flight["isCodeshare"] is False:
 
-                    Airport.objects.get_or_create(code=flight['departureAirportFsCode'])
-                    Airport.objects.get_or_create(code=flight['arrivalAirportFsCode'])
+                        Airport.objects.get_or_create(code=flight['departureAirportFsCode'])
+                        Airport.objects.get_or_create(code=flight['arrivalAirportFsCode'])
 
-                    departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
-                    arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
-                    departure_airport = Airport.objects.get(code=flight['departureAirportFsCode'])
-                    arrival_airport = Airport.objects.get(code=flight['arrivalAirportFsCode'])
-                    Flight.objects.create(departure_airport=departure_airport,
-                                          arrival_airport=arrival_airport,
-                                          departure_time=departure_date,
-                                          flight_no= flight['flightNumber'],
-                                          carrier_code= flight['carrierFsCode'],
-                                          arrival_time= arrival_date,
-                                          stops= flight['stops'],)
+                        departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
+                        arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
+                        departure_airport = Airport.objects.get(code=flight['departureAirportFsCode'])
+                        arrival_airport = Airport.objects.get(code=flight['arrivalAirportFsCode'])
+                        Flight.objects.create(departure_airport=departure_airport,
+                                              arrival_airport=arrival_airport,
+                                              departure_time=departure_date,
+                                              flight_no= flight['flightNumber'],
+                                              carrier_code= flight['carrierFsCode'],
+                                              arrival_time= arrival_date,
+                                              stops= flight['stops'],)
 
 
 
