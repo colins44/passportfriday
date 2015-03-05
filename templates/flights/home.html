@@ -1,19 +1,20 @@
 {% extends 'flights/base.html' %}
 {% block content %}
-<header>
-<h1>{{ title }}</h1>
-</header>
-
-
+<section id="main" class="container">
+<section class="box special">
+    <h2>Flights from London for the dates:</h2>
+</section>
     <ul>
     {%  for route in routes %}
         <h3>{{ route.airport }}</h3>
         <h4>Outbound Flights</h4>
         {% for flight in route.outbound_flights.all %}
             <li>From: {{ flight.departure_airport }}</li>
-            <li>{{ flight.carrier_code }} {{ flight.flight_no }}</li>
-            <li>{{ flight.departure_time }}</li>
-            <li>To: {{ flight.arrival_airport }}</li>
+            <tr>
+            <td>{{ flight.carrier_code }} {{ flight.flight_no }}</td>
+            <td>{{ flight.departure_time }}</td>
+            <td>From: {{ flight.departure_airport }} To: {{ flight.arrival_airport }}</td>
+            </tr>
             <h4>price{{ flight.price }}</h4>
             <img src="https://www.gstatic.com/flights/airline_logos/70px/{{ flight.carrier_code }}.png" alt="Smiley face" height="70" width="70">
             <br>
@@ -28,4 +29,6 @@
         {%  endfor %}
     {% endfor %}
     </ul>
+</section>
+</section>
 {% endblock %}

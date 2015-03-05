@@ -1,6 +1,7 @@
 from .models import  Route
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView
+from django.views.generic.base import TemplateView
 from flights.utils import SortMixin, FilterMixin
 
 class Index(ListView, SortMixin, FilterMixin):
@@ -36,4 +37,7 @@ class Detail(DetailView):
         print kwargs
         return context
 
+class Contact(TemplateView):
+
+    template_name = 'flights/contact.html'
 
