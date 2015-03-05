@@ -11,10 +11,10 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='flight',
-            name='price',
-            field=models.DecimalField(null=True, max_digits=6, decimal_places=2, blank=True),
-            preserve_default=True,
-        ),
+        # migrations.AddField(
+        #     model_name='flight',
+        #     name='price',
+        #     field=models.DecimalField(null=True, max_digits=6, decimal_places=2, blank=True),
+        #     preserve_default=True,
+        # ),
     ]
