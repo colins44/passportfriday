@@ -7,22 +7,24 @@ from flights.utils import SortMixin, FilterMixin
 class Index(ListView, SortMixin, FilterMixin):
 
     context_object_name = 'routes'
-    # queryset = Route.objects.all()
+    queryset = Route.objects.all()
     template_name = "flights/home.html"
+    paginate_by = 2
+    # model = Route.objects.all()
 
-    def get_queryset(self):
-        return Route.objects.all().order_by('-price')[:20]
-
-    def get_context_data(self, **kwargs):
-        context = super(Index, self).get_context_data(**kwargs)
-        if self.kwargs:
-            context['title'] = 'filtered on price'
-            context['routes'] = Route.objects.filter(price__lte=self.kwargs['price'])
-        else:
-            context['title'] = 'home'
-            context['routes'] = Route.objects.all()[:20]
-
-        return context
+    # def get_queryset(self):
+    #     return Route.objects.all().order_by('-price')
+    #
+    # def get_context_data(self, **kwargs):
+    #     context = super(Index, self).get_context_data(**kwargs)
+    #     if self.kwargs:
+    #         context['title'] = 'filtered on price'
+    #         context['routes'] = Route.objects.filter(price__lte=self.kwargs['price'])
+    #     else:
+    #         context['title'] = 'home'
+    #         context['routes'] = Route.objects.all()[:20]
+    #
+    #     return context
 
 
 
