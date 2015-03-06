@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from flights.views import Index, Detail, Contact
+from flights.views import Index, Detail, Contact, Filter
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -15,7 +15,8 @@ urlpatterns = patterns('',
     url(r'^$', Index.as_view(), name='index'),
     url(r'^contact$', Contact.as_view(), name='contact'),
     url(r'^(?P<pk>\d+)/$', Detail.as_view(), name='detail'),
-    (r'^price/(?P<price>\d+)/$', Index.as_view()),
+    url(r'^price/(?P<price>\d+)/$', Filter.as_view(), name='filter'),
+    url(r'^leaving-date/(?P<leavingDate>[0-9A-z\-_]+)/$', Filter.as_view()),
     url(r'^api/routes/', include(RouteResource.urls())),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

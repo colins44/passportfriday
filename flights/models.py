@@ -28,6 +28,9 @@ class Flight(models.Model):
     def __unicode__(self):
         return unicode(self.id)
 
+    # class Meta:
+    #     ordering = ['price']
+
 class Route(models.Model):
     airport = models.ForeignKey(Airport) #airport to which the flight is going to
     outbound_flights = models.ManyToManyField(Flight, related_name='outbound flights')
@@ -35,6 +38,7 @@ class Route(models.Model):
 
     def __unicode__(self):
         return unicode(self.id)
+
 
 
 
