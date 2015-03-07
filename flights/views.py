@@ -15,7 +15,7 @@ class Index(ListView, SortMixin, FilterMixin):
 
 class Filter(ListView):
 
-    context_object_name = 'routes'
+    # context_object_name = 'routes'
     template_name = 'flights/home.html'
     pageinate_by =10
     model = Route
@@ -23,25 +23,20 @@ class Filter(ListView):
     def get_context_data(self, **kwargs):
         context = super(Filter, self).get_context_data(**kwargs)
         if 'price' in self.kwargs:
+            print self.kwargs['price']
             context['title'] = 'filtered on price'
-            #comment this out when flights have prices
             context['routes'] = Route.objects.filter(outbound_flights__price__lte=self.kwargs['price']).order_by('outbound_flights__price')
             print context['routes']
+
         if 'leavingDate' in self.kwargs:
             date_object = datetime.strptime(self.kwargs['leavingDate'], '%Y-%m-%d')
             next_day = date_object + timedelta(days=+1)
             print next_day
-            context['title'] = 'filtered by weekend'
-            context['routes'] = Route.objects.select_related('outbound_flights').all()
-            # context['routes'] = Route.objects.filter(outbound_flights__departure_time__gt=date_object)
-                                                     # outbound_flights__departure_time__lt=next_day).order_by('outbound_flights__price')
-
-            flights = Flight.objects.filter(departure_time__gt=date_object,
-                                                     departure_time__lt=next_day)
-            print flights
-            print context['routes']
-
-
+            # context['title'] = 'filtered by weekend'
+            context['routes'] = Route.objects.filter(outbound_flights__departure_time__gt=date_object,
+                                                     outbound_flights__departure_time__lt=next_day).order_by('outbound_flights__price')
+        if 'city' in self.kwargs:
+            context['routes'] = Route.objects.filter(airport__code=self.kwargs['city'])
         return context
 
 

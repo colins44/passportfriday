@@ -16,7 +16,8 @@ urlpatterns = patterns('',
     url(r'^contact$', Contact.as_view(), name='contact'),
     url(r'^(?P<pk>\d+)/$', Detail.as_view(), name='detail'),
     url(r'^price/(?P<price>\d+)/$', Filter.as_view(), name='filter'),
-    url(r'^leaving-date/(?P<leavingDate>[0-9A-z\-_]+)/$', Filter.as_view()),
+    url(r'^leaving-date/(?P<leavingDate>[0-9\-_]+)/$', Filter.as_view()),
+    url(r'^city/(?P<city>[A-z]+)/$', Filter.as_view()),
     url(r'^api/routes/', include(RouteResource.urls())),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
