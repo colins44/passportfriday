@@ -1,9 +1,9 @@
-from .models import Route, Flight
-from django.http import HttpResponse
-from django.views.generic import ListView, DetailView
-from django.views.generic.base import TemplateView
+from .models import Route
+from django.views.generic import ListView, DetailView, FormView
 from flights.utils import SortMixin, FilterMixin
 from datetime import datetime, timedelta
+from .forms import ContactForm, NotificationForm
+from django.contrib.auth.forms import AuthenticationForm
 
 class Index(ListView, SortMixin, FilterMixin):
 
@@ -40,19 +40,33 @@ class Filter(ListView):
         return context
 
 
-
 class Detail(DetailView):
     model = Route
     template_name = "flights/detail.html"
 
     def get_context_data(self, **kwargs):
         context = super(Detail, self).get_context_data(**kwargs)
-        print "$$$$$$$"
-        print context
-        print kwargs
-        return context
 
-class Contact(TemplateView):
 
-    template_name = 'flights/index.html'
+class Contact(FormView):
+    template_name = 'flights/elements.html'
+    form_class = ContactForm
+    success_url = '/thanks/'
+
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        form.send_email()
+        return super(Contact, self).form_valid(form)
+
+class Notifications(FormView):
+    template_name = 'flights/notifications.html'
+    form_class = NotificationForm
+    success_url = '/thanks/'
+
+    def form_valid(self, form):
+        form.send_email()
+        return super(Notifications, self).form_valid(form)
+
+
 
