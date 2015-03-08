@@ -56,3 +56,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+passportfridays/project_static/
+passportfridays/static/
