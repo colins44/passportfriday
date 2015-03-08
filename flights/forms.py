@@ -12,6 +12,13 @@ class ContactForm(forms.Form):
 
 class NotificationForm(forms.Form):
     max_price = forms.IntegerField()
+    email = forms.EmailField()
+    OPTIONS = (
+                ("AUT", "Australia"),
+                ("DEU", "Germany"),
+                ("NLD", "Neitherlands"),
+                )
+    Countries = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple, choices=OPTIONS)
 
     def send_email(self):
         # send email using the self.cleaned_data dictionary
