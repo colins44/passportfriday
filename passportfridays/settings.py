@@ -20,6 +20,19 @@ DATABASES = {
     }
 }
 
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'my gmail account'
+EMAIL_HOST_PASSWORD = 'my gmail account password'
+DEFAULT_FROM_EMAIL = 'my gmail account'
+DEFAULT_TO_EMAIL = 'to email'
+
+DEFAULT_FROM_EMAIL = 'The Passport Fridays Team <noreply@passportfridays.com>'
+DEFAULT_FROM_NAME = 'The Passport Fridays Team'
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []

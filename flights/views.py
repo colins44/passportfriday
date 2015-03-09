@@ -1,11 +1,10 @@
 from .models import Route
 from django.views.generic import ListView, DetailView, FormView
-from flights.utils import SortMixin, FilterMixin
 from datetime import datetime, timedelta
 from .forms import ContactForm, NotificationForm
 from django.contrib.auth.forms import AuthenticationForm
 
-class Index(ListView, SortMixin, FilterMixin):
+class Index(ListView):
 
     context_object_name = 'routes'
     queryset = Route.objects.all().order_by('outbound_flights__price')[:10]

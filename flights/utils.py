@@ -1,74 +1,28 @@
-from django.core.exceptions import ImproperlyConfigured
+from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
+from django.views.generic.base import TemplateResponseMixin
+from django.template import loader, Context
 
-class FilterMixin(object):
-    """
-    View mixin which provides filtering for ListView.
-    """
-    filter_url_kwarg = 'filter'
-    default_filter_param = None
+class TemplateEmailer(EmailMultiAlternatives, TemplateResponseMixin):
 
-    def get_default_filter_param(self):
-        if self.default_filter_param is None:
-            raise ImproperlyConfigured(
-                "'FilterMixin' requires the 'default_filter_param' attribute "
-                "to be set.")
-        return self.default_filter_param
+    def get_template_names(self, template):
+        return template
 
-    def filter_queryset(self, qs, filter_param):
-        """
-        Filter the queryset `qs`, given the selected `filter_param`. Default
-        implementation does no filtering at all.
-        """
-        return qs
-
-    def get_filter_param(self):
-        return self.kwargs.get(self.filter_url_kwarg,
-                               self.get_default_filter_param())
-
-    def get_queryset(self):
-        return self.filter_queryset(
-            super(FilterMixin, self).get_queryset(),
-            self.get_filter_param())
-
-    def get_context_data(self, *args, **kwargs):
-        context = super(FilterMixin, self).get_context_data(*args, **kwargs)
+    def __init__(self, template, context={}, **kwargs):
+        t = loader.get_template(self.get_template_names(template))
         context.update({
-            'filter': self.get_filter_param(),
+            'email_from_name': settings.DEFAULT_FROM_NAME,
         })
-        return context
+        c = Context(context)
+        self.rendered_message = t.render(c)
+        if not kwargs.get('subject', None):
+            kwargs['subject'] = settings.DEFAULT_FROM_NAME
+        if not kwargs.get('from_email', None):
+            kwargs['from_email'] = settings.DEFAULT_FROM_EMAIL
 
-class SortMixin(object):
-    """
-    View mixin which provides sorting for ListView.
-    """
-    default_sort_params = None
+        super(TemplateEmailer, self).__init__(**kwargs)
+        self.attach_alternative(self.rendered_message, "text/html")
 
-    def sort_queryset(self, qs, sort_by, order):
-        return qs
-
-    def get_default_sort_params(self):
-        if self.default_sort_params is None:
-            raise ImproperlyConfigured(
-                "'SortMixin' requires the 'default_sort_params' attribute "
-                "to be set.")
-        return self.default_sort_params
-
-    def get_sort_params(self):
-        default_sort_by, default_order = self.get_default_sort_params()
-        sort_by = self.request.GET.get('sort_by', default_sort_by)
-        order = self.request.GET.get('order', default_order)
-        return (sort_by, order)
-
-    def get_queryset(self):
-        return self.sort_queryset(
-            super(SortMixin, self).get_queryset(),
-            *self.get_sort_params())
-
-    def get_context_data(self, *args, **kwargs):
-        context = super(SortMixin, self).get_context_data(*args, **kwargs)
-        sort_by, order = self.get_sort_params()
-        context.update({
-            'sort_by': sort_by,
-            'order': order,
-        })
-        return context
+    def send(self, fail_silently=False):
+        """Just changes the default to fail_silently=True"""
+        return super(TemplateEmailer, self).send(fail_silently)
