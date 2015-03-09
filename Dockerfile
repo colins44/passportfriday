@@ -5,3 +5,6 @@ WORKDIR /passportfridays
 ADD requirements.txt /passportfridays/
 RUN pip install -r requirements.txt
 ADD . /code/
+
+
+

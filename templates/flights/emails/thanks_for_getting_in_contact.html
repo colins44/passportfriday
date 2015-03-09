@@ -1,0 +1,11 @@
+{% extends 'flights/emails/base.html' %}
+
+{% block content %}
+
+<p>Hello {{ name }}</p>
+
+    <p>Thanks for contacting Passport Fridays. We will try and reply to your message about: {{ subject }} as soon as we can.</p>
+
+<p>Best regards,<br>
+{{ email_from_name }}</p>
+{% endblock %}

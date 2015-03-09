@@ -59,6 +59,7 @@
                 <td>From: {{ flight.departure_airport }} at: {{ flight.departure_time }}</td>
                 <td>price{{ flight.price }}</td>
             </tr>
+            <a href="{{ route.pk }}" class="button special">More</a>
         {%  endfor %}
         </table>
     {% endfor %}
@@ -67,13 +68,13 @@
         <div class="pagination">
             <span class="page-links">
                 {% if page_obj.has_previous %}
-                    <a href="/cars?page={{ page_obj.previous_page_number }}">previous</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
                 {% endif %}
                 <span class="page-current">
                     Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
                 </span>
                 {% if page_obj.has_next %}
-                    <a href="/cars?page={{ page_obj.next_page_number }}">next</a>
+                    <a href="?page={{ page_obj.next_page_number }}">next</a>
                 {% endif %}
             </span>
         </div>

@@ -1,11 +1,10 @@
 from .models import Route
 from django.views.generic import ListView, DetailView, FormView
-from flights.utils import SortMixin, FilterMixin
 from datetime import datetime, timedelta
 from .forms import ContactForm, NotificationForm
 from django.contrib.auth.forms import AuthenticationForm
 
-class Index(ListView, SortMixin, FilterMixin):
+class Index(ListView):
 
     context_object_name = 'routes'
     queryset = Route.objects.all().order_by('outbound_flights__price')[:10]
@@ -49,13 +48,11 @@ class Detail(DetailView):
 
 
 class Contact(FormView):
-    template_name = 'flights/elements.html'
+    template_name = 'flights/contact.html'
     form_class = ContactForm
     success_url = '/thanks/'
 
     def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
         form.send_email()
         return super(Contact, self).form_valid(form)
 

@@ -1,0 +1,17 @@
+{% extends 'flights/emails/base.html' %}
+
+{% block content %}
+
+<p>Hello {{ name }}</p>
+
+    <p>Thanks for setting up a notification with Passport Fridays, you have signed up for the following notifications:</p>
+    {%  if countries %}
+    <p>You are interested in flights to the following places for less than the price of {% if max_price %}£{{ max_price }}{% endif %}</p>
+    {% for country in countries %}
+    <li>{{ country }}</li>
+    {% endfor %}
+
+<p>Best regards,<br>
+{{ email_from_name }}</p>
+{% endblock %}
+
