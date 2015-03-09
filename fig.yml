@@ -9,8 +9,14 @@
 #    - "8000:8000"
 #  links:
 #    - db
+#worker:
+#  build: .
+#  command: celery -A passportfridays worker -l info
+#  volumes:
+#    - .:/passportfridays
 
-# database container
+
+#database container
 db:
   image: postgres
 #  environment:
@@ -29,7 +35,7 @@ rabbitmq:
 # container with Django web server
 web:
   build: .  # build using default Dockerfile
-  command: ./run_web.sh
+  command: python manage.py runserver 0.0.0.0:8000
   volumes:
     - .:/passportfridays  # mount current directory inside container
   ports:
@@ -39,12 +45,13 @@ web:
     - db:db
     - rabbitmq:rabbit
     - redis:redis
-# container with redis worker
+#container with redis worker
 worker:
   build: .
-  command: ./run_celery.sh
+#  command: ./run_celery.sh
+  command: celery -A passportfridays worker -l info
   volumes:
-    - .:/app
+    - .:/passportfridays
   links:
     - db:db
     - rabbitmq:rabbit
