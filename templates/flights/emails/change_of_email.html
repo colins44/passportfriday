@@ -1,0 +1,11 @@
+{% extends 'flights/emails/base.html' %}
+
+{% block content %}
+<p>Hello{% if customer.first_name %} {{ customer.first_name }}{% endif %}{% if customer.last_name %} {{ customer.last_name }}{% endif %},</p>
+
+<p>You have changed your email to {{ customer.email }}. From now on, please log in with {{ customer.email }}</p>
+
+<p>Best regards,<br>
+{{ email_from_name }}</p>
+{% endblock %}
+
