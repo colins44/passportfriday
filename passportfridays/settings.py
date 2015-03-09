@@ -20,15 +20,15 @@ DATABASES = {
     }
 }
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'my gmail account'
-EMAIL_HOST_PASSWORD = 'my gmail account password'
-DEFAULT_FROM_EMAIL = 'my gmail account'
-DEFAULT_TO_EMAIL = 'to email'
+EMAIL_HOST_USER = 'colin.pringle-wood@ostmodern.co.uk'
+EMAIL_HOST_PASSWORD = '44aberdeen'
+DEFAULT_FROM_EMAIL = 'colin.pringle-wood@ostmodern.co.uk'
+DEFAULT_TO_EMAIL = 'colin.pringle-wood@ostmodern.co.uk'
 
 DEFAULT_FROM_EMAIL = 'The Passport Fridays Team <noreply@passportfridays.com>'
 DEFAULT_FROM_NAME = 'The Passport Fridays Team'
@@ -142,6 +142,8 @@ INSTALLED_APPS = (
 FLIGHTSTATS_APPID = '92c5179a'
 FLIGHTSTATS_APPKEY = 'c4d1675d8482e35d11d7af0000618e78'
 QPX_APIKEY ='AIzaSyCyEO6Vp6MxuKYnEOlvVJV-TyaAgXyZJZc'
+
+CELERY_ALWAYS_EAGER = True
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
