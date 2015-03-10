@@ -103,33 +103,21 @@ class SignUp(FormView):
     success_url='/account'
 
     def form_valid(self, form):
+        #call the save function to save the new user
         form.save()
+        #get the username and password
+        username = self.request.POST['username']
+        password = self.request.POST['password1']
+        #authenticate user then login
+        user = authenticate(username=username, password=password)
+        login(self.request, user)
         return super(SignUp, self).form_valid(form)
 
-        # try:
-        #     login(self.request, user)
-        # except:
-        #     print 'asdasjkdkjsahdkjsahdhkjsadhksahdkjashd'
-        # redirect_to = settings.LOGIN_REDIRECT_URL
-        # return HttpResponseRedirect(redirect_to)
-
-    def post(self, request, *args, **kwargs):
-        print self.get_form_kwargs()
-        data = self.get_form_kwargs()['data']
-        print data
-        user = authenticate(username=data['username'], password=data['password1'])
-        login(request, user=user)
-        redirect_to = settings.LOGIN_REDIRECT_URL
-        return HttpResponseRedirect(redirect_to)
-        # print '$$$$$$$$$$$'
-        # print self.get_form_kwargs()
-        # print self.get_form()
-        # print args
-        # print kwargs
 
 
-
-
+#http://stackoverflow.com/questions/3222549/how-to-automatically-login-a-user-after-registration-in-django
+#http://stackoverflow.com/a/28974691/2319915
+#http://stackoverflow.com/questions/6034763/django-attributeerror-user-object-has-no-attribute-backend-but-it-does
 
 
 

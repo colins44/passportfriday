@@ -5,7 +5,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 
-
 class ContactForm(forms.Form):
     name = forms.CharField()
     email =forms.EmailField()
