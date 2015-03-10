@@ -7,8 +7,8 @@ from django.http import HttpResponseRedirect
 from django.views.decorators.debug import sensitive_post_parameters
 from django.utils.decorators import method_decorator
 from django.conf import settings
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
+
 
 
 class Index(ListView):
@@ -78,7 +78,7 @@ class SignIn(FormView):
 
     def form_valid(self, form):
         redirect_to = settings.LOGIN_REDIRECT_URL
-        auth_login(self.request, form.get_user())
+        login(self.request, form.get_user())
         if self.request.session.test_cookie_worked():
             self.request.session.delete_test_cookie()
         return HttpResponseRedirect(redirect_to)
@@ -94,7 +94,7 @@ class SignIn(FormView):
 class SignOut(View):
 
     def get(self, request, *args, **kwargs):
-        auth_logout(request)
+        logout(request)
         return HttpResponseRedirect(settings.LOGOUT_REDIRECT_URL)
 
 class SignUp(FormView):
