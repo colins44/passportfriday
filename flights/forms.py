@@ -52,7 +52,7 @@ class UserCreateForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ( "username", "email" )
+        fields =('email',)
 
 
 
