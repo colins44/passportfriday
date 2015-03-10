@@ -1,8 +1,15 @@
 from .models import Route
-from django.views.generic import ListView, DetailView, FormView
+from django.views.generic import ListView, DetailView, FormView, View
 from datetime import datetime, timedelta
-from .forms import ContactForm, NotificationForm
+from .forms import ContactForm, NotificationForm, UserCreateForm
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login as auth_login, logout as auth_logout
+from django.http import HttpResponseRedirect
+from django.views.decorators.debug import sensitive_post_parameters
+from django.utils.decorators import method_decorator
+from django.conf import settings
+from django.contrib.auth import authenticate, login
+
 
 class Index(ListView):
 
@@ -64,6 +71,66 @@ class Notifications(FormView):
     def form_valid(self, form):
         form.send_email()
         return super(Notifications, self).form_valid(form)
+
+class SignIn(FormView):
+    form_class = AuthenticationForm
+    template_name = 'flights/signin.html'
+
+    def form_valid(self, form):
+        redirect_to = settings.LOGIN_REDIRECT_URL
+        auth_login(self.request, form.get_user())
+        if self.request.session.test_cookie_worked():
+            self.request.session.delete_test_cookie()
+        return HttpResponseRedirect(redirect_to)
+
+    def form_invalid(self, form):
+        return self.render_to_response(self.get_context_data(form=form))
+
+    @method_decorator(sensitive_post_parameters('password'))
+    def dispatch(self, request, *args, **kwargs):
+        request.session.set_test_cookie()
+        return super(SignIn, self).dispatch(request, *args, **kwargs)
+
+class SignOut(View):
+
+    def get(self, request, *args, **kwargs):
+        auth_logout(request)
+        return HttpResponseRedirect(settings.LOGOUT_REDIRECT_URL)
+
+class SignUp(FormView):
+    template_name = 'flights/signup.html'
+    form_class = UserCreateForm
+    success_url='/account'
+
+    def form_valid(self, form):
+        form.save()
+        return super(SignUp, self).form_valid(form)
+
+        # try:
+        #     login(self.request, user)
+        # except:
+        #     print 'asdasjkdkjsahdkjsahdhkjsadhksahdkjashd'
+        # redirect_to = settings.LOGIN_REDIRECT_URL
+        # return HttpResponseRedirect(redirect_to)
+
+    def post(self, request, *args, **kwargs):
+        print self.get_form_kwargs()
+        data = self.get_form_kwargs()['data']
+        print data
+        user = authenticate(username=data['username'], password=data['password1'])
+        login(request, user=user)
+        redirect_to = settings.LOGIN_REDIRECT_URL
+        return HttpResponseRedirect(redirect_to)
+        # print '$$$$$$$$$$$'
+        # print self.get_form_kwargs()
+        # print self.get_form()
+        # print args
+        # print kwargs
+
+
+
+
+
 
 
 

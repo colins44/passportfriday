@@ -1,6 +1,10 @@
 from django import forms
 from .tasks import send_email
 from django.conf import settings
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+
+
 
 class ContactForm(forms.Form):
     name = forms.CharField()
@@ -43,3 +47,14 @@ class NotificationForm(forms.Form):
                     'countries': data['countries']},
                     [data['email'],],
                     'You have set up a new Notification',)
+
+class UserCreateForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+
+    class Meta:
+        model = User
+        fields = ( "username", "email" )
+
+
+
+

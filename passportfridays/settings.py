@@ -33,6 +33,10 @@ DEFAULT_TO_EMAIL = 'colin.pringle-wood@ostmodern.co.uk'
 DEFAULT_FROM_EMAIL = 'The Passport Fridays Team <noreply@passportfridays.com>'
 DEFAULT_FROM_NAME = 'The Passport Fridays Team'
 
+LOGIN_REDIRECT_URL = '/account/'
+LOGOUT_REDIRECT_URL = '/'
+
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
