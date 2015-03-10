@@ -3,6 +3,7 @@ from flights.views import Index, Detail, Contact, Filter, Notifications, SignIn,
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
+from django.contrib.auth.decorators import login_required
 
 
 # Uncomment the next two lines to enable the admin:
@@ -25,6 +26,6 @@ urlpatterns = patterns('',
     url(r'^city/(?P<city>[A-z]+)/$', Filter.as_view()),
     url(r'^api/routes/', include(RouteResource.urls())),
     url(r'^thanks',TemplateView.as_view(template_name='flights/generic.html'),name='thanks'),
-    url(r'^account',TemplateView.as_view(template_name='flights/generic.html'),name='thanks'),
+    url(r'^account',login_required(TemplateView.as_view(template_name='flights/generic.html')),name='thanks'),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

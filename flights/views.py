@@ -3,12 +3,12 @@ from django.views.generic import ListView, DetailView, FormView, View
 from datetime import datetime, timedelta
 from .forms import ContactForm, NotificationForm, UserCreateForm
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login as auth_login, logout as auth_logout
 from django.http import HttpResponseRedirect
 from django.views.decorators.debug import sensitive_post_parameters
 from django.utils.decorators import method_decorator
 from django.conf import settings
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 
 
 class Index(ListView):
@@ -114,10 +114,6 @@ class SignUp(FormView):
         return super(SignUp, self).form_valid(form)
 
 
-
-#http://stackoverflow.com/questions/3222549/how-to-automatically-login-a-user-after-registration-in-django
-#http://stackoverflow.com/a/28974691/2319915
-#http://stackoverflow.com/questions/6034763/django-attributeerror-user-object-has-no-attribute-backend-but-it-does
 
 
 
