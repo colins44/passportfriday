@@ -3,12 +3,12 @@ from django.views.generic import ListView, DetailView, FormView, View
 from datetime import datetime, timedelta
 from .forms import ContactForm, NotificationForm, UserCreateForm
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login as auth_login, logout as auth_logout
 from django.http import HttpResponseRedirect
 from django.views.decorators.debug import sensitive_post_parameters
 from django.utils.decorators import method_decorator
 from django.conf import settings
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+
 
 
 class Index(ListView):
@@ -78,7 +78,7 @@ class SignIn(FormView):
 
     def form_valid(self, form):
         redirect_to = settings.LOGIN_REDIRECT_URL
-        auth_login(self.request, form.get_user())
+        login(self.request, form.get_user())
         if self.request.session.test_cookie_worked():
             self.request.session.delete_test_cookie()
         return HttpResponseRedirect(redirect_to)
@@ -94,7 +94,7 @@ class SignIn(FormView):
 class SignOut(View):
 
     def get(self, request, *args, **kwargs):
-        auth_logout(request)
+        logout(request)
         return HttpResponseRedirect(settings.LOGOUT_REDIRECT_URL)
 
 class SignUp(FormView):
@@ -103,31 +103,15 @@ class SignUp(FormView):
     success_url='/account'
 
     def form_valid(self, form):
+        #call the save function to save the new user
         form.save()
+        #get the username and password
+        username = self.request.POST['username']
+        password = self.request.POST['password1']
+        #authenticate user then login
+        user = authenticate(username=username, password=password)
+        login(self.request, user)
         return super(SignUp, self).form_valid(form)
-
-        # try:
-        #     login(self.request, user)
-        # except:
-        #     print 'asdasjkdkjsahdkjsahdhkjsadhksahdkjashd'
-        # redirect_to = settings.LOGIN_REDIRECT_URL
-        # return HttpResponseRedirect(redirect_to)
-
-    def post(self, request, *args, **kwargs):
-        print self.get_form_kwargs()
-        data = self.get_form_kwargs()['data']
-        print data
-        user = authenticate(username=data['username'], password=data['password1'])
-        login(request, user=user)
-        redirect_to = settings.LOGIN_REDIRECT_URL
-        return HttpResponseRedirect(redirect_to)
-        # print '$$$$$$$$$$$'
-        # print self.get_form_kwargs()
-        # print self.get_form()
-        # print args
-        # print kwargs
-
-
 
 
 

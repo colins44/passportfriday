@@ -121,6 +121,9 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'passportfridays.urls'
 
+LOGIN_URL = '/signin'
+LOGOUT_REDIRECT_URL = '/'
+
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'passportfridays.wsgi.application'
 
