@@ -10,6 +10,8 @@ from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
 from email_user.forms import EmailUserCreationForm
 from email_user.models import EmailUser
+from django.contrib.auth.forms import UserCreationForm
+from .forms import EmailSignUpForms
 
 
 
@@ -98,34 +100,6 @@ class SignOut(View):
     def get(self, request, *args, **kwargs):
         logout(request)
         return HttpResponseRedirect(settings.LOGOUT_REDIRECT_URL)
-
-# class SignUp(FormView):
-#     template_name = 'flights/signup.html'
-#     form_class = UserCreateForm
-#     success_url='/account'
-#
-#     def form_valid(self, form):
-#         #call the save function to save the new user
-#         form.save()
-#         #get the username and password
-#         print self.request.POST
-#         email = self.request.POST['email']
-#         password = self.request.POST['password1']
-#         # user = EmailUser.objects.get(email=self.request.POST['email'])
-#         #authenticate user then login
-#         try:
-#             user = authenticate(email=email, password=password)
-#         except:
-#             print 'asdasdsad'
-#         print '$$$$$$$$'
-#         print '$$$$$$$$'
-#         print '$$$$$$$$'
-#         print user
-#         try:
-#             login(self.request, user)
-#         except:
-#             print 'login failed'
-#         # return super(SignUp, self).form_valid(form)
 
 
 class SignUp(FormView):

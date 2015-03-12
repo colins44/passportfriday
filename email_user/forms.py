@@ -122,6 +122,8 @@ class EmailUserCreationForm(forms.ModelForm):
 
     class Meta:
         model = EmailUser
+        fields = ("email",)
+
 
 
 class EmailUserChangeForm(forms.ModelForm):

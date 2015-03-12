@@ -3,7 +3,7 @@ from .tasks import send_email
 from django.conf import settings
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
+from email_user.models import EmailUser
 
 class ContactForm(forms.Form):
     name = forms.CharField()
@@ -47,6 +47,12 @@ class NotificationForm(forms.Form):
                     [data['email'],],
                     'You have set up a new Notification',)
 
+class EmailSignUpForms(UserCreationForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = EmailUser
+        exclude =('username',)
 
 
 
