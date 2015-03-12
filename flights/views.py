@@ -8,6 +8,7 @@ from django.views.decorators.debug import sensitive_post_parameters
 from django.utils.decorators import method_decorator
 from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
+from email_user.forms import EmailUserCreationForm
 
 
 
@@ -99,19 +100,31 @@ class SignOut(View):
 
 class SignUp(FormView):
     template_name = 'flights/signup.html'
-    form_class = UserCreateForm
+    form_class = EmailUserCreationForm
     success_url='/account'
 
     def form_valid(self, form):
         #call the save function to save the new user
         form.save()
         #get the username and password
-        username = self.request.POST['username']
+        print self.request.POST
+        email = self.request.POST['email']
         password = self.request.POST['password1']
         #authenticate user then login
-        user = authenticate(username=username, password=password)
-        login(self.request, user)
+        try:
+            user = authenticate(email=email, password=password)
+        except:
+            print 'asdasdsad'
+        print '$$$$$$$$'
+        print '$$$$$$$$'
+        print '$$$$$$$$'
+        print user
+        try:
+            login(self.request, user)
+        except:
+            print 'login failed'
         return super(SignUp, self).form_valid(form)
+
 
 
 
