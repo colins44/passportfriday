@@ -58,6 +58,9 @@ class EmailUserCreationForm(forms.ModelForm):
     Includes all the required fields, plus a repeated password.
 
     """
+    def __init__(self, *args, **kwargs):
+        self.user = EmailUser
+        super(EmailUserCreationForm, self).__init__(*args, **kwargs)
 
     error_messages = {
         'duplicate_email': _("A user with that email already exists."),
@@ -110,9 +113,15 @@ class EmailUserCreationForm(forms.ModelForm):
             )
         return password2
 
+    def save(self, commit=True):
+        user = super(EmailUserCreationForm, self).save(commit=False)
+        user.set_password(self.cleaned_data["password1"])
+        if commit:
+            user.save()
+        return user
+
     class Meta:
-        model = get_user_model()
-        fields = ('email',)
+        model = EmailUser
 
 
 class EmailUserChangeForm(forms.ModelForm):

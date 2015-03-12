@@ -47,12 +47,7 @@ class NotificationForm(forms.Form):
                     [data['email'],],
                     'You have set up a new Notification',)
 
-class UserCreateForm(UserCreationForm):
-    email = forms.EmailField(required=True)
 
-    class Meta:
-        model = User
-        fields =('email',)
 
 
 

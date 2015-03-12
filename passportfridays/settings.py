@@ -120,8 +120,8 @@ MIDDLEWARE_CLASSES = (
 )
 
 AUTHENTICATION_BACKENDS = (
-        'email_user.backends.EmailUserAuth',
-        # 'django.contrib.auth.backends.ModelBackend',
+        # 'email_user.backends.EmailUserAuth',
+        'django.contrib.auth.backends.ModelBackend',
     )
 
 ROOT_URLCONF = 'passportfridays.urls'
