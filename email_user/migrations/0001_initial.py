@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from django.db import models, migrations
 import django.utils.timezone
-from django.conf import settings
 
 
 class Migration(migrations.Migration):
@@ -29,18 +28,6 @@ class Migration(migrations.Migration):
             ],
             options={
                 'abstract': False,
-            },
-            bases=(models.Model,),
-        ),
-        migrations.CreateModel(
-            name='UserPasswordReset',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('reset_key', models.CharField(max_length=50)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('user', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
-            ],
-            options={
             },
             bases=(models.Model,),
         ),

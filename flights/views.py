@@ -9,6 +9,7 @@ from django.utils.decorators import method_decorator
 from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
 from email_user.forms import EmailUserCreationForm
+from email_user.models import EmailUser
 
 
 
@@ -100,7 +101,7 @@ class SignOut(View):
 
 class SignUp(FormView):
     template_name = 'flights/signup.html'
-    form_class = EmailUserCreationForm
+    form_class = UserCreateForm
     success_url='/account'
 
     def form_valid(self, form):
@@ -110,6 +111,7 @@ class SignUp(FormView):
         print self.request.POST
         email = self.request.POST['email']
         password = self.request.POST['password1']
+        # user = EmailUser.objects.get(email=self.request.POST['email'])
         #authenticate user then login
         try:
             user = authenticate(email=email, password=password)
@@ -123,7 +125,7 @@ class SignUp(FormView):
             login(self.request, user)
         except:
             print 'login failed'
-        return super(SignUp, self).form_valid(form)
+        # return super(SignUp, self).form_valid(form)
 
 
 
