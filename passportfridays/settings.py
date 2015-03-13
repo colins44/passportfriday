@@ -151,7 +151,10 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'flights',
     'email_user',
+    'weekend',
     'django_extensions',
+    'location',
+    'accommodation',
     'genericadmin',
 )
 
