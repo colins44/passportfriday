@@ -119,10 +119,18 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+AUTHENTICATION_BACKENDS = (
+        # 'email_user.backends.EmailUserAuth',
+        'django.contrib.auth.backends.ModelBackend',
+    )
+
 ROOT_URLCONF = 'passportfridays.urls'
 
 LOGIN_URL = '/signin'
 LOGOUT_REDIRECT_URL = '/'
+
+AUTH_USER_MODEL = 'email_user.EmailUser'
+
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'passportfridays.wsgi.application'
@@ -142,6 +150,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'flights',
+    'email_user',
     'django_extensions',
     'genericadmin',
 )

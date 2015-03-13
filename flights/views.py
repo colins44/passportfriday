@@ -1,13 +1,17 @@
 from .models import Route
 from django.views.generic import ListView, DetailView, FormView, View
 from datetime import datetime, timedelta
-from .forms import ContactForm, NotificationForm, UserCreateForm
+from .forms import ContactForm, NotificationForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.http import HttpResponseRedirect
 from django.views.decorators.debug import sensitive_post_parameters
 from django.utils.decorators import method_decorator
 from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
+from email_user.forms import EmailUserCreationForm
+from email_user.models import EmailUser
+from django.contrib.auth.forms import UserCreationForm
+from .forms import EmailSignUpForms
 
 
 
@@ -97,21 +101,24 @@ class SignOut(View):
         logout(request)
         return HttpResponseRedirect(settings.LOGOUT_REDIRECT_URL)
 
+
 class SignUp(FormView):
     template_name = 'flights/signup.html'
-    form_class = UserCreateForm
+    form_class = EmailUserCreationForm
     success_url='/account'
 
     def form_valid(self, form):
         #call the save function to save the new user
         form.save()
+        # form.send_email()
         #get the username and password
-        username = self.request.POST['username']
+        username = self.request.POST['email']
         password = self.request.POST['password1']
         #authenticate user then login
         user = authenticate(username=username, password=password)
         login(self.request, user)
         return super(SignUp, self).form_valid(form)
+
 
 
 
