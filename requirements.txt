@@ -7,4 +7,5 @@ requests==2.6.0
 redis==2.10.3
 celery==3.1.17
 requests_oauthlib==0.4.1
+python-yelp-v2==0.5.2
 

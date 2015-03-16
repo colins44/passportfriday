@@ -2,10 +2,7 @@ from django.db import models
 from location.models import City
 
 ACCOMMODATION_CHOICES =(('hotel', 'hotel'),
-                        ('hostel', 'hostel'),
-                        ('air b and b', 'airb&b'),
-                        ('private', 'private'),
-                        ('bed and breakfast', 'B&B'),)
+                        ('hostel', 'hostel'))
 
 class Accommodation(models.Model):
     city = models.ForeignKey(City)
