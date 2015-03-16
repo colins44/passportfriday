@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
+
 SYMBOL = (('pound', u"£"),
           ('euro', u'€'),)
 

@@ -131,6 +131,20 @@ LOGOUT_REDIRECT_URL = '/'
 
 AUTH_USER_MODEL = 'email_user.EmailUser'
 
+#V2 yelp keys
+YELP_KEYS ={
+    'Consumer Key': 'z6L-YNjSpzs6fbkVL1TjEQ',
+    'Consumer Secret': 'reGK0qmvKqrn5P2PSEIwxdyNUT0',
+    'Token': '1tAwl4Ypsg7iO_UBXwhMnnQ33eaRRSyE',
+    'Token Secret': 'QK_bVGJnl91CBxSfnSJoS9hhGoA',
+}
+
+#v1 depreciated yel key
+
+YELP_KEYS_V1 ={
+    'key': '47NhbvFA6LWFxA_aYHpGqw',
+}
+
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'passportfridays.wsgi.application'
