@@ -137,6 +137,9 @@ EAN_HOTEL_API  ={
     'shared_secret': 'UzhYX7kX',
 }
 
+#read this for google flights
+#http://www.nohup.in/blog/using-json-google-flights
+
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'passportfridays.wsgi.application'
 
