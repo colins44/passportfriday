@@ -16,7 +16,7 @@ class Airport(models.Model):
     timezone = models.DecimalField(max_digits=4, decimal_places=2, default=0)
 
     def __unicode__(self):
-        return '%s , City: %s , Country: %s' % (self.name, self.city.name, self.country.name)
+        return '%s' % self.name
 
 class Flight(models.Model):
     departure_airport = models.ForeignKey(Airport, related_name='departure_airport')
