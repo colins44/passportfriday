@@ -1,0 +1,48 @@
+{% extends 'flights/base.html' %}
+{% block content %}
+
+		<!-- Main -->
+			<section id="main" class="container 75%">
+				<header>
+					<h2>Contact Us</h2>
+					<p>Tell us what you think about our little operation.</p>
+				</header>
+				<div class="box">
+					<form method="post" action="#">{% csrf_token %}
+						<!--<div class="row uniform 50%">
+							<div class="6u 12u(mobilep)">
+								<input type="text" name="name" id="id_name" value="" placeholder="Name" />
+							</div>
+							<div class="6u 12u(mobilep)">
+								<input type="email" name="email" id="id_email" value="" placeholder="Email" />
+							</div>
+						</div>
+						<div class="row uniform 50%">
+							<div class="12u">
+								<input type="text" name="subject" id="id_subject" value="" placeholder="Subject" />
+							</div>
+						</div>
+						<div class="row uniform 50%">
+							<div class="12u">
+								<textarea name="message" id="id_message" placeholder="Enter your message" rows="6" ></textarea>
+							</div>
+						</div>-->
+                        {{ form.as_p }}
+						<div class="row uniform">
+							<div class="12u">
+								<ul class="actions align-center">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>
+                            <div class="12u">
+                                <p>Dont have a account?</p>
+								<ul class="actions align-center">
+                                    <li><a href="/signup" type="submit">Sign Up</a> </li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+
+{% endblock %}

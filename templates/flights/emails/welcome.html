@@ -1,0 +1,14 @@
+{% extends 'flights/emails/base.html' %}
+
+{% block content %}
+
+<p>Hello {{ name }}</p>
+
+    <p>Thankyou for signing up to Passport Fridays, have a look around we recommend you log into your account
+    and have a look around.</p>
+    <p>Within your account you can set up your notifications, this will help us send you weekend getaways that are tailored to
+    your like</p>
+
+<p>Best regards,<br>
+{{ email_from_name }}</p>
+{% endblock %}

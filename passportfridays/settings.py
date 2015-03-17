@@ -20,6 +20,23 @@ DATABASES = {
     }
 }
 
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'colin.pringle-wood@ostmodern.co.uk'
+EMAIL_HOST_PASSWORD = 'thisisthepassword'
+DEFAULT_FROM_EMAIL = 'colin.pringle-wood@ostmodern.co.uk'
+DEFAULT_TO_EMAIL = 'colin.pringle-wood@ostmodern.co.uk'
+
+DEFAULT_FROM_EMAIL = 'The Passport Fridays Team <noreply@passportfridays.com>'
+DEFAULT_FROM_NAME = 'The Passport Fridays Team'
+
+LOGIN_REDIRECT_URL = '/account/'
+LOGOUT_REDIRECT_URL = '/'
+
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -28,7 +45,7 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'UTC'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -54,13 +71,13 @@ MEDIA_ROOT = ''
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = ''
+MEDIA_URL = '/static/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -68,6 +85,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "project_static"),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -101,7 +119,26 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+AUTHENTICATION_BACKENDS = (
+        # 'email_user.backends.EmailUserAuth',
+        'django.contrib.auth.backends.ModelBackend',
+    )
+
 ROOT_URLCONF = 'passportfridays.urls'
+
+LOGIN_URL = '/signin'
+LOGOUT_REDIRECT_URL = '/'
+
+AUTH_USER_MODEL = 'email_user.EmailUser'
+
+EAN_HOTEL_API  ={
+    'application' : 'testing app',
+    'key': '3rdyahz9hnfnba6nuqu8gedp',
+    'shared_secret': 'UzhYX7kX',
+}
+
+#read this for google flights
+#http://www.nohup.in/blog/using-json-google-flights
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'passportfridays.wsgi.application'
@@ -121,9 +158,19 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'flights',
+    'email_user',
+    'weekend',
     'django_extensions',
+    'location',
+    'accommodation',
     'genericadmin',
 )
+
+FLIGHTSTATS_APPID = '92c5179a'
+FLIGHTSTATS_APPKEY = 'c4d1675d8482e35d11d7af0000618e78'
+QPX_APIKEY ='AIzaSyCyEO6Vp6MxuKYnEOlvVJV-TyaAgXyZJZc'
+
+CELERY_ALWAYS_EAGER = True
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

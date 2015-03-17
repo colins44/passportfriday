@@ -41,6 +41,9 @@ htmlcov/
 nosetests.xml
 coverage.xml
 
+# IDEs
+.idea
+
 # Translations
 *.mo
 *.pot
@@ -53,3 +56,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+passportfridays/project_static/
+passportfridays/static/
