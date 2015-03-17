@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from flights.api import RouteResource
+from location.api import CityResource, CountryResource, CurrencyResource
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -26,6 +27,9 @@ urlpatterns = patterns('',
     url(r'^city/(?P<city>[A-z]+)/$', Filter.as_view()),
     url(r'^signout/$', SignOut.as_view()),
     url(r'^api/routes/', include(RouteResource.urls())),
+    url(r'^api/currenies/', include(CurrencyResource.urls())),
+    url(r'^api/countries/', include(CountryResource.urls())),
+    url(r'^api/cities/', include(CityResource.urls())),
     url(r'^thanks',TemplateView.as_view(template_name='flights/generic.html'),name='thanks'),
     url(r'^account',login_required(TemplateView.as_view(template_name='flights/generic.html')),name='thanks'),
 
