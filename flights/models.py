@@ -1,13 +1,22 @@
 from django.db import models
 from django.contrib.contenttypes import generic
 from django.contrib.contenttypes.models import ContentType
+from location.models import City, Country
 
 
 class Airport(models.Model):
-    code = models.CharField(max_length=5, unique=True)
+    name = models.CharField(blank=True, null=True, max_length=75)
+    city = models.ForeignKey(City)
+    country = models.ForeignKey(Country)
+    iata = models.CharField(blank=True, null=True, max_length=10)
+    icao = models.CharField(blank=True, null=True, max_length=10)
+    latitude = models.DecimalField(max_digits=10, decimal_places=6)
+    longitude = models.DecimalField(max_digits=10, decimal_places=6)
+    altitude = models.DecimalField(max_digits=8, decimal_places=2, blank=True, null=True)
+    timezone = models.DecimalField(max_digits=4, decimal_places=2, default=0)
 
     def __unicode__(self):
-        return self.code
+        return '%s , City: %s , Country: %s' % (self.name, self.city.name, self.country.name)
 
 class Flight(models.Model):
     departure_airport = models.ForeignKey(Airport, related_name='departure_airport')

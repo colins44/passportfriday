@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 countries = {
     "continents": {
         "AF": "Africa",
@@ -80,15 +81,6 @@ countries = {
             "capital": "Luanda",
             "currency": "AOA",
             "languages": "pt"
-        },
-        "AQ": {
-            "name": "Antarctica",
-            "native": "",
-            "phone": "",
-            "continent": "AN",
-            "capital": "",
-            "currency": "",
-            "languages": ""
         },
         "AR": {
             "name": "Argentina",
@@ -305,15 +297,6 @@ countries = {
             "capital": "Thimphu",
             "currency": "BTN,INR",
             "languages": "dz"
-        },
-        "BV": {
-            "name": "Bouvet Island",
-            "native": "Bouvetøya",
-            "phone": "",
-            "continent": "AN",
-            "capital": "",
-            "currency": "NOK",
-            "languages": ""
         },
         "BW": {
             "name": "Botswana",
@@ -552,7 +535,7 @@ countries = {
         "DO": {
             "name": "Dominican Republic",
             "native": "República Dominicana",
-            "phone": "1809,1829,1849",
+            "phone": "1809",
             "continent": "NA",
             "capital": "Santo Domingo",
             "currency": "DOP",
@@ -864,15 +847,6 @@ countries = {
             "currency": "HKD",
             "languages": "zh,en"
         },
-        "HM": {
-            "name": "Heard Island and McDonald Islands",
-            "native": "Heard Island and McDonald Islands",
-            "phone": "",
-            "continent": "AN",
-            "capital": "",
-            "currency": "AUD",
-            "languages": "en"
-        },
         "HN": {
             "name": "Honduras",
             "native": "Honduras",
@@ -1128,7 +1102,7 @@ countries = {
         "KZ": {
             "name": "Kazakhstan",
             "native": "Қазақстан",
-            "phone": "76,77",
+            "phone": "76",
             "continent": "AS",
             "capital": "Astana",
             "currency": "KZT",
@@ -1334,12 +1308,12 @@ countries = {
         },
         "MO": {
             "name": "Macao",
-            "native": "澳門",
+            "native": "Macao",
             "phone": "853",
             "continent": "AS",
-            "capital": "",
+            "capital": "Macao",
             "currency": "MOP",
-            "languages": "zh,pt"
+            "languages": "zh"
         },
         "MP": {
             "name": "Northern Mariana Islands",
@@ -1641,7 +1615,7 @@ countries = {
         "PR": {
             "name": "Puerto Rico",
             "native": "Puerto Rico",
-            "phone": "1787,1939",
+            "phone": "1787",
             "continent": "NA",
             "capital": "San Juan",
             "currency": "USD",
@@ -1947,7 +1921,7 @@ countries = {
         "TF": {
             "name": "French Southern Territories",
             "native": "Territoire des Terres australes et antarctiques fr",
-            "phone": "",
+            "phone": "00",
             "continent": "AN",
             "capital": "Port-aux-Français",
             "currency": "EUR",
@@ -2091,9 +2065,9 @@ countries = {
         "UM": {
             "name": "U.S. Minor Outlying Islands",
             "native": "United States Minor Outlying Islands",
-            "phone": "",
+            "phone": "01",
             "continent": "OC",
-            "capital": "",
+            "capital": "Washington",
             "currency": "USD",
             "languages": "en"
         },
@@ -2127,7 +2101,7 @@ countries = {
         "VA": {
             "name": "Vatican City",
             "native": "Vaticano",
-            "phone": "39066,379",
+            "phone": "379",
             "continent": "EU",
             "capital": "Vatican City",
             "currency": "EUR",
@@ -2208,7 +2182,7 @@ countries = {
         "XK": {
             "name": "Kosovo",
             "native": "Republika e Kosovës",
-            "phone": "377,381,386",
+            "phone": "377",
             "continent": "EU",
             "capital": "Pristina",
             "currency": "EUR",
