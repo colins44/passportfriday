@@ -131,6 +131,14 @@ LOGOUT_REDIRECT_URL = '/'
 
 AUTH_USER_MODEL = 'email_user.EmailUser'
 
+EAN_HOTEL_API  ={
+    'application' : 'testing app',
+    'key': '3rdyahz9hnfnba6nuqu8gedp',
+    'shared_secret': 'UzhYX7kX',
+}
+
+#read this for google flights
+#http://www.nohup.in/blog/using-json-google-flights
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'passportfridays.wsgi.application'
@@ -151,7 +159,10 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'flights',
     'email_user',
+    'weekend',
     'django_extensions',
+    'location',
+    'accommodation',
     'genericadmin',
 )
 
