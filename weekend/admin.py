@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import WeekendItem, Weekend
+from .models import WeekendItem, Weekend, Dates
 from genericadmin.admin import GenericAdminModelAdmin, GenericTabularInline
 
+admin.site.register(Dates)
 
 class TaggedItemInline(GenericTabularInline):
     content_type_whitelist = ('flights/routes', 'accommodation/accommodation')

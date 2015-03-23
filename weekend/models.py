@@ -5,6 +5,13 @@ from django.contrib.contenttypes.models import ContentType
 from django.conf import settings
 
 
+class Dates(models.Model):
+    departure_date = models.DateField()
+    return_date = models.DateField()
+
+    def __unicode__(self):
+        return '%s to %s' % (self.departure_date, self.return_date)
+
 class WeekendItem(models.Model):
     tag = models.SlugField()
     content_type = models.ForeignKey(ContentType)
