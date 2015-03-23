@@ -22,6 +22,7 @@ class Country(models.Model):
     continent = models.CharField(max_length=10)
     capital = models.CharField(max_length=50)
     currency = models.ForeignKey(Currency)
+    code = models.CharField(blank=True, max_length=4)
 
     def __unicode__(self):
         return self.name

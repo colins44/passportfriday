@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand, CommandError
 from location.models import Country, Currency, City
 from flights.models import Airport
-from location.countries import countries
+from location.countries import countries, country_codes
 from location.currencies import currencies
 from flights.airports import airports
 from django.core.exceptions import ObjectDoesNotExist
@@ -31,6 +31,15 @@ class Command(BaseCommand):
                                           phone = countries.get('countries').get(country).get('phone'),
                                           continent = countries.get('countries').get(country).get('continent'),
                                           capital = countries.get('countries').get(country).get('capital'))
+
+            for country in country_codes:
+                try:
+                    count = Country.objects.get(name=country.get('name'))
+                except ObjectDoesNotExist:
+                    continue
+                else:
+                    count.code = country.get('code')
+                    count.save()
 
         for airport in airports:
             try:
