@@ -1,5 +1,6 @@
 from django.db import models
 from location.models import City, Currency
+from datetime import datetime
 
 
 ACCOMMODATION_CHOICES =(('1', 'hotel'),
@@ -9,16 +10,16 @@ class Accommodation(models.Model):
     city = models.ForeignKey(City)
     type = models.CharField(max_length=100, choices=ACCOMMODATION_CHOICES)
     name = models.CharField(max_length=150)
-    address1 = models.CharField(max_length=150, blank=True)
-    address2 = models.CharField(max_length=150, blank=True)
-    post_code = models.CharField(max_length=50, blank=True)
+    address1 = models.CharField(max_length=150, blank=True, null=True)
+    address2 = models.CharField(max_length=150, blank=True, null=True)
+    post_code = models.CharField(max_length=50, blank=True, null=True)
     rating = models.FloatField(default=3)
     high_rate = models.IntegerField(blank=False, null=True)
-    low_rate = models.IntegerField(blank=True, )
+    low_rate = models.IntegerField(blank=True, null=True)
     ean_hotel_id = models.IntegerField(blank=True, null=True)
 
     def __unicode__(self):
-        return '%s %s in %s' % (self.name, self.type, self.city)
+        return '%s in %s' % (self.name, self.city)
 
 class RoomRate(models.Model):
     hotel = models.ForeignKey(Accommodation)
@@ -36,6 +37,13 @@ class RoomRate(models.Model):
     total = models.FloatField(blank=True, null=True)
     rate_type = models.CharField(max_length=150, blank=True, null=True)
     currency = models.ForeignKey(Currency)
+    created = models.DateTimeField(editable=False, null=True)
+
+    def save(self, *args, **kwargs):
+        ''' On save, update timestamps '''
+        if not self.id:
+            self.created = datetime.now()
+        return super(RoomRate, self).save(*args, **kwargs)
 
     def __unicode__(self):
-        return self.hotel
+        return '%d for %s' % (self.total, self.hotel.name)
