@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
+CATEGORIES =(
+    ('Do', 'Do'),
+    ('See', 'See'),
+    ('Get around', 'Get around'),
+)
 
 class Currency(models.Model):
     name = models.CharField(max_length=60)
@@ -34,26 +39,30 @@ class City(models.Model):
     def __unicode__(self):
         return self.name
 
-PLACESOFINTEREST = (('statue','statue'),
-                    ('museaum', 'museaum'),
-                    ('building', 'building'),)
+#Listing, Section and CityInfo map to the json returned by wilisherpa API
 
-class PlacesOfIntrest(models.Model):
-    '''A place of interest is a significant site and has no schedule attached to it eg, Museaums, Tate Gallery, Architecture'''
+class Listing(models.Model):
     city = models.ForeignKey(City)
-    name = models.CharField(max_length=100)
-    type = models.CharField(max_length=100, choices=PLACESOFINTEREST)
+    name = models.CharField(blank=True, max_length=250)
+    url = models.URLField(null=True, blank=True)
+    directions = models.CharField(blank=True, max_length=250)
+    category = models.CharField(max_length=25, choices=CATEGORIES)
+    description = models.TextField(blank=True)
 
-    def __unicode__(self):
-        return self.name
 
-ACTIVITIES = (('tour', 'tour'),
-              ('class', 'class'),
-              ('show', 'show'),)
-
-class Activity(models.Model):
-    '''these denote a activity such as a tour, show, class and may have aschedule'''
+class Section(models.Model):
     city = models.ForeignKey(City)
-    name = models.CharField(max_length=100)
-    type = models.CharField(max_length=100, choices=PLACESOFINTEREST)
+    category = models.CharField(max_length=25, choices=CATEGORIES)
+    name = models.CharField(max_length=250)
+    text = models.TextField(blank=True)
+    url = models.URLField(null=True)
+    listings = models.ManyToManyField(Listing, blank=True, null=True)
+
+
+class CityInfo(models.Model):
+    city = models.ForeignKey(City)
+    category = models.CharField(max_length=25, choices=CATEGORIES)
+    text = models.TextField(blank=True)
+    sections = models.ManyToManyField(Section, null=True, blank=True)
+
 
