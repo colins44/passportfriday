@@ -1,5 +1,9 @@
 from django.contrib import admin
-from .models import City, Country, Currency
+from .models import City, Country, Currency, CityInfo, Section, Listing
+
+admin.site.register(CityInfo)
+admin.site.register(Section)
+admin.site.register(Listing)
 
 
 class CityAdmin(admin.ModelAdmin):
