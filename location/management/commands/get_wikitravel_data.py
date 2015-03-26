@@ -29,10 +29,12 @@ class Command(BaseCommand):
         cityinfo.save()
 
         for obj in see.get('sections'):
-            section, created, Section.objects.get_or_create(city=city, category=see.get('name'), name=obj['name'])
+            # print obj
+            section, created = Section.objects.get_or_create(city=city, category=see.get('name'), name=obj['name'])
             if obj.get('text'):
                 section.text = obj.get('text')
                 section.save()
+
 
             if obj.get('listings'):
                 for listing in obj.get('listings'):

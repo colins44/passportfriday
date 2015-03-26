@@ -45,24 +45,33 @@ class Listing(models.Model):
     city = models.ForeignKey(City)
     name = models.CharField(blank=True, max_length=250)
     url = models.URLField(null=True, blank=True)
-    directions = models.CharField(blank=True, max_length=250)
+    directions = models.CharField(blank=True, max_length=250, null=True)
     category = models.CharField(max_length=25, choices=CATEGORIES)
-    description = models.TextField(blank=True)
+    description = models.TextField(blank=True, null=True)
+
+    def __unicode__(self):
+        return self.name
 
 
 class Section(models.Model):
     city = models.ForeignKey(City)
     category = models.CharField(max_length=25, choices=CATEGORIES)
     name = models.CharField(max_length=250)
-    text = models.TextField(blank=True)
+    text = models.TextField(blank=True, null=True)
     url = models.URLField(null=True)
     listings = models.ManyToManyField(Listing, blank=True, null=True)
+
+    def __unicode__(self):
+        return self.name
 
 
 class CityInfo(models.Model):
     city = models.ForeignKey(City)
     category = models.CharField(max_length=25, choices=CATEGORIES)
-    text = models.TextField(blank=True)
+    text = models.TextField(blank=True, null=True)
     sections = models.ManyToManyField(Section, null=True, blank=True)
+
+    def __unicode__(self):
+        return self.name
 
 
