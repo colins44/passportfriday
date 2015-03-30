@@ -1,7 +1,9 @@
 from django.contrib import admin
-from .models import City, Country, Currency
+from .models import City, Country, Currency, Activity, Category
 
+admin.site.register(Activity)
 
+admin.site.register(Category)
 
 class CityAdmin(admin.ModelAdmin):
     search_fields = ('name', 'country')

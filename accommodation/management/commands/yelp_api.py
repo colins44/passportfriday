@@ -1,6 +1,8 @@
 from django.core.management.base import BaseCommand
 import yelp
-from location.models import Categories, Activities
+import wikipedia
+from location.models import Category, Activity, Country, City
+from time import sleep
 
 
 YELP_KEYS ={
@@ -21,18 +23,31 @@ class Command(BaseCommand):
     help = 'Get the top things that yelp suggest doing in a city then try look them up in the api'
 
     def handle(self, *args, **options):
-        search_results = yelp_api.Search(term='things to do', location='london')
-        for result in search_results.businesses:
-            categories =  [item for sublist in result.categories for item in sublist]
-            categories = [item.lower() for item in categories]
-            categories = set(categories)
-            base_queryset = Categories.objects.none()
+        for country in Country.objects.filter(name='Germany')[:1]:
+            print country.capital
+            search_results = yelp_api.Search(term='Landmarks & Historic Buildings', location=country.capital)
+            for result in search_results.businesses:
+                categories = [item for sublist in result.categories for item in sublist]
+                categories = [item.lower() for item in categories]
+                categories = set(categories)
+                base_queryset = Category.objects.none()
 
-            for cat in categories:
-                cats, created =Categories.objects.get_or_create(name=cat)
-                base_queryset= base_queryset|cats
+                for cat in categories:
+                    Category.objects.get_or_create(name=cat)
+                    cats = Category.objects.filter(name=cat)
+                    base_queryset = base_queryset | cats
 
-            Activities.objects.get_or_create(city= city, name=result.name)
+                city = City.objects.get(name=country.capital)
+                activity, created = Activity.objects.get_or_create(city=city, name=result.name)
+                activity.category = base_queryset
+                try:
+                    activity.text = wikipedia.summary(activity.name)
+                except:
+                    pass
+                activity.save()
+                sleep(3)
+
+
 
 
 

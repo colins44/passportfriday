@@ -39,16 +39,16 @@ class City(models.Model):
     def __unicode__(self):
         return self.name
 
-class Categories(models.Model):
+class Category(models.Model):
     name = models.CharField(blank=True, null=True, max_length=150, unique=True)
 
     def __unicode__(self):
         return self.name
 
-class Activities(models.Model):
+class Activity(models.Model):
     name = models.CharField(blank=True, null=True, max_length=150)
     city = models.ForeignKey(City)
-    catergories = models.ManyToManyField(Categories)
+    catergories = models.ManyToManyField(Category)
     text = models.TextField(blank=True, null=True)
 
     def __unicode__(self):
