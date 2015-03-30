@@ -39,39 +39,21 @@ class City(models.Model):
     def __unicode__(self):
         return self.name
 
-#Listing, Section and CityInfo map to the json returned by wilisherpa API
-
-class Listing(models.Model):
-    city = models.ForeignKey(City)
-    name = models.CharField(blank=True, max_length=250)
-    url = models.URLField(null=True, blank=True)
-    directions = models.CharField(blank=True, max_length=250, null=True)
-    category = models.CharField(max_length=25, choices=CATEGORIES)
-    description = models.TextField(blank=True, null=True)
+class Categories(models.Model):
+    name = models.CharField(blank=True, null=True, max_length=150, unique=True)
 
     def __unicode__(self):
         return self.name
 
-
-class Section(models.Model):
+class Activities(models.Model):
+    name = models.CharField(blank=True, null=True, max_length=150)
     city = models.ForeignKey(City)
-    category = models.CharField(max_length=25, choices=CATEGORIES)
-    name = models.CharField(max_length=250)
+    catergories = models.ManyToManyField(Categories)
     text = models.TextField(blank=True, null=True)
-    url = models.URLField(null=True)
-    listings = models.ManyToManyField(Listing, blank=True, null=True)
 
     def __unicode__(self):
         return self.name
 
 
-class CityInfo(models.Model):
-    city = models.ForeignKey(City)
-    category = models.CharField(max_length=25, choices=CATEGORIES)
-    text = models.TextField(blank=True, null=True)
-    sections = models.ManyToManyField(Section, null=True, blank=True)
-
-    def __unicode__(self):
-        return self.name
 
 
