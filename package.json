@@ -1,0 +1,24 @@
+{
+  "name": "passportfridays",
+  "version": "1.0.0",
+  "description": "flight booking api's",
+  "main": "module1.js",
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "underscore": "^1.8.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colins44/passportfridays.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colins44/passportfridays/issues"
+  },
+  "homepage": "https://github.com/colins44/passportfridays"
+}
