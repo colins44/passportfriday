@@ -25,29 +25,34 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         for country in Country.objects.filter(name='Germany')[:1]:
             print country.capital
-            search_results = yelp_api.Search(term='Landmarks & Historic Buildings', location=country.capital)
-            for result in search_results.businesses:
-                categories = [item for sublist in result.categories for item in sublist]
-                categories = [item.lower() for item in categories]
-                categories = set(categories)
-                base_queryset = Category.objects.none()
+            interests =['Art Galleries', 'Tours', 'markets', 'Museums', 'Landmarks & Historic Buildings']
+            for interest in interests:
+                search_results = yelp_api.Search(term=interest, location=country.capital)
+                for result in search_results.businesses:
+                    categories = [item for sublist in result.categories for item in sublist]
+                    categories = [item.lower() for item in categories]
+                    categories = set(categories)
+                    base_queryset = Category.objects.none()
 
-                for cat in categories:
-                    Category.objects.get_or_create(name=cat)
-                    cats = Category.objects.filter(name=cat)
-                    base_queryset = base_queryset | cats
+                    for cat in categories:
+                        Category.objects.get_or_create(name=cat)
+                        cats = Category.objects.filter(name=cat)
+                        base_queryset = base_queryset | cats
 
-                print base_queryset
-                city = City.objects.get(name=country.capital)
-                activity, created = Activity.objects.get_or_create(city=city, name=result.name)
-                print activity.pk
-                activity.catergories = base_queryset
-                try:
-                    activity.text = wikipedia.summary(activity.name)
-                except:
-                    pass
-                activity.save()
-                sleep(3)
+                    print base_queryset
+                    city = City.objects.get(name=country.capital)
+                    activity, created = Activity.objects.get_or_create(city=city, name=result.name)
+                    print activity.pk
+                    activity.catergories = base_queryset
+                    if interest == 'Tours' or interest =='markets':
+                        activity.text = result.snippet_text
+                    else:
+                        try:
+                            activity.text = wikipedia.summary(activity.name)
+                        except:
+                            pass
+                    activity.save()
+                    sleep(3)
 
 
 

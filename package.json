@@ -5,6 +5,9 @@
   "main": "module1.js",
   "dependencies": {
     "backbone": "^1.1.2",
+    "cheerio": "^0.19.0",
+    "express": "^4.12.3",
+    "request": "^2.54.0",
     "underscore": "^1.8.2"
   },
   "devDependencies": {},
