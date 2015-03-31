@@ -37,9 +37,11 @@ class Command(BaseCommand):
                     cats = Category.objects.filter(name=cat)
                     base_queryset = base_queryset | cats
 
+                print base_queryset
                 city = City.objects.get(name=country.capital)
                 activity, created = Activity.objects.get_or_create(city=city, name=result.name)
-                activity.category = base_queryset
+                print activity.pk
+                activity.catergories = base_queryset
                 try:
                     activity.text = wikipedia.summary(activity.name)
                 except:
