@@ -22,11 +22,10 @@ data = json.loads(r.content)
 for x in data['objects']:
     for inbound_flight in x['inbound_flights']:
         return_date = inbound_flight['departure_time'][:10]
+
     for x in x['outbound_flights']:
+        print x
         child = subprocess.Popen(['python',"scraping.py"], stdin=subprocess.PIPE)
 
         child.communicate(os.linesep.join([x['departure_airport'], x['arrival_airport'], x['departure_time'][:10], return_date, x['carrier_code'], str(x['pk'])]))
-        print '$$$$$$$$$'
-        print '$$$$$$$$$'
-        print '$$$$$$$$$'
-        print '$$$$$$$$$'
+
