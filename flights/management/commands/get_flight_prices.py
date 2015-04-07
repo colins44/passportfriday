@@ -12,8 +12,8 @@ template ="""{
   "request": {
     "slice": [
       {
-        "origin": "{{ route.origin.name }}",
-        "destination": "{{ route.destination.name }}",
+        "origin": "{{ route.origin.code }}",
+        "destination": "{{ route.destination.code }}",
         "date": "{{ route.departure_date|date:"c" }}",
         "maxStops": 0,
         "permittedDepartureTime": {
@@ -22,8 +22,8 @@ template ="""{
         }
       },
       {
-        "origin": "{{ route.destination.name }}",
-        "destination": "{{ route.origin.name }}",
+        "origin": "{{ route.destination.code }}",
+        "destination": "{{ route.origin.code }}",
         "date": "{{ route.return_date|date:"c" }}",
         "maxStops": 0,
         "permittedDepartureTime": {
@@ -51,7 +51,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         for route in Route.objects.all()[10:11]:
             t = Template(template)
-            rendered =  t.render(Context({'route':route}))
+            rendered = t.render(Context({'route':route}))
             print rendered
             headers ={'Content-type': 'application/json'}
             url = 'https://www.googleapis.com/qpxExpress/v1/trips/search?key=%s' %QPX_APIKEY

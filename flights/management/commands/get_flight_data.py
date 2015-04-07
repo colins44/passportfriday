@@ -49,15 +49,15 @@ class Command(BaseCommand):
                                               arrival_time= arrival_date,
                                               stops= flight['stops'],)
 
-                for airport in outbound_flights['appendix']['airports']:
+                for ap in outbound_flights['appendix']['airports']:
                     try:
-                        city = City.objects.get(name__icontains=airport.get('city'), country__code=airport.get('countryCode'))
+                        city = City.objects.get(name__icontains=ap.get('city'), country__code=ap.get('countryCode'))
                     except ObjectDoesNotExist:
                         pass
                     except MultipleObjectsReturned:
                         pass
                     else:
-                        city.code = airport.get('cityCode')
+                        city.code = ap.get('cityCode')
                         city.save()
 
             month_from_now +=datetime.timedelta(2)
@@ -87,15 +87,15 @@ class Command(BaseCommand):
                                               arrival_time= arrival_date,
                                               stops= flight['stops'],)
 
-                for airport in inbound_flights['appendix']['airports']:
+                for ap in inbound_flights['appendix']['airports']:
                     try:
-                        city = City.objects.get(name__icontains=airport.get('city'), country__code=airport.get('countryCode'))
+                        city = City.objects.get(name__icontains=ap.get('city'), country__code=ap.get('countryCode'))
                     except ObjectDoesNotExist:
                         pass
                     except MultipleObjectsReturned:
                         pass
                     else:
-                        city.code = airport.get('cityCode')
+                        city.code = ap.get('cityCode')
                         city.save()
 
 
