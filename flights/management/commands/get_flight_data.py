@@ -5,6 +5,8 @@ import datetime
 import json
 from time import sleep
 from flights.models import Airport, Flight
+from location.models import City
+from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 
 
 leaving_hours =(18, 19, 20, 21, 22, 23)
@@ -15,6 +17,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         ###get fridays and sundays flights a month from now
+        ###we have weekends now in the database so should be looking up on those values
         help = 'Get all the flights for the weekend from the flightstats api, then save the flight before making the route'
         month_from_now = datetime.date.today()+datetime.timedelta(days=30)
         while month_from_now.weekday() != 4:
@@ -31,13 +34,13 @@ class Command(BaseCommand):
                 for flight in outbound_flights['scheduledFlights']:
                     if flight["isCodeshare"] is False:
 
-                        Airport.objects.get_or_create(code=flight['departureAirportFsCode'])
-                        Airport.objects.get_or_create(code=flight['arrivalAirportFsCode'])
+                        Airport.objects.get_or_create(iata=flight['departureAirportFsCode'])
+                        Airport.objects.get_or_create(iata=flight['arrivalAirportFsCode'])
 
                         departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
                         arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
-                        departure_airport = Airport.objects.get(code=flight['departureAirportFsCode'])
-                        arrival_airport = Airport.objects.get(code=flight['arrivalAirportFsCode'])
+                        departure_airport = Airport.objects.get(iata=flight['departureAirportFsCode'])
+                        arrival_airport = Airport.objects.get(iata=flight['arrivalAirportFsCode'])
                         Flight.objects.create(departure_airport=departure_airport,
                                               arrival_airport=arrival_airport,
                                               departure_time=departure_date,
@@ -45,6 +48,17 @@ class Command(BaseCommand):
                                               carrier_code= flight['carrierFsCode'],
                                               arrival_time= arrival_date,
                                               stops= flight['stops'],)
+
+                for airport in outbound_flights['appendix']['airports']:
+                    try:
+                        city = City.objects.get(name__icontains=airport.get('city'), country__code=airport.get('countryCode'))
+                    except ObjectDoesNotExist:
+                        pass
+                    except MultipleObjectsReturned:
+                        pass
+                    else:
+                        city.code = airport.get('cityCode')
+                        city.save()
 
             month_from_now +=datetime.timedelta(2)
 
@@ -58,13 +72,13 @@ class Command(BaseCommand):
                 for flight in inbound_flights['scheduledFlights']:
                     if flight["isCodeshare"] is False:
 
-                        Airport.objects.get_or_create(code=flight['departureAirportFsCode'])
-                        Airport.objects.get_or_create(code=flight['arrivalAirportFsCode'])
+                        Airport.objects.get_or_create(iata=flight['departureAirportFsCode'])
+                        Airport.objects.get_or_create(iata=flight['arrivalAirportFsCode'])
 
                         departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
                         arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
-                        departure_airport = Airport.objects.get(code=flight['departureAirportFsCode'])
-                        arrival_airport = Airport.objects.get(code=flight['arrivalAirportFsCode'])
+                        departure_airport = Airport.objects.get(iata=flight['departureAirportFsCode'])
+                        arrival_airport = Airport.objects.get(iata=flight['arrivalAirportFsCode'])
                         Flight.objects.create(departure_airport=departure_airport,
                                               arrival_airport=arrival_airport,
                                               departure_time=departure_date,
@@ -72,6 +86,18 @@ class Command(BaseCommand):
                                               carrier_code= flight['carrierFsCode'],
                                               arrival_time= arrival_date,
                                               stops= flight['stops'],)
+
+                for airport in inbound_flights['appendix']['airports']:
+                    try:
+                        city = City.objects.get(name__icontains=airport.get('city'), country__code=airport.get('countryCode'))
+                    except ObjectDoesNotExist:
+                        pass
+                    except MultipleObjectsReturned:
+                        pass
+                    else:
+                        city.code = airport.get('cityCode')
+                        city.save()
+
 
 
 

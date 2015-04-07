@@ -35,13 +35,16 @@ class Flight(models.Model):
         return Flight.objects.filter(arrival_airport=self.arrival_airport)
 
     def __unicode__(self):
-        return unicode(self.id)
+        return '%s %s' % (self.carrier_code, self.flight_no)
 
     # class Meta:
     #     ordering = ['price']
 
 class Route(models.Model):
-    airport = models.ForeignKey(Airport) #airport to which the flight is going to
+    origin = models.ForeignKey(City, related_name='origin')
+    destination = models.ForeignKey(City, related_name='destination')
+    departure_date = models.DateField(blank=True, null=True)
+    return_date = models.DateField(blank=True, null=True)
     outbound_flights = models.ManyToManyField(Flight, related_name='outbound flights')
     inbound_flights = models.ManyToManyField(Flight, related_name='inbound flights')
 

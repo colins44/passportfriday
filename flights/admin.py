@@ -12,9 +12,11 @@ class FlightAdmin(admin.ModelAdmin):
 
 
 class RouteAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('origin', 'destination', 'departure_date', 'return_date')
+    search_fields = ('origin',)
+    readonly_fields = ('outbound_flights', 'inbound_flights',)
 
 
 admin.site.register(Airport, AirportAdmin)
-admin.site.register(Route)
+admin.site.register(Route, RouteAdmin)
 admin.site.register(Flight, FlightAdmin)

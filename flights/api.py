@@ -18,24 +18,24 @@ class RouteResource(DjangoResource):
     def prepare(self, data):
         ret ={}
         ret['pk'] = data.pk
-        ret['weekend_destination'] = data.airport.code
+        ret['weekend_destination'] = data.airport.iata
         outbound_flights = []
         inbound_flights = []
         for flight in data.outbound_flights.all():
             outbound_flight={}
-            outbound_flight['departure_airport'] = flight.departure_airport.code
+            outbound_flight['departure_airport'] = flight.departure_airport.iata
             outbound_flight['departure_time'] = flight.departure_time
             outbound_flight['carrier_code'] = flight.carrier_code
-            outbound_flight['arrival_airport'] = flight.arrival_airport.code
+            outbound_flight['arrival_airport'] = flight.arrival_airport.iata
             outbound_flight['pk'] = flight.pk
             outbound_flight['price'] = flight.price
             outbound_flights.append(dict(outbound_flight))
         for flight in data.inbound_flights.all():
             inbound_flight={}
-            inbound_flight['departure_airport'] = flight.departure_airport.code
+            inbound_flight['departure_airport'] = flight.departure_airport.iata
             inbound_flight['departure_time'] = flight.departure_time
             inbound_flight['carrier_code'] = flight.carrier_code
-            inbound_flight['arrival_airport'] = flight.arrival_airport.code
+            inbound_flight['arrival_airport'] = flight.arrival_airport.iata
             inbound_flights.append(dict(inbound_flight))
         ret['outbound_flights'] = outbound_flights
         ret['inbound_flights'] = inbound_flights
@@ -48,7 +48,7 @@ class RouteResource(DjangoResource):
 
     # GET /
     def list(self):
-        return Route.objects.all()
+        return Route.objects.all()[:5]
 
     # GET /pk/
     def detail(self, pk):
@@ -61,8 +61,8 @@ class RouteResource(DjangoResource):
         for flight in self.data:
             departure_date = datetime.strptime(flight['departure_date'], '%Y-%m-%d %H:%M')
             fly = Flight.objects.get(carrier_code=flight['airline_code'],
-                                            departure_airport__code=flight['departure_airport'],
-                                            arrival_airport__code=flight['arrival_airport'],
+                                            departure_airport__iata=flight['departure_airport'],
+                                            arrival_airport__iata=flight['arrival_airport'],
                                             departure_time=departure_date,)
 
             fly.price = flight['price']
