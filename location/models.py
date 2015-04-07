@@ -35,6 +35,7 @@ class Country(models.Model):
 class City(models.Model):
     name = models.CharField(max_length=75)
     country = models.ForeignKey(Country)
+    code = models.CharField(max_length=5, blank=True, null=True)
 
     def __unicode__(self):
         return self.name

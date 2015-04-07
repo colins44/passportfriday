@@ -14,7 +14,7 @@ template ="""{
       {
         "origin": "{{ route.origin.name }}",
         "destination": "{{ route.destination.name }}",
-        "date": "{{ route.departure_date.year }}-{{ route.departure_date.month }}-{{ route.departure_date.day }}",
+        "date": "{{ route.departure_date|date:"c" }}",
         "maxStops": 0,
         "permittedDepartureTime": {
           "earliestTime": "18:00",
@@ -24,7 +24,7 @@ template ="""{
       {
         "origin": "{{ route.destination.name }}",
         "destination": "{{ route.origin.name }}",
-        "date": "{{ route.return_date.year }}-{{ route.return_date.month }}-{{ route.return_date.day }}",
+        "date": "{{ route.return_date|date:"c" }}",
         "maxStops": 0,
         "permittedDepartureTime": {
           "earliestTime": "15:00",
@@ -39,7 +39,7 @@ template ="""{
       "childCount": 0,
       "seniorCount": 0
     },
-    "solutions": 20,
+    "solutions": 1,
     "refundable": false
   }
 }"""
@@ -49,8 +49,14 @@ class Command(BaseCommand):
            'should be run after the delete_no_routes command'
 
     def handle(self, *args, **options):
-        for route in Route.objects.all()[:1]:
-
+        for route in Route.objects.all()[10:11]:
             t = Template(template)
-            print t.render(Context({'route':route}))
-            #this is where we should call the google api
+            rendered =  t.render(Context({'route':route}))
+            print rendered
+            headers ={'Content-type': 'application/json'}
+            url = 'https://www.googleapis.com/qpxExpress/v1/trips/search?key=%s' %QPX_APIKEY
+            # jsonreq = json.dumps(code, encoding = 'utf-8')
+            r = requests.post(url, data = rendered, headers =headers)
+            print r.status_code
+            returned_data = json.loads(r.content)
+            print returned_data

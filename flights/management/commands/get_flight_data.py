@@ -5,6 +5,8 @@ import datetime
 import json
 from time import sleep
 from flights.models import Airport, Flight
+from location.models import City
+from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 
 
 leaving_hours =(18, 19, 20, 21, 22, 23)
@@ -47,6 +49,17 @@ class Command(BaseCommand):
                                               arrival_time= arrival_date,
                                               stops= flight['stops'],)
 
+                for airport in outbound_flights['appendix']['airports']:
+                    try:
+                        city = City.objects.get(name__icontains=airport.get('city'), country__code=airport.get('countryCode'))
+                    except ObjectDoesNotExist:
+                        pass
+                    except MultipleObjectsReturned:
+                        pass
+                    else:
+                        city.code = airport.get('cityCode')
+                        city.save()
+
             month_from_now +=datetime.timedelta(2)
 
             for hour in leaving_hours:
@@ -73,6 +86,18 @@ class Command(BaseCommand):
                                               carrier_code= flight['carrierFsCode'],
                                               arrival_time= arrival_date,
                                               stops= flight['stops'],)
+
+                for airport in inbound_flights['appendix']['airports']:
+                    try:
+                        city = City.objects.get(name__icontains=airport.get('city'), country__code=airport.get('countryCode'))
+                    except ObjectDoesNotExist:
+                        pass
+                    except MultipleObjectsReturned:
+                        pass
+                    else:
+                        city.code = airport.get('cityCode')
+                        city.save()
+
 
 
 
