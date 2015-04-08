@@ -6,7 +6,7 @@ admin.site.register(Activity)
 admin.site.register(Category)
 
 class CityAdmin(admin.ModelAdmin):
-    search_fields = ('name', 'country')
+    search_fields = ('name', 'country__name')
     list_display = ('name', 'country')
 
 admin.site.register(City, CityAdmin)
