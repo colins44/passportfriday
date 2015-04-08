@@ -49,7 +49,7 @@ class Command(BaseCommand):
            'should be run after the delete_no_routes command'
 
     def handle(self, *args, **options):
-        for route in Route.objects.all()[10:11]:
+        for route in Route.objects.all()[:1]:
             t = Template(template)
             rendered = t.render(Context({'route':route}))
             print rendered
