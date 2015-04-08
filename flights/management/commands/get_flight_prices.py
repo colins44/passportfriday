@@ -39,7 +39,7 @@ template ="""{
       "childCount": 0,
       "seniorCount": 0
     },
-    "solutions": 1,
+    "solutions": 20,
     "refundable": false
   }
 }"""
@@ -49,7 +49,7 @@ class Command(BaseCommand):
            'should be run after the delete_no_routes command'
 
     def handle(self, *args, **options):
-        for route in Route.objects.all()[:1]:
+        for route in Route.objects.all()[3:4]:
             t = Template(template)
             rendered = t.render(Context({'route':route}))
             print rendered
@@ -59,7 +59,8 @@ class Command(BaseCommand):
             r = requests.post(url, data = rendered, headers =headers)
             print r.status_code
             returned_data = json.loads(r.content)
-            print returned_data
+            print '$$$$$$$$$$'
+            # print returned_data
             print '$$$$$$$$$$'
             trips = returned_data.get('trips').get('tripOption')
             for trip in trips:
@@ -67,6 +68,7 @@ class Command(BaseCommand):
                 print trip.get('saleTotal')
                 for slice in trip.get('slice'):
                     for segment in slice.get('segment'):
+                        print segment
                         print segment.get('flight').get('carrier')
                         print segment.get('flight').get('number')
 
