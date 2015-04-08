@@ -60,3 +60,13 @@ class Command(BaseCommand):
             print r.status_code
             returned_data = json.loads(r.content)
             print returned_data
+            print '$$$$$$$$$$'
+            trips = returned_data.get('trips').get('tripOption')
+            for trip in trips:
+                print '$$$$$$$$$$$$$'
+                print trip.get('saleTotal')
+                for slice in trip.get('slice'):
+                    for segment in slice.get('segment'):
+                        print segment.get('flight').get('carrier')
+                        print segment.get('flight').get('number')
+
