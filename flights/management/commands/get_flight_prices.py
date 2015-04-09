@@ -68,7 +68,8 @@ class Command(BaseCommand):
                 print oubound_flight
                 print inbound_flight
                 inb_flight = Flight.objects.get(flight_no=inbound_flight.get('segment').get('flight').get('number'),
-                                                carrier_code=inbound_flight.get('segment').get('flight').get('carrier'))
+                                                carrier_code=inbound_flight.get('segment').get('flight').get('carrier'),
+                                                departure_time=inbound_flight.get('segment').get('leg')[0].get('departureTime'))
                 outb_flight = Flight.objects.get(flight_no=outbound_flight.get('segment').get('flight').get('number'),
                                                 carrier_code=outbound_flight.get('segment').get('flight').get('carrier'))
 
