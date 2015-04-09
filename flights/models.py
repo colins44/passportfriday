@@ -1,7 +1,6 @@
 from django.db import models
-from django.contrib.contenttypes import generic
-from django.contrib.contenttypes.models import ContentType
-from location.models import City, Country
+from location.models import City, Country, Currency
+from weekend.models import Dates
 
 
 class Airport(models.Model):
@@ -25,7 +24,7 @@ class Flight(models.Model):
     flight_no = models.IntegerField(blank=True, null=True)
     carrier_code = models.CharField(max_length=5, blank=True, null=True)
     arrival_time = models.DateTimeField(blank=True, null=True)
-    stops = models.IntegerField(blank=True, null=True)
+    stops = models.IntegerField(blank=True, null=True, default=0)
     price = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
 
     def get_outbound_flights(self):
@@ -37,8 +36,6 @@ class Flight(models.Model):
     def __unicode__(self):
         return '%s %s' % (self.carrier_code, self.flight_no)
 
-    # class Meta:
-    #     ordering = ['price']
 
 class Route(models.Model):
     origin = models.ForeignKey(City, related_name='origin')
@@ -50,6 +47,21 @@ class Route(models.Model):
 
     def __unicode__(self):
         return unicode(self.id)
+
+class Slice(models.Model):
+    dates = models.ForeignKey(Dates)
+    origin = models.ForeignKey(City, related_name='origin city')
+    price = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
+    currency = models.ForeignKey(Currency)
+    destination = models.ForeignKey(City, related_name='destination city')
+    outbound_flight = models.ForeignKey(Flight, related_name='departing flight')
+    inbound_flight = models.ForeignKey(Flight, related_name='return flight')
+
+    class Meta:
+        ordering = ['price']
+
+    def __unicode__(self):
+        return self.origin.name
 
 
 

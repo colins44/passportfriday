@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from flights.models import Route
+from flights.models import Route, Slice, Flight
 import requests
 import json
 from passportfridays.settings import QPX_APIKEY
@@ -55,20 +55,32 @@ class Command(BaseCommand):
             print rendered
             headers ={'Content-type': 'application/json'}
             url = 'https://www.googleapis.com/qpxExpress/v1/trips/search?key=%s' %QPX_APIKEY
-            # jsonreq = json.dumps(code, encoding = 'utf-8')
             r = requests.post(url, data = rendered, headers =headers)
             print r.status_code
             returned_data = json.loads(r.content)
-            print '$$$$$$$$$$'
-            # print returned_data
-            print '$$$$$$$$$$'
             trips = returned_data.get('trips').get('tripOption')
             for trip in trips:
-                print '$$$$$$$$$$$$$'
                 print trip.get('saleTotal')
-                for slice in trip.get('slice'):
-                    for segment in slice.get('segment'):
-                        print segment
-                        print segment.get('flight').get('carrier')
-                        print segment.get('flight').get('number')
+                slices = trip.get('slice')
+                outbound_flight = slices[0]
+                inbound_flight = slices[1]
+                print '!!!!!!!!!!!!'
+                print oubound_flight
+                print inbound_flight
+                inb_flight = Flight.objects.get(flight_no=inbound_flight.get('segment').get('flight').get('number'),
+                                                carrier_code=inbound_flight.get('segment').get('flight').get('carrier'))
+                outb_flight = Flight.objects.get(flight_no=outbound_flight.get('segment').get('flight').get('number'),
+                                                carrier_code=outbound_flight.get('segment').get('flight').get('carrier'))
+
+                slice, created = Slice.objects.get_or_create(
+                    outbound_flight
+                )
+                # for slice in trip.get('slice'):
+                #     print type(slice)
+                #     print slice
+                    # for segment in slice.get('segment'):
+                    #     print type(segment)
+                    #     print segment
+                        # print segment.get('flight').get('carrier')
+                        # print segment.get('flight').get('number')
 
