@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
+
 CATEGORIES =(
     ('Do', 'Do'),
     ('See', 'See'),
@@ -39,6 +40,33 @@ class City(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def destinations(self, dates):
+        from flights.models import Flight
+        '''pass a dates object to this function and it will return a list of cities you will be able
+            to fly to for the week in question'''
+        outbound_flights = Flight.objects.filter(departure_airport__city=self,
+                                                 departure_time__year=dates.departure_date.year,
+                                                 departure_time__month=dates.departure_date.month,
+                                                 departure_time__day=dates.departure_date.day,
+                                                 )
+        inbound_flights = Flight.objects.filter(arrival_airport__city=self,
+                                                departure_time__year=dates.return_date.year,
+                                                departure_time__month=dates.return_date.month,
+                                                departure_time__day=dates.return_date.day,
+                                                )
+        #make two lists of all the cities
+        outbound_cities = []
+        inbound_cites = []
+        for flight in outbound_flights:
+            outbound_cities.append(flight.arrival_airport.city.code)
+        for flight in inbound_flights:
+            inbound_cites.append(flight.departure_airport.city.code)
+
+        # compare the lists and get the cites that match
+        cites = set(outbound_cities).intersection(inbound_cites)
+        return cites, dates
+
 
 class Category(models.Model):
     name = models.CharField(blank=True, null=True, max_length=150, unique=True)
