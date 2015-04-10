@@ -4,6 +4,7 @@ import requests
 import json
 from passportfridays.settings import QPX_APIKEY
 from django.template import Context, Template
+from datetime import datetime
 
 
 
@@ -65,17 +66,30 @@ class Command(BaseCommand):
                 outbound_flight = slices[0]
                 inbound_flight = slices[1]
                 print '!!!!!!!!!!!!'
-                print oubound_flight
+                print outbound_flight
                 print inbound_flight
-                inb_flight = Flight.objects.get(flight_no=inbound_flight.get('segment').get('flight').get('number'),
-                                                carrier_code=inbound_flight.get('segment').get('flight').get('carrier'),
-                                                departure_time=inbound_flight.get('segment').get('leg')[0].get('departureTime'))
-                outb_flight = Flight.objects.get(flight_no=outbound_flight.get('segment').get('flight').get('number'),
-                                                carrier_code=outbound_flight.get('segment').get('flight').get('carrier'))
+                print '$$$$$$$$$$'
+                inbound_date = datetime.strptime(inbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:10], '%Y-%m-%d')
+                outbound_date = datetime.strptime(outbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:10], '%Y-%m-%d')
+                print inbound_date.year
+                print outbound_date.month
+                inb_flight = Flight.objects.get(flight_no=inbound_flight.get('segment')[0].get('flight').get('number'),
+                                                carrier_code=inbound_flight.get('segment')[0].get('flight').get('carrier'))
+                                                # departure_time__year=inbound_date.year,
+                                                # departure_time__month=inbound_date.month,
+                                                # departure_time__day=inbound_date.day)
+                outb_flight = Flight.objects.get(flight_no=outbound_flight.get('segment')[0].get('flight').get('number'),
+                                                carrier_code=outbound_flight.get('segment')[0].get('flight').get('carrier'))
+                                                # departure_time__year=outbound_date.year,
+                                                # departure_time__month=outbound_date.month,
+                                                # departure_time__day=outbound_date.day)
 
-                slice, created = Slice.objects.get_or_create(
-                    outbound_flight
-                )
+                print inb_flight
+                print outb_flight
+                #
+                # slice, created = Slice.objects.get_or_create(
+                #     outbound_flight
+                # )
                 # for slice in trip.get('slice'):
                 #     print type(slice)
                 #     print slice

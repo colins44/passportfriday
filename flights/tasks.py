@@ -1,7 +1,10 @@
 from __future__ import absolute_import
-
-import os
-
+from django.conf import settings
+import datetime
+from time import sleep
+from flights.models import Airport, Flight
+from location.models import City
+from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from flights.utils import TemplateEmailer
 from celery import shared_task
 import requests
@@ -81,3 +84,101 @@ def get_flight_price(route):
     for segment in slice.get('segment'):
         print segment.get('flight').get('carrier')
         print segment.get('flight').get('number')
+
+@shared_task
+def get_flight_data(airports, dates):
+    leaving_hours =(18, 19, 20, 21, 22, 23)
+    for airport in airports:
+            for hour in leaving_hours:
+                url = "https://api.flightstats.com/flex/schedules/rest/v1/json/from/%s/departing/%s/%s/%s/%d?appId=%s&appKey=%s" % (airport,
+                                                                                                                                    dates.departure_date.year,
+                                                                                                                                    dates.departure_date.month,
+                                                                                                                                    dates.departure_date.day,
+                                                                                                                                    hour,
+                                                                                                                                    settings.FLIGHTSTATS_APPID,
+                                                                                                                                    settings.FLIGHTSTATS_APPKEY)
+                print url
+                r = requests.get(url)
+                outbound_flights = json.loads(r.content)
+                sleep(2)
+
+                for flight in outbound_flights['scheduledFlights']:
+                    if flight["isCodeshare"] is False:
+
+                        Airport.objects.get_or_create(iata=flight['departureAirportFsCode'])
+                        Airport.objects.get_or_create(iata=flight['arrivalAirportFsCode'])
+
+                        departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
+                        arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
+                        departure_airport = Airport.objects.get(iata=flight['departureAirportFsCode'])
+                        arrival_airport = Airport.objects.get(iata=flight['arrivalAirportFsCode'])
+                        Flight.objects.create(departure_airport=departure_airport,
+                                              arrival_airport=arrival_airport,
+                                              departure_time=departure_date,
+                                              flight_no= flight['flightNumber'],
+                                              carrier_code= flight['carrierFsCode'],
+                                              arrival_time= arrival_date,
+                                              stops= flight['stops'],)
+
+                for ap in outbound_flights['appendix']['airports']:
+                    try:
+                        city = City.objects.get(name__icontains=ap.get('city'), country__code=ap.get('countryCode'))
+                    except ObjectDoesNotExist:
+                        pass
+                    except MultipleObjectsReturned:
+                        pass
+                    else:
+                        city.code = ap.get('cityCode')
+                        city.save()
+
+            for hour in leaving_hours:
+                url = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/%s/arriving/%s/%s/%s/%d?appId=%s&appKey=%s" % (airport,
+                                                                                                                                dates.departure_date.year,
+                                                                                                                                dates.departure_date.month,
+                                                                                                                                dates.departure_date.day,
+                                                                                                                                hour,
+                                                                                                                                settings.FLIGHTSTATS_APPID,
+                                                                                                                                settings.FLIGHTSTATS_APPKEY)
+                print url
+                r = requests.get(url)
+                inbound_flights = json.loads(r.content)
+                sleep(2)
+
+                for flight in inbound_flights['scheduledFlights']:
+                    if flight["isCodeshare"] is False:
+
+                        Airport.objects.get_or_create(iata=flight['departureAirportFsCode'])
+                        Airport.objects.get_or_create(iata=flight['arrivalAirportFsCode'])
+
+                        departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
+                        arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
+                        departure_airport = Airport.objects.get(iata=flight['departureAirportFsCode'])
+                        arrival_airport = Airport.objects.get(iata=flight['arrivalAirportFsCode'])
+                        Flight.objects.create(departure_airport=departure_airport,
+                                              arrival_airport=arrival_airport,
+                                              departure_time=departure_date,
+                                              flight_no= flight['flightNumber'],
+                                              carrier_code= flight['carrierFsCode'],
+                                              arrival_time= arrival_date,
+                                              stops= flight['stops'],)
+
+                for ap in inbound_flights['appendix']['airports']:
+                    try:
+                        city = City.objects.get(name__icontains=ap.get('city'), country__code=ap.get('countryCode'))
+                    except ObjectDoesNotExist:
+                        pass
+                    except MultipleObjectsReturned:
+                        pass
+                    else:
+                        city.code = ap.get('cityCode')
+                        city.save()
+
+@shared_task
+def delete_old_flights():
+    now = datetime.datetime.now()
+    one_week_ago = now - datetime.timedelta(days=7)
+    flights = Flight.objects.filter(departure_time__lte=one_week_ago)
+    for flight in flights:
+        flight.delete()
+
+

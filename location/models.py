@@ -49,19 +49,19 @@ class City(models.Model):
                                                  departure_time__year=dates.departure_date.year,
                                                  departure_time__month=dates.departure_date.month,
                                                  departure_time__day=dates.departure_date.day,
-                                                 )
+                                                 ).exclude(arrival_airport__country=self.country)
         inbound_flights = Flight.objects.filter(arrival_airport__city=self,
                                                 departure_time__year=dates.return_date.year,
                                                 departure_time__month=dates.return_date.month,
                                                 departure_time__day=dates.return_date.day,
-                                                )
+                                                ).exclude(departure_airport__country=self.country)
         #make two lists of all the cities
         outbound_cities = []
         inbound_cites = []
         for flight in outbound_flights:
-            outbound_cities.append(flight.arrival_airport.city.code)
+            outbound_cities.append(flight.arrival_airport.city)
         for flight in inbound_flights:
-            inbound_cites.append(flight.departure_airport.city.code)
+            inbound_cites.append(flight.departure_airport.city)
 
         # compare the lists and get the cites that match
         cites = set(outbound_cities).intersection(inbound_cites)
