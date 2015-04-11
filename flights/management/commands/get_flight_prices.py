@@ -6,9 +6,6 @@ from passportfridays.settings import QPX_APIKEY
 from django.template import Context, Template
 from datetime import datetime
 
-
-
-
 template ="""{
   "request": {
     "slice": [

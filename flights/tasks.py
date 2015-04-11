@@ -36,57 +36,6 @@ def test_email():
                 )
         email.send()
 
-template ="""{
-  "request": {
-    "slice": [
-      {
-        "origin": "{{ route.origin.code }}",
-        "destination": "{{ route.destination.code }}",
-        "date": "{{ route.departure_date|date:"c" }}",
-        "maxStops": 0,
-        "permittedDepartureTime": {
-          "earliestTime": "18:00",
-          "latestTime": "23:59"
-        }
-      },
-      {
-        "origin": "{{ route.destination.code }}",
-        "destination": "{{ route.origin.code }}",
-        "date": "{{ route.return_date|date:"c" }}",
-        "maxStops": 0,
-        "permittedDepartureTime": {
-          "earliestTime": "15:00",
-          "latestTime": "23:59"
-        }
-      }
-    ],
-    "passengers": {
-      "adultCount": 1,
-      "infantInLapCount": 0,
-      "infantInSeatCount": 0,
-      "childCount": 0,
-      "seniorCount": 0
-    },
-    "solutions": 1,
-    "refundable": false
-  }
-}"""
-
-@shared_task
-def get_flight_price(route):
-    t = Template(template)
-    rendered = t.render(Context({'route':route}))
-    headers ={'Content-type': 'application/json'}
-    url = 'https://www.googleapis.com/qpxExpress/v1/trips/search?key=%s' %QPX_APIKEY
-    r = requests.post(url, data=rendered, headers =headers)
-    returned_data = json.loads(r.content)
-    print returned_data
-    slice = returned_data.get('trips').get('tripOption')
-    print slice.get('saleTotal')
-    for segment in slice.get('segment'):
-        print segment.get('flight').get('carrier')
-        print segment.get('flight').get('number')
-
 @shared_task
 def get_airport_flight(days_from_now=60):
     """get the inbound and outbound flight times for airports
@@ -125,6 +74,17 @@ def get_possible_destinations(dates, city=None):
     destination, _ = Destinations.objects.get_or_create(origin=city, dates=dates)
     destination.destinations = destinations
     destination.save()
+
+@shared_task
+def flight_prices_lookup_logic():
+    #maybe here goes the logic as to how to lookup the flight and what is important to us
+    pass
+
+
+@shared_task
+def get_flight_prices(slice):
+    '''call the get flight prices function call here and update the slice prices'''
+
 
 
 

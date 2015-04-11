@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.views.generic.base import TemplateResponseMixin
-from django.template import loader, Context
 import requests
 import json
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
@@ -9,6 +8,67 @@ from location.models import City
 from flights.models import Airport, Flight
 import datetime
 from time import sleep
+from django.template import Context, Template, loader
+from passportfridays.settings import QPX_APIKEY
+
+template ="""{
+  "request": {
+    "slice": [
+      {
+        "origin": "{{ origin.code }}",
+        "destination": "{{ destination.code }}",
+        "date": "{{ dates.departure_date|date:"c" }}",
+        "maxStops": 0,
+        "permittedDepartureTime": {
+          "earliestTime": "18:00",
+          "latestTime": "23:59"
+        }
+      },
+      {
+        "origin": "{{ destination.code }}",
+        "destination": "{{ rorigin.code }}",
+        "date": "{{ dates.return_date|date:"c" }}",
+        "maxStops": 0,
+        "permittedDepartureTime": {
+          "earliestTime": "15:00",
+          "latestTime": "23:59"
+        }
+      }
+    ],
+    "passengers": {
+      "adultCount": 1,
+      "infantInLapCount": 0,
+      "infantInSeatCount": 0,
+      "childCount": 0,
+      "seniorCount": 0
+    },
+    "solutions": 20,
+    "refundable": false
+  }
+}"""
+
+def process_qpx(data):
+    '''this function takes the dict that is returned from qpx breaks it down itnot the slice and saves it
+    by doing this we can get the data through an api call or any other function'''
+    returned_data = json.loads(data)
+    trips = returned_data.get('trips').get('tripOption')
+    for trip in trips:
+        slices = trip.get('slice')
+        outbound_flight = slices[0]
+        inbound_flight = slices[1]
+        inbound_date = datetime.strptime(inbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:10], '%Y-%m-%d')
+        outbound_date = datetime.strptime(outbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:10], '%Y-%m-%d')
+        inb_flight = Flight.objects.get(flight_no=inbound_flight.get('segment')[0].get('flight').get('number'),
+                                        carrier_code=inbound_flight.get('segment')[0].get('flight').get('carrier'))
+                                        # departure_time__year=inbound_date.year,
+                                        # departure_time__month=inbound_date.month,
+                                        # departure_time__day=inbound_date.day)
+        outb_flight = Flight.objects.get(flight_no=outbound_flight.get('segment')[0].get('flight').get('number'),
+                                        carrier_code=outbound_flight.get('segment')[0].get('flight').get('carrier'))
+                                        # departure_time__year=outbound_date.year,
+                                        # departure_time__month=outbound_date.month,
+                                        # departure_time__day=outbound_date.day)
+        #at this stage we should start saving the slice
 
 class TemplateEmailer(EmailMultiAlternatives, TemplateResponseMixin):
 
@@ -117,3 +177,14 @@ def get_flight_data(airport, dates, hour):
             else:
                 city.code = ap.get('cityCode')
                 city.save()
+
+def get_flight_prices(origin, destination, dates):
+    '''pass an origin city and a destination city plus the weekend dates object to this function in order to get prices
+    a slice object is then made within the DB of the returned data'''
+    t = Template(template)
+    rendered = t.render(Context({'origin':origin, 'destination':destination, 'dates':dates}))
+    headers ={'Content-type': 'application/json'}
+    url = 'https://www.googleapis.com/qpxExpress/v1/trips/search?key=%s' % QPX_APIKEY
+    r = requests.post(url, data = rendered, headers =headers)
+    process_qpx(r.content)
+
