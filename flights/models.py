@@ -36,17 +36,17 @@ class Flight(models.Model):
     def __unicode__(self):
         return '%s %s' % (self.carrier_code, self.flight_no)
 
-#
-# class Route(models.Model):
-#     origin = models.ForeignKey(City, related_name='origin')
-#     destination = models.ForeignKey(City, related_name='destination')
-#     departure_date = models.DateField(blank=True, null=True)
-#     return_date = models.DateField(blank=True, null=True)
-#     outbound_flights = models.ManyToManyField(Flight, related_name='outbound flights')
-#     inbound_flights = models.ManyToManyField(Flight, related_name='inbound flights')
-#
-#     def __unicode__(self):
-#         return unicode(self.id)
+
+class Route(models.Model):
+    origin = models.ForeignKey(City, related_name='origin')
+    destination = models.ForeignKey(City, related_name='destination')
+    departure_date = models.DateField(blank=True, null=True)
+    return_date = models.DateField(blank=True, null=True)
+    outbound_flights = models.ManyToManyField(Flight, related_name='outbound flights')
+    inbound_flights = models.ManyToManyField(Flight, related_name='inbound flights')
+
+    def __unicode__(self):
+        return unicode(self.id)
 
 class Slice(models.Model):
     dates = models.ForeignKey(Dates)
