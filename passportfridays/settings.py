@@ -21,7 +21,8 @@ DATABASES = {
 }
 
 import sys
-if 'test' in sys.argv or 'test_coverage' in sys.argv: #Covers regular testing and django-coverage
+if 'test' in sys.argv or 'test_coverage' in sys.argv:
+    #we change the host to none for codeship
     DATABASES['default']['HOST'] = None
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
