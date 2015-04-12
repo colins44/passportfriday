@@ -84,6 +84,7 @@ def flight_prices_lookup_logic():
 @shared_task
 def get_flight_prices(slice):
     '''call the get flight prices function call here and update the slice prices'''
+    print 'colin'
     return None
 
 
