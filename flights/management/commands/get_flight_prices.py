@@ -83,6 +83,7 @@ class Command(BaseCommand):
 
                 print inb_flight
                 print outb_flight
+                #testing
                 #
                 # slice, created = Slice.objects.get_or_create(
                 #     outbound_flight
