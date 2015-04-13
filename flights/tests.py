@@ -251,6 +251,12 @@ class TaskTests(TestCase):
                                              flight_no=12,
                                              carrier_code='BA')
 
+    def test_data(self):
+        self.assertEqual(Airport.objects.all().count(), 7)
+        self.assertEqual(Flight.objects.all().count(), 12)
+        self.assertEqual(Currency.objects.all().count(), 2)
+        self.assertEqual(Country.objects.all().count(), 3)
+        self.assertEqual(City.objects.all().count(), 7)
 
 
 
