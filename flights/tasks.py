@@ -36,18 +36,28 @@ def test_email():
                 )
         email.send()
 
+
 @shared_task
-def get_airport_flight(days_from_now=60):
+def get_weekend_dates(days_from_now=120):
+    '''This is a crone job and should just get the dates of the weekend that is
+    120 days from now
+    should be run on a wednesday
+    '''
+    #TODO thes has to be better logic for this
+    now = timezone.now()
+    future = now + timedelta(days=days_from_now)
+    cut_off = now + timedelta(days=(days_from_now+4))
+    future_weekend = Dates.objects.get(departure_date__gte=future,
+                                         departure_date__lte=cut_off)
+    return future_weekend
+
+
+@shared_task
+def get_airport_flight(dates, airports = ['LHR', 'LGW'], hours = [18, 19, 20, 21, 22, 23]):
     """get the inbound and outbound flight times for airports
     this task should be run every week
-    maybe wednesday would be best
-    take into account public holidays"""
-    airports =['LHR',]
-    hours = [18, ]
-    now = timezone.now()
-    lookup= now + timedelta(days=days_from_now)
-    end_lookup = now + timedelta(days=days_from_now+6)
-    dates = Dates.objects.get(departure_date__gte=lookup, departure_date__lte=end_lookup)
+    first the function that gets the dates for that weekend shoud be called
+    Then this function can be called"""
     for airport in airports:
         for hour in hours:
             get_flight_data(airport, dates, hour)
@@ -55,6 +65,7 @@ def get_airport_flight(days_from_now=60):
 @shared_task
 def delete_old_flights():
     """delete old flights to save DB space"""
+    #TODO set up con job to run this every week
     now = timezone.now
     one_week_ago = now - timedelta(days=7)
     flights = Flight.objects.filter(departure_time__lte=one_week_ago)
@@ -65,9 +76,12 @@ def delete_old_flights():
 def get_possible_destinations(dates, city=None):
     '''pass a city code to this function to find and save a list of possible destinations
     this task should be run once a week on wednesdays to take into account for public holidays
-    after this task the get flight prices should run to get prices for all these destinations'''
+    after this task the get flight prices should run to get prices for all these destinations
+
+    This function should only be run once flight data for this weekend has been populated
+    So first run the task get_airport flight for that weekend, then runn this task'''
     if city is None:
-        city = City.object.get(name='London', country='United Kingdom')
+        city = City.objects.get(name='London', country__name='United Kingdom')
     else:
         pass
     destinations, dates = city.destinations(dates)
@@ -86,6 +100,8 @@ def get_flight_prices(slice):
     '''call the get flight prices function call here and update the slice prices'''
     print 'colin'
     return None
+
+
 
 
 
