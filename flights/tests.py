@@ -10,6 +10,7 @@ from django.test import TestCase
 from weekend.models import Dates
 from flights.models import Flight, Airport
 from location.models import City, Country, Currency
+from datetime import timedelta, date
 
 
 class SimpleTest(TestCase):
@@ -184,6 +185,74 @@ class TaskTests(TestCase):
             altitude=0,
             timezone=1
         )
+        today = date.today()
+        next_friday = (today + timedelta( (4-today.weekday()) % 7))+timedelta(days=7)
+        next_sunday = (today + timedelta( (6-today.weekday()) % 7))+timedelta(days=7)
+        self.weekend = Dates.objects.create(departure_date=next_friday,
+                                            return_date=next_sunday)
+        self.outbound_flight1 = Flight.objects.create(departure_airport=self.London_Airport,
+                                             arrival_airport=self.Frankfurt_Airport,
+                                             departure_time=self.weekend.departure_date,
+                                             flight_no=1,
+                                             carrier_code='BA')
+        self.outbound_flight2 = Flight.objects.create(departure_airport=self.London_Airport,
+                                             arrival_airport=self.Munich_Airport,
+                                             departure_time=self.weekend.departure_date,
+                                             flight_no=2,
+                                             carrier_code='BA')
+        self.outbound_flight3 = Flight.objects.create(departure_airport=self.London_Airport,
+                                             arrival_airport=self.Berlin_Airport,
+                                             departure_time=self.weekend.departure_date,
+                                             flight_no=3,
+                                             carrier_code='BA')
+        self.outbound_flight4 = Flight.objects.create(departure_airport=self.London_Airport,
+                                             arrival_airport=self.Paris_Airport,
+                                             departure_time=self.weekend.departure_date,
+                                             flight_no=4,
+                                             carrier_code='BA')
+        self.outbound_flight5 = Flight.objects.create(departure_airport=self.London_Airport,
+                                             arrival_airport=self.Toulouse_Airport,
+                                             departure_time=self.weekend.departure_date,
+                                             flight_no=5,
+                                             carrier_code='BA')
+        self.outbound_flight6 = Flight.objects.create(departure_airport=self.London_Airport,
+                                             arrival_airport=self.Nice_Airport,
+                                             departure_time=self.weekend.departure_date,
+                                             flight_no=6,
+                                             carrier_code='BA')
+        self.inbound_flight1 = Flight.objects.create(departure_airport=self.Frankfurt_Airport,
+                                             arrival_airport=self.London_Airport,
+                                             departure_time=self.weekend.return_date,
+                                             flight_no=7,
+                                             carrier_code='BA')
+        self.inbound_flight2 = Flight.objects.create(departure_airport=self.Munich_Airport,
+                                             arrival_airport=self.London_Airport,
+                                             departure_time=self.weekend.return_date,
+                                             flight_no=8,
+                                             carrier_code='BA')
+        self.inbound_flight3 = Flight.objects.create(departure_airport=self.Berlin_Airport,
+                                             arrival_airport=self.London_Airport,
+                                             departure_time=self.weekend.return_date,
+                                             flight_no=9,
+                                             carrier_code='BA')
+        self.inbound_flight4 = Flight.objects.create(departure_airport=self.Paris_Airport,
+                                             arrival_airport=self.London_Airport,
+                                             departure_time=self.weekend.return_date,
+                                             flight_no=10,
+                                             carrier_code='BA')
+        self.inbound_flight5 = Flight.objects.create(departure_airport=self.Nice_Airport,
+                                             arrival_airport=self.London_Airport,
+                                             departure_time=self.weekend.return_date,
+                                             flight_no=11,
+                                             carrier_code='BA')
+        self.inbound_flight6 = Flight.objects.create(departure_airport=self.Toulouse_Airport,
+                                             arrival_airport=self.London_Airport,
+                                             departure_time=self.weekend.return_date,
+                                             flight_no=12,
+                                             carrier_code='BA')
+
+
+
 
 
 
