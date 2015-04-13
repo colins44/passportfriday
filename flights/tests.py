@@ -121,7 +121,7 @@ class TaskTests(TestCase):
         )
         self.Munich_Airport = Airport.objects.create(
             name='Munich Airport',
-            cit =self.Munich,
+            city =self.Munich,
             country=self.germany,
             iata='MUQ',
             icao='asd',
