@@ -112,43 +112,43 @@ class TaskTests(TestCase):
             country= self.germany,
             iata='FRA',
             icao='EDDF',
-            latitude = 0,
-            longitude = 0,
-            altitude = 0,
-            timezone =1
+            latitude=0,
+            longitude=0,
+            altitude=0,
+            timezone=1
         )
         self.Munich_Airport = Airport.objects.create(
-            name = 'Munich Airport',
-            city = self.Munich,
-            country= self.germany,
+            name='Munich Airport',
+            cit =self.Munich,
+            country=self.germany,
             iata='MUQ',
             icao='asd',
-            latitude = 0,
-            longitude = 0,
-            altitude = 0,
-            timezone =1
+            latitud =0,
+            longitude=0,
+            altitude=0,
+            timezone=1
         )
         self.Berlin_Airport = Airport.objects.create(
-            name = 'Berlin Airport',
-            city = self.Berlin,
-            country= self.germany,
+            name='Berlin Airport',
+            city=self.Berlin,
+            country=self.germany,
             iata='BER',
             icao='asd',
-            latitude = 0,
-            longitude = 0,
-            altitude = 0,
-            timezone =1
+            latitude=0,
+            longitude=0,
+            altitude=0,
+            timezone=1
         )
         self.Nice_Airport = Airport.objects.create(
-            name = 'Nice Airport',
-            city = self.Nice,
-            country= self.france,
+            name='Nice Airport',
+            city=self.Nice,
+            country=self.france,
             iata='NCE',
             icao='nce',
-            latitude = 0,
-            longitude = 0,
-            altitude = 0,
-            timezone =1
+            latitude=0,
+            longitude=0,
+            altitude=0,
+            timezone=1
         )
         self.Toulouse_Airport = Airport.objects.create(
             name = 'Toulouse Airport',
@@ -156,10 +156,10 @@ class TaskTests(TestCase):
             country= self.france,
             iata='TOU',
             icao='TOU',
-            latitude = 0,
-            longitude = 0,
-            altitude = 0,
-            timezone =1
+            latitude=0,
+            longitude=0,
+            altitude=0,
+            timezone=1
         )
         self.Paris_Airport = Airport.objects.create(
             name = 'Paris Airport',
@@ -167,21 +167,21 @@ class TaskTests(TestCase):
             country= self.france,
             iata='PAR',
             icao='PAR',
-            latitude = 0,
-            longitude = 0,
-            altitude = 0,
-            timezone =1
+            latitude=0,
+            longitude=0,
+            altitude=0,
+            timezone=1
         )
         self.London_Airport = Airport.objects.create(
-            name = 'Paris Airport',
-            city = self.London,
+            name='Paris Airport',
+            city=self.London,
             country= self.uk,
             iata='LON',
             icao='LON',
-            latitude = 0,
-            longitude = 0,
-            altitude = 0,
-            timezone =1
+            latitude=0,
+            longitude=0,
+            altitude=0,
+            timezone=1
         )
 
 
