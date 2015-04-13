@@ -8,7 +8,7 @@ Replace this with more appropriate tests for your application.
 
 from django.test import TestCase
 from weekend.models import Dates
-from flights.models import Flight, Airport
+from flights.models import Flight, Airport, Destinations
 from location.models import City, Country, Currency
 from datetime import timedelta, date
 
@@ -257,6 +257,17 @@ class TaskTests(TestCase):
         self.assertEqual(Currency.objects.all().count(), 2)
         self.assertEqual(Country.objects.all().count(), 3)
         self.assertEqual(City.objects.all().count(), 7)
+
+    def test_city_destinations(self):
+        city, cities, dates = self.London.destinations(self.weekend)
+        self.assertEqual(city, self.London)
+        self.assertEqual(dates, self.weekend)
+        destinations = Destinations.objects.get(origin=self.London, dates=self.weekend)
+        self.assertEqual(destinations.dates, self.weekend)
+        self.assertEqual(destinations.origin, self.London)
+        #Currently there are 7 cities including London
+
+
 
 
 

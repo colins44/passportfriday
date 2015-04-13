@@ -52,6 +52,7 @@ class Slice(models.Model):
         return self.origin.name
 
 class Destinations(models.Model):
+    '''There is probs a better model name for this'''
     origin = models.ForeignKey(City, related_name='origin')
     dates = models.ForeignKey(Dates)
     destinations = models.ManyToManyField(City, related_name='destinations')

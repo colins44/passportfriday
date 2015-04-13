@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+from flights.models import Destinations
 
 
 CATEGORIES =(
@@ -33,6 +34,7 @@ class Country(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class City(models.Model):
     name = models.CharField(max_length=75)
     country = models.ForeignKey(Country)
@@ -65,7 +67,11 @@ class City(models.Model):
 
         # compare the lists and get the cites that match
         cites = set(outbound_cities).intersection(inbound_cites)
-        return cites, dates
+        destinations, created = Destinations.objects.get_or_create(origin=self,
+                                                                   dates=dates)
+        destinations.destinations = cites
+        destinations.save()
+        return self, cites, dates
 
 
 class Category(models.Model):
