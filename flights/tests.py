@@ -37,11 +37,11 @@ class TaskTests(TestCase):
 
         )
         self.euro = Currency.objects.create(
-            name='pound',
-            symbol='£',
-            symbol_native='£',
-            code = 'GBP',
-            name_plural = 'British pounds sterling',
+            name='euro',
+            symbol='€',
+            symbol_native='€',
+            code = 'EUR',
+            name_plural = 'euros',
 
         )
         self.uk = Country.objects.create(
