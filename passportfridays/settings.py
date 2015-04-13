@@ -1,6 +1,7 @@
 # Django settings for passportfridays project.
 import os
 from kombu import Exchange, Queue
+# from celery.scheduler import crontab
 from datetime import timedelta
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -279,14 +280,14 @@ CELERYD_HIJACK_ROOT_LOGGER = False
 CELERYD_PREFETCH_MULTIPLIER = 1
 CELERYD_MAX_TASKS_PER_CHILD = 1000
 
-CELERYBEAT_SCHEDULE = {
-    'add-every-30-seconds': {
-        'task': 'flights.tasks.add',
-        'schedule': timedelta(seconds=3),
-        'args': ()
-    },
-}
-
+# CELERYBEAT_SCHEDULE = {
+#     'add-every-30-seconds': {
+#         'task': 'flights.tasks.add',
+#         'schedule': timedelta(seconds=3),
+#         'args': ()
+#     },
+# }
+#
 # CELERYBEAT_SCHEDULE = {
 #     'add-every-min': {
 #         'task': 'flights.tasks.add',

@@ -3,6 +3,7 @@ from __future__ import absolute_import
 import os
 
 from celery import Celery
+from celery.schedules import crontab
 from django.conf import settings
 
 
@@ -15,6 +16,19 @@ app = Celery('passportfridays')
 # pickle the object when using Windows.
 app.config_from_object('django.conf:settings')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
+
+settings.CELERYBEAT_SCHEDULE = {
+    'add-every-min': {
+        'task': 'flights.tasks.add',
+        'schedule': crontab(),
+        'args': ()
+    },
+    'printing-every-min': {
+        'task': 'flights.tasks.printing',
+        'schedule': crontab(),
+        'args': ()
+    },
+}
 
 
 @app.task(bind=True)
