@@ -125,7 +125,7 @@ class TaskTests(TestCase):
             country=self.germany,
             iata='MUQ',
             icao='asd',
-            latitud =0,
+            latitude =0,
             longitude=0,
             altitude=0,
             timezone=1
