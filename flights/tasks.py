@@ -11,30 +11,7 @@ from flights.utils import get_flight_data
 from django.utils import timezone
 from weekend.models import Dates
 from location.models import City, Destinations
-from celery.schedules import crontab
 from django.core.mail import send_mail
-
-
-
-
-CELERYBEAT_SCHEDULE = {
-    # Executes every Wednesday morning at 7:30 A.M
-    'add-every-monday-morning': {
-        'task': 'flights.tasks.get_airport_flight',
-        'schedule': crontab(hour=7, minute=30, day_of_week=3),
-        'args': (),
-    },
-}
-
-CELERYBEAT_SCHEDULE = {
-    # Executes every Wednesday morning at 7:30 A.M
-    'add-every-monday-morning': {
-        'task': 'flights.tasks.printing',
-        'schedule': crontab(minute='*/3'),
-        'args': (),
-    },
-}
-
 
 
 @shared_task
@@ -124,6 +101,14 @@ def get_flight_prices(slice):
 def printing():
     send_mail('Subject here', 'Here is the message.', 'from@example.com',
     ['colin.pringlwood@gmail.com'], fail_silently=False)
+
+@shared_task
+def add():
+    print 'colin'
+    print '$$$$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$$$$'
+
 
 
 

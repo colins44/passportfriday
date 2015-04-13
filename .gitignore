@@ -60,5 +60,9 @@ target/
 #node
 node_modules/
 
+celerybeat-schedule.bak
+celerybeat-schedule.dat
+celerybeat-schedule.dir
+
 passportfridays/project_static/
 passportfridays/static/
