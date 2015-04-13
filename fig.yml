@@ -49,7 +49,7 @@ web:
 worker:
   build: .
 #  command: ./run_celery.sh
-  command: celery -A passportfridays worker -l info
+  command: celery -A passportfridays worker -B -l info
   volumes:
     - .:/passportfridays
   links:

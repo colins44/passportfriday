@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from flights.models import Destinations
+from weekend.models import Dates
 
 
 CATEGORIES =(
@@ -43,7 +43,7 @@ class City(models.Model):
     def __unicode__(self):
         return self.name
 
-    def destinations(self, dates):
+    def possible_destinations(self, dates):
         from flights.models import Flight
         '''pass a dates object to this function and it will return a list of cities you will be able
             to fly to for the week in question'''
@@ -72,6 +72,15 @@ class City(models.Model):
         destinations.destinations = cites
         destinations.save()
         return self, cites, dates
+
+class Destinations(models.Model):
+    '''There is probs a better model name for this'''
+    origin = models.ForeignKey(City, related_name='origin')
+    dates = models.ForeignKey(Dates)
+    destinations = models.ManyToManyField(City, related_name='destinations')
+
+    def __unicode__(self):
+        return self.origin.name
 
 
 class Category(models.Model):

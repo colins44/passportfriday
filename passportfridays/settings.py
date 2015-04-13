@@ -1,5 +1,6 @@
 # Django settings for passportfridays project.
 import os
+# from celery.schedules import crontab
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -20,10 +21,10 @@ DATABASES = {
     }
 }
 
-import sys
-if 'test' in sys.argv or 'test_coverage' in sys.argv:
-    #we change the host to none for codeship
-    DATABASES['default']['HOST'] = None
+# import sys
+# if 'test' in sys.argv or 'test_coverage' in sys.argv:
+#     #we change the host to none for codeship
+#     DATABASES['default']['HOST'] = None
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -205,3 +206,21 @@ LOGGING = {
         },
     }
 }
+#
+# CELERYBEAT_SCHEDULE = {
+#     # Executes every Wednesday morning at 7:30 A.M
+#     'add-every-monday-morning': {
+#         'task': 'flights.tasks.get_airport_flight',
+#         'schedule': crontab(hour=7, minute=30, day_of_week=3),
+#         'args': (),
+#     },
+# }
+#
+# CELERYBEAT_SCHEDULE = {
+#     # Executes every Wednesday morning at 7:30 A.M
+#     'add-every-monday-morning': {
+#         'task': 'flights.tasks.get_flight_prices',
+#         'schedule': crontab(minute='*'),
+#         'args': (),
+#     },
+# }

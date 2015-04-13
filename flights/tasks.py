@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from datetime import timedelta
-from flights.models import Flight, Destinations
+from flights.models import Flight
 from flights.utils import TemplateEmailer
 from celery import shared_task
 import requests
@@ -10,7 +10,30 @@ import json
 from flights.utils import get_flight_data
 from django.utils import timezone
 from weekend.models import Dates
-from location.models import City
+from location.models import City, Destinations
+from celery.schedules import crontab
+from django.core.mail import send_mail
+
+
+
+
+CELERYBEAT_SCHEDULE = {
+    # Executes every Wednesday morning at 7:30 A.M
+    'add-every-monday-morning': {
+        'task': 'flights.tasks.get_airport_flight',
+        'schedule': crontab(hour=7, minute=30, day_of_week=3),
+        'args': (),
+    },
+}
+
+CELERYBEAT_SCHEDULE = {
+    # Executes every Wednesday morning at 7:30 A.M
+    'add-every-monday-morning': {
+        'task': 'flights.tasks.printing',
+        'schedule': crontab(minute='*/3'),
+        'args': (),
+    },
+}
 
 
 
@@ -39,25 +62,24 @@ def test_email():
 
 @shared_task
 def get_weekend_dates(days_from_now=120):
-    '''This is a crone job and should just get the dates of the weekend that is
-    120 days from now
-    should be run on a wednesday
-    '''
     #TODO thes has to be better logic for this
     now = timezone.now()
     future = now + timedelta(days=days_from_now)
     cut_off = now + timedelta(days=(days_from_now+4))
-    future_weekend = Dates.objects.get(departure_date__gte=future,
-                                         departure_date__lte=cut_off)
+    future_weekend = Dates.objects.get(departure_date__gte=future, departure_date__lte=cut_off)
     return future_weekend
 
 
 @shared_task
-def get_airport_flight(dates, airports = ['LHR', 'LGW'], hours = [18, 19, 20, 21, 22, 23]):
+def get_airport_flight(airports = ['LHR', 'LGW'], hours = [18, 19, 20, 21, 22, 23], dates=None):
     """get the inbound and outbound flight times for airports
     this task should be run every week
-    first the function that gets the dates for that weekend shoud be called
+    first the function that gets the dates for that weekend should be called
     Then this function can be called"""
+    if not dates:
+        #we will get the flights 120 days from now
+        future = (timezone.now())+timedelta(days=120)
+        dates = Dates.objects.filter(departure_date__gte=future)[:1][0]
     for airport in airports:
         for hour in hours:
             get_flight_data(airport, dates, hour)
@@ -84,10 +106,8 @@ def get_possible_destinations(dates, city=None):
         city = City.objects.get(name='London', country__name='United Kingdom')
     else:
         pass
-    destinations, dates = city.destinations(dates)
-    destination, _ = Destinations.objects.get_or_create(origin=city, dates=dates)
-    destination.destinations = destinations
-    destination.save()
+    city.possible_destinations(dates)
+
 
 @shared_task
 def flight_prices_lookup_logic():
@@ -99,7 +119,13 @@ def flight_prices_lookup_logic():
 def get_flight_prices(slice):
     '''call the get flight prices function call here and update the slice prices'''
     print 'colin'
-    return None
+
+@shared_task
+def printing():
+    send_mail('Subject here', 'Here is the message.', 'from@example.com',
+    ['colin.pringlwood@gmail.com'], fail_silently=False)
+
+
 
 
 

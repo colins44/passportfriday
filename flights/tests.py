@@ -8,8 +8,8 @@ Replace this with more appropriate tests for your application.
 
 from django.test import TestCase
 from weekend.models import Dates
-from flights.models import Flight, Airport, Destinations
-from location.models import City, Country, Currency
+from flights.models import Flight, Airport
+from location.models import City, Country, Currency, Destinations
 from datetime import timedelta, date
 
 
@@ -245,26 +245,28 @@ class TaskTests(TestCase):
                                              departure_time=self.weekend.return_date,
                                              flight_no=11,
                                              carrier_code='BA')
-        self.inbound_flight6 = Flight.objects.create(departure_airport=self.Toulouse_Airport,
-                                             arrival_airport=self.London_Airport,
-                                             departure_time=self.weekend.return_date,
-                                             flight_no=12,
-                                             carrier_code='BA')
+        # self.inbound_flight6 = Flight.objects.create(departure_airport=self.Toulouse_Airport,
+        #                                      arrival_airport=self.London_Airport,
+        #                                      departure_time=self.weekend.return_date,
+        #                                      flight_no=12,
+        #                                      carrier_code='BA')
 
     def test_data(self):
         self.assertEqual(Airport.objects.all().count(), 7)
-        self.assertEqual(Flight.objects.all().count(), 12)
+        #we do not create a return flight from toulosse
+        self.assertEqual(Flight.objects.all().count(), 11)
         self.assertEqual(Currency.objects.all().count(), 2)
         self.assertEqual(Country.objects.all().count(), 3)
         self.assertEqual(City.objects.all().count(), 7)
 
     def test_city_destinations(self):
-        city, cities, dates = self.London.destinations(self.weekend)
+        city, cities, dates = self.London.possible_destinations(self.weekend)
         self.assertEqual(city, self.London)
         self.assertEqual(dates, self.weekend)
-        destinations = Destinations.objects.get(origin=self.London, dates=self.weekend)
-        self.assertEqual(destinations.dates, self.weekend)
-        self.assertEqual(destinations.origin, self.London)
+        dest = Destinations.objects.get(origin=self.London, dates=self.weekend)
+        self.assertEqual(dest.dates, self.weekend)
+        self.assertEqual(dest.origin, self.London)
+        self.assertEqual(len(dest.destinations.all()), 5)
         #Currently there are 7 cities including London
 
 
