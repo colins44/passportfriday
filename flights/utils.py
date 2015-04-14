@@ -6,7 +6,7 @@ import json
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from location.models import City
 from flights.models import Airport, Flight
-import datetime
+from datetime import datetime
 from time import sleep
 from django.template import Context, Template, loader
 from passportfridays.settings import QPX_APIKEY
@@ -50,25 +50,67 @@ template ="""{
 def process_qpx(data):
     '''this function takes the dict that is returned from qpx breaks it down itnot the slice and saves it
     by doing this we can get the data through an api call or any other function'''
-    returned_data = json.loads(data)
+    if type(data) is str:
+        returned_data = json.loads(data)
+    else:
+        returned_data = data
     trips = returned_data.get('trips').get('tripOption')
     for trip in trips:
+        print trip.get('saleTotal')
         slices = trip.get('slice')
+        print slices
         outbound_flight = slices[0]
         inbound_flight = slices[1]
-        inbound_date = datetime.strptime(inbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:10], '%Y-%m-%d')
-        outbound_date = datetime.strptime(outbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:10], '%Y-%m-%d')
-        inb_flight = Flight.objects.get(flight_no=inbound_flight.get('segment')[0].get('flight').get('number'),
-                                        carrier_code=inbound_flight.get('segment')[0].get('flight').get('carrier'))
-                                        # departure_time__year=inbound_date.year,
-                                        # departure_time__month=inbound_date.month,
-                                        # departure_time__day=inbound_date.day)
-        outb_flight = Flight.objects.get(flight_no=outbound_flight.get('segment')[0].get('flight').get('number'),
-                                        carrier_code=outbound_flight.get('segment')[0].get('flight').get('carrier'))
-                                        # departure_time__year=outbound_date.year,
-                                        # departure_time__month=outbound_date.month,
-                                        # departure_time__day=outbound_date.day)
-        #at this stage we should start saving the slice
+        inbound_date = datetime.strptime(inbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
+        outbound_date = datetime.strptime(outbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
+        outbound_flight = outbound_flight.get('segment')[0]
+        print outbound_flight
+        print outbound_date
+        print '$$$$$$$$$$'
+        inbound_flight = inbound_flight.get('segment')[0]
+        print inbound_flight
+        print inbound_date
+        print outbound_flight.get('leg')[0].get('origin')
+        # outbound_flight_departure_airport = Airport.objects.get(iata=outbound_flight.get('leg')[0].get('origin'))
+        # outbound_flight_arrival_airport = Airport.objects.get(iata=outbound_flight.get('leg')[0].get('destination'))
+        # inbound_flight_departure_airport = Airport.objects.get(iata=inbound_flight.get('leg')[0].get('origin'))
+        # inbound_flight_arrival_airport = Airport.objects.get(iata=inbound_flight.get('leg')[0].get('destination'))
+        # print outbound_flight_arrival_airport
+        # print outbound_flight_departure_airport
+        # outbound_flight = Flight.objects.get_or_create(departure_airport=outbound_flight_departure_airport,
+        #                                                arrival_airport=outbound_flight_arrival_airport,
+        #                                                departure_time__year=outbound_date.year,
+        #                                                departure_time__month=outbound_date.month,
+        #                                                departure_time__day=outbound_date.day)
+        # inbound_flight = Flight.objects.get_or_create(departure_airport=inbound_flight_departure_airport,
+        #                                                arrival_airport=inbound_flight_arrival_airport,
+        #                                                departure_time__year=inbound_date.year,
+        #                                                departure_time__month=inbound_date.month,
+        #                                                departure_time__day=inbound_date.day)
+        # print '$$$$$$$$$$$'
+        # print outbound_flight
+        # print '$$$$$$$$$$$'
+        # print inbound_flight
+
+
+def process_qpx(data):
+    '''this function takes the dict that is returned from qpx breaks it down itnot the slice and saves it
+    by doing this we can get the data through an api call or any other function'''
+    if type(data) is str:
+        returned_data = json.loads(data)
+    else:
+        returned_data = data
+
+    trips = returned_data.get('trips')
+    kind = returned_data.get('kind')
+    for trip in trips:
+        tripOption = trip.get('tripOption')
+        kind = trip.get('kind')
+        data = trip.get('data')
+        requestId = trip.get('requestId')
+
+
+
 
 class TemplateEmailer(EmailMultiAlternatives, TemplateResponseMixin):
 
