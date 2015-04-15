@@ -13,6 +13,7 @@ ADMINS = (
 MANAGERS = ADMINS
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+#docker DB setup
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -22,6 +23,17 @@ DATABASES = {
         'PORT': 5432,
     }
 }
+#vagrant db setup
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '',
+#     }
+# }
 
 # import sys
 # if 'test' in sys.argv or 'test_coverage' in sys.argv:

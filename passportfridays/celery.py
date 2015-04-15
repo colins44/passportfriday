@@ -23,11 +23,11 @@ settings.CELERYBEAT_SCHEDULE = {
         'schedule': crontab(),
         'args': ()
     },
-    'printing-every-min': {
-        'task': 'flights.tasks.printing',
-        'schedule': crontab(),
-        'args': ()
-    },
+    # 'printing-every-min': {
+    #     'task': 'flights.tasks.printing',
+    #     'schedule': crontab(),
+    #     'args': ()
+    # },
 }
 
 

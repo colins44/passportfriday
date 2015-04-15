@@ -47,6 +47,61 @@ template ="""{
   }
 }"""
 
+def create_slice(price, outbound_flight, inbound_flight):
+    print outbound_flight
+    print '$$$$$$$$$'
+    print '$$$$$$$$$'
+    print '$$$$$$$$$'
+    print inbound_flight
+    outbound_date = datetime.strptime(outbound_flight.get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
+    outbound_flight_departure_airport = Airport.objects.get(iata=outbound_flight.get('leg')[0].get('origin'))
+    outbound_flight_arrival_airport = Airport.objects.get(iata=outbound_flight.get('leg')[0].get('destination'))
+    outbound_flight_departure_time = datetime.strptime(outbound_flight.get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
+    outbound_flight_arrival_time = datetime.strptime(outbound_flight.get('leg')[0].get('arrivalTime')[:16], '%Y-%m-%dT%H:%M')
+    outbound_flight_carrier_code = outbound_flight.get('flight').get('carrier')
+    outbound_flight_flight_no = outbound_flight.get('flight').get('number')
+    inbound_date = datetime.strptime(inbound_flight.get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
+    inbound_flight_departure_airport = Airport.objects.get(iata=inbound_flight.get('leg')[0].get('origin'))
+    inbound_flight_arrival_airport = Airport.objects.get(iata=inbound_flight.get('leg')[0].get('destination'))
+    inbound_flight_departure_time =  datetime.strptime(inbound_flight.get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
+    inbound_flight_arrival_time = datetime.strptime(inbound_flight.get('leg')[0].get('arrivalTime')[:16], '%Y-%m-%dT%H:%M')
+    inbound_flight_carrier_code = inbound_flight.get('flight').get('carrier')
+    inbound_flight_flight_no = inbound_flight.get('flight').get('number')
+    print 'outbound date: ',outbound_date
+    print 'outbound departure time: ',outbound_flight_departure_time
+    print 'outbound flight arrival airport: ',outbound_flight_arrival_airport
+    print 'outbound flight no: ',outbound_flight_flight_no
+    print 'outbound flight code: ',outbound_flight_carrier_code
+    print 'outbound flight departure airport: ',outbound_flight_departure_airport
+    print 'outbound flight arrival time: ',outbound_flight_arrival_time
+    print '$$$$$$$$$$$$$$$$$'
+    print inbound_flight_departure_airport
+    print inbound_flight_arrival_airport
+    print inbound_flight_departure_time
+    print inbound_flight_arrival_time
+    ob_flight, _ = Flight.objects.get_or_create(carrier_code=outbound_flight_carrier_code,
+                                                flight_no=outbound_flight_flight_no,
+                                                departure_airport=outbound_flight_departure_airport,
+                                                arrival_airport=outbound_flight_arrival_airport,
+                                                departure_time__year=outbound_date.year,
+                                                departure_time__month=outbound_date.month,
+                                                departure_time__day=outbound_date.day,
+                                                )
+    inb_flight, _ = Flight.objects.get_or_create(carrier_code=inbound_flight_carrier_code,
+                                                flight_no=inbound_flight_flight_no,
+                                                departure_airport=inbound_flight_departure_airport,
+                                                arrival_airport=inbound_flight_arrival_airport,
+                                                departure_time__year=inbound_date.year,
+                                                departure_time__month=inbound_date.month,
+                                                departure_time__day=inbound_date.day,
+                                                )
+    ob_flight.departure_date=outbound_flight_departure_time
+    inb_flight.departure_date=inbound_flight_departure_time
+    ob_flight.save()
+    inb_flight.save()
+
+
+
 def process_qpx(data):
     '''this function takes the dict that is returned from qpx breaks it down itnot the slice and saves it
     by doing this we can get the data through an api call or any other function'''
@@ -56,58 +111,68 @@ def process_qpx(data):
         returned_data = data
     trips = returned_data.get('trips').get('tripOption')
     for trip in trips:
-        print trip.get('saleTotal')
+        price = trip.get('saleTotal')
         slices = trip.get('slice')
-        print slices
         outbound_flight = slices[0]
         inbound_flight = slices[1]
-        inbound_date = datetime.strptime(inbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
-        outbound_date = datetime.strptime(outbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
+        # inbound_date = datetime.strptime(inbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
+        # outbound_date = datetime.strptime(outbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
         outbound_flight = outbound_flight.get('segment')[0]
-        print outbound_flight
-        print outbound_date
-        print '$$$$$$$$$$'
         inbound_flight = inbound_flight.get('segment')[0]
-        print inbound_flight
-        print inbound_date
-        print outbound_flight.get('leg')[0].get('origin')
+        create_slice(price , outbound_flight, inbound_flight)
         # outbound_flight_departure_airport = Airport.objects.get(iata=outbound_flight.get('leg')[0].get('origin'))
         # outbound_flight_arrival_airport = Airport.objects.get(iata=outbound_flight.get('leg')[0].get('destination'))
+        # outbound_flight_departure_time = datetime.strptime(inbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
+        # outbound_flight_arrival_time = datetime.strptime(inbound_flight.get('segment')[0].get('leg')[0].get('arrivalTime')[:16], '%Y-%m-%dT%H:%M')
+        # outbound_flight_carrier_code = outbound_flight.get('flight').get('carrier')
+        # outbound_flight_flight_no = outbound_flight.get('flight').get('number')
         # inbound_flight_departure_airport = Airport.objects.get(iata=inbound_flight.get('leg')[0].get('origin'))
         # inbound_flight_arrival_airport = Airport.objects.get(iata=inbound_flight.get('leg')[0].get('destination'))
+        # inbound_flight_departure_time =  datetime.strptime(inbound_flight.get('segment')[0].get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
+        # inbound_flight_arrival_time = datetime.strptime(inbound_flight.get('segment')[0].get('leg')[0].get('arrivalTime')[:16], '%Y-%m-%dT%H:%M')
+        # inbound_flight_carrier_code = inbound_flight.get('flight').get('carrier')
+        # inbound_flight_flight_no = inbound_flight.get('flight').get('number')
         # print outbound_flight_arrival_airport
         # print outbound_flight_departure_airport
-        # outbound_flight = Flight.objects.get_or_create(departure_airport=outbound_flight_departure_airport,
+        # outbound_flight = Flight.objects.get_or_create(carrier_code=outbound_flight_carrier_code,
+        #                                                flight_no=outbound_flight_flight_no,
+        #                                                departure_airport=outbound_flight_departure_airport,
         #                                                arrival_airport=outbound_flight_arrival_airport,
         #                                                departure_time__year=outbound_date.year,
         #                                                departure_time__month=outbound_date.month,
         #                                                departure_time__day=outbound_date.day)
-        # inbound_flight = Flight.objects.get_or_create(departure_airport=inbound_flight_departure_airport,
+        # inbound_flight = Flight.objects.get_or_create(carrier_code=inbound_flight_carrier_code,
+        #                                                flight_no=inbound_flight_flight_no,
+        #                                                departure_airport=inbound_flight_departure_airport,
         #                                                arrival_airport=inbound_flight_arrival_airport,
         #                                                departure_time__year=inbound_date.year,
         #                                                departure_time__month=inbound_date.month,
         #                                                departure_time__day=inbound_date.day)
+        # outbound_flight.departure_date = outbound_flight_departure_time
+        # outbound_flight.save()
+        # inbound_flight.departure_date = inbound_flight_departure_time
+        # inbound_flight.save()
         # print '$$$$$$$$$$$'
         # print outbound_flight
         # print '$$$$$$$$$$$'
         # print inbound_flight
 
 
-def process_qpx(data):
-    '''this function takes the dict that is returned from qpx breaks it down itnot the slice and saves it
-    by doing this we can get the data through an api call or any other function'''
-    if type(data) is str:
-        returned_data = json.loads(data)
-    else:
-        returned_data = data
-
-    trips = returned_data.get('trips')
-    kind = returned_data.get('kind')
-    for trip in trips:
-        tripOption = trip.get('tripOption')
-        kind = trip.get('kind')
-        data = trip.get('data')
-        requestId = trip.get('requestId')
+# def process_qpx(data):
+#     '''this function takes the dict that is returned from qpx breaks it down itnot the slice and saves it
+#     by doing this we can get the data through an api call or any other function'''
+#     if type(data) is str:
+#         returned_data = json.loads(data)
+#     else:
+#         returned_data = data
+#
+#     trips = returned_data.get('trips')
+#     kind = returned_data.get('kind')
+#     for trip in trips:
+#         tripOption = trip.get('tripOption')
+#         kind = trip.get('kind')
+#         data = trip.get('data')
+#         requestId = trip.get('requestId')
 
 
 

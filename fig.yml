@@ -1,20 +1,3 @@
-#db:
-#  image: postgres
-#web:
-#  build: .
-#  command: python manage.py runserver 0.0.0.0:8000
-#  volumes:
-#    - .:/passportfridays
-#  ports:
-#    - "8000:8000"
-#  links:
-#    - db
-#worker:
-#  build: .
-#  command: celery -A passportfridays worker -l info
-#  volumes:
-#    - .:/passportfridays
-
 
 #database container
 db:
@@ -48,12 +31,14 @@ web:
 #container with redis worker
 worker:
   build: .
-#  command: ./run_celery.sh
-#  command: celery -A passportfridays worker -l info
   command: celery -A passportfridays worker -B -l DEBUG
+#  command: flower --port=5555
   volumes:
     - .:/passportfridays
   links:
     - db:db
     - rabbitmq:rabbit
     - redis:redis
+
+
+
