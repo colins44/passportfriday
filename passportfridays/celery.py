@@ -18,11 +18,11 @@ app.config_from_object('django.conf:settings')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
 settings.CELERYBEAT_SCHEDULE = {
-    'add-every-min': {
-        'task': 'flights.tasks.add',
-        'schedule': crontab(),
-        'args': ()
-    },
+    # 'add-every-min': {
+    #     'task': 'flights.tasks.add',
+    #     'schedule': crontab(),
+    #     'args': ()
+    # },
     # 'printing-every-min': {
     #     'task': 'flights.tasks.printing',
     #     'schedule': crontab(),

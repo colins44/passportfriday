@@ -3,15 +3,10 @@ from datetime import timedelta
 from flights.models import Flight
 from flights.utils import TemplateEmailer
 from celery import shared_task
-import requests
-from django.template import Context, Template
-from passportfridays.settings import QPX_APIKEY
-import json
 from flights.utils import get_flight_data
 from django.utils import timezone
 from weekend.models import Dates
-from location.models import City, Destinations
-from django.core.mail import send_mail
+from location.models import City
 
 
 @shared_task
@@ -97,10 +92,6 @@ def get_flight_prices(slice):
     '''call the get flight prices function call here and update the slice prices'''
     print 'colin'
 
-@shared_task
-def printing():
-    send_mail('Subject here', 'Here is the message.', 'from@example.com',
-    ['colin.pringlwood@gmail.com'], fail_silently=False)
 
 @shared_task
 def add():

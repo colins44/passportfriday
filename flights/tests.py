@@ -8,9 +8,12 @@ Replace this with more appropriate tests for your application.
 
 from django.test import TestCase
 from weekend.models import Dates
-from flights.models import Flight, Airport
+from flights.models import Flight, Airport, Slice, HistoricSlice
 from location.models import City, Country, Currency, Destinations
-from datetime import timedelta, date
+from datetime import timedelta, date, datetime
+import calendar
+from flights.utils import process_qpx
+from flights.qpx import flight_data
 
 
 class SimpleTest(TestCase):
@@ -30,6 +33,17 @@ class TaskTests(TestCase):
         One airport for every city,
         Weekend dates for a weekend in the future,
         Flights for that weekend'''
+        years =[2015,]
+        for year in years:
+            for month in range(1, 13):
+                cal = calendar.monthcalendar(year, month)
+                for week in cal:
+                    friday = week[calendar.FRIDAY]
+                    if friday != 0:
+                        departure_date = datetime.strptime(('%d/%d/%d' % (friday, month, year)), '%d/%m/%Y')
+                        return_date = departure_date + timedelta(days=2)
+                        Dates.objects.get_or_create(departure_date=departure_date, return_date=return_date)
+
         self.pound = Currency.objects.create(
             name='pound',
             symbol='£',
@@ -268,6 +282,13 @@ class TaskTests(TestCase):
         self.assertEqual(dest.origin, self.London)
         self.assertEqual(len(dest.destinations.all()), 5)
         #Currently there are 7 cities including London
+
+    def test_process_qpx(self):
+        process_qpx(flight_data)
+        slices= Slice.objects.all()
+        self.assertEqual(slices, 1)
+
+
 
 
 
