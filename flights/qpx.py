@@ -1,3 +1,16 @@
+no_data = {
+ "kind": "qpxExpress#tripsSearch",
+ "trips": {
+  "kind": "qpxexpress#tripOptions",
+  "requestId": "7ZAOgpPkAIfc7xUyq0LxR4",
+  "data": {
+   "kind": "qpxexpress#data"
+  }
+ }
+}
+
+
+
 flight_data = {
  "kind": "qpxExpress#tripsSearch",
  "trips": {

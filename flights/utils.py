@@ -119,35 +119,40 @@ def process_qpx(qpx_data, dates):
     #first you have to find all the other slices for that destination for that date and delete there
     #this is cause prices will go up, but before we delete the slice we should log the price between the two cites
     trip_data = returned_data.get('trips').get('data')
-    origin_city = trip_data.get('city')[0]
+    print trip_data
     try:
-        origin_city = City.objects.get(name=origin_city.get('name'), code=origin_city.get('code'))
-    except City.DoesNotExist:
-        origin_city = None
-    destination_city = trip_data.get('city')[1]
-    try:
-        destination_city = City.objects.get(name=destination_city.get('name'))
-    except City.DoesNotExist:
-        destination_city = None
-    if origin_city and destination_city:
-        slices = Slice.objects.filter(dates=dates,
-                                    origin=origin_city,
-                                    destination=destination_city,
-                                    )
-        for slice in slices:
-            make_historic_slice(slice)
-            slice.delete()
+        origin_city = trip_data.get('city')[0]
+    except TypeError:
+        pass
+    else:
+        try:
+            origin_city = City.objects.get(name=origin_city.get('name'), code=origin_city.get('code'))
+        except City.DoesNotExist:
+            origin_city = None
+        destination_city = trip_data.get('city')[1]
+        try:
+            destination_city = City.objects.get(name=destination_city.get('name'))
+        except City.DoesNotExist:
+            destination_city = None
+        if origin_city and destination_city:
+            slices = Slice.objects.filter(dates=dates,
+                                        origin=origin_city,
+                                        destination=destination_city,
+                                        )
+            for slice in slices:
+                make_historic_slice(slice)
+                slice.delete()
 
-    #Then we start to process the qpx data
-    trips = returned_data.get('trips').get('tripOption')
-    for trip in trips:
-        price = trip.get('saleTotal')
-        slices = trip.get('slice')
-        outbound_flight = slices[0]
-        inbound_flight = slices[1]
-        outbound_flight = outbound_flight.get('segment')[0]
-        inbound_flight = inbound_flight.get('segment')[0]
-        create_slice(price, outbound_flight, inbound_flight)
+        #Then we start to process the qpx data
+        trips = returned_data.get('trips').get('tripOption')
+        for trip in trips:
+            price = trip.get('saleTotal')
+            slices = trip.get('slice')
+            outbound_flight = slices[0]
+            inbound_flight = slices[1]
+            outbound_flight = outbound_flight.get('segment')[0]
+            inbound_flight = inbound_flight.get('segment')[0]
+            create_slice(price, outbound_flight, inbound_flight)
 
 
 class TemplateEmailer(EmailMultiAlternatives, TemplateResponseMixin):
