@@ -2,14 +2,21 @@ from restless.dj import DjangoResource
 from restless.preparers import FieldsPreparer
 from .models import  Flight, Slice
 from datetime import datetime
+from weekend.models import Dates
+from flights.utils import process_qpx
 
 
-class SliceResource(DjangoResource):
+class QPXResource(DjangoResource):
+
+    def is_authenticated(self):
+        # Open everything wide!
+        # DANGEROUS, DO NOT DO IN PRODUCTION.
+        return True
 
     # GET /
     def list(self):
         'return all slices'
-        return Slice.objects.all()
+        return 'this is a test'
 
     # PUT /api/route/<pk>/
     def update(self, pk):
@@ -17,6 +24,12 @@ class SliceResource(DjangoResource):
         this way we can have different QPS api keys getting flight prices
         get the data that is posted to this url and pass it along to the process_qpx function'''
         print self.data
+
+    def create(self):
+        print self.data
+        # dates = Dates.objects.get(departure_date=self.data.get('dates').get('departure_date'))
+        # process_qpx(self.data.get('qpx_data'), dates)
+
 
 
 

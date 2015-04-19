@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
-from flights.api import SliceResource
+from flights.api import QPXResource
 from location.api import CityResource, CountryResource, CurrencyResource
 admin.autodiscover()
 
@@ -26,7 +26,7 @@ urlpatterns = patterns('',
     url(r'^leaving-date/(?P<leavingDate>[0-9\-_]+)/$', Filter.as_view()),
     url(r'^city/(?P<city>[A-z]+)/$', Filter.as_view()),
     url(r'^signout/$', SignOut.as_view()),
-    url(r'^api/slice/', include(SliceResource.urls())),
+    url(r'^api/qpx/', include(QPXResource.urls())),
     url(r'^api/currenies/', include(CurrencyResource.urls())),
     url(r'^api/countries/', include(CountryResource.urls())),
     url(r'^api/cities/', include(CityResource.urls())),
