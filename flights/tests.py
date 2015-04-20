@@ -321,15 +321,16 @@ class SimpleTest(TestCase):
 
 class FixturesTest(TestCase):
 
-    fixtures = ['flights/fixtures/dates.yaml', 'flights/fixtures/flights.yaml']
+    fixtures = ['flights/fixtures/dates.yaml','flights/fixtures/location.yaml', 'flights/fixtures/flights.yaml', ]
     #http://django-testing-docs.readthedocs.org/en/latest/fixtures.html
 
     # def setUp(self):
     #     call_setup_methods()
 
     def test_count(self):
-        self.assertEqual(Flight.objects.count(), 2134)
+        self.assertEqual(Airport.objects.count(), 2134)
         self.assertEqual(Dates.objects.count(), 440)
+        self.assertEqual(Currency.objects.count(), 440)
 
 
 
