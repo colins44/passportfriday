@@ -1,0 +1,3610 @@
+-   fields: {code: DZD, decimal_digits: 2, name: Algerian Dinar, name_plural: Algerian
+            dinars, rounding: 0, symbol: DA, symbol_native: "\u062F.\u062C.\u200F"}
+    model: location.currency
+    pk: 1
+-   fields: {code: NAD, decimal_digits: 2, name: Namibian Dollar, name_plural: Namibian
+            dollars, rounding: 0, symbol: N$, symbol_native: N$}
+    model: location.currency
+    pk: 2
+-   fields: {code: GHS, decimal_digits: 2, name: Ghanaian Cedi, name_plural: Ghanaian
+            cedis, rounding: 0, symbol: "GH\u20B5", symbol_native: "GH\u20B5"}
+    model: location.currency
+    pk: 3
+-   fields: {code: EGP, decimal_digits: 2, name: Egyptian Pound, name_plural: Egyptian
+            pounds, rounding: 0, symbol: EGP, symbol_native: "\u062C.\u0645.\u200F"}
+    model: location.currency
+    pk: 4
+-   fields: {code: BGN, decimal_digits: 2, name: Bulgarian Lev, name_plural: Bulgarian
+            leva, rounding: 0, symbol: BGN, symbol_native: "\u043B\u0432."}
+    model: location.currency
+    pk: 5
+-   fields: {code: PAB, decimal_digits: 2, name: Panamanian Balboa, name_plural: Panamanian
+            balboas, rounding: 0, symbol: B/., symbol_native: B/.}
+    model: location.currency
+    pk: 6
+-   fields: {code: BOB, decimal_digits: 2, name: Bolivian Boliviano, name_plural: Bolivian
+            bolivianos, rounding: 0, symbol: Bs, symbol_native: Bs}
+    model: location.currency
+    pk: 7
+-   fields: {code: DKK, decimal_digits: 2, name: Danish Krone, name_plural: Danish
+            kroner, rounding: 0, symbol: Dkr, symbol_native: kr}
+    model: location.currency
+    pk: 8
+-   fields: {code: BWP, decimal_digits: 2, name: Botswanan Pula, name_plural: Botswanan
+            pulas, rounding: 0, symbol: BWP, symbol_native: P}
+    model: location.currency
+    pk: 9
+-   fields: {code: LBP, decimal_digits: 0, name: Lebanese Pound, name_plural: Lebanese
+            pounds, rounding: 0, symbol: "LB\xA3", symbol_native: "\u0644.\u0644.\u200F"}
+    model: location.currency
+    pk: 10
+-   fields: {code: TZS, decimal_digits: 0, name: Tanzanian Shilling, name_plural: Tanzanian
+            shillings, rounding: 0, symbol: TSh, symbol_native: TSh}
+    model: location.currency
+    pk: 11
+-   fields: {code: VND, decimal_digits: 0, name: Vietnamese Dong, name_plural: Vietnamese
+            dong, rounding: 0, symbol: "\u20AB", symbol_native: "\u20AB"}
+    model: location.currency
+    pk: 12
+-   fields: {code: KHR, decimal_digits: 2, name: Cambodian Riel, name_plural: Cambodian
+            riels, rounding: 0, symbol: KHR, symbol_native: "\u17DB"}
+    model: location.currency
+    pk: 13
+-   fields: {code: MYR, decimal_digits: 2, name: Malaysian Ringgit, name_plural: Malaysian
+            ringgits, rounding: 0, symbol: RM, symbol_native: RM}
+    model: location.currency
+    pk: 14
+-   fields: {code: LYD, decimal_digits: 3, name: Libyan Dinar, name_plural: Libyan
+            dinars, rounding: 0, symbol: LD, symbol_native: "\u062F.\u0644.\u200F"}
+    model: location.currency
+    pk: 15
+-   fields: {code: UAH, decimal_digits: 2, name: Ukrainian Hryvnia, name_plural: Ukrainian
+            hryvnias, rounding: 0, symbol: "\u20B4", symbol_native: "\u20B4"}
+    model: location.currency
+    pk: 16
+-   fields: {code: JOD, decimal_digits: 3, name: Jordanian Dinar, name_plural: Jordanian
+            dinars, rounding: 0, symbol: JD, symbol_native: "\u062F.\u0623.\u200F"}
+    model: location.currency
+    pk: 17
+-   fields: {code: SAR, decimal_digits: 2, name: Saudi Riyal, name_plural: Saudi riyals,
+        rounding: 0, symbol: SR, symbol_native: "\u0631.\u0633.\u200F"}
+    model: location.currency
+    pk: 18
+-   fields: {code: EUR, decimal_digits: 2, name: Euro, name_plural: euros, rounding: 0,
+        symbol: "\u20AC", symbol_native: "\u20AC"}
+    model: location.currency
+    pk: 19
+-   fields: {code: HKD, decimal_digits: 2, name: Hong Kong Dollar, name_plural: Hong
+            Kong dollars, rounding: 0, symbol: HK$, symbol_native: $}
+    model: location.currency
+    pk: 20
+-   fields: {code: CHF, decimal_digits: 2, name: Swiss Franc, name_plural: Swiss francs,
+        rounding: 0, symbol: CHF, symbol_native: CHF}
+    model: location.currency
+    pk: 21
+-   fields: {code: BYR, decimal_digits: 0, name: Belarusian Ruble, name_plural: Belarusian
+            rubles, rounding: 0, symbol: BYR, symbol_native: BYR}
+    model: location.currency
+    pk: 22
+-   fields: {code: ALL, decimal_digits: 0, name: Albanian Lek, name_plural: "Albanian
+            lek\xEB", rounding: 0, symbol: ALL, symbol_native: Lek}
+    model: location.currency
+    pk: 23
+-   fields: {code: HRK, decimal_digits: 2, name: Croatian Kuna, name_plural: Croatian
+            kunas, rounding: 0, symbol: kn, symbol_native: kn}
+    model: location.currency
+    pk: 24
+-   fields: {code: DJF, decimal_digits: 0, name: Djiboutian Franc, name_plural: Djiboutian
+            francs, rounding: 0, symbol: Fdj, symbol_native: Fdj}
+    model: location.currency
+    pk: 25
+-   fields: {code: THB, decimal_digits: 2, name: Thai Baht, name_plural: Thai baht,
+        rounding: 0, symbol: "\u0E3F", symbol_native: "\u0E3F"}
+    model: location.currency
+    pk: 26
+-   fields: {code: XAF, decimal_digits: 0, name: CFA Franc BEAC, name_plural: CFA
+            francs BEAC, rounding: 0, symbol: FCFA, symbol_native: FCFA}
+    model: location.currency
+    pk: 27
+-   fields: {code: BND, decimal_digits: 2, name: Brunei Dollar, name_plural: Brunei
+            dollars, rounding: 0, symbol: BN$, symbol_native: $}
+    model: location.currency
+    pk: 28
+-   fields: {code: ISK, decimal_digits: 0, name: "Icelandic Kr\xF3na", name_plural: "Icelandic
+            kr\xF3nur", rounding: 0, symbol: Ikr, symbol_native: kr}
+    model: location.currency
+    pk: 29
+-   fields: {code: UYU, decimal_digits: 2, name: Uruguayan Peso, name_plural: Uruguayan
+            pesos, rounding: 0, symbol: $U, symbol_native: $}
+    model: location.currency
+    pk: 30
+-   fields: {code: NIO, decimal_digits: 2, name: "Nicaraguan C\xF3rdoba", name_plural: "Nicaraguan
+            c\xF3rdobas", rounding: 0, symbol: C$, symbol_native: C$}
+    model: location.currency
+    pk: 31
+-   fields: {code: SYP, decimal_digits: 0, name: Syrian Pound, name_plural: Syrian
+            pounds, rounding: 0, symbol: "SY\xA3", symbol_native: "\u0644.\u0633.\u200F"}
+    model: location.currency
+    pk: 32
+-   fields: {code: MAD, decimal_digits: 2, name: Moroccan Dirham, name_plural: Moroccan
+            dirhams, rounding: 0, symbol: MAD, symbol_native: "\u062F.\u0645.\u200F"}
+    model: location.currency
+    pk: 33
+-   fields: {code: MZN, decimal_digits: 2, name: Mozambican Metical, name_plural: Mozambican
+            meticals, rounding: 0, symbol: MTn, symbol_native: MTn}
+    model: location.currency
+    pk: 34
+-   fields: {code: PHP, decimal_digits: 2, name: Philippine Peso, name_plural: Philippine
+            pesos, rounding: 0, symbol: "\u20B1", symbol_native: "\u20B1"}
+    model: location.currency
+    pk: 35
+-   fields: {code: ZAR, decimal_digits: 2, name: South African Rand, name_plural: South
+            African rand, rounding: 0, symbol: R, symbol_native: R}
+    model: location.currency
+    pk: 36
+-   fields: {code: NPR, decimal_digits: 2, name: Nepalese Rupee, name_plural: Nepalese
+            rupees, rounding: 0, symbol: NPRs, symbol_native: "\u0928\u0947\u0930\u0942"}
+    model: location.currency
+    pk: 37
+-   fields: {code: NGN, decimal_digits: 2, name: Nigerian Naira, name_plural: Nigerian
+            nairas, rounding: 0, symbol: "\u20A6", symbol_native: "\u20A6"}
+    model: location.currency
+    pk: 38
+-   fields: {code: CRC, decimal_digits: 0, name: "Costa Rican Col\xF3n", name_plural: "Costa
+            Rican col\xF3ns", rounding: 0, symbol: "\u20A1", symbol_native: "\u20A1"}
+    model: location.currency
+    pk: 39
+-   fields: {code: AED, decimal_digits: 2, name: United Arab Emirates Dirham, name_plural: UAE
+            dirhams, rounding: 0, symbol: AED, symbol_native: "\u062F.\u0625.\u200F"}
+    model: location.currency
+    pk: 40
+-   fields: {code: EEK, decimal_digits: 2, name: Estonian Kroon, name_plural: Estonian
+            kroons, rounding: 0, symbol: Ekr, symbol_native: kr}
+    model: location.currency
+    pk: 41
+-   fields: {code: LKR, decimal_digits: 2, name: Sri Lankan Rupee, name_plural: Sri
+            Lankan rupees, rounding: 0, symbol: SLRs, symbol_native: SL Re}
+    model: location.currency
+    pk: 42
+-   fields: {code: PKR, decimal_digits: 0, name: Pakistani Rupee, name_plural: Pakistani
+            rupees, rounding: 0, symbol: PKRs, symbol_native: "\u20A8"}
+    model: location.currency
+    pk: 43
+-   fields: {code: HUF, decimal_digits: 0, name: Hungarian Forint, name_plural: Hungarian
+            forints, rounding: 0, symbol: Ft, symbol_native: Ft}
+    model: location.currency
+    pk: 44
+-   fields: {code: RON, decimal_digits: 2, name: Romanian Leu, name_plural: Romanian
+            lei, rounding: 0, symbol: RON, symbol_native: RON}
+    model: location.currency
+    pk: 45
+-   fields: {code: AMD, decimal_digits: 0, name: Armenian Dram, name_plural: Armenian
+            drams, rounding: 0, symbol: AMD, symbol_native: "\u0564\u0580."}
+    model: location.currency
+    pk: 46
+-   fields: {code: UGX, decimal_digits: 0, name: Ugandan Shilling, name_plural: Ugandan
+            shillings, rounding: 0, symbol: USh, symbol_native: USh}
+    model: location.currency
+    pk: 47
+-   fields: {code: JMD, decimal_digits: 2, name: Jamaican Dollar, name_plural: Jamaican
+            dollars, rounding: 0, symbol: J$, symbol_native: $}
+    model: location.currency
+    pk: 48
+-   fields: {code: GEL, decimal_digits: 2, name: Georgian Lari, name_plural: Georgian
+            laris, rounding: 0, symbol: GEL, symbol_native: GEL}
+    model: location.currency
+    pk: 49
+-   fields: {code: AFN, decimal_digits: 0, name: Afghan Afghani, name_plural: Afghan
+            Afghanis, rounding: 0, symbol: Af, symbol_native: "\u060B"}
+    model: location.currency
+    pk: 50
+-   fields: {code: MKD, decimal_digits: 2, name: Macedonian Denar, name_plural: Macedonian
+            denari, rounding: 0, symbol: MKD, symbol_native: MKD}
+    model: location.currency
+    pk: 51
+-   fields: {code: TRY, decimal_digits: 2, name: Turkish Lira, name_plural: Turkish
+            Lira, rounding: 0, symbol: TL, symbol_native: TL}
+    model: location.currency
+    pk: 52
+-   fields: {code: BDT, decimal_digits: 2, name: Bangladeshi Taka, name_plural: Bangladeshi
+            takas, rounding: 0, symbol: Tk, symbol_native: "\u09F3"}
+    model: location.currency
+    pk: 53
+-   fields: {code: MGA, decimal_digits: 0, name: Malagasy Ariary, name_plural: Malagasy
+            Ariaries, rounding: 0, symbol: MGA, symbol_native: MGA}
+    model: location.currency
+    pk: 54
+-   fields: {code: YER, decimal_digits: 0, name: Yemeni Rial, name_plural: Yemeni
+            rials, rounding: 0, symbol: YR, symbol_native: "\u0631.\u064A.\u200F"}
+    model: location.currency
+    pk: 55
+-   fields: {code: RWF, decimal_digits: 0, name: Rwandan Franc, name_plural: Rwandan
+            francs, rounding: 0, symbol: RWF, symbol_native: FR}
+    model: location.currency
+    pk: 56
+-   fields: {code: NOK, decimal_digits: 2, name: Norwegian Krone, name_plural: Norwegian
+            kroner, rounding: 0, symbol: Nkr, symbol_native: kr}
+    model: location.currency
+    pk: 57
+-   fields: {code: MOP, decimal_digits: 2, name: Macanese Pataca, name_plural: Macanese
+            patacas, rounding: 0, symbol: MOP$, symbol_native: MOP$}
+    model: location.currency
+    pk: 58
+-   fields: {code: INR, decimal_digits: 2, name: Indian Rupee, name_plural: Indian
+            rupees, rounding: 0, symbol: Rs, symbol_native: "\u099F\u0995\u09BE"}
+    model: location.currency
+    pk: 59
+-   fields: {code: MXN, decimal_digits: 2, name: Mexican Peso, name_plural: Mexican
+            pesos, rounding: 0, symbol: MX$, symbol_native: $}
+    model: location.currency
+    pk: 60
+-   fields: {code: CZK, decimal_digits: 2, name: Czech Republic Koruna, name_plural: Czech
+            Republic korunas, rounding: 0, symbol: "K\u010D", symbol_native: "K\u010D"}
+    model: location.currency
+    pk: 61
+-   fields: {code: PYG, decimal_digits: 0, name: Paraguayan Guarani, name_plural: Paraguayan
+            guaranis, rounding: 0, symbol: "\u20B2", symbol_native: "\u20B2"}
+    model: location.currency
+    pk: 62
+-   fields: {code: COP, decimal_digits: 0, name: Colombian Peso, name_plural: Colombian
+            pesos, rounding: 0, symbol: CO$, symbol_native: $}
+    model: location.currency
+    pk: 63
+-   fields: {code: MUR, decimal_digits: 0, name: Mauritian Rupee, name_plural: Mauritian
+            rupees, rounding: 0, symbol: MURs, symbol_native: MURs}
+    model: location.currency
+    pk: 64
+-   fields: {code: IDR, decimal_digits: 0, name: Indonesian Rupiah, name_plural: Indonesian
+            rupiahs, rounding: 0, symbol: Rp, symbol_native: Rp}
+    model: location.currency
+    pk: 65
+-   fields: {code: HNL, decimal_digits: 2, name: Honduran Lempira, name_plural: Honduran
+            lempiras, rounding: 0, symbol: HNL, symbol_native: L}
+    model: location.currency
+    pk: 66
+-   fields: {code: ETB, decimal_digits: 2, name: Ethiopian Birr, name_plural: Ethiopian
+            birrs, rounding: 0, symbol: Br, symbol_native: Br}
+    model: location.currency
+    pk: 67
+-   fields: {code: PEN, decimal_digits: 2, name: Peruvian Nuevo Sol, name_plural: Peruvian
+            nuevos soles, rounding: 0, symbol: S/., symbol_native: S/.}
+    model: location.currency
+    pk: 68
+-   fields: {code: BZD, decimal_digits: 2, name: Belize Dollar, name_plural: Belize
+            dollars, rounding: 0, symbol: BZ$, symbol_native: $}
+    model: location.currency
+    pk: 69
+-   fields: {code: ILS, decimal_digits: 2, name: Israeli New Sheqel, name_plural: Israeli
+            new sheqels, rounding: 0, symbol: "\u20AA", symbol_native: "\u20AA"}
+    model: location.currency
+    pk: 70
+-   fields: {code: DOP, decimal_digits: 2, name: Dominican Peso, name_plural: Dominican
+            pesos, rounding: 0, symbol: RD$, symbol_native: RD$}
+    model: location.currency
+    pk: 71
+-   fields: {code: TWD, decimal_digits: 2, name: New Taiwan Dollar, name_plural: New
+            Taiwan dollars, rounding: 0, symbol: NT$, symbol_native: NT$}
+    model: location.currency
+    pk: 72
+-   fields: {code: MDL, decimal_digits: 2, name: Moldovan Leu, name_plural: Moldovan
+            lei, rounding: 0, symbol: MDL, symbol_native: MDL}
+    model: location.currency
+    pk: 73
+-   fields: {code: QAR, decimal_digits: 2, name: Qatari Rial, name_plural: Qatari
+            rials, rounding: 0, symbol: QR, symbol_native: "\u0631.\u0642.\u200F"}
+    model: location.currency
+    pk: 74
+-   fields: {code: SEK, decimal_digits: 2, name: Swedish Krona, name_plural: Swedish
+            kronor, rounding: 0, symbol: Skr, symbol_native: kr}
+    model: location.currency
+    pk: 75
+-   fields: {code: ZMK, decimal_digits: 0, name: Zambian Kwacha, name_plural: Zambian
+            kwachas, rounding: 0, symbol: ZK, symbol_native: ZK}
+    model: location.currency
+    pk: 76
+-   fields: {code: AUD, decimal_digits: 2, name: Australian Dollar, name_plural: Australian
+            dollars, rounding: 0, symbol: AU$, symbol_native: $}
+    model: location.currency
+    pk: 77
+-   fields: {code: KMF, decimal_digits: 0, name: Comorian Franc, name_plural: Comorian
+            francs, rounding: 0, symbol: CF, symbol_native: FC}
+    model: location.currency
+    pk: 78
+-   fields: {code: KRW, decimal_digits: 0, name: South Korean Won, name_plural: South
+            Korean won, rounding: 0, symbol: "\u20A9", symbol_native: "\u20A9"}
+    model: location.currency
+    pk: 79
+-   fields: {code: VEF, decimal_digits: 2, name: "Venezuelan Bol\xEDvar", name_plural: "Venezuelan
+            bol\xEDvars", rounding: 0, symbol: Bs.F., symbol_native: Bs.F.}
+    model: location.currency
+    pk: 80
+-   fields: {code: GTQ, decimal_digits: 2, name: Guatemalan Quetzal, name_plural: Guatemalan
+            quetzals, rounding: 0, symbol: GTQ, symbol_native: Q}
+    model: location.currency
+    pk: 81
+-   fields: {code: CLP, decimal_digits: 0, name: Chilean Peso, name_plural: Chilean
+            pesos, rounding: 0, symbol: CL$, symbol_native: $}
+    model: location.currency
+    pk: 82
+-   fields: {code: LTL, decimal_digits: 2, name: Lithuanian Litas, name_plural: Lithuanian
+            litai, rounding: 0, symbol: Lt, symbol_native: Lt}
+    model: location.currency
+    pk: 83
+-   fields: {code: CDF, decimal_digits: 2, name: Congolese Franc, name_plural: Congolese
+            francs, rounding: 0, symbol: CDF, symbol_native: FrCD}
+    model: location.currency
+    pk: 84
+-   fields: {code: KZT, decimal_digits: 2, name: Kazakhstani Tenge, name_plural: Kazakhstani
+            tenges, rounding: 0, symbol: KZT, symbol_native: "\u0442\u04A3\u0433."}
+    model: location.currency
+    pk: 85
+-   fields: {code: RUB, decimal_digits: 2, name: Russian Ruble, name_plural: Russian
+            rubles, rounding: 0, symbol: RUB, symbol_native: "\u0440\u0443\u0431."}
+    model: location.currency
+    pk: 86
+-   fields: {code: TTD, decimal_digits: 2, name: Trinidad and Tobago Dollar, name_plural: Trinidad
+            and Tobago dollars, rounding: 0, symbol: TT$, symbol_native: $}
+    model: location.currency
+    pk: 87
+-   fields: {code: OMR, decimal_digits: 3, name: Omani Rial, name_plural: Omani rials,
+        rounding: 0, symbol: OMR, symbol_native: "\u0631.\u0639.\u200F"}
+    model: location.currency
+    pk: 88
+-   fields: {code: BRL, decimal_digits: 2, name: Brazilian Real, name_plural: Brazilian
+            reals, rounding: 0, symbol: R$, symbol_native: R$}
+    model: location.currency
+    pk: 89
+-   fields: {code: MMK, decimal_digits: 0, name: Myanma Kyat, name_plural: Myanma
+            kyats, rounding: 0, symbol: MMK, symbol_native: K}
+    model: location.currency
+    pk: 90
+-   fields: {code: PLN, decimal_digits: 2, name: Polish Zloty, name_plural: Polish
+            zlotys, rounding: 0, symbol: "z\u0142", symbol_native: "z\u0142"}
+    model: location.currency
+    pk: 91
+-   fields: {code: KES, decimal_digits: 2, name: Kenyan Shilling, name_plural: Kenyan
+            shillings, rounding: 0, symbol: Ksh, symbol_native: Ksh}
+    model: location.currency
+    pk: 92
+-   fields: {code: USD, decimal_digits: 2, name: US Dollar, name_plural: US dollars,
+        rounding: 0, symbol: $, symbol_native: $}
+    model: location.currency
+    pk: 93
+-   fields: {code: GBP, decimal_digits: 2, name: British Pound Sterling, name_plural: British
+            pounds sterling, rounding: 0, symbol: "\xA3", symbol_native: "\xA3"}
+    model: location.currency
+    pk: 94
+-   fields: {code: AZN, decimal_digits: 2, name: Azerbaijani Manat, name_plural: Azerbaijani
+            manats, rounding: 0, symbol: man., symbol_native: "\u043C\u0430\u043D."}
+    model: location.currency
+    pk: 95
+-   fields: {code: TOP, decimal_digits: 2, name: "Tongan Pa\u02BBanga", name_plural: "Tongan
+            pa\u02BBanga", rounding: 0, symbol: T$, symbol_native: T$}
+    model: location.currency
+    pk: 96
+-   fields: {code: GNF, decimal_digits: 0, name: Guinean Franc, name_plural: Guinean
+            francs, rounding: 0, symbol: FG, symbol_native: FG}
+    model: location.currency
+    pk: 97
+-   fields: {code: IQD, decimal_digits: 0, name: Iraqi Dinar, name_plural: Iraqi dinars,
+        rounding: 0, symbol: IQD, symbol_native: "\u062F.\u0639.\u200F"}
+    model: location.currency
+    pk: 98
+-   fields: {code: ERN, decimal_digits: 2, name: Eritrean Nakfa, name_plural: Eritrean
+            nakfas, rounding: 0, symbol: Nfk, symbol_native: Nfk}
+    model: location.currency
+    pk: 99
+-   fields: {code: BAM, decimal_digits: 2, name: Bosnia-Herzegovina Convertible Mark,
+        name_plural: Bosnia-Herzegovina convertible marks, rounding: 0, symbol: KM,
+        symbol_native: KM}
+    model: location.currency
+    pk: 100
+-   fields: {code: CAD, decimal_digits: 2, name: Canadian Dollar, name_plural: Canadian
+            dollars, rounding: 0, symbol: CA$, symbol_native: $}
+    model: location.currency
+    pk: 101
+-   fields: {code: CVE, decimal_digits: 2, name: Cape Verdean Escudo, name_plural: Cape
+            Verdean escudos, rounding: 0, symbol: CV$, symbol_native: CV$}
+    model: location.currency
+    pk: 102
+-   fields: {code: KWD, decimal_digits: 3, name: Kuwaiti Dinar, name_plural: Kuwaiti
+            dinars, rounding: 0, symbol: KD, symbol_native: "\u062F.\u0643.\u200F"}
+    model: location.currency
+    pk: 103
+-   fields: {code: BIF, decimal_digits: 0, name: Burundian Franc, name_plural: Burundian
+            francs, rounding: 0, symbol: FBu, symbol_native: FBu}
+    model: location.currency
+    pk: 104
+-   fields: {code: SOS, decimal_digits: 0, name: Somali Shilling, name_plural: Somali
+            shillings, rounding: 0, symbol: Ssh, symbol_native: Ssh}
+    model: location.currency
+    pk: 105
+-   fields: {code: SGD, decimal_digits: 2, name: Singapore Dollar, name_plural: Singapore
+            dollars, rounding: 0, symbol: S$, symbol_native: $}
+    model: location.currency
+    pk: 106
+-   fields: {code: UZS, decimal_digits: 0, name: Uzbekistan Som, name_plural: Uzbekistan
+            som, rounding: 0, symbol: UZS, symbol_native: UZS}
+    model: location.currency
+    pk: 107
+-   fields: {code: IRR, decimal_digits: 0, name: Iranian Rial, name_plural: Iranian
+            rials, rounding: 0, symbol: IRR, symbol_native: "\uFDFC"}
+    model: location.currency
+    pk: 108
+-   fields: {code: CNY, decimal_digits: 2, name: Chinese Yuan, name_plural: Chinese
+            yuan, rounding: 0, symbol: "CN\xA5", symbol_native: "CN\xA5"}
+    model: location.currency
+    pk: 109
+-   fields: {code: XOF, decimal_digits: 0, name: CFA Franc BCEAO, name_plural: CFA
+            francs BCEAO, rounding: 0, symbol: CFA, symbol_native: CFA}
+    model: location.currency
+    pk: 110
+-   fields: {code: TND, decimal_digits: 3, name: Tunisian Dinar, name_plural: Tunisian
+            dinars, rounding: 0, symbol: DT, symbol_native: "\u062F.\u062A.\u200F"}
+    model: location.currency
+    pk: 111
+-   fields: {code: NZD, decimal_digits: 2, name: New Zealand Dollar, name_plural: New
+            Zealand dollars, rounding: 0, symbol: NZ$, symbol_native: $}
+    model: location.currency
+    pk: 112
+-   fields: {code: LVL, decimal_digits: 2, name: Latvian Lats, name_plural: Latvian
+            lati, rounding: 0, symbol: Ls, symbol_native: Ls}
+    model: location.currency
+    pk: 113
+-   fields: {code: ARS, decimal_digits: 2, name: Argentine Peso, name_plural: Argentine
+            pesos, rounding: 0, symbol: AR$, symbol_native: $}
+    model: location.currency
+    pk: 114
+-   fields: {code: RSD, decimal_digits: 0, name: Serbian Dinar, name_plural: Serbian
+            dinars, rounding: 0, symbol: din., symbol_native: "\u0434\u0438\u043D."}
+    model: location.currency
+    pk: 115
+-   fields: {code: BHD, decimal_digits: 3, name: Bahraini Dinar, name_plural: Bahraini
+            dinars, rounding: 0, symbol: BD, symbol_native: "\u062F.\u0628.\u200F"}
+    model: location.currency
+    pk: 116
+-   fields: {code: JPY, decimal_digits: 0, name: Japanese Yen, name_plural: Japanese
+            yen, rounding: 0, symbol: "\xA5", symbol_native: "\uFFE5"}
+    model: location.currency
+    pk: 117
+-   fields: {code: SDG, decimal_digits: 2, name: Sudanese Pound, name_plural: Sudanese
+            pounds, rounding: 0, symbol: SDG, symbol_native: SDG}
+    model: location.currency
+    pk: 118
+-   fields: {capital: Saint Helier, code: JE, continent: EU, currency: 94, name: Jersey,
+        phone: 44}
+    model: location.country
+    pk: 6
+-   fields: {capital: King Edward Point, code: GS, continent: AN, currency: 94, name: South
+            Georgia and the South Sandwich Islands, phone: 500}
+    model: location.country
+    pk: 10
+-   fields: {capital: Athens, code: GR, continent: EU, currency: 19, name: Greece,
+        phone: 30}
+    model: location.country
+    pk: 11
+-   fields: {capital: St. Peter Port, code: GG, continent: EU, currency: 94, name: Guernsey,
+        phone: 44}
+    model: location.country
+    pk: 15
+-   fields: {capital: London, code: GB, continent: EU, currency: 94, name: United
+            Kingdom, phone: 44}
+    model: location.country
+    pk: 19
+-   fields: {capital: Gibraltar, code: GI, continent: EU, currency: 93, name: Gibraltar,
+        phone: 350}
+    model: location.country
+    pk: 24
+-   fields: {capital: Lisbon, code: PT, continent: EU, currency: 19, name: Portugal,
+        phone: 351}
+    model: location.country
+    pk: 29
+-   fields: {capital: Warsaw, code: PL, continent: EU, currency: 91, name: Poland,
+        phone: 48}
+    model: location.country
+    pk: 38
+-   fields: {capital: Podgorica, code: '', continent: EU, currency: 19, name: Montenegro,
+        phone: 382}
+    model: location.country
+    pk: 43
+-   fields: {capital: "Chi\u0219in\u0103u", code: '', continent: EU, currency: 73,
+        name: Moldova, phone: 373}
+    model: location.country
+    pk: 44
+-   fields: {capital: Monaco, code: MC, continent: EU, currency: 19, name: Monaco,
+        phone: 377}
+    model: location.country
+    pk: 48
+-   fields: {capital: Skopje, code: '', continent: EU, currency: 51, name: Macedonia,
+        phone: 389}
+    model: location.country
+    pk: 54
+-   fields: {capital: Valletta, code: MT, continent: EU, currency: 19, name: Malta,
+        phone: 356}
+    model: location.country
+    pk: 56
+-   fields: {capital: Paris, code: FR, continent: EU, currency: 19, name: France,
+        phone: 33}
+    model: location.country
+    pk: 66
+-   fields: {capital: Helsinki, code: FI, continent: EU, currency: 19, name: Finland,
+        phone: 358}
+    model: location.country
+    pk: 67
+-   fields: {capital: "T\xF3rshavn", code: FO, continent: EU, currency: 8, name: Faroe
+            Islands, phone: 298}
+    model: location.country
+    pk: 71
+-   fields: {capital: Bern, code: CH, continent: EU, currency: 93, name: Switzerland,
+        phone: 41}
+    model: location.country
+    pk: 74
+-   fields: {capital: Prague, code: '', continent: EU, currency: 61, name: Czechia,
+        phone: 420}
+    model: location.country
+    pk: 84
+-   fields: {capital: Nicosia, code: CY, continent: EU, currency: 19, name: Cyprus,
+        phone: 357}
+    model: location.country
+    pk: 85
+-   fields: {capital: Bratislava, code: SK, continent: EU, currency: 19, name: Slovakia,
+        phone: 421}
+    model: location.country
+    pk: 98
+-   fields: {capital: Longyearbyen, code: SJ, continent: EU, currency: 57, name: Svalbard
+            and Jan Mayen, phone: 4779}
+    model: location.country
+    pk: 99
+-   fields: {capital: Ljubljana, code: SI, continent: EU, currency: 19, name: Slovenia,
+        phone: 386}
+    model: location.country
+    pk: 100
+-   fields: {capital: City of San Marino, code: SM, continent: EU, currency: 19, name: San
+            Marino, phone: 378}
+    model: location.country
+    pk: 104
+-   fields: {capital: Stockholm, code: SE, continent: EU, currency: 75, name: Sweden,
+        phone: 46}
+    model: location.country
+    pk: 110
+-   fields: {capital: Vaduz, code: LI, continent: EU, currency: 21, name: Liechtenstein,
+        phone: 423}
+    model: location.country
+    pk: 118
+-   fields: {capital: Riga, code: LV, continent: EU, currency: 19, name: Latvia, phone: 371}
+    model: location.country
+    pk: 119
+-   fields: {capital: Vilnius, code: LT, continent: EU, currency: 83, name: Lithuania,
+        phone: 370}
+    model: location.country
+    pk: 120
+-   fields: {capital: Luxembourg, code: LU, continent: EU, currency: 19, name: Luxembourg,
+        phone: 352}
+    model: location.country
+    pk: 121
+-   fields: {capital: Vatican City, code: '', continent: EU, currency: 19, name: Vatican
+            City, phone: 379}
+    model: location.country
+    pk: 125
+-   fields: {capital: Reykjavik, code: IS, continent: EU, currency: 29, name: Iceland,
+        phone: 354}
+    model: location.country
+    pk: 131
+-   fields: {capital: Rome, code: IT, continent: EU, currency: 19, name: Italy, phone: 39}
+    model: location.country
+    pk: 133
+-   fields: {capital: Douglas, code: IM, continent: EU, currency: 94, name: Isle of
+            Man, phone: 44}
+    model: location.country
+    pk: 135
+-   fields: {capital: Dublin, code: IE, continent: EU, currency: 19, name: Ireland,
+        phone: 353}
+    model: location.country
+    pk: 139
+-   fields: {capital: Brussels, code: BE, continent: EU, currency: 19, name: Belgium,
+        phone: 32}
+    model: location.country
+    pk: 142
+-   fields: {capital: Sofia, code: BG, continent: EU, currency: 5, name: Bulgaria,
+        phone: 359}
+    model: location.country
+    pk: 144
+-   fields: {capital: Sarajevo, code: BA, continent: EU, currency: 100, name: Bosnia
+            and Herzegovina, phone: 387}
+    model: location.country
+    pk: 145
+-   fields: {capital: Minsk, code: BY, continent: EU, currency: 22, name: Belarus,
+        phone: 375}
+    model: location.country
+    pk: 159
+-   fields: {capital: Moscow, code: '', continent: EU, currency: 86, name: Russia,
+        phone: 7}
+    model: location.country
+    pk: 161
+-   fields: {capital: Belgrade, code: '', continent: EU, currency: 115, name: Serbia,
+        phone: 381}
+    model: location.country
+    pk: 163
+-   fields: {capital: Bucharest, code: RO, continent: EU, currency: 45, name: Romania,
+        phone: 40}
+    model: location.country
+    pk: 165
+-   fields: {capital: Zagreb, code: HR, continent: EU, currency: 24, name: Croatia,
+        phone: 385}
+    model: location.country
+    pk: 167
+-   fields: {capital: Budapest, code: HU, continent: EU, currency: 44, name: Hungary,
+        phone: 36}
+    model: location.country
+    pk: 169
+-   fields: {capital: Tallinn, code: EE, continent: EU, currency: 19, name: Estonia,
+        phone: 372}
+    model: location.country
+    pk: 173
+-   fields: {capital: Madrid, code: ES, continent: EU, currency: 19, name: Spain,
+        phone: 34}
+    model: location.country
+    pk: 177
+-   fields: {capital: Kiev, code: UA, continent: EU, currency: 16, name: Ukraine,
+        phone: 380}
+    model: location.country
+    pk: 184
+-   fields: {capital: Amsterdam, code: NL, continent: EU, currency: 19, name: Netherlands,
+        phone: 31}
+    model: location.country
+    pk: 187
+-   fields: {capital: Oslo, code: 'NO', continent: EU, currency: 57, name: Norway,
+        phone: 47}
+    model: location.country
+    pk: 188
+-   fields: {capital: Pristina, code: '', continent: EU, currency: 19, name: Kosovo,
+        phone: 377}
+    model: location.country
+    pk: 198
+-   fields: {capital: Copenhagen, code: DK, continent: EU, currency: 8, name: Denmark,
+        phone: 45}
+    model: location.country
+    pk: 213
+-   fields: {capital: Berlin, code: DE, continent: EU, currency: 19, name: Germany,
+        phone: 49}
+    model: location.country
+    pk: 214
+-   fields: {capital: "Port-aux-Fran\xE7ais", code: TF, continent: AN, currency: 19,
+        name: French Southern Territories, phone: 0}
+    model: location.country
+    pk: 228
+-   fields: {capital: Andorra la Vella, code: '', continent: EU, currency: 19, name: Andorra,
+        phone: 376}
+    model: location.country
+    pk: 233
+-   fields: {capital: Tirana, code: AL, continent: EU, currency: 23, name: Albania,
+        phone: 355}
+    model: location.country
+    pk: 238
+-   fields: {capital: Vienna, code: AT, continent: EU, currency: 19, name: Austria,
+        phone: 43}
+    model: location.country
+    pk: 243
+-   fields: {capital: Mariehamn, code: '', continent: EU, currency: 19, name: "\xC5land",
+        phone: 358}
+    model: location.country
+    pk: 245
+-   fields: {code: null, country: 161, name: Kvarkeno}
+    model: location.city
+    pk: 1
+-   fields: {code: SPU, country: 167, name: Split}
+    model: location.city
+    pk: 8
+-   fields: {code: null, country: 214, name: Spangdahlem}
+    model: location.city
+    pk: 12
+-   fields: {code: null, country: 177, name: Santa Cruz De La Palma}
+    model: location.city
+    pk: 15
+-   fields: {code: PAR, country: 66, name: Paris}
+    model: location.city
+    pk: 28
+-   fields: {code: null, country: 11, name: Cyclades Islands}
+    model: location.city
+    pk: 43
+-   fields: {code: null, country: 19, name: Benbecula}
+    model: location.city
+    pk: 54
+-   fields: {code: null, country: 163, name: Belgrade}
+    model: location.city
+    pk: 57
+-   fields: {code: BER, country: 214, name: Berlin}
+    model: location.city
+    pk: 61
+-   fields: {code: null, country: 66, name: Brest}
+    model: location.city
+    pk: 62
+-   fields: {code: null, country: 19, name: Honington}
+    model: location.city
+    pk: 64
+-   fields: {code: null, country: 161, name: Grozny}
+    model: location.city
+    pk: 69
+-   fields: {code: null, country: 29, name: Graciosa Island}
+    model: location.city
+    pk: 70
+-   fields: {code: null, country: 133, name: Grosseto}
+    model: location.city
+    pk: 73
+-   fields: {code: null, country: 187, name: Groningen}
+    model: location.city
+    pk: 75
+-   fields: {code: null, country: 243, name: Graz}
+    model: location.city
+    pk: 76
+-   fields: {code: null, country: 177, name: Granada}
+    model: location.city
+    pk: 77
+-   fields: {code: null, country: 131, name: "Gr\xEDmsey"}
+    model: location.city
+    pk: 78
+-   fields: {code: null, country: 177, name: Gerona}
+    model: location.city
+    pk: 81
+-   fields: {code: null, country: 161, name: Noyabrsk}
+    model: location.city
+    pk: 89
+-   fields: {code: null, country: 214, name: Norden}
+    model: location.city
+    pk: 90
+-   fields: {code: null, country: 161, name: Tyumen}
+    model: location.city
+    pk: 92
+-   fields: {code: null, country: 139, name: Connaught}
+    model: location.city
+    pk: 95
+-   fields: {code: null, country: 120, name: Barysiai}
+    model: location.city
+    pk: 100
+-   fields: {code: null, country: 161, name: Novokuznetsk}
+    model: location.city
+    pk: 101
+-   fields: {code: null, country: 110, name: Hultsfred}
+    model: location.city
+    pk: 104
+-   fields: {code: null, country: 133, name: Lampedusa}
+    model: location.city
+    pk: 116
+-   fields: {code: null, country: 214, name: Laage}
+    model: location.city
+    pk: 117
+-   fields: {code: EDI, country: 19, name: Edinburgh}
+    model: location.city
+    pk: 118
+-   fields: {code: null, country: 66, name: La Roche-sur-yon}
+    model: location.city
+    pk: 122
+-   fields: {code: null, country: 19, name: Lossiemouth}
+    model: location.city
+    pk: 127
+-   fields: {code: null, country: 66, name: Le Mans}
+    model: location.city
+    pk: 129
+-   fields: {code: null, country: 120, name: Panevezys}
+    model: location.city
+    pk: 143
+-   fields: {code: null, country: 133, name: Pantelleria}
+    model: location.city
+    pk: 148
+-   fields: {code: null, country: 177, name: Pamplona}
+    model: location.city
+    pk: 150
+-   fields: {code: null, country: 11, name: Kerkyra/corfu}
+    model: location.city
+    pk: 152
+-   fields: {code: null, country: 66, name: Caen}
+    model: location.city
+    pk: 153
+-   fields: {code: null, country: 161, name: Mineralnye Vody}
+    model: location.city
+    pk: 160
+-   fields: {code: MRS, country: 66, name: Marseille}
+    model: location.city
+    pk: 162
+-   fields: {code: null, country: 161, name: Komsomolsk-on-Amur}
+    model: location.city
+    pk: 182
+-   fields: {code: null, country: 144, name: Plovdiv}
+    model: location.city
+    pk: 203
+-   fields: {code: VCE, country: 133, name: Venice}
+    model: location.city
+    pk: 206
+-   fields: {code: null, country: 66, name: Calvi}
+    model: location.city
+    pk: 220
+-   fields: {code: null, country: 188, name: Jan Mayen}
+    model: location.city
+    pk: 223
+-   fields: {code: null, country: 161, name: Moscow}
+    model: location.city
+    pk: 227
+-   fields: {code: null, country: 177, name: Jerez}
+    model: location.city
+    pk: 233
+-   fields: {code: null, country: 214, name: Sankt Peter-Ording}
+    model: location.city
+    pk: 235
+-   fields: {code: null, country: 19, name: Perth}
+    model: location.city
+    pk: 238
+-   fields: {code: null, country: 133, name: Pisa}
+    model: location.city
+    pk: 241
+-   fields: {code: null, country: 110, name: Landskrona}
+    model: location.city
+    pk: 246
+-   fields: {code: null, country: 133, name: Pescara}
+    model: location.city
+    pk: 249
+-   fields: {code: null, country: 19, name: Papa Stour}
+    model: location.city
+    pk: 253
+-   fields: {code: null, country: 165, name: Bacau}
+    model: location.city
+    pk: 256
+-   fields: {code: BCN, country: 177, name: Barcelona}
+    model: location.city
+    pk: 257
+-   fields: {code: null, country: 188, name: Stord}
+    model: location.city
+    pk: 276
+-   fields: {code: null, country: 161, name: Novorossiysk}
+    model: location.city
+    pk: 283
+-   fields: {code: null, country: 19, name: Angelsey}
+    model: location.city
+    pk: 285
+-   fields: {code: LON, country: 19, name: London}
+    model: location.city
+    pk: 301
+-   fields: {code: null, country: 214, name: Ebenhofen}
+    model: location.city
+    pk: 314
+-   fields: {code: null, country: 133, name: Marina Di Campo}
+    model: location.city
+    pk: 316
+-   fields: {code: null, country: 214, name: Bochum}
+    model: location.city
+    pk: 320
+-   fields: {code: null, country: 213, name: Esbjerg}
+    model: location.city
+    pk: 321
+-   fields: {code: null, country: 66, name: St-Etienne}
+    model: location.city
+    pk: 322
+-   fields: {code: null, country: 177, name: "Logro\xF1o-Agoncillo"}
+    model: location.city
+    pk: 325
+-   fields: {code: null, country: 167, name: Rijeka}
+    model: location.city
+    pk: 326
+-   fields: {code: null, country: 214, name: Dresden}
+    model: location.city
+    pk: 328
+-   fields: {code: MLA, country: 56, name: Malta}
+    model: location.city
+    pk: 351
+-   fields: {code: null, country: 110, name: Arvidsjaur}
+    model: location.city
+    pk: 354
+-   fields: {code: null, country: 177, name: Melilla}
+    model: location.city
+    pk: 355
+-   fields: {code: null, country: 66, name: Montpellier}
+    model: location.city
+    pk: 361
+-   fields: {code: null, country: 184, name: Mariupol International}
+    model: location.city
+    pk: 367
+-   fields: {code: null, country: 66, name: Avignon}
+    model: location.city
+    pk: 368
+-   fields: {code: null, country: 133, name: Aviano}
+    model: location.city
+    pk: 374
+-   fields: {code: null, country: 144, name: Gorna Orechovica}
+    model: location.city
+    pk: 377
+-   fields: {code: null, country: 66, name: Ajaccio}
+    model: location.city
+    pk: 379
+-   fields: {code: null, country: 11, name: Kastelorizo}
+    model: location.city
+    pk: 385
+-   fields: {code: null, country: 11, name: Kozani}
+    model: location.city
+    pk: 387
+-   fields: {code: null, country: 161, name: Kazan}
+    model: location.city
+    pk: 388
+-   fields: {code: null, country: 67, name: Vaasa}
+    model: location.city
+    pk: 413
+-   fields: {code: null, country: 66, name: Valence}
+    model: location.city
+    pk: 414
+-   fields: {code: null, country: 144, name: Varna}
+    model: location.city
+    pk: 418
+-   fields: {code: null, country: 188, name: "Vard\xF8"}
+    model: location.city
+    pk: 421
+-   fields: {code: null, country: 214, name: Hannover}
+    model: location.city
+    pk: 434
+-   fields: {code: null, country: 184, name: Rivne}
+    model: location.city
+    pk: 439
+-   fields: {code: null, country: 184, name: Donetsk}
+    model: location.city
+    pk: 440
+-   fields: {code: null, country: 66, name: Deauville}
+    model: location.city
+    pk: 442
+-   fields: {code: null, country: 66, name: Pau}
+    model: location.city
+    pk: 458
+-   fields: {code: null, country: 167, name: Pula}
+    model: location.city
+    pk: 464
+-   fields: {code: null, country: 161, name: Barnaul}
+    model: location.city
+    pk: 477
+-   fields: {code: null, country: 165, name: Baia Mare}
+    model: location.city
+    pk: 478
+-   fields: {code: null, country: 214, name: Bamberg}
+    model: location.city
+    pk: 484
+-   fields: {code: null, country: 213, name: Stauning}
+    model: location.city
+    pk: 491
+-   fields: {code: STO, country: 110, name: Stockholm}
+    model: location.city
+    pk: 496
+-   fields: {code: null, country: 161, name: Stavropol}
+    model: location.city
+    pk: 503
+-   fields: {code: STR, country: 214, name: Stuttgart}
+    model: location.city
+    pk: 504
+-   fields: {code: null, country: 66, name: Annecy}
+    model: location.city
+    pk: 510
+-   fields: {code: TCI, country: 177, name: Tenerife}
+    model: location.city
+    pk: 511
+-   fields: {code: NCL, country: 19, name: Newcastle}
+    model: location.city
+    pk: 515
+-   fields: {code: NCE, country: 66, name: Nice}
+    model: location.city
+    pk: 518
+-   fields: {code: null, country: 187, name: Valkenburg}
+    model: location.city
+    pk: 519
+-   fields: {code: null, country: 66, name: Limoges}
+    model: location.city
+    pk: 521
+-   fields: {code: null, country: 66, name: Lille}
+    model: location.city
+    pk: 523
+-   fields: {code: null, country: 133, name: Milan}
+    model: location.city
+    pk: 525
+-   fields: {code: LIS, country: 29, name: Lisbon}
+    model: location.city
+    pk: 536
+-   fields: {code: null, country: 66, name: Nimes}
+    model: location.city
+    pk: 539
+-   fields: {code: null, country: 15, name: Alderney}
+    model: location.city
+    pk: 540
+-   fields: {code: null, country: 188, name: Hammerfest}
+    model: location.city
+    pk: 542
+-   fields: {code: null, country: 67, name: Kajaani}
+    model: location.city
+    pk: 549
+-   fields: {code: null, country: 67, name: Kuusamo}
+    model: location.city
+    pk: 551
+-   fields: {code: null, country: 67, name: Kauhava}
+    model: location.city
+    pk: 558
+-   fields: {code: null, country: 66, name: Reims}
+    model: location.city
+    pk: 561
+-   fields: {code: null, country: 131, name: Hofn}
+    model: location.city
+    pk: 563
+-   fields: {code: null, country: 19, name: Oxford}
+    model: location.city
+    pk: 567
+-   fields: {code: null, country: 38, name: RUDNIKI}
+    model: location.city
+    pk: 571
+-   fields: {code: ATH, country: 11, name: Athens}
+    model: location.city
+    pk: 588
+-   fields: {code: null, country: 139, name: Dongloe}
+    model: location.city
+    pk: 597
+-   fields: {code: null, country: 66, name: Clermont-Ferrand}
+    model: location.city
+    pk: 600
+-   fields: {code: null, country: 19, name: Yeovilton}
+    model: location.city
+    pk: 615
+-   fields: {code: null, country: 177, name: Vigo}
+    model: location.city
+    pk: 626
+-   fields: {code: null, country: 161, name: Vologda}
+    model: location.city
+    pk: 627
+-   fields: {code: null, country: 66, name: Figari}
+    model: location.city
+    pk: 638
+-   fields: {code: null, country: 11, name: Zakynthos}
+    model: location.city
+    pk: 646
+-   fields: {code: null, country: 184, name: Zhytomyr}
+    model: location.city
+    pk: 652
+-   fields: {code: null, country: 110, name: Helsingborg}
+    model: location.city
+    pk: 665
+-   fields: {code: null, country: 187, name: Soesterberg}
+    model: location.city
+    pk: 682
+-   fields: {code: null, country: 66, name: Vilefrance}
+    model: location.city
+    pk: 699
+-   fields: {code: null, country: 161, name: Pevek}
+    model: location.city
+    pk: 702
+-   fields: {code: null, country: 66, name: Bourges}
+    model: location.city
+    pk: 713
+-   fields: {code: null, country: 161, name: Nalchik}
+    model: location.city
+    pk: 714
+-   fields: {code: null, country: 19, name: Bournemouth}
+    model: location.city
+    pk: 716
+-   fields: {code: NAP, country: 133, name: Naples}
+    model: location.city
+    pk: 718
+-   fields: {code: null, country: 188, name: Bodo}
+    model: location.city
+    pk: 723
+-   fields: {code: BOD, country: 66, name: Bordeaux}
+    model: location.city
+    pk: 727
+-   fields: {code: null, country: 67, name: Savonlinna}
+    model: location.city
+    pk: 732
+-   fields: {code: null, country: 188, name: "Svolv\xE6r"}
+    model: location.city
+    pk: 734
+-   fields: {code: SVG, country: 188, name: Stavanger}
+    model: location.city
+    pk: 737
+-   fields: {code: null, country: 161, name: Yekaterinburg}
+    model: location.city
+    pk: 743
+-   fields: {code: null, country: 177, name: Sevilla}
+    model: location.city
+    pk: 747
+-   fields: {code: null, country: 188, name: Leknes}
+    model: location.city
+    pk: 753
+-   fields: {code: null, country: 188, name: Lakselv}
+    model: location.city
+    pk: 755
+-   fields: {code: null, country: 29, name: Flores}
+    model: location.city
+    pk: 762
+-   fields: {code: null, country: 214, name: Flensburg}
+    model: location.city
+    pk: 770
+-   fields: {code: null, country: 19, name: Coll}
+    model: location.city
+    pk: 771
+-   fields: {code: null, country: 19, name: Islay}
+    model: location.city
+    pk: 772
+-   fields: {code: null, country: 184, name: Zaporozhye}
+    model: location.city
+    pk: 783
+-   fields: {code: null, country: 184, name: Nikolayev}
+    model: location.city
+    pk: 793
+-   fields: {code: null, country: 161, name: Ufa}
+    model: location.city
+    pk: 802
+-   fields: {code: null, country: 131, name: Vestmannaeyjar}
+    model: location.city
+    pk: 816
+-   fields: {code: null, country: 66, name: Grenoble}
+    model: location.city
+    pk: 819
+-   fields: {code: null, country: 159, name: Hrodna}
+    model: location.city
+    pk: 820
+-   fields: {code: null, country: 38, name: Wroclaw}
+    model: location.city
+    pk: 824
+-   fields: {code: null, country: 214, name: Frankfurt}
+    model: location.city
+    pk: 829
+-   fields: {code: ZRH, country: 74, name: Zurich}
+    model: location.city
+    pk: 832
+-   fields: {code: null, country: 161, name: Dikson}
+    model: location.city
+    pk: 843
+-   fields: {code: null, country: 173, name: Kuressaare}
+    model: location.city
+    pk: 850
+-   fields: {code: null, country: 66, name: Rouen}
+    model: location.city
+    pk: 854
+-   fields: {code: null, country: 161, name: Uraj}
+    model: location.city
+    pk: 855
+-   fields: {code: null, country: 161, name: Kursk}
+    model: location.city
+    pk: 857
+-   fields: {code: null, country: 11, name: Andravida}
+    model: location.city
+    pk: 862
+-   fields: {code: null, country: 161, name: Yakutia}
+    model: location.city
+    pk: 868
+-   fields: {code: null, country: 214, name: Heringsdorf}
+    model: location.city
+    pk: 882
+-   fields: {code: null, country: 214, name: Borkum}
+    model: location.city
+    pk: 897
+-   fields: {code: null, country: 56, name: Gozo}
+    model: location.city
+    pk: 928
+-   fields: {code: null, country: 121, name: Luxemburg}
+    model: location.city
+    pk: 957
+-   fields: {code: null, country: 38, name: Lublin}
+    model: location.city
+    pk: 958
+-   fields: {code: null, country: 74, name: Lugano}
+    model: location.city
+    pk: 962
+-   fields: {code: null, country: 214, name: Mainz}
+    model: location.city
+    pk: 970
+-   fields: {code: null, country: 19, name: Duxford}
+    model: location.city
+    pk: 972
+-   fields: {code: null, country: 67, name: Kemi}
+    model: location.city
+    pk: 977
+-   fields: {code: null, country: 214, name: Kiel}
+    model: location.city
+    pk: 978
+-   fields: {code: null, country: 161, name: Kemorovo}
+    model: location.city
+    pk: 980
+-   fields: {code: null, country: 131, name: Keflavik}
+    model: location.city
+    pk: 982
+-   fields: {code: null, country: 214, name: Kempten}
+    model: location.city
+    pk: 985
+-   fields: {code: null, country: 67, name: Halli}
+    model: location.city
+    pk: 987
+-   fields: {code: BUH, country: 165, name: Bucharest}
+    model: location.city
+    pk: 996
+-   fields: {code: null, country: 11, name: Alexandroupolis}
+    model: location.city
+    pk: 1005
+-   fields: {code: null, country: 66, name: Epinal}
+    model: location.city
+    pk: 1014
+-   fields: {code: null, country: 66, name: Metz}
+    model: location.city
+    pk: 1018
+-   fields: {code: null, country: 161, name: Vladivostok}
+    model: location.city
+    pk: 1025
+-   fields: {code: null, country: 66, name: Moulins}
+    model: location.city
+    pk: 1030
+-   fields: {code: null, country: 67, name: Hyvinkaa}
+    model: location.city
+    pk: 1060
+-   fields: {code: null, country: 161, name: Vorkuta}
+    model: location.city
+    pk: 1064
+-   fields: {code: null, country: 19, name: Fort William}
+    model: location.city
+    pk: 1070
+-   fields: {code: null, country: 214, name: Rheine}
+    model: location.city
+    pk: 1074
+-   fields: {code: null, country: 169, name: Debrecen}
+    model: location.city
+    pk: 1087
+-   fields: {code: null, country: 161, name: Yuzhno-Kurilsk}
+    model: location.city
+    pk: 1090
+-   fields: {code: null, country: 67, name: Ivalo}
+    model: location.city
+    pk: 1098
+-   fields: {code: null, country: 177, name: Las Palmas}
+    model: location.city
+    pk: 1102
+-   fields: {code: null, country: 110, name: Hagfors}
+    model: location.city
+    pk: 1106
+-   fields: {code: null, country: 74, name: Altenrhein}
+    model: location.city
+    pk: 1107
+-   fields: {code: null, country: 161, name: Nezhitino}
+    model: location.city
+    pk: 1112
+-   fields: {code: null, country: 29, name: Sao Jorge Island}
+    model: location.city
+    pk: 1136
+-   fields: {code: null, country: 67, name: "Sein\xE4joki / Ilmajoki"}
+    model: location.city
+    pk: 1138
+-   fields: {code: null, country: 145, name: Sarajevo}
+    model: location.city
+    pk: 1143
+-   fields: {code: null, country: 161, name: Magadan}
+    model: location.city
+    pk: 1157
+-   fields: {code: null, country: 161, name: Gelendzik}
+    model: location.city
+    pk: 1158
+-   fields: {code: null, country: 66, name: Mende}
+    model: location.city
+    pk: 1159
+-   fields: {code: null, country: 188, name: Mehamn}
+    model: location.city
+    pk: 1160
+-   fields: {code: null, country: 38, name: Gdansk}
+    model: location.city
+    pk: 1168
+-   fields: {code: null, country: 187, name: Leeuwarden}
+    model: location.city
+    pk: 1171
+-   fields: {code: null, country: 19, name: Lerwick}
+    model: location.city
+    pk: 1174
+-   fields: {code: null, country: 184, name: Lvov}
+    model: location.city
+    pk: 1176
+-   fields: {code: null, country: 161, name: Kogalym}
+    model: location.city
+    pk: 1181
+-   fields: {code: KGS, country: 11, name: Kos}
+    model: location.city
+    pk: 1182
+-   fields: {code: DUS, country: 214, name: Dusseldorf}
+    model: location.city
+    pk: 1189
+-   fields: {code: null, country: 161, name: Kaliningrad}
+    model: location.city
+    pk: 1191
+-   fields: {code: null, country: 184, name: Kirovograd}
+    model: location.city
+    pk: 1199
+-   fields: {code: CPH, country: 213, name: Copenhagen}
+    model: location.city
+    pk: 1201
+-   fields: {code: null, country: 161, name: Sovetskiy}
+    model: location.city
+    pk: 1213
+-   fields: {code: null, country: 161, name: Novosibirsk}
+    model: location.city
+    pk: 1214
+-   fields: {code: null, country: 177, name: Aviles}
+    model: location.city
+    pk: 1216
+-   fields: {code: null, country: 110, name: Mora}
+    model: location.city
+    pk: 1218
+-   fields: {code: null, country: 133, name: Milano}
+    model: location.city
+    pk: 1223
+-   fields: {code: null, country: 66, name: Morlaix}
+    model: location.city
+    pk: 1224
+-   fields: {code: HAM, country: 214, name: Hamburg}
+    model: location.city
+    pk: 1231
+-   fields: {code: null, country: 214, name: Mannheim}
+    model: location.city
+    pk: 1232
+-   fields: {code: MUC, country: 214, name: Munich}
+    model: location.city
+    pk: 1234
+-   fields: {code: null, country: 133, name: Vicenza}
+    model: location.city
+    pk: 1237
+-   fields: {code: null, country: 133, name: Vieste}
+    model: location.city
+    pk: 1239
+-   fields: {code: VIE, country: 243, name: Vienna}
+    model: location.city
+    pk: 1241
+-   fields: {code: null, country: 110, name: Torsby}
+    model: location.city
+    pk: 1244
+-   fields: {code: null, country: 184, name: Vinnitsa}
+    model: location.city
+    pk: 1246
+-   fields: {code: null, country: 161, name: Tula}
+    model: location.city
+    pk: 1247
+-   fields: {code: null, country: 177, name: Vitoria}
+    model: location.city
+    pk: 1251
+-   fields: {code: null, country: 214, name: Fussen}
+    model: location.city
+    pk: 1255
+-   fields: {code: null, country: 177, name: Fuerteventura}
+    model: location.city
+    pk: 1257
+-   fields: {code: null, country: 214, name: Helgoland}
+    model: location.city
+    pk: 1270
+-   fields: {code: ABZ, country: 19, name: Aberdeen}
+    model: location.city
+    pk: 1274
+-   fields: {code: null, country: 19, name: Unst}
+    model: location.city
+    pk: 1280
+-   fields: {code: null, country: 161, name: Omsk}
+    model: location.city
+    pk: 1298
+-   fields: {code: null, country: 165, name: Oradea}
+    model: location.city
+    pk: 1299
+-   fields: {code: null, country: 213, name: Aalborg}
+    model: location.city
+    pk: 1305
+-   fields: {code: null, country: 214, name: Aachen}
+    model: location.city
+    pk: 1308
+-   fields: {code: null, country: 161, name: Anapa}
+    model: location.city
+    pk: 1314
+-   fields: {code: null, country: 213, name: Aarhus}
+    model: location.city
+    pk: 1315
+-   fields: {code: BIO, country: 177, name: Bilbao}
+    model: location.city
+    pk: 1320
+-   fields: {code: null, country: 214, name: Biessenhofen}
+    model: location.city
+    pk: 1328
+-   fields: {code: null, country: 66, name: Bastia}
+    model: location.city
+    pk: 1329
+-   fields: {code: null, country: 131, name: Bildudalur}
+    model: location.city
+    pk: 1333
+-   fields: {code: null, country: 66, name: Biarritz-bayonne}
+    model: location.city
+    pk: 1336
+-   fields: {code: null, country: 161, name: Salekhard}
+    model: location.city
+    pk: 1338
+-   fields: {code: null, country: 177, name: Salamanca}
+    model: location.city
+    pk: 1346
+-   fields: {code: null, country: 98, name: Sliac}
+    model: location.city
+    pk: 1352
+-   fields: {code: null, country: 48, name: Monaco}
+    model: location.city
+    pk: 1360
+-   fields: {code: null, country: 161, name: Makhachkala}
+    model: location.city
+    pk: 1373
+-   fields: {code: null, country: 66, name: Montlucon}
+    model: location.city
+    pk: 1376
+-   fields: {code: null, country: 19, name: Exeter}
+    model: location.city
+    pk: 1383
+-   fields: {code: null, country: 139, name: Kerry}
+    model: location.city
+    pk: 1386
+-   fields: {code: null, country: 184, name: KIEV}
+    model: location.city
+    pk: 1387
+-   fields: {code: null, country: 44, name: Chisinau}
+    model: location.city
+    pk: 1389
+-   fields: {code: null, country: 11, name: Kithira}
+    model: location.city
+    pk: 1390
+-   fields: {code: null, country: 161, name: Kineshma}
+    model: location.city
+    pk: 1400
+-   fields: {code: null, country: 110, name: Kristianstad}
+    model: location.city
+    pk: 1401
+-   fields: {code: null, country: 133, name: Crotone}
+    model: location.city
+    pk: 1403
+-   fields: {code: null, country: 165, name: Craiova}
+    model: location.city
+    pk: 1408
+-   fields: {code: null, country: 142, name: Charleroi}
+    model: location.city
+    pk: 1413
+-   fields: {code: null, country: 29, name: Porto}
+    model: location.city
+    pk: 1423
+-   fields: {code: null, country: 161, name: Beloyarsky}
+    model: location.city
+    pk: 1427
+-   fields: {code: null, country: 110, name: Linkoeping}
+    model: location.city
+    pk: 1432
+-   fields: {code: null, country: 66, name: Arcachon}
+    model: location.city
+    pk: 1440
+-   fields: {code: null, country: 161, name: Volgograd}
+    model: location.city
+    pk: 1442
+-   fields: {code: null, country: 11, name: Nea Anghialos}
+    model: location.city
+    pk: 1443
+-   fields: {code: null, country: 165, name: Constanta}
+    model: location.city
+    pk: 1445
+-   fields: {code: null, country: 161, name: Voronezh}
+    model: location.city
+    pk: 1447
+-   fields: {code: ROM, country: 133, name: Rome}
+    model: location.city
+    pk: 1451
+-   fields: {code: null, country: 165, name: Timisoara}
+    model: location.city
+    pk: 1458
+-   fields: {code: null, country: 161, name: Ulyanovsk}
+    model: location.city
+    pk: 1480
+-   fields: {code: null, country: 161, name: Lensk}
+    model: location.city
+    pk: 1484
+-   fields: {code: null, country: 161, name: Izhevsk}
+    model: location.city
+    pk: 1497
+-   fields: {code: null, country: 110, name: "\xC4ngelholm"}
+    model: location.city
+    pk: 1503
+-   fields: {code: null, country: 66, name: Agen}
+    model: location.city
+    pk: 1504
+-   fields: {code: null, country: 214, name: Wangerooge}
+    model: location.city
+    pk: 1505
+-   fields: {code: null, country: 214, name: Augsburg}
+    model: location.city
+    pk: 1507
+-   fields: {code: null, country: 110, name: Nynashamn}
+    model: location.city
+    pk: 1512
+-   fields: {code: null, country: 11, name: Agrinion}
+    model: location.city
+    pk: 1519
+-   fields: {code: AGP, country: 177, name: Malaga}
+    model: location.city
+    pk: 1520
+-   fields: {code: null, country: 214, name: Braunschweig}
+    model: location.city
+    pk: 1526
+-   fields: {code: null, country: 19, name: Barrow Island}
+    model: location.city
+    pk: 1527
+-   fields: {code: null, country: 167, name: Brac}
+    model: location.city
+    pk: 1530
+-   fields: {code: null, country: 161, name: Balakovo}
+    model: location.city
+    pk: 1532
+-   fields: {code: SNN, country: 139, name: Shannon}
+    model: location.city
+    pk: 1538
+-   fields: {code: null, country: 66, name: St.-nazaire}
+    model: location.city
+    pk: 1544
+-   fields: {code: MAD, country: 177, name: Madrid}
+    model: location.city
+    pk: 1545
+-   fields: {code: MAH, country: 177, name: Menorca}
+    model: location.city
+    pk: 1548
+-   fields: {code: MAN, country: 19, name: Manchester}
+    model: location.city
+    pk: 1553
+-   fields: {code: null, country: 188, name: Harstad/Narvik}
+    model: location.city
+    pk: 1555
+-   fields: {code: null, country: 110, name: Sveg}
+    model: location.city
+    pk: 1556
+-   fields: {code: null, country: 19, name: Sumburgh}
+    model: location.city
+    pk: 1563
+-   fields: {code: null, country: 167, name: Mali Losinj}
+    model: location.city
+    pk: 1570
+-   fields: {code: null, country: 188, name: Kirkenes}
+    model: location.city
+    pk: 1576
+-   fields: {code: null, country: 66, name: Le Castellet}
+    model: location.city
+    pk: 1584
+-   fields: {code: CTA, country: 133, name: Catania}
+    model: location.city
+    pk: 1590
+-   fields: {code: ORK, country: 139, name: Cork}
+    model: location.city
+    pk: 1606
+-   fields: {code: null, country: 66, name: Orleans}
+    model: location.city
+    pk: 1612
+-   fields: {code: null, country: 110, name: Orebro}
+    model: location.city
+    pk: 1613
+-   fields: {code: null, country: 11, name: Mytilini}
+    model: location.city
+    pk: 1619
+-   fields: {code: null, country: 74, name: Interlaken}
+    model: location.city
+    pk: 1623
+-   fields: {code: null, country: 66, name: Chalon}
+    model: location.city
+    pk: 1641
+-   fields: {code: null, country: 66, name: Chalons}
+    model: location.city
+    pk: 1643
+-   fields: {code: null, country: 19, name: Tresco}
+    model: location.city
+    pk: 1646
+-   fields: {code: null, country: 66, name: Tours}
+    model: location.city
+    pk: 1666
+-   fields: {code: null, country: 177, name: Sabadell}
+    model: location.city
+    pk: 1672
+-   fields: {code: null, country: 133, name: Salerno}
+    model: location.city
+    pk: 1674
+-   fields: {code: null, country: 11, name: Paros}
+    model: location.city
+    pk: 1678
+-   fields: {code: null, country: 161, name: Shchyolkovo}
+    model: location.city
+    pk: 1683
+-   fields: {code: null, country: 161, name: Chokurdah}
+    model: location.city
+    pk: 1685
+-   fields: {code: null, country: 214, name: Paderborn}
+    model: location.city
+    pk: 1688
+-   fields: {code: null, country: 66, name: Castres}
+    model: location.city
+    pk: 1698
+-   fields: {code: null, country: 133, name: Decimomannu}
+    model: location.city
+    pk: 1699
+-   fields: {code: null, country: 188, name: Alesund}
+    model: location.city
+    pk: 1711
+-   fields: {code: null, country: 131, name: Akureyri}
+    model: location.city
+    pk: 1715
+-   fields: {code: null, country: 214, name: Buchloe}
+    model: location.city
+    pk: 1730
+-   fields: {code: BUD, country: 169, name: Budapest}
+    model: location.city
+    pk: 1738
+-   fields: {code: null, country: 214, name: Marktoberdorf}
+    model: location.city
+    pk: 1740
+-   fields: {code: null, country: 188, name: Molde}
+    model: location.city
+    pk: 1749
+-   fields: {code: null, country: 161, name: Kostroma}
+    model: location.city
+    pk: 1762
+-   fields: {code: null, country: 66, name: Macon}
+    model: location.city
+    pk: 1771
+-   fields: {code: null, country: 74, name: Neuchatel}
+    model: location.city
+    pk: 1772
+-   fields: {code: null, country: 66, name: Annemasse}
+    model: location.city
+    pk: 1773
+-   fields: {code: null, country: 19, name: Coventry}
+    model: location.city
+    pk: 1775
+-   fields: {code: null, country: 29, name: Corvo}
+    model: location.city
+    pk: 1776
+-   fields: {code: null, country: 66, name: Courcheval}
+    model: location.city
+    pk: 1782
+-   fields: {code: null, country: 66, name: Granville}
+    model: location.city
+    pk: 1815
+-   fields: {code: null, country: 110, name: Vasteras}
+    model: location.city
+    pk: 1823
+-   fields: {code: null, country: 184, name: Lugansk}
+    model: location.city
+    pk: 1826
+-   fields: {code: null, country: 66, name: Royan}
+    model: location.city
+    pk: 1827
+-   fields: {code: null, country: 188, name: Rygge}
+    model: location.city
+    pk: 1831
+-   fields: {code: null, country: 19, name: Eday}
+    model: location.city
+    pk: 1832
+-   fields: {code: null, country: 161, name: Rybinsk}
+    model: location.city
+    pk: 1834
+-   fields: {code: null, country: 66, name: Chambery}
+    model: location.city
+    pk: 1843
+-   fields: {code: null, country: 66, name: Colmar}
+    model: location.city
+    pk: 1852
+-   fields: {code: INV, country: 19, name: Inverness}
+    model: location.city
+    pk: 1860
+-   fields: {code: null, country: 139, name: Inisheer}
+    model: location.city
+    pk: 1862
+-   fields: {code: null, country: 243, name: Innsbruck}
+    model: location.city
+    pk: 1865
+-   fields: {code: null, country: 163, name: Nis}
+    model: location.city
+    pk: 1868
+-   fields: {code: null, country: 19, name: Golouchestershire}
+    model: location.city
+    pk: 1879
+-   fields: {code: null, country: 85, name: Akrotiri}
+    model: location.city
+    pk: 1886
+-   fields: {code: null, country: 74, name: Basel}
+    model: location.city
+    pk: 1905
+-   fields: {code: MMA, country: 110, name: Malmoe}
+    model: location.city
+    pk: 1918
+-   fields: {code: null, country: 165, name: Sibiu}
+    model: location.city
+    pk: 1920
+-   fields: {code: null, country: 161, name: Murmansk}
+    model: location.city
+    pk: 1926
+-   fields: {code: null, country: 19, name: Teesside}
+    model: location.city
+    pk: 1928
+-   fields: {code: null, country: 66, name: St.-brieuc Armor}
+    model: location.city
+    pk: 1929
+-   fields: {code: null, country: 19, name: Kirkwall}
+    model: location.city
+    pk: 1934
+-   fields: {code: null, country: 67, name: Kruunupyy}
+    model: location.city
+    pk: 1935
+-   fields: {code: null, country: 214, name: Koln}
+    model: location.city
+    pk: 1944
+-   fields: {code: null, country: 214, name: Erfurt}
+    model: location.city
+    pk: 1945
+-   fields: {code: null, country: 133, name: Latina}
+    model: location.city
+    pk: 1957
+-   fields: {code: null, country: 19, name: Lasham}
+    model: location.city
+    pk: 1958
+-   fields: {code: null, country: 214, name: Essen}
+    model: location.city
+    pk: 1971
+-   fields: {code: null, country: 67, name: Jyvaskyla}
+    model: location.city
+    pk: 1972
+-   fields: {code: null, country: 133, name: Tremiti Islands}
+    model: location.city
+    pk: 1986
+-   fields: {code: null, country: 177, name: Huesca}
+    model: location.city
+    pk: 1988
+-   fields: {code: null, country: 19, name: Stornoway}
+    model: location.city
+    pk: 2004
+-   fields: {code: null, country: 214, name: Emden}
+    model: location.city
+    pk: 2006
+-   fields: {code: null, country: 177, name: Burgos}
+    model: location.city
+    pk: 2008
+-   fields: {code: null, country: 19, name: East Midlands}
+    model: location.city
+    pk: 2009
+-   fields: {code: null, country: 214, name: Regensburg}
+    model: location.city
+    pk: 2013
+-   fields: {code: null, country: 161, name: Gorno-Altaysk}
+    model: location.city
+    pk: 2016
+-   fields: {code: null, country: 161, name: Arkhangelsk}
+    model: location.city
+    pk: 2021
+-   fields: {code: null, country: 66, name: Tarbes}
+    model: location.city
+    pk: 2022
+-   fields: {code: null, country: 110, name: Lidkoping}
+    model: location.city
+    pk: 2023
+-   fields: {code: null, country: 19, name: Londonderry}
+    model: location.city
+    pk: 2031
+-   fields: {code: null, country: 161, name: Penza}
+    model: location.city
+    pk: 2038
+-   fields: {code: null, country: 169, name: "P\xE9cs-Pog\xE1ny"}
+    model: location.city
+    pk: 2040
+-   fields: {code: null, country: 161, name: Petrozavodsk}
+    model: location.city
+    pk: 2044
+-   fields: {code: null, country: 161, name: Perm}
+    model: location.city
+    pk: 2053
+-   fields: {code: null, country: 133, name: Perugia}
+    model: location.city
+    pk: 2055
+-   fields: {code: null, country: 98, name: "\u017Dilina"}
+    model: location.city
+    pk: 2056
+-   fields: {code: null, country: 133, name: Aosta}
+    model: location.city
+    pk: 2060
+-   fields: {code: null, country: 110, name: Ornskoldsvik}
+    model: location.city
+    pk: 2062
+-   fields: {code: null, country: 161, name: Norilsk}
+    model: location.city
+    pk: 2090
+-   fields: {code: null, country: 133, name: Sigonella}
+    model: location.city
+    pk: 2095
+-   fields: {code: null, country: 177, name: Santander}
+    model: location.city
+    pk: 2102
+-   fields: {code: null, country: 19, name: Scatsta}
+    model: location.city
+    pk: 2105
+-   fields: {code: null, country: 110, name: Sundsvall}
+    model: location.city
+    pk: 2110
+-   fields: {code: null, country: 188, name: Sandane}
+    model: location.city
+    pk: 2111
+-   fields: {code: null, country: 173, name: Parnu}
+    model: location.city
+    pk: 2114
+-   fields: {code: null, country: 188, name: Svalbard}
+    model: location.city
+    pk: 2121
+-   fields: {code: LYS, country: 66, name: Lyon}
+    model: location.city
+    pk: 2122
+-   fields: {code: null, country: 19, name: Lydd}
+    model: location.city
+    pk: 2123
+-   fields: {code: null, country: 19, name: Lyneham}
+    model: location.city
+    pk: 2124
+-   fields: {code: null, country: 110, name: Lycksele}
+    model: location.city
+    pk: 2128
+-   fields: {code: null, country: 19, name: Lympne}
+    model: location.city
+    pk: 2129
+-   fields: {code: null, country: 19, name: Biggin Hill}
+    model: location.city
+    pk: 2136
+-   fields: {code: null, country: 159, name: Brest}
+    model: location.city
+    pk: 2137
+-   fields: {code: null, country: 161, name: Blagoveschensk}
+    model: location.city
+    pk: 2139
+-   fields: {code: null, country: 159, name: Gomel}
+    model: location.city
+    pk: 2140
+-   fields: {code: null, country: 188, name: Orland}
+    model: location.city
+    pk: 2146
+-   fields: {code: null, country: 214, name: Arnsberg}
+    model: location.city
+    pk: 2148
+-   fields: {code: null, country: 214, name: Celle}
+    model: location.city
+    pk: 2150
+-   fields: {code: null, country: 133, name: Treviso}
+    model: location.city
+    pk: 2174
+-   fields: {code: null, country: 214, name: Guetersloh}
+    model: location.city
+    pk: 2185
+-   fields: {code: null, country: 110, name: Hudiksvall}
+    model: location.city
+    pk: 2198
+-   fields: {code: null, country: 19, name: Humberside}
+    model: location.city
+    pk: 2202
+-   fields: {code: null, country: 11, name: Thira}
+    model: location.city
+    pk: 2204
+-   fields: {code: null, country: 188, name: "R\xF8st"}
+    model: location.city
+    pk: 2212
+-   fields: {code: null, country: 177, name: Reus}
+    model: location.city
+    pk: 2213
+-   fields: {code: null, country: 161, name: Orenburg}
+    model: location.city
+    pk: 2215
+-   fields: {code: null, country: 133, name: Reggio Calabria}
+    model: location.city
+    pk: 2219
+-   fields: {code: null, country: 214, name: Puttgarden}
+    model: location.city
+    pk: 2227
+-   fields: {code: null, country: 19, name: Carlisle}
+    model: location.city
+    pk: 2231
+-   fields: {code: IBZ, country: 177, name: Ibiza}
+    model: location.city
+    pk: 2241
+-   fields: {code: null, country: 19, name: Campbeltown}
+    model: location.city
+    pk: 2243
+-   fields: {code: null, country: 133, name: Cagliari}
+    model: location.city
+    pk: 2247
+-   fields: {code: null, country: 66, name: Perpignan}
+    model: location.city
+    pk: 2249
+-   fields: {code: null, country: 214, name: Lahr}
+    model: location.city
+    pk: 2251
+-   fields: {code: null, country: 161, name: Anadyr}
+    model: location.city
+    pk: 2255
+-   fields: {code: null, country: 66, name: Perigueux}
+    model: location.city
+    pk: 2259
+-   fields: {code: null, country: 188, name: Sogndal}
+    model: location.city
+    pk: 2261
+-   fields: {code: null, country: 161, name: Beslan}
+    model: location.city
+    pk: 2262
+-   fields: {code: null, country: 144, name: Sofia}
+    model: location.city
+    pk: 2264
+-   fields: {code: null, country: 187, name: Volkel}
+    model: location.city
+    pk: 2269
+-   fields: {code: null, country: 184, name: Uzhgorod}
+    model: location.city
+    pk: 2270
+-   fields: {code: null, country: 67, name: Mikkeli}
+    model: location.city
+    pk: 2276
+-   fields: {code: null, country: 214, name: Giebelstadt}
+    model: location.city
+    pk: 2284
+-   fields: {code: null, country: 214, name: Altenburg}
+    model: location.city
+    pk: 2294
+-   fields: {code: null, country: 19, name: Nottingham}
+    model: location.city
+    pk: 2295
+-   fields: {code: null, country: 19, name: Newquai}
+    model: location.city
+    pk: 2299
+-   fields: {code: null, country: 11, name: Karpathos}
+    model: location.city
+    pk: 2300
+-   fields: {code: null, country: 133, name: Ancona}
+    model: location.city
+    pk: 2302
+-   fields: {code: null, country: 19, name: Southampton}
+    model: location.city
+    pk: 2307
+-   fields: {code: null, country: 67, name: Sodankyla}
+    model: location.city
+    pk: 2310
+-   fields: {code: null, country: 110, name: Skelleftea}
+    model: location.city
+    pk: 2315
+-   fields: {code: null, country: 188, name: Kristiansund}
+    model: location.city
+    pk: 2331
+-   fields: {code: null, country: 161, name: Kotlas}
+    model: location.city
+    pk: 2334
+-   fields: {code: null, country: 110, name: Karlstad}
+    model: location.city
+    pk: 2335
+-   fields: {code: null, country: 214, name: Kassel}
+    model: location.city
+    pk: 2336
+-   fields: {code: null, country: 98, name: Kosice}
+    model: location.city
+    pk: 2338
+-   fields: {code: null, country: 11, name: Kastoria}
+    model: location.city
+    pk: 2341
+-   fields: {code: null, country: 110, name: Karlskoga}
+    model: location.city
+    pk: 2345
+-   fields: {code: null, country: 11, name: Kasos}
+    model: location.city
+    pk: 2346
+-   fields: {code: null, country: 119, name: Ventspils}
+    model: location.city
+    pk: 2371
+-   fields: {code: ZAG, country: 167, name: Zagreb}
+    model: location.city
+    pk: 2379
+-   fields: {code: null, country: 167, name: Zadar}
+    model: location.city
+    pk: 2380
+-   fields: {code: null, country: 177, name: Zaragoza}
+    model: location.city
+    pk: 2382
+-   fields: {code: null, country: 214, name: Nuernberg}
+    model: location.city
+    pk: 2385
+-   fields: {code: null, country: 214, name: Juist}
+    model: location.city
+    pk: 2388
+-   fields: {code: null, country: 67, name: Tampere}
+    model: location.city
+    pk: 2393
+-   fields: {code: null, country: 161, name: Nizhnevartovsk}
+    model: location.city
+    pk: 2414
+-   fields: {code: null, country: 19, name: Rochester}
+    model: location.city
+    pk: 2423
+-   fields: {code: null, country: 66, name: Rochefort}
+    model: location.city
+    pk: 2426
+-   fields: {code: null, country: 161, name: Yeniseysk}
+    model: location.city
+    pk: 2427
+-   fields: {code: null, country: 187, name: Eindhoven}
+    model: location.city
+    pk: 2431
+-   fields: {code: null, country: 188, name: Farsund}
+    model: location.city
+    pk: 2437
+-   fields: {code: FAO, country: 29, name: Faro}
+    model: location.city
+    pk: 2438
+-   fields: {code: null, country: 19, name: Farnborough}
+    model: location.city
+    pk: 2439
+-   fields: {code: null, country: 71, name: Vagar}
+    model: location.city
+    pk: 2442
+-   fields: {code: null, country: 66, name: Carcassonne}
+    model: location.city
+    pk: 2459
+-   fields: {code: null, country: 19, name: Prestwick}
+    model: location.city
+    pk: 2463
+-   fields: {code: null, country: 29, name: Pico}
+    model: location.city
+    pk: 2470
+-   fields: {code: null, country: 66, name: Poitiers}
+    model: location.city
+    pk: 2474
+-   fields: {code: null, country: 131, name: Gjogur}
+    model: location.city
+    pk: 2485
+-   fields: {code: AMS, country: 187, name: Amsterdam}
+    model: location.city
+    pk: 2504
+-   fields: {code: null, country: 19, name: Norwich}
+    model: location.city
+    pk: 2505
+-   fields: {code: null, country: 161, name: Amderma}
+    model: location.city
+    pk: 2506
+-   fields: {code: null, country: 67, name: Kuopio}
+    model: location.city
+    pk: 2514
+-   fields: {code: null, country: 120, name: Kaunas}
+    model: location.city
+    pk: 2515
+-   fields: {code: null, country: 161, name: Samara}
+    model: location.city
+    pk: 2520
+-   fields: {code: null, country: 184, name: Khmeinitskiy}
+    model: location.city
+    pk: 2526
+-   fields: {code: null, country: 19, name: Whittlesford}
+    model: location.city
+    pk: 2547
+-   fields: {code: null, country: 11, name: Sitia}
+    model: location.city
+    pk: 2555
+-   fields: {code: null, country: 11, name: Skiathos}
+    model: location.city
+    pk: 2556
+-   fields: {code: null, country: 11, name: Syros Island}
+    model: location.city
+    pk: 2560
+-   fields: {code: null, country: 142, name: Liege}
+    model: location.city
+    pk: 2561
+-   fields: {code: null, country: 188, name: Tromso}
+    model: location.city
+    pk: 2563
+-   fields: {code: null, country: 161, name: Tomsk}
+    model: location.city
+    pk: 2574
+-   fields: {code: null, country: 161, name: Nazran}
+    model: location.city
+    pk: 2591
+-   fields: {code: null, country: 131, name: Egilsstadir}
+    model: location.city
+    pk: 2594
+-   fields: {code: null, country: 161, name: Belgorod}
+    model: location.city
+    pk: 2598
+-   fields: {code: null, country: 66, name: Bergerac}
+    model: location.city
+    pk: 2601
+-   fields: {code: LBA, country: 19, name: Leeds}
+    model: location.city
+    pk: 2619
+-   fields: {code: null, country: 214, name: Luebeck}
+    model: location.city
+    pk: 2620
+-   fields: {code: null, country: 66, name: Albi}
+    model: location.city
+    pk: 2625
+-   fields: {code: BFS, country: 19, name: Belfast}
+    model: location.city
+    pk: 2636
+-   fields: {code: null, country: 110, name: Uppsala}
+    model: location.city
+    pk: 2642
+-   fields: {code: null, country: 66, name: Troyes}
+    model: location.city
+    pk: 2643
+-   fields: {code: null, country: 187, name: Hilversum}
+    model: location.city
+    pk: 2644
+-   fields: {code: null, country: 38, name: Gdynia}
+    model: location.city
+    pk: 2645
+-   fields: {code: null, country: 184, name: Ivano-Frankivsk}
+    model: location.city
+    pk: 2653
+-   fields: {code: null, country: 131, name: Isafjordur}
+    model: location.city
+    pk: 2654
+-   fields: {code: null, country: 19, name: Hawarden}
+    model: location.city
+    pk: 2656
+-   fields: {code: null, country: 161, name: Chelyabinsk}
+    model: location.city
+    pk: 2667
+-   fields: {code: null, country: 184, name: Chernigov}
+    model: location.city
+    pk: 2668
+-   fields: {code: null, country: 161, name: Petropavlovsk}
+    model: location.city
+    pk: 2671
+-   fields: {code: null, country: 66, name: Cholet}
+    model: location.city
+    pk: 2673
+-   fields: {code: null, country: 66, name: Cannes}
+    model: location.city
+    pk: 2676
+-   fields: {code: null, country: 11, name: Porto Heli}
+    model: location.city
+    pk: 2679
+-   fields: {code: null, country: 161, name: Novy Urengoy}
+    model: location.city
+    pk: 2699
+-   fields: {code: null, country: 214, name: Nurnberg}
+    model: location.city
+    pk: 2702
+-   fields: {code: null, country: 161, name: Astrakhan}
+    model: location.city
+    pk: 2708
+-   fields: {code: null, country: 19, name: Georgetown Acension Island Santa Helena}
+    model: location.city
+    pk: 2713
+-   fields: {code: DUB, country: 139, name: Dublin}
+    model: location.city
+    pk: 2720
+-   fields: {code: null, country: 214, name: Duesseldorf}
+    model: location.city
+    pk: 2724
+-   fields: {code: null, country: 184, name: Krivoy Rog}
+    model: location.city
+    pk: 2731
+-   fields: {code: null, country: 133, name: Oristano}
+    model: location.city
+    pk: 2744
+-   fields: {code: null, country: 29, name: Funchal}
+    model: location.city
+    pk: 2753
+-   fields: {code: null, country: 19, name: Papa Westray}
+    model: location.city
+    pk: 2778
+-   fields: {code: null, country: 188, name: Narvik}
+    model: location.city
+    pk: 2782
+-   fields: {code: null, country: 43, name: Tivat}
+    model: location.city
+    pk: 2788
+-   fields: {code: TIA, country: 238, name: Tirana}
+    model: location.city
+    pk: 2803
+-   fields: {code: null, country: 161, name: Naryan-Mar}
+    model: location.city
+    pk: 2806
+-   fields: {code: null, country: 144, name: Haskovo}
+    model: location.city
+    pk: 2809
+-   fields: {code: null, country: 139, name: Indreabhan}
+    model: location.city
+    pk: 2818
+-   fields: {code: null, country: 214, name: Westerland}
+    model: location.city
+    pk: 2820
+-   fields: {code: null, country: 120, name: Siauliai}
+    model: location.city
+    pk: 2821
+-   fields: {code: null, country: 110, name: Mohed}
+    model: location.city
+    pk: 2823
+-   fields: {code: null, country: 161, name: Veliky Ustyug}
+    model: location.city
+    pk: 2826
+-   fields: {code: null, country: 161, name: Rostov}
+    model: location.city
+    pk: 2845
+-   fields: {code: null, country: 11, name: Rhodos}
+    model: location.city
+    pk: 2850
+-   fields: {code: null, country: 188, name: Bardufoss}
+    model: location.city
+    pk: 2859
+-   fields: {code: null, country: 133, name: Brindisi}
+    model: location.city
+    pk: 2863
+-   fields: {code: null, country: 66, name: "\xCEle d'Yeu"}
+    model: location.city
+    pk: 2865
+-   fields: {code: null, country: 19, name: Portsmouth}
+    model: location.city
+    pk: 2880
+-   fields: {code: null, country: 133, name: Parma}
+    model: location.city
+    pk: 2881
+-   fields: {code: null, country: 177, name: Palma de Mallorca}
+    model: location.city
+    pk: 2890
+-   fields: {code: null, country: 214, name: Fuerstenfeldbruck}
+    model: location.city
+    pk: 2894
+-   fields: {code: null, country: 187, name: Maastricht}
+    model: location.city
+    pk: 2899
+-   fields: {code: null, country: 159, name: Minsk 2}
+    model: location.city
+    pk: 2902
+-   fields: {code: null, country: 19, name: Manston}
+    model: location.city
+    pk: 2910
+-   fields: {code: null, country: 161, name: Pechora}
+    model: location.city
+    pk: 2923
+-   fields: {code: null, country: 161, name: Kyzyl}
+    model: location.city
+    pk: 2927
+-   fields: {code: null, country: 139, name: Bantry}
+    model: location.city
+    pk: 2933
+-   fields: {code: null, country: 214, name: Bayreuth}
+    model: location.city
+    pk: 2934
+-   fields: {code: null, country: 161, name: Nadym}
+    model: location.city
+    pk: 2947
+-   fields: {code: null, country: 161, name: Nyagan}
+    model: location.city
+    pk: 2958
+-   fields: {code: null, country: 133, name: Brescia}
+    model: location.city
+    pk: 2961
+-   fields: {code: null, country: 110, name: Visby}
+    model: location.city
+    pk: 2963
+-   fields: {code: null, country: 163, name: Pristina}
+    model: location.city
+    pk: 2975
+-   fields: {code: null, country: 67, name: Joensuu}
+    model: location.city
+    pk: 2979
+-   fields: {code: null, country: 161, name: Yoshkar-Ola}
+    model: location.city
+    pk: 2982
+-   fields: {code: null, country: 214, name: Peenemunde}
+    model: location.city
+    pk: 2991
+-   fields: {code: null, country: 110, name: Hemavan}
+    model: location.city
+    pk: 3002
+-   fields: {code: null, country: 188, name: Hamar}
+    model: location.city
+    pk: 3004
+-   fields: {code: null, country: 67, name: Turku}
+    model: location.city
+    pk: 3008
+-   fields: {code: null, country: 161, name: Khanty-Mansiysk}
+    model: location.city
+    pk: 3014
+-   fields: {code: null, country: 66, name: Dole}
+    model: location.city
+    pk: 3020
+-   fields: {code: null, country: 188, name: Sandnessjoen}
+    model: location.city
+    pk: 3035
+-   fields: {code: null, country: 214, name: Ramstein}
+    model: location.city
+    pk: 3042
+-   fields: {code: null, country: 243, name: Linz}
+    model: location.city
+    pk: 3047
+-   fields: {code: null, country: 85, name: Nicosia}
+    model: location.city
+    pk: 3048
+-   fields: {code: null, country: 214, name: Lindau}
+    model: location.city
+    pk: 3059
+-   fields: {code: null, country: 133, name: Rimini}
+    model: location.city
+    pk: 3060
+-   fields: {code: null, country: 214, name: Bautzen}
+    model: location.city
+    pk: 3068
+-   fields: {code: null, country: 214, name: Barth}
+    model: location.city
+    pk: 3070
+-   fields: {code: null, country: 19, name: Blackbushe}
+    model: location.city
+    pk: 3074
+-   fields: {code: null, country: 19, name: Bembridge}
+    model: location.city
+    pk: 3077
+-   fields: {code: null, country: 38, name: Poznan}
+    model: location.city
+    pk: 3081
+-   fields: {code: null, country: 66, name: Pontoise}
+    model: location.city
+    pk: 3082
+-   fields: {code: null, country: 100, name: Portoroz}
+    model: location.city
+    pk: 3084
+-   fields: {code: null, country: 161, name: Cherskiy}
+    model: location.city
+    pk: 3086
+-   fields: {code: null, country: 67, name: Pori}
+    model: location.city
+    pk: 3087
+-   fields: {code: null, country: 214, name: Karlsruhe/Baden-Baden}
+    model: location.city
+    pk: 3107
+-   fields: {code: null, country: 161, name: Magnetiogorsk}
+    model: location.city
+    pk: 3115
+-   fields: {code: null, country: 188, name: Mo i Rana}
+    model: location.city
+    pk: 3119
+-   fields: {code: null, country: 161, name: Velikiye Luki}
+    model: location.city
+    pk: 3132
+-   fields: {code: BRU, country: 142, name: Brussels}
+    model: location.city
+    pk: 3144
+-   fields: {code: null, country: 188, name: "R\xF8rvik"}
+    model: location.city
+    pk: 3148
+-   fields: {code: null, country: 67, name: Rovaniemi}
+    model: location.city
+    pk: 3149
+-   fields: {code: null, country: 11, name: Mykonos}
+    model: location.city
+    pk: 3167
+-   fields: {code: null, country: 133, name: Lamezia}
+    model: location.city
+    pk: 3173
+-   fields: {code: null, country: 165, name: Satu Mare}
+    model: location.city
+    pk: 3179
+-   fields: {code: null, country: 213, name: Thisted}
+    model: location.city
+    pk: 3192
+-   fields: {code: null, country: 161, name: Nizhnekamsk}
+    model: location.city
+    pk: 3198
+-   fields: {code: null, country: 161, name: Berezovo}
+    model: location.city
+    pk: 3199
+-   fields: {code: null, country: 29, name: Lajes (terceira Island)}
+    model: location.city
+    pk: 3200
+-   fields: {code: null, country: 19, name: Dundee}
+    model: location.city
+    pk: 3204
+-   fields: {code: null, country: 184, name: Dnepropetrovsk}
+    model: location.city
+    pk: 3209
+-   fields: {code: null, country: 66, name: Dinard}
+    model: location.city
+    pk: 3211
+-   fields: {code: null, country: 19, name: Coningsby}
+    model: location.city
+    pk: 3215
+-   fields: {code: REK, country: 131, name: Reykjavik}
+    model: location.city
+    pk: 3218
+-   fields: {code: null, country: 66, name: Mulhouse}
+    model: location.city
+    pk: 3225
+-   fields: {code: null, country: 177, name: San Sebastian}
+    model: location.city
+    pk: 3226
+-   fields: {code: null, country: 243, name: Hohenems}
+    model: location.city
+    pk: 3237
+-   fields: {code: null, country: 188, name: Orsta-Volda}
+    model: location.city
+    pk: 3240
+-   fields: {code: null, country: 29, name: Horta}
+    model: location.city
+    pk: 3243
+-   fields: {code: null, country: 214, name: Hof}
+    model: location.city
+    pk: 3245
+-   fields: {code: null, country: 19, name: Fair Isle}
+    model: location.city
+    pk: 3257
+-   fields: {code: null, country: 19, name: 'Doncaster, Sheffield'}
+    model: location.city
+    pk: 3265
+-   fields: {code: null, country: 66, name: Auxerre}
+    model: location.city
+    pk: 3269
+-   fields: {code: null, country: 66, name: Aurillac}
+    model: location.city
+    pk: 3275
+-   fields: {code: null, country: 11, name: Kalymnos}
+    model: location.city
+    pk: 3292
+-   fields: {code: null, country: 19, name: Waddington}
+    model: location.city
+    pk: 3301
+-   fields: {code: null, country: 142, name: Antwerp}
+    model: location.city
+    pk: 3309
+-   fields: {code: null, country: 187, name: Rotterdam}
+    model: location.city
+    pk: 3314
+-   fields: {code: null, country: 161, name: Saratov}
+    model: location.city
+    pk: 3315
+-   fields: {code: null, country: 19, name: ST MARY\\'S}
+    model: location.city
+    pk: 3325
+-   fields: {code: null, country: 161, name: Provideniya Bay}
+    model: location.city
+    pk: 3331
+-   fields: {code: null, country: 11, name: Chios}
+    model: location.city
+    pk: 3336
+-   fields: {code: null, country: 11, name: Preveza}
+    model: location.city
+    pk: 3339
+-   fields: {code: null, country: 110, name: Joenkoeping}
+    model: location.city
+    pk: 3340
+-   fields: {code: null, country: 66, name: Frejus}
+    model: location.city
+    pk: 3346
+-   fields: {code: null, country: 188, name: Floro}
+    model: location.city
+    pk: 3348
+-   fields: {code: null, country: 133, name: Forli}
+    model: location.city
+    pk: 3350
+-   fields: {code: null, country: 161, name: Yuzhno-sakhalinsk}
+    model: location.city
+    pk: 3356
+-   fields: {code: null, country: 161, name: Ulan-ude}
+    model: location.city
+    pk: 3358
+-   fields: {code: null, country: 161, name: Bugulma}
+    model: location.city
+    pk: 3359
+-   fields: {code: null, country: 19, name: Swansea}
+    model: location.city
+    pk: 3367
+-   fields: {code: null, country: 161, name: Strezhevoy}
+    model: location.city
+    pk: 3368
+-   fields: {code: null, country: 43, name: Podgorica}
+    model: location.city
+    pk: 3381
+-   fields: {code: null, country: 165, name: Tirgu Mures}
+    model: location.city
+    pk: 3386
+-   fields: {code: null, country: 187, name: De Kooy}
+    model: location.city
+    pk: 3393
+-   fields: {code: RIX, country: 119, name: Riga}
+    model: location.city
+    pk: 3395
+-   fields: {code: null, country: 145, name: Banja Luka}
+    model: location.city
+    pk: 3409
+-   fields: {code: null, country: 188, name: Hasvik}
+    model: location.city
+    pk: 3412
+-   fields: {code: null, country: 110, name: Halmstad}
+    model: location.city
+    pk: 3414
+-   fields: {code: null, country: 214, name: Bonn}
+    model: location.city
+    pk: 3418
+-   fields: {code: null, country: 188, name: Bronnoysund}
+    model: location.city
+    pk: 3420
+-   fields: {code: null, country: 188, name: Haugesund}
+    model: location.city
+    pk: 3424
+-   fields: {code: null, country: 133, name: Foggia}
+    model: location.city
+    pk: 3432
+-   fields: {code: null, country: 19, name: Foula}
+    model: location.city
+    pk: 3433
+-   fields: {code: null, country: 100, name: Ljubljana}
+    model: location.city
+    pk: 3437
+-   fields: {code: null, country: 188, name: Vadso}
+    model: location.city
+    pk: 3456
+-   fields: {code: null, country: 188, name: Fagernes}
+    model: location.city
+    pk: 3461
+-   fields: {code: null, country: 177, name: Hierro}
+    model: location.city
+    pk: 3462
+-   fields: {code: null, country: 214, name: Wilhelmshaven}
+    model: location.city
+    pk: 3466
+-   fields: {code: null, country: 110, name: Gavle}
+    model: location.city
+    pk: 3468
+-   fields: {code: null, country: 139, name: Galway}
+    model: location.city
+    pk: 3469
+-   fields: {code: null, country: 177, name: Ronda}
+    model: location.city
+    pk: 3477
+-   fields: {code: null, country: 188, name: Roros}
+    model: location.city
+    pk: 3479
+-   fields: {code: null, country: 161, name: Usinsk}
+    model: location.city
+    pk: 3482
+-   fields: {code: null, country: 66, name: Strasbourg}
+    model: location.city
+    pk: 3489
+-   fields: {code: null, country: 29, name: Porto Santo}
+    model: location.city
+    pk: 3491
+-   fields: {code: null, country: 74, name: Sion}
+    model: location.city
+    pk: 3496
+-   fields: {code: null, country: 184, name: Simferopol}
+    model: location.city
+    pk: 3498
+-   fields: {code: null, country: 131, name: Siglufjordur}
+    model: location.city
+    pk: 3505
+-   fields: {code: null, country: 98, name: Poprad}
+    model: location.city
+    pk: 3507
+-   fields: {code: null, country: 133, name: Grottaglie}
+    model: location.city
+    pk: 3509
+-   fields: {code: null, country: 173, name: Tartu}
+    model: location.city
+    pk: 3511
+-   fields: {code: null, country: 11, name: Ikaria}
+    model: location.city
+    pk: 3527
+-   fields: {code: null, country: 169, name: "Gy\u0151r"}
+    model: location.city
+    pk: 3536
+-   fields: {code: null, country: 184, name: Kiev}
+    model: location.city
+    pk: 3542
+-   fields: {code: BLQ, country: 133, name: Bologna}
+    model: location.city
+    pk: 3553
+-   fields: {code: null, country: 213, name: Billund}
+    model: location.city
+    pk: 3554
+-   fields: {code: null, country: 19, name: Blackpool}
+    model: location.city
+    pk: 3557
+-   fields: {code: null, country: 110, name: Borlange}
+    model: location.city
+    pk: 3559
+-   fields: {code: null, country: 19, name: Outer Skerries}
+    model: location.city
+    pk: 3565
+-   fields: {code: null, country: 66, name: Dijon}
+    model: location.city
+    pk: 3567
+-   fields: {code: null, country: 67, name: Oulu}
+    model: location.city
+    pk: 3568
+-   fields: {code: null, country: 66, name: Le Tourquet}
+    model: location.city
+    pk: 3573
+-   fields: {code: null, country: 214, name: Munster}
+    model: location.city
+    pk: 3577
+-   fields: {code: null, country: 214, name: Memmingen}
+    model: location.city
+    pk: 3579
+-   fields: {code: null, country: 214, name: Hanau}
+    model: location.city
+    pk: 3591
+-   fields: {code: null, country: 214, name: Koblenz}
+    model: location.city
+    pk: 3594
+-   fields: {code: null, country: 19, name: Fairford}
+    model: location.city
+    pk: 3619
+-   fields: {code: null, country: 19, name: Peterborough}
+    model: location.city
+    pk: 3620
+-   fields: {code: null, country: 19, name: Stevenage}
+    model: location.city
+    pk: 3623
+-   fields: {code: SZG, country: 243, name: Salzburg}
+    model: location.city
+    pk: 3637
+-   fields: {code: null, country: 214, name: Stendal}
+    model: location.city
+    pk: 3638
+-   fields: {code: null, country: 161, name: Raduzhnyi}
+    model: location.city
+    pk: 3641
+-   fields: {code: null, country: 98, name: Piestany}
+    model: location.city
+    pk: 3646
+-   fields: {code: null, country: 161, name: Ivanovo}
+    model: location.city
+    pk: 3647
+-   fields: {code: null, country: 19, name: Penzance}
+    model: location.city
+    pk: 3654
+-   fields: {code: null, country: 144, name: Bourgas}
+    model: location.city
+    pk: 3661
+-   fields: {code: null, country: 11, name: Skiros}
+    model: location.city
+    pk: 3663
+-   fields: {code: null, country: 54, name: Skopje}
+    model: location.city
+    pk: 3666
+-   fields: {code: null, country: 213, name: Skrydstrup}
+    model: location.city
+    pk: 3667
+-   fields: {code: null, country: 161, name: Saransk}
+    model: location.city
+    pk: 3669
+-   fields: {code: null, country: 188, name: Skien}
+    model: location.city
+    pk: 3671
+-   fields: {code: null, country: 11, name: Thessaloniki}
+    model: location.city
+    pk: 3673
+-   fields: {code: null, country: 188, name: Stokmarknes}
+    model: location.city
+    pk: 3678
+-   fields: {code: OSL, country: 188, name: Oslo}
+    model: location.city
+    pk: 3702
+-   fields: {code: null, country: 173, name: Kardla}
+    model: location.city
+    pk: 3714
+-   fields: {code: null, country: 214, name: Egelsbach}
+    model: location.city
+    pk: 3719
+-   fields: {code: HER, country: 11, name: Heraklion}
+    model: location.city
+    pk: 3728
+-   fields: {code: null, country: 19, name: Sanday}
+    model: location.city
+    pk: 3733
+-   fields: {code: null, country: 214, name: Cuxhaven}
+    model: location.city
+    pk: 3734
+-   fields: {code: null, country: 110, name: Soderhamn}
+    model: location.city
+    pk: 3736
+-   fields: {code: HEL, country: 67, name: Helsinki}
+    model: location.city
+    pk: 3737
+-   fields: {code: null, country: 214, name: "B\xFCsum"}
+    model: location.city
+    pk: 3740
+-   fields: {code: null, country: 188, name: Batsfjord}
+    model: location.city
+    pk: 3742
+-   fields: {code: null, country: 177, name: Badajoz}
+    model: location.city
+    pk: 3756
+-   fields: {code: null, country: 66, name: Laval}
+    model: location.city
+    pk: 3764
+-   fields: {code: null, country: 177, name: Ciudad Real}
+    model: location.city
+    pk: 3787
+-   fields: {code: null, country: 66, name: Calais}
+    model: location.city
+    pk: 3788
+-   fields: {code: null, country: 66, name: Solenzara}
+    model: location.city
+    pk: 3792
+-   fields: {code: null, country: 133, name: Florence}
+    model: location.city
+    pk: 3811
+-   fields: {code: null, country: 66, name: Vichy}
+    model: location.city
+    pk: 3812
+-   fields: {code: null, country: 110, name: Vilhelmina}
+    model: location.city
+    pk: 3814
+-   fields: {code: null, country: 214, name: Zweibruecken}
+    model: location.city
+    pk: 3822
+-   fields: {code: null, country: 214, name: Donaueschingen}
+    model: location.city
+    pk: 3824
+-   fields: {code: null, country: 214, name: Trier}
+    model: location.city
+    pk: 3826
+-   fields: {code: null, country: 214, name: Speyer}
+    model: location.city
+    pk: 3827
+-   fields: {code: null, country: 184, name: Cherkassy}
+    model: location.city
+    pk: 3828
+-   fields: {code: null, country: 131, name: Husavik}
+    model: location.city
+    pk: 3837
+-   fields: {code: null, country: 19, name: Westray}
+    model: location.city
+    pk: 3841
+-   fields: {code: null, country: 188, name: Alta}
+    model: location.city
+    pk: 3842
+-   fields: {code: ALC, country: 177, name: Alicante}
+    model: location.city
+    pk: 3846
+-   fields: {code: null, country: 188, name: Notodden}
+    model: location.city
+    pk: 3857
+-   fields: {code: NTE, country: 66, name: Nantes}
+    model: location.city
+    pk: 3858
+-   fields: {code: null, country: 74, name: Samedan}
+    model: location.city
+    pk: 3864
+-   fields: {code: null, country: 11, name: Samos}
+    model: location.city
+    pk: 3873
+-   fields: {code: null, country: 29, name: Santa Maria (island)}
+    model: location.city
+    pk: 3876
+-   fields: {code: null, country: 6, name: Jersey}
+    model: location.city
+    pk: 3892
+-   fields: {code: CGN, country: 214, name: Cologne}
+    model: location.city
+    pk: 3901
+-   fields: {code: null, country: 214, name: Kaufbeuren}
+    model: location.city
+    pk: 3902
+-   fields: {code: null, country: 142, name: Kortrijk-vevelgem}
+    model: location.city
+    pk: 3907
+-   fields: {code: null, country: 161, name: Abakan}
+    model: location.city
+    pk: 3908
+-   fields: {code: null, country: 19, name: Birmingham}
+    model: location.city
+    pk: 3936
+-   fields: {code: null, country: 19, name: Northolt}
+    model: location.city
+    pk: 3944
+-   fields: {code: null, country: 66, name: Le Puy}
+    model: location.city
+    pk: 3945
+-   fields: {code: null, country: 119, name: Liepaja}
+    model: location.city
+    pk: 3946
+-   fields: {code: null, country: 67, name: Lappeenranta}
+    model: location.city
+    pk: 3952
+-   fields: {code: null, country: 19, name: Liverpool}
+    model: location.city
+    pk: 3955
+-   fields: {code: null, country: 161, name: Lipetsk}
+    model: location.city
+    pk: 3956
+-   fields: {code: null, country: 177, name: Gran Canaria}
+    model: location.city
+    pk: 3960
+-   fields: {code: null, country: 214, name: Cochstedt}
+    model: location.city
+    pk: 3961
+-   fields: {code: null, country: 161, name: Solovetsky Islands}
+    model: location.city
+    pk: 3962
+-   fields: {code: null, country: 66, name: Creil}
+    model: location.city
+    pk: 3964
+-   fields: {code: null, country: 19, name: Colonsay}
+    model: location.city
+    pk: 3965
+-   fields: {code: null, country: 165, name: Caransebes}
+    model: location.city
+    pk: 3967
+-   fields: {code: null, country: 161, name: Cheboksary}
+    model: location.city
+    pk: 3968
+-   fields: {code: null, country: 74, name: Locarno}
+    model: location.city
+    pk: 3971
+-   fields: {code: null, country: 161, name: Sochi}
+    model: location.city
+    pk: 3972
+-   fields: {code: null, country: 66, name: Vannes}
+    model: location.city
+    pk: 3975
+-   fields: {code: null, country: 120, name: Vilnius}
+    model: location.city
+    pk: 3977
+-   fields: {code: null, country: 110, name: Umea}
+    model: location.city
+    pk: 3994
+-   fields: {code: null, country: 161, name: Tiksi}
+    model: location.city
+    pk: 3995
+-   fields: {code: OLB, country: 133, name: Olbia}
+    model: location.city
+    pk: 3997
+-   fields: {code: null, country: 161, name: Irkutsk}
+    model: location.city
+    pk: 4001
+-   fields: {code: null, country: 19, name: Bristol}
+    model: location.city
+    pk: 4016
+-   fields: {code: null, country: 169, name: "S\xE1rmell\xE9k"}
+    model: location.city
+    pk: 4021
+-   fields: {code: null, country: 188, name: Sorkjosen}
+    model: location.city
+    pk: 4029
+-   fields: {code: null, country: 100, name: Maribor}
+    model: location.city
+    pk: 4038
+-   fields: {code: null, country: 19, name: Stronsay}
+    model: location.city
+    pk: 4042
+-   fields: {code: null, country: 177, name: Ceuta}
+    model: location.city
+    pk: 4047
+-   fields: {code: null, country: 56, name: Comino}
+    model: location.city
+    pk: 4049
+-   fields: {code: null, country: 161, name: Khabarovsk}
+    model: location.city
+    pk: 4055
+-   fields: {code: null, country: 184, name: Kerch}
+    model: location.city
+    pk: 4061
+-   fields: {code: null, country: 184, name: Kherson}
+    model: location.city
+    pk: 4063
+-   fields: {code: null, country: 161, name: Iturup Island}
+    model: location.city
+    pk: 4068
+-   fields: {code: null, country: 66, name: Beauvais}
+    model: location.city
+    pk: 4072
+-   fields: {code: null, country: 188, name: Berlevag}
+    model: location.city
+    pk: 4073
+-   fields: {code: null, country: 66, name: Brive}
+    model: location.city
+    pk: 4074
+-   fields: {code: null, country: 188, name: Namsos}
+    model: location.city
+    pk: 4077
+-   fields: {code: null, country: 38, name: Koszalin}
+    model: location.city
+    pk: 4078
+-   fields: {code: null, country: 38, name: Slupsk}
+    model: location.city
+    pk: 4079
+-   fields: {code: null, country: 142, name: Ostend}
+    model: location.city
+    pk: 4082
+-   fields: {code: null, country: 161, name: Orsk}
+    model: location.city
+    pk: 4083
+-   fields: {code: null, country: 167, name: Osijek}
+    model: location.city
+    pk: 4084
+-   fields: {code: null, country: 110, name: Oskarshamn}
+    model: location.city
+    pk: 4086
+-   fields: {code: null, country: 110, name: "\xD6stersund"}
+    model: location.city
+    pk: 4091
+-   fields: {code: null, country: 11, name: Larissa}
+    model: location.city
+    pk: 4095
+-   fields: {code: null, country: 66, name: La Rochelle}
+    model: location.city
+    pk: 4098
+-   fields: {code: null, country: 11, name: Leros}
+    model: location.city
+    pk: 4101
+-   fields: {code: null, country: 66, name: Lorient}
+    model: location.city
+    pk: 4104
+-   fields: {code: null, country: 133, name: Cuneo}
+    model: location.city
+    pk: 4112
+-   fields: {code: null, country: 161, name: Cherepovets}
+    model: location.city
+    pk: 4123
+-   fields: {code: null, country: 161, name: Pskov}
+    model: location.city
+    pk: 4124
+-   fields: {code: null, country: 66, name: Bourg}
+    model: location.city
+    pk: 4126
+-   fields: {code: null, country: 66, name: Cherbourg}
+    model: location.city
+    pk: 4132
+-   fields: {code: null, country: 177, name: Valladolid}
+    model: location.city
+    pk: 4134
+-   fields: {code: VLC, country: 177, name: Valencia}
+    model: location.city
+    pk: 4138
+-   fields: {code: null, country: 133, name: Tortoli}
+    model: location.city
+    pk: 4143
+-   fields: {code: null, country: 161, name: Ust-Kut}
+    model: location.city
+    pk: 4151
+-   fields: {code: null, country: 184, name: Sevastopol}
+    model: location.city
+    pk: 4153
+-   fields: {code: null, country: 184, name: Lutsk}
+    model: location.city
+    pk: 4155
+-   fields: {code: null, country: 139, name: Inishmaan}
+    model: location.city
+    pk: 4165
+-   fields: {code: null, country: 38, name: Rzeszow}
+    model: location.city
+    pk: 4170
+-   fields: {code: null, country: 131, name: Saudarkrokur}
+    model: location.city
+    pk: 4176
+-   fields: {code: null, country: 133, name: Siena}
+    model: location.city
+    pk: 4183
+-   fields: {code: null, country: 139, name: Caherciveen}
+    model: location.city
+    pk: 4190
+-   fields: {code: null, country: 11, name: Chania}
+    model: location.city
+    pk: 4195
+-   fields: {code: null, country: 66, name: Chateauroux}
+    model: location.city
+    pk: 4196
+-   fields: {code: null, country: 167, name: Dubrovnik}
+    model: location.city
+    pk: 4212
+-   fields: {code: null, country: 15, name: Guernsey}
+    model: location.city
+    pk: 4217
+-   fields: {code: null, country: 98, name: Bratislava}
+    model: location.city
+    pk: 4228
+-   fields: {code: null, country: 161, name: Bratsk}
+    model: location.city
+    pk: 4235
+-   fields: {code: null, country: 161, name: Krasnoyarsk}
+    model: location.city
+    pk: 4240
+-   fields: {code: null, country: 19, name: Cardiff}
+    model: location.city
+    pk: 4248
+-   fields: {code: null, country: 184, name: Chernovtsk}
+    model: location.city
+    pk: 4250
+-   fields: {code: null, country: 214, name: Frankfurt Oder}
+    model: location.city
+    pk: 4252
+-   fields: {code: null, country: 161, name: Nefteyugansk}
+    model: location.city
+    pk: 4262
+-   fields: {code: null, country: 188, name: "V\xE6r\xF8y"}
+    model: location.city
+    pk: 4276
+-   fields: {code: null, country: 67, name: Varkaus}
+    model: location.city
+    pk: 4282
+-   fields: {code: null, country: 133, name: Villafranca}
+    model: location.city
+    pk: 4285
+-   fields: {code: null, country: 29, name: Vila Real}
+    model: location.city
+    pk: 4287
+-   fields: {code: null, country: 214, name: Wyk}
+    model: location.city
+    pk: 4303
+-   fields: {code: null, country: 161, name: Okhotsk}
+    model: location.city
+    pk: 4310
+-   fields: {code: null, country: 161, name: Okha}
+    model: location.city
+    pk: 4311
+-   fields: {code: null, country: 54, name: Ohrid}
+    model: location.city
+    pk: 4312
+-   fields: {code: null, country: 161, name: Ust Ilimsk}
+    model: location.city
+    pk: 4314
+-   fields: {code: null, country: 139, name: Inis Mor}
+    model: location.city
+    pk: 4316
+-   fields: {code: null, country: 66, name: Quimper}
+    model: location.city
+    pk: 4318
+-   fields: {code: null, country: 135, name: Isle Of Man}
+    model: location.city
+    pk: 4319
+-   fields: {code: null, country: 11, name: Ioannina}
+    model: location.city
+    pk: 4321
+-   fields: {code: null, country: 214, name: Saarbruecken}
+    model: location.city
+    pk: 4326
+-   fields: {code: null, country: 177, name: Santiago}
+    model: location.city
+    pk: 4343
+-   fields: {code: null, country: 19, name: Leuchars}
+    model: location.city
+    pk: 4375
+-   fields: {code: null, country: 177, name: La Gomera}
+    model: location.city
+    pk: 4378
+-   fields: {code: null, country: 214, name: Bremerhaven}
+    model: location.city
+    pk: 4389
+-   fields: {code: null, country: 19, name: Barra}
+    model: location.city
+    pk: 4391
+-   fields: {code: null, country: 74, name: Bern}
+    model: location.city
+    pk: 4394
+-   fields: {code: null, country: 133, name: Bari}
+    model: location.city
+    pk: 4397
+-   fields: {code: null, country: 214, name: Bremen}
+    model: location.city
+    pk: 4398
+-   fields: {code: null, country: 66, name: "La M\xF4le"}
+    model: location.city
+    pk: 4402
+-   fields: {code: null, country: 161, name: Tver}
+    model: location.city
+    pk: 4403
+-   fields: {code: null, country: 243, name: Klagenfurt}
+    model: location.city
+    pk: 4413
+-   fields: {code: null, country: 110, name: Kalkmar}
+    model: location.city
+    pk: 4418
+-   fields: {code: null, country: 161, name: Elista}
+    model: location.city
+    pk: 4422
+-   fields: {code: KLX, country: 11, name: Kalamata}
+    model: location.city
+    pk: 4423
+-   fields: {code: null, country: 19, name: Shoreham By Sea}
+    model: location.city
+    pk: 4425
+-   fields: {code: null, country: 29, name: Braganca}
+    model: location.city
+    pk: 4427
+-   fields: {code: BGO, country: 188, name: Bergen}
+    model: location.city
+    pk: 4429
+-   fields: {code: null, country: 161, name: Syktyvkar}
+    model: location.city
+    pk: 4430
+-   fields: {code: null, country: 165, name: Suceava}
+    model: location.city
+    pk: 4431
+-   fields: {code: null, country: 131, name: "Vopnafj\xF6r\xF0ur"}
+    model: location.city
+    pk: 4449
+-   fields: {code: null, country: 11, name: Patras}
+    model: location.city
+    pk: 4455
+-   fields: {code: null, country: 169, name: Pecs}
+    model: location.city
+    pk: 4469
+-   fields: {code: null, country: 133, name: Padova}
+    model: location.city
+    pk: 4470
+-   fields: {code: null, country: 133, name: Piacenza}
+    model: location.city
+    pk: 4472
+-   fields: {code: null, country: 133, name: Trapani}
+    model: location.city
+    pk: 4483
+-   fields: {code: null, country: 214, name: Wurzburg}
+    model: location.city
+    pk: 4488
+-   fields: {code: null, country: 66, name: Nancy}
+    model: location.city
+    pk: 4497
+-   fields: {code: null, country: 67, name: Enontekio}
+    model: location.city
+    pk: 4500
+-   fields: {code: null, country: 19, name: Enniskillen}
+    model: location.city
+    pk: 4503
+-   fields: {code: null, country: 187, name: Enschede}
+    model: location.city
+    pk: 4504
+-   fields: {code: null, country: 19, name: Southend}
+    model: location.city
+    pk: 4518
+-   fields: {code: null, country: 165, name: Cluj-napoca}
+    model: location.city
+    pk: 4524
+-   fields: {code: null, country: 29, name: Ponta Delgada}
+    model: location.city
+    pk: 4532
+-   fields: {code: null, country: 145, name: Mostar}
+    model: location.city
+    pk: 4542
+-   fields: {code: null, country: 161, name: Nizhniy Novgorod}
+    model: location.city
+    pk: 4556
+-   fields: {code: null, country: 133, name: Genoa}
+    model: location.city
+    pk: 4559
+-   fields: {code: null, country: 11, name: Milos}
+    model: location.city
+    pk: 4560
+-   fields: {code: null, country: 110, name: Gothenborg}
+    model: location.city
+    pk: 4567
+-   fields: {code: null, country: 110, name: Norrkoeping}
+    model: location.city
+    pk: 4574
+-   fields: {code: null, country: 214, name: Weeze}
+    model: location.city
+    pk: 4575
+-   fields: {code: null, country: 19, name: North Ronaldsay}
+    model: location.city
+    pk: 4576
+-   fields: {code: null, country: 214, name: Norderney}
+    model: location.city
+    pk: 4578
+-   fields: {code: null, country: 142, name: Knokke}
+    model: location.city
+    pk: 4580
+-   fields: {code: null, country: 19, name: Marham}
+    model: location.city
+    pk: 4582
+-   fields: {code: null, country: 11, name: Limnos}
+    model: location.city
+    pk: 4592
+-   fields: {code: null, country: 161, name: Yakutsk}
+    model: location.city
+    pk: 4603
+-   fields: {code: WAW, country: 38, name: Warsaw}
+    model: location.city
+    pk: 4617
+-   fields: {code: null, country: 139, name: Waterford}
+    model: location.city
+    pk: 4619
+-   fields: {code: null, country: 66, name: Roanne}
+    model: location.city
+    pk: 4624
+-   fields: {code: null, country: 139, name: Sligo}
+    model: location.city
+    pk: 4626
+-   fields: {code: null, country: 161, name: Kaluga}
+    model: location.city
+    pk: 4646
+-   fields: {code: null, country: 67, name: Utti}
+    model: location.city
+    pk: 4647
+-   fields: {code: null, country: 133, name: Torino}
+    model: location.city
+    pk: 4651
+-   fields: {code: null, country: 19, name: Tiree}
+    model: location.city
+    pk: 4653
+-   fields: {code: TRD, country: 188, name: Trondheim}
+    model: location.city
+    pk: 4654
+-   fields: {code: null, country: 188, name: Sandefjord}
+    model: location.city
+    pk: 4656
+-   fields: {code: null, country: 133, name: Ronchi De Legionari}
+    model: location.city
+    pk: 4658
+-   fields: {code: null, country: 161, name: Khatanga}
+    model: location.city
+    pk: 4663
+-   fields: {code: null, country: 19, name: Hatfield}
+    model: location.city
+    pk: 4664
+-   fields: {code: null, country: 161, name: Chita}
+    model: location.city
+    pk: 4665
+-   fields: {code: null, country: 184, name: Odessa}
+    model: location.city
+    pk: 4676
+-   fields: {code: null, country: 19, name: Odiham}
+    model: location.city
+    pk: 4677
+-   fields: {code: null, country: 161, name: Bodaibo}
+    model: location.city
+    pk: 4679
+-   fields: {code: null, country: 177, name: Cordoba}
+    model: location.city
+    pk: 4681
+-   fields: {code: null, country: 213, name: Odense}
+    model: location.city
+    pk: 4682
+-   fields: {code: null, country: 66, name: Rodez}
+    model: location.city
+    pk: 4694
+-   fields: {code: null, country: 161, name: St. Petersburg}
+    model: location.city
+    pk: 4707
+-   fields: {code: null, country: 66, name: Le Havre}
+    model: location.city
+    pk: 4708
+-   fields: {code: null, country: 177, name: Almeria}
+    model: location.city
+    pk: 4709
+-   fields: {code: null, country: 214, name: Leipzig}
+    model: location.city
+    pk: 4710
+-   fields: {code: null, country: 177, name: Leon}
+    model: location.city
+    pk: 4713
+-   fields: {code: null, country: 19, name: Land's End}
+    model: location.city
+    pk: 4714
+-   fields: {code: null, country: 214, name: Leuterschach}
+    model: location.city
+    pk: 4716
+-   fields: {code: null, country: 177, name: Seo De Urgel}
+    model: location.city
+    pk: 4718
+-   fields: {code: null, country: 187, name: Lelystad}
+    model: location.city
+    pk: 4721
+-   fields: {code: null, country: 214, name: Heidelberg}
+    model: location.city
+    pk: 4723
+-   fields: {code: null, country: 161, name: Surgut}
+    model: location.city
+    pk: 4734
+-   fields: {code: null, country: 213, name: Soenderborg}
+    model: location.city
+    pk: 4735
+-   fields: {code: null, country: 66, name: Cognac}
+    model: location.city
+    pk: 4743
+-   fields: {code: null, country: 161, name: Neryungri}
+    model: location.city
+    pk: 4747
+-   fields: {code: null, country: 213, name: Sindal}
+    model: location.city
+    pk: 4748
+-   fields: {code: null, country: 131, name: Patreksfjordur}
+    model: location.city
+    pk: 4751
+-   fields: {code: null, country: 85, name: Paphos}
+    model: location.city
+    pk: 4753
+-   fields: {code: null, country: 188, name: Mosjoen}
+    model: location.city
+    pk: 4759
+-   fields: {code: MJV, country: 177, name: Murcia}
+    model: location.city
+    pk: 4770
+-   fields: {code: GIB, country: 24, name: Gibraltar}
+    model: location.city
+    pk: 4772
+-   fields: {code: null, country: 161, name: Mirnyj}
+    model: location.city
+    pk: 4774
+-   fields: {code: null, country: 133, name: Alghero}
+    model: location.city
+    pk: 4780
+-   fields: {code: null, country: 161, name: Tambow}
+    model: location.city
+    pk: 4812
+-   fields: {code: null, country: 214, name: Moenchengladbach}
+    model: location.city
+    pk: 4813
+-   fields: {code: null, country: 38, name: Szczecin}
+    model: location.city
+    pk: 4827
+-   fields: {code: null, country: 214, name: Parchim}
+    model: location.city
+    pk: 4830
+-   fields: {code: null, country: 11, name: Astypalaia}
+    model: location.city
+    pk: 4831
+-   fields: {code: TLS, country: 66, name: Toulouse}
+    model: location.city
+    pk: 4844
+-   fields: {code: null, country: 159, name: Vitebsk}
+    model: location.city
+    pk: 4847
+-   fields: {code: null, country: 214, name: Ruegen}
+    model: location.city
+    pk: 4851
+-   fields: {code: null, country: 214, name: Treuchtlingen}
+    model: location.city
+    pk: 4855
+-   fields: {code: null, country: 66, name: Hyeres}
+    model: location.city
+    pk: 4860
+-   fields: {code: null, country: 173, name: Tallinn-ulemiste International}
+    model: location.city
+    pk: 4862
+-   fields: {code: null, country: 188, name: Honningsvag}
+    model: location.city
+    pk: 4866
+-   fields: {code: null, country: 161, name: Ukhta}
+    model: location.city
+    pk: 4871
+-   fields: {code: null, country: 177, name: Lleida}
+    model: location.city
+    pk: 4872
+-   fields: {code: null, country: 214, name: Langeoog}
+    model: location.city
+    pk: 4889
+-   fields: {code: null, country: 165, name: Dezmir}
+    model: location.city
+    pk: 4898
+-   fields: {code: null, country: 161, name: Igarka}
+    model: location.city
+    pk: 4904
+-   fields: {code: null, country: 165, name: Iasi}
+    model: location.city
+    pk: 4906
+-   fields: {code: null, country: 161, name: Yaroslavl}
+    model: location.city
+    pk: 4907
+-   fields: {code: null, country: 19, name: Mildenhall}
+    model: location.city
+    pk: 4928
+-   fields: {code: null, country: 214, name: Geilenkirchen}
+    model: location.city
+    pk: 4935
+-   fields: {code: null, country: 159, name: Minsk}
+    model: location.city
+    pk: 4936
+-   fields: {code: null, country: 67, name: Mariehamn}
+    model: location.city
+    pk: 4937
+-   fields: {code: null, country: 66, name: "Angers/Marc\xE9"}
+    model: location.city
+    pk: 4939
+-   fields: {code: null, country: 66, name: Angouleme}
+    model: location.city
+    pk: 4941
+-   fields: {code: null, country: 66, name: Nevers}
+    model: location.city
+    pk: 4942
+-   fields: {code: null, country: 188, name: Andoya}
+    model: location.city
+    pk: 4953
+-   fields: {code: null, country: 161, name: Krasnodar}
+    model: location.city
+    pk: 4959
+-   fields: {code: null, country: 188, name: Kristiansand}
+    model: location.city
+    pk: 4960
+-   fields: {code: null, country: 213, name: Karup}
+    model: location.city
+    pk: 4961
+-   fields: {code: KRK, country: 38, name: Krakow}
+    model: location.city
+    pk: 4965
+-   fields: {code: null, country: 19, name: Redhill}
+    model: location.city
+    pk: 4966
+-   fields: {code: null, country: 110, name: Kiruna}
+    model: location.city
+    pk: 4968
+-   fields: {code: null, country: 161, name: Kurgan}
+    model: location.city
+    pk: 4969
+-   fields: {code: null, country: 110, name: Kramfors}
+    model: location.city
+    pk: 4972
+-   fields: {code: GLA, country: 19, name: Glasgow}
+    model: location.city
+    pk: 4990
+-   fields: {code: GVA, country: 74, name: Geneva}
+    model: location.city
+    pk: 5002
+-   fields: {code: null, country: 66, name: Toussous-le-noble}
+    model: location.city
+    pk: 5007
+-   fields: {code: null, country: 184, name: Ternopol}
+    model: location.city
+    pk: 5011
+-   fields: {code: null, country: 214, name: Hahn}
+    model: location.city
+    pk: 5025
+-   fields: {code: null, country: 213, name: Rodby}
+    model: location.city
+    pk: 5026
+-   fields: {code: null, country: 110, name: Lulea}
+    model: location.city
+    pk: 5034
+-   fields: {code: null, country: 66, name: Lannion}
+    model: location.city
+    pk: 5039
+-   fields: {code: null, country: 214, name: Dortmund}
+    model: location.city
+    pk: 5055
+-   fields: {code: null, country: 214, name: Ingolstadt}
+    model: location.city
+    pk: 5061
+-   fields: {code: null, country: 66, name: Gustavia}
+    model: location.city
+    pk: 5069
+-   fields: {code: null, country: 19, name: Cambridge}
+    model: location.city
+    pk: 5071
+-   fields: {code: null, country: 110, name: Pajala}
+    model: location.city
+    pk: 5074
+-   fields: {code: null, country: 66, name: Beziers}
+    model: location.city
+    pk: 5085
+-   fields: {code: null, country: 19, name: Brize Norton}
+    model: location.city
+    pk: 5086
+-   fields: {code: null, country: 44, name: Strymba}
+    model: location.city
+    pk: 5087
+-   fields: {code: null, country: 38, name: Bydgoszcz}
+    model: location.city
+    pk: 5088
+-   fields: {code: null, country: 133, name: Bolzano}
+    model: location.city
+    pk: 5093
+-   fields: {code: null, country: 161, name: Bryansk}
+    model: location.city
+    pk: 5096
+-   fields: {code: null, country: 159, name: Mogilev}
+    model: location.city
+    pk: 5099
+-   fields: {code: null, country: 66, name: Verdun}
+    model: location.city
+    pk: 5103
+-   fields: {code: null, country: 131, name: Myvatn}
+    model: location.city
+    pk: 5106
+-   fields: {code: null, country: 133, name: Albenga}
+    model: location.city
+    pk: 5113
+-   fields: {code: null, country: 67, name: Kittila}
+    model: location.city
+    pk: 5135
+-   fields: {code: null, country: 38, name: Katowice}
+    model: location.city
+    pk: 5137
+-   fields: {code: null, country: 187, name: Woensdrecht}
+    model: location.city
+    pk: 5163
+-   fields: {code: null, country: 133, name: Palermo}
+    model: location.city
+    pk: 5170
+-   fields: {code: null, country: 110, name: Gallivare}
+    model: location.city
+    pk: 5176
+-   fields: {code: null, country: 133, name: Bergamo}
+    model: location.city
+    pk: 5191
+-   fields: {code: null, country: 110, name: Vaxjo}
+    model: location.city
+    pk: 5194
+-   fields: {code: null, country: 131, name: Thorshofn}
+    model: location.city
+    pk: 5201
+-   fields: {code: null, country: 110, name: Trollhattan}
+    model: location.city
+    pk: 5202
+-   fields: {code: null, country: 165, name: Tulcea}
+    model: location.city
+    pk: 5209
+-   fields: {code: null, country: 66, name: Niort}
+    model: location.city
+    pk: 5217
+-   fields: {code: null, country: 188, name: Forde}
+    model: location.city
+    pk: 5219
+-   fields: {code: null, country: 214, name: Friedrichshafen}
+    model: location.city
+    pk: 5221
+-   fields: {code: null, country: 66, name: Aix-les-milles}
+    model: location.city
+    pk: 5224
+-   fields: {code: null, country: 66, name: Angers}
+    model: location.city
+    pk: 5225
+-   fields: {code: null, country: 38, name: RADOM}
+    model: location.city
+    pk: 5226
+-   fields: {code: null, country: 11, name: Keffallinia}
+    model: location.city
+    pk: 5227
+-   fields: {code: null, country: 213, name: Ronne}
+    model: location.city
+    pk: 5231
+-   fields: {code: null, country: 110, name: Ronneby}
+    model: location.city
+    pk: 5234
+-   fields: {code: null, country: 177, name: La Coruna}
+    model: location.city
+    pk: 5237
+-   fields: {code: null, country: 133, name: Lecce}
+    model: location.city
+    pk: 5239
+-   fields: {code: LCA, country: 85, name: Larnaca}
+    model: location.city
+    pk: 5240
+-   fields: {code: null, country: 66, name: Rennes}
+    model: location.city
+    pk: 5241
+-   fields: {code: null, country: 38, name: Lodz}
+    model: location.city
+    pk: 5244
+-   fields: {code: null, country: 165, name: Deva}
+    model: location.city
+    pk: 5250
+-   fields: {code: null, country: 19, name: North Connel}
+    model: location.city
+    pk: 5252
+-   fields: {code: null, country: 214, name: Oberpfaffenhofen}
+    model: location.city
+    pk: 5254
+-   fields: {code: null, country: 66, name: Aubenas-vals-lanas}
+    model: location.city
+    pk: 5259
+-   fields: {code: null, country: 38, name: Zielona Gora}
+    model: location.city
+    pk: 5260
+-   fields: {code: null, country: 184, name: Poltava}
+    model: location.city
+    pk: 5262
+-   fields: {code: null, country: 120, name: Palanga}
+    model: location.city
+    pk: 5265
+-   fields: {code: null, country: 19, name: Plymouth}
+    model: location.city
+    pk: 5281
+-   fields: {code: null, country: 74, name: Buochs}
+    model: location.city
+    pk: 5288
+-   fields: {code: null, country: 165, name: Arad}
+    model: location.city
+    pk: 5306
+-   fields: {code: null, country: 184, name: Kharkov}
+    model: location.city
+    pk: 5315
+-   fields: {code: null, country: 110, name: Skovde}
+    model: location.city
+    pk: 5320
+-   fields: {code: null, country: 11, name: Kavala}
+    model: location.city
+    pk: 5322
+-   fields: {code: null, country: 161, name: Apatity}
+    model: location.city
+    pk: 5324
+-   fields: {code: null, country: 161, name: Kirov}
+    model: location.city
+    pk: 5326
+-   fields: {code: null, country: 19, name: Wick}
+    model: location.city
+    pk: 5345
