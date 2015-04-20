@@ -26,9 +26,13 @@ class QPXResource(DjangoResource):
         print self.data
 
     def create(self):
-        print self.data
-        # dates = Dates.objects.get(departure_date=self.data.get('dates').get('departure_date'))
-        # process_qpx(self.data.get('qpx_data'), dates)
+        print self.data.get('dates').get('departure_date')
+        departure_date = datetime.strptime(self.data.get('dates').get('departure_date'), '%Y-%m-%d')
+        return_date = datetime.strptime(self.data.get('dates').get('return_date'), '%Y-%m-%d')
+        print departure_date.date()
+        dates = Dates.objects.get(departure_date=departure_date, return_date=return_date)
+        return process_qpx(self.data.get('qpx_data'), dates)
+
 
 
 

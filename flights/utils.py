@@ -58,6 +58,7 @@ def make_historic_slice(slice):
 
 def create_slice(price, outbound_flight, inbound_flight):
     price = re.split('(\d.*)',price)
+    print price
     currency = Currency.objects.get(code=price[0])
     price = price[1]
     outbound_date = datetime.strptime(outbound_flight.get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')

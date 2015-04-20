@@ -9,6 +9,11 @@ no_data = {
  }
 }
 
+trip_dates = {
+    'departure_date': '2015-05-29',
+    'return_date': '2015-05-31',
+}
+
 
 
 flight_data = {
