@@ -1,0 +1,1 @@
+[{"fields": {"is_active": true, "is_superuser": true, "is_staff": true, "last_login": "2015-04-14T08:32:10.509Z", "groups": [], "user_permissions": [], "password": "pbkdf2_sha256$12000$9gdNmTnVMpNe$TfE1HbTWqhDtK/tFCSduxBom3HmjxFr3dHCSIH83Upk=", "email": "colin.pringlewood@gmail.com", "date_joined": "2015-04-14T08:26:43.410Z"}, "model": "email_user.emailuser", "pk": 1}]

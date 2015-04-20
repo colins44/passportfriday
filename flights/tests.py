@@ -322,6 +322,7 @@ class SimpleTest(TestCase):
 class FixturesTest(TestCase):
 
     fixtures = ['intial_data.json',]
+    #http://django-testing-docs.readthedocs.org/en/latest/fixtures.html
 
     # def setUp(self):
     #     call_setup_methods()
