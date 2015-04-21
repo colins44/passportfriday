@@ -58,7 +58,6 @@ def make_historic_slice(slice):
 
 def create_slice(price, outbound_flight, inbound_flight):
     price = re.split('(\d.*)',price)
-    print price
     currency = Currency.objects.get(code=price[0])
     price = price[1]
     outbound_date = datetime.strptime(outbound_flight.get('leg')[0].get('departureTime')[:16], '%Y-%m-%dT%H:%M')
@@ -120,7 +119,6 @@ def process_qpx(qpx_data, dates):
     #first you have to find all the other slices for that destination for that date and delete there
     #this is cause prices will go up, but before we delete the slice we should log the price between the two cites
     trip_data = returned_data.get('trips').get('data')
-    print trip_data
     try:
         origin_city = trip_data.get('city')[0]
     except TypeError:
@@ -189,7 +187,6 @@ def get_flight_data(airport, dates, hour):
                                                                                                                             hour,
                                                                                                                             settings.FLIGHTSTATS_APPID,
                                                                                                                             settings.FLIGHTSTATS_APPKEY)
-        print url
         r = requests.get(url)
         outbound_flights = json.loads(r.content)
         sleep(2)
@@ -230,7 +227,6 @@ def get_flight_data(airport, dates, hour):
                                                                                                                         hour,
                                                                                                                         settings.FLIGHTSTATS_APPID,
                                                                                                                         settings.FLIGHTSTATS_APPKEY)
-        print url
         r = requests.get(url)
         inbound_flights = json.loads(r.content)
         sleep(2)
@@ -273,4 +269,16 @@ def get_flight_prices(origin, destination, dates):
     url = 'https://www.googleapis.com/qpxExpress/v1/trips/search?key=%s' % QPX_APIKEY
     r = requests.post(url, data = rendered, headers =headers)
     process_qpx(r.content, dates)
+
+def flight_price_lookup_logic():
+    """Here we put the logic that dictates which city pairs for which dates the QPX API should be called for"""
+    slices = Slice.objects.all().order_by('price')[:50]
+    where_to_go =[]
+    for slice in slices:
+        data ={}
+        data['origin_city']:slice.origin,
+        data['destination']:slice.destination,
+        data['dates']:slice.dates
+        where_to_go.append(data)
+    return data
 
