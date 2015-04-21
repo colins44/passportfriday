@@ -1,11 +1,3 @@
--   fields: {altitude: '305.00', city: 1, country: 161, iata: '', icao: UWOH, latitude: '52.078333',
-        longitude: '59.683333', name: Kvarkeno, timezone: '6.00'}
-    model: flights.airport
-    pk: 1
--   fields: {altitude: '79.00', city: 8, country: 167, iata: SPU, icao: LDSP, latitude: '43.538944',
-        longitude: '16.297964', name: Split, timezone: '1.00'}
-    model: flights.airport
-    pk: 8
 -   fields: {altitude: '1197.00', city: 12, country: 214, iata: SPM, icao: ETAD, latitude: '49.972667',
         longitude: '6.692500', name: Spangdahlem Ab, timezone: '1.00'}
     model: flights.airport
@@ -18,18 +10,10 @@
         longitude: '2.355323', name: Gare du Nord, timezone: '1.00'}
     model: flights.airport
     pk: 28
--   fields: {altitude: '10.00', city: 43, country: 11, iata: JNX, icao: LGNX, latitude: '37.080556',
-        longitude: '25.368056', name: Naxos, timezone: '2.00'}
-    model: flights.airport
-    pk: 43
 -   fields: {altitude: '19.00', city: 54, country: 19, iata: BEB, icao: EGPL, latitude: '57.481111',
         longitude: '-7.362778', name: Benbecula, timezone: '0.00'}
     model: flights.airport
     pk: 54
--   fields: {altitude: '335.00', city: 57, country: 163, iata: BEG, icao: LYBE, latitude: '44.818444',
-        longitude: '20.309139', name: Beograd, timezone: '1.00'}
-    model: flights.airport
-    pk: 57
 -   fields: {altitude: '154.00', city: 61, country: 214, iata: BER, icao: EDDB, latitude: '52.366667',
         longitude: '13.503333', name: Berlin Brandenburg Willy Brandt, timezone: '1.00'}
     model: flights.airport
@@ -42,50 +26,26 @@
         longitude: '0.772939', name: Honington, timezone: '0.00'}
     model: flights.airport
     pk: 64
--   fields: {altitude: '548.00', city: 69, country: 161, iata: GRV, icao: URMG, latitude: '43.298100',
-        longitude: '45.784100', name: Grozny Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 69
 -   fields: {altitude: '86.00', city: 70, country: 29, iata: GRW, icao: LPGR, latitude: '39.092169',
         longitude: '-28.029847', name: Graciosa, timezone: '-1.00'}
     model: flights.airport
     pk: 70
--   fields: {altitude: '15.00', city: 73, country: 133, iata: GRS, icao: LIRS, latitude: '42.759747',
-        longitude: '11.071897', name: Grosseto, timezone: '1.00'}
-    model: flights.airport
-    pk: 73
 -   fields: {altitude: '17.00', city: 75, country: 187, iata: GRQ, icao: EHGG, latitude: '53.119720',
         longitude: '6.579444', name: Eelde, timezone: '1.00'}
     model: flights.airport
     pk: 75
--   fields: {altitude: '1115.00', city: 76, country: 243, iata: GRZ, icao: LOWG, latitude: '46.991067',
-        longitude: '15.439628', name: Graz, timezone: '1.00'}
-    model: flights.airport
-    pk: 76
 -   fields: {altitude: '1860.00', city: 77, country: 177, iata: GRX, icao: LEGR, latitude: '37.188731',
         longitude: '-3.777356', name: Granada, timezone: '1.00'}
     model: flights.airport
     pk: 77
--   fields: {altitude: '66.00', city: 78, country: 131, iata: GRY, icao: BIGR, latitude: '66.554700',
-        longitude: '-18.017500', name: "Gr\xEDmsey Airport", timezone: '0.00'}
-    model: flights.airport
-    pk: 78
 -   fields: {altitude: '468.00', city: 81, country: 177, iata: GRO, icao: LEGE, latitude: '41.900969',
         longitude: '2.760547', name: Girona, timezone: '1.00'}
     model: flights.airport
     pk: 81
--   fields: {altitude: '20.00', city: 89, country: 161, iata: NOJ, icao: USRO, latitude: '63.110079',
-        longitude: '75.162243', name: Noyabrsk, timezone: '6.00'}
-    model: flights.airport
-    pk: 89
 -   fields: {altitude: '3.00', city: 90, country: 214, iata: NOE, icao: EDWS, latitude: '53.632221',
         longitude: '7.191389', name: Sonderlandeplatz Norden-Norddeich, timezone: '1.00'}
     model: flights.airport
     pk: 90
--   fields: {altitude: '378.00', city: 92, country: 161, iata: TJM, icao: USTR, latitude: '57.189567',
-        longitude: '65.324300', name: Roschino, timezone: '6.00'}
-    model: flights.airport
-    pk: 92
 -   fields: {altitude: '665.00', city: 95, country: 139, iata: NOC, icao: EIKN, latitude: '53.910297',
         longitude: '-8.818492', name: Ireland West Knock, timezone: '0.00'}
     model: flights.airport
@@ -94,19 +54,10 @@
         longitude: '23.558056', name: Barysiai, timezone: '2.00'}
     model: flights.airport
     pk: 100
--   fields: {altitude: '1024.00', city: 101, country: 161, iata: NOZ, icao: UNWW,
-        latitude: '53.811400', longitude: '86.877200', name: Spichenkovo Airport,
-        timezone: '8.00'}
-    model: flights.airport
-    pk: 101
 -   fields: {altitude: '366.00', city: 104, country: 110, iata: HLF, icao: ESSF, latitude: '57.525833',
         longitude: '15.823333', name: Hultsfred, timezone: '1.00'}
     model: flights.airport
     pk: 104
--   fields: {altitude: '70.00', city: 116, country: 133, iata: LMP, icao: LICD, latitude: '35.497914',
-        longitude: '12.618083', name: Lampedusa, timezone: '1.00'}
-    model: flights.airport
-    pk: 117
 -   fields: {altitude: '138.00', city: 117, country: 214, iata: RLG, icao: ETNL, latitude: '53.918167',
         longitude: '12.278333', name: Laage, timezone: '1.00'}
     model: flights.airport
@@ -131,58 +82,30 @@
         longitude: '24.460833', name: Pajuostis, timezone: '2.00'}
     model: flights.airport
     pk: 144
--   fields: {altitude: '635.00', city: 148, country: 133, iata: PNL, icao: LICG, latitude: '36.816519',
-        longitude: '11.968864', name: Pantelleria, timezone: '1.00'}
-    model: flights.airport
-    pk: 149
 -   fields: {altitude: '1504.00', city: 150, country: 177, iata: PNA, icao: LEPP,
         latitude: '42.770039', longitude: '-1.646331', name: Pamplona, timezone: '1.00'}
     model: flights.airport
     pk: 151
--   fields: {altitude: '6.00', city: 152, country: 11, iata: CFU, icao: LGKR, latitude: '39.601944',
-        longitude: '19.911667', name: Ioannis Kapodistrias Intl, timezone: '2.00'}
-    model: flights.airport
-    pk: 153
 -   fields: {altitude: '256.00', city: 153, country: 66, iata: CFR, icao: LFRK, latitude: '49.173333',
         longitude: '-0.450000', name: Carpiquet, timezone: '1.00'}
     model: flights.airport
     pk: 154
--   fields: {altitude: '1054.00', city: 160, country: 161, iata: MRV, icao: URMM,
-        latitude: '44.225072', longitude: '43.081889', name: Mineralnyye Vody, timezone: '4.00'}
-    model: flights.airport
-    pk: 161
 -   fields: {altitude: '74.00', city: 162, country: 66, iata: MRS, icao: LFML, latitude: '43.435555',
         longitude: '5.213611', name: Provence, timezone: '1.00'}
     model: flights.airport
     pk: 163
--   fields: {altitude: '92.00', city: 182, country: 161, iata: KXK, icao: UHKK, latitude: '50.409400',
-        longitude: '136.934000', name: Komsomolsk-on-Amur Airport, timezone: '11.00'}
-    model: flights.airport
-    pk: 184
 -   fields: {altitude: '597.00', city: 203, country: 144, iata: PDV, icao: LBPD, latitude: '42.067806',
         longitude: '24.850833', name: Plovdiv, timezone: '2.00'}
     model: flights.airport
     pk: 205
--   fields: {altitude: '7.00', city: 206, country: 133, iata: VCE, icao: LIPZ, latitude: '45.505278',
-        longitude: '12.351944', name: Venezia Tessera, timezone: '1.00'}
-    model: flights.airport
-    pk: 208
 -   fields: {altitude: '209.00', city: 220, country: 66, iata: CLY, icao: LFKC, latitude: '42.530753',
         longitude: '8.793189', name: Saint Catherine, timezone: '1.00'}
     model: flights.airport
     pk: 222
--   fields: {altitude: '33.00', city: 223, country: 188, iata: ZXB, icao: ENJA, latitude: '70.961111',
-        longitude: '-8.575833', name: Jan Mayensfield, timezone: '1.00'}
-    model: flights.airport
-    pk: 225
 -   fields: {altitude: '0.00', city: 118, country: 19, iata: ZXE, icao: \N, latitude: '55.952000',
         longitude: '-3.189000', name: Edinburgh Waverly Station, timezone: '0.00'}
     model: flights.airport
     pk: 226
--   fields: {altitude: '588.00', city: 227, country: 161, iata: DME, icao: UUDD, latitude: '55.408611',
-        longitude: '37.906111', name: Domododevo, timezone: '4.00'}
-    model: flights.airport
-    pk: 230
 -   fields: {altitude: '93.00', city: 233, country: 177, iata: XRY, icao: LEJR, latitude: '36.744622',
         longitude: '-6.060111', name: Jerez, timezone: '1.00'}
     model: flights.airport
@@ -195,18 +118,10 @@
         longitude: '-3.371389', name: Perth Scone Airport, timezone: '0.00'}
     model: flights.airport
     pk: 241
--   fields: {altitude: '6.00', city: 241, country: 133, iata: PSA, icao: LIRP, latitude: '43.683917',
-        longitude: '10.392750', name: Pisa, timezone: '1.00'}
-    model: flights.airport
-    pk: 244
 -   fields: {altitude: '194.00', city: 246, country: 110, iata: JLD, icao: ESML, latitude: '55.944444',
         longitude: '12.869444', name: Landskrona, timezone: '1.00'}
     model: flights.airport
     pk: 249
--   fields: {altitude: '48.00', city: 249, country: 133, iata: PSR, icao: LIBP, latitude: '42.431656',
-        longitude: '14.181067', name: Pescara, timezone: '1.00'}
-    model: flights.airport
-    pk: 252
 -   fields: {altitude: '0.00', city: 253, country: 19, iata: PSV, icao: '', latitude: '60.321700',
         longitude: '-1.693060', name: Papa Stour Airport, timezone: '0.00'}
     model: flights.airport
@@ -219,14 +134,6 @@
         longitude: '2.078464', name: Barcelona, timezone: '1.00'}
     model: flights.airport
     pk: 260
--   fields: {altitude: '160.00', city: 276, country: 188, iata: SRP, icao: ENSO, latitude: '59.791925',
-        longitude: '5.340850', name: Sorstokken, timezone: '1.00'}
-    model: flights.airport
-    pk: 279
--   fields: {altitude: '50.00', city: 283, country: 161, iata: NOI, icao: \N, latitude: '44.401600',
-        longitude: '37.777900', name: Krymsk, timezone: '4.00'}
-    model: flights.airport
-    pk: 286
 -   fields: {altitude: '37.00', city: 285, country: 19, iata: HLY, icao: EGOV, latitude: '53.248097',
         longitude: '-4.535339', name: Anglesey Airport, timezone: '0.00'}
     model: flights.airport
@@ -239,18 +146,10 @@
         latitude: '47.824000', longitude: '10.623000', name: Ebenhofen BF, timezone: '1.00'}
     model: flights.airport
     pk: 317
--   fields: {altitude: '31.00', city: 316, country: 133, iata: EBA, icao: LIRJ, latitude: '42.760277',
-        longitude: '10.239445', name: Marina Di Campo, timezone: '1.00'}
-    model: flights.airport
-    pk: 319
 -   fields: {altitude: '45.00', city: 320, country: 214, iata: EBO, icao: \N, latitude: '51.478506',
         longitude: '7.222781', name: Bochum Railway, timezone: '1.00'}
     model: flights.airport
     pk: 323
--   fields: {altitude: '97.00', city: 321, country: 213, iata: EBJ, icao: EKEB, latitude: '55.525942',
-        longitude: '8.553403', name: Esbjerg, timezone: '1.00'}
-    model: flights.airport
-    pk: 324
 -   fields: {altitude: '1325.00', city: 322, country: 66, iata: EBU, icao: LFMH, latitude: '45.540554',
         longitude: '4.296389', name: Boutheon, timezone: '1.00'}
     model: flights.airport
@@ -260,10 +159,6 @@
             Airport", timezone: '1.00'}
     model: flights.airport
     pk: 328
--   fields: {altitude: '278.00', city: 326, country: 167, iata: RJK, icao: LDRI, latitude: '45.216889',
-        longitude: '14.570267', name: Rijeka, timezone: '1.00'}
-    model: flights.airport
-    pk: 329
 -   fields: {altitude: '755.00', city: 328, country: 214, iata: DRS, icao: EDDC, latitude: '51.132767',
         longitude: '13.767161', name: Dresden, timezone: '1.00'}
     model: flights.airport
@@ -284,18 +179,10 @@
         longitude: '3.963014', name: Mediterranee, timezone: '1.00'}
     model: flights.airport
     pk: 364
--   fields: {altitude: '251.00', city: 367, country: 184, iata: MPW, icao: UKCM, latitude: '47.076100',
-        longitude: '37.449600', name: Mariupol International Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 371
 -   fields: {altitude: '124.00', city: 368, country: 66, iata: AVN, icao: LFMV, latitude: '43.907300',
         longitude: '4.901831', name: Caumont, timezone: '1.00'}
     model: flights.airport
     pk: 372
--   fields: {altitude: '410.00', city: 374, country: 133, iata: AVB, icao: LIPA, latitude: '46.031889',
-        longitude: '12.596472', name: Aviano Ab, timezone: '1.00'}
-    model: flights.airport
-    pk: 378
 -   fields: {altitude: '285.00', city: 377, country: 144, iata: GOZ, icao: LBGO, latitude: '43.151444',
         longitude: '25.712889', name: Gorna Oryahovitsa, timezone: '2.00'}
     model: flights.airport
@@ -304,22 +191,6 @@
         longitude: '8.802917', name: Campo Dell Oro, timezone: '1.00'}
     model: flights.airport
     pk: 383
--   fields: {altitude: '474.00', city: 385, country: 11, iata: KZS, icao: LGKJ, latitude: '36.127777',
-        longitude: '29.566656', name: Kastelorizo, timezone: '2.00'}
-    model: flights.airport
-    pk: 389
--   fields: {altitude: '2059.00', city: 387, country: 11, iata: KZI, icao: LGKZ, latitude: '40.286110',
-        longitude: '21.840834', name: Filippos, timezone: '2.00'}
-    model: flights.airport
-    pk: 391
--   fields: {altitude: '411.00', city: 388, country: 161, iata: KZN, icao: UWKD, latitude: '55.606186',
-        longitude: '49.278728', name: Kazan, timezone: '4.00'}
-    model: flights.airport
-    pk: 392
--   fields: {altitude: '19.00', city: 413, country: 67, iata: VAA, icao: EFVA, latitude: '63.050650',
-        longitude: '21.762175', name: Vaasa, timezone: '2.00'}
-    model: flights.airport
-    pk: 417
 -   fields: {altitude: '525.00', city: 414, country: 66, iata: VAF, icao: LFLU, latitude: '44.921594',
         longitude: '4.969900', name: Chabeuil, timezone: '1.00'}
     model: flights.airport
@@ -328,22 +199,10 @@
         longitude: '27.825106', name: Varna, timezone: '2.00'}
     model: flights.airport
     pk: 422
--   fields: {altitude: '42.00', city: 421, country: 188, iata: VAW, icao: ENSS, latitude: '70.355392',
-        longitude: '31.044889', name: Svartnes Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 425
 -   fields: {altitude: '152.00', city: 434, country: 214, iata: ZVM, icao: \N, latitude: '52.329035',
         longitude: '9.822136', name: Hannover Messe-Heliport, timezone: '1.00'}
     model: flights.airport
     pk: 438
--   fields: {altitude: '755.00', city: 439, country: 184, iata: RWN, icao: UKLR, latitude: '50.607100',
-        longitude: '26.141600', name: Rivne International Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 443
--   fields: {altitude: '791.00', city: 440, country: 184, iata: DOK, icao: UKCC, latitude: '48.073611',
-        longitude: '37.739722', name: Donetsk Intl, timezone: '2.00'}
-    model: flights.airport
-    pk: 444
 -   fields: {altitude: '479.00', city: 442, country: 66, iata: DOL, icao: LFRG, latitude: '49.365339',
         longitude: '0.154306', name: St Gatien, timezone: '1.00'}
     model: flights.airport
@@ -352,14 +211,6 @@
         longitude: '-0.418611', name: Pau Pyrenees, timezone: '1.00'}
     model: flights.airport
     pk: 462
--   fields: {altitude: '274.00', city: 464, country: 167, iata: PUY, icao: LDPL, latitude: '44.893533',
-        longitude: '13.922192', name: Pula, timezone: '1.00'}
-    model: flights.airport
-    pk: 468
--   fields: {altitude: '838.00', city: 477, country: 161, iata: BAX, icao: UNBB, latitude: '53.363775',
-        longitude: '83.538533', name: Barnaul, timezone: '7.00'}
-    model: flights.airport
-    pk: 481
 -   fields: {altitude: '605.00', city: 478, country: 165, iata: BAY, icao: LRBM, latitude: '47.658389',
         longitude: '23.470022', name: Tautii Magheraus, timezone: '2.00'}
     model: flights.airport
@@ -368,10 +219,6 @@
         longitude: '10.900000', name: Bamberg BF, timezone: '1.00'}
     model: flights.airport
     pk: 488
--   fields: {altitude: '17.00', city: 491, country: 213, iata: STA, icao: EKVJ, latitude: '55.990122',
-        longitude: '8.353906', name: Stauning, timezone: '1.00'}
-    model: flights.airport
-    pk: 495
 -   fields: {altitude: '348.00', city: 301, country: 19, iata: STN, icao: EGSS, latitude: '51.885000',
         longitude: '0.235000', name: Stansted, timezone: '0.00'}
     model: flights.airport
@@ -380,10 +227,6 @@
         longitude: '18.081000', name: Stockholm Cruise Port, timezone: '1.00'}
     model: flights.airport
     pk: 501
--   fields: {altitude: '1486.00', city: 503, country: 161, iata: STW, icao: URMT,
-        latitude: '45.109165', longitude: '42.112778', name: Shpakovskoye, timezone: '4.00'}
-    model: flights.airport
-    pk: 508
 -   fields: {altitude: '0.00', city: 301, country: 19, iata: STP, icao: \N, latitude: '51.530000',
         longitude: '-0.125000', name: London St Pancras, timezone: '0.00'}
     model: flights.airport
@@ -424,10 +267,6 @@
         longitude: '3.089444', name: Lesquin, timezone: '1.00'}
     model: flights.airport
     pk: 530
--   fields: {altitude: '353.00', city: 525, country: 133, iata: LIN, icao: LIML, latitude: '45.445103',
-        longitude: '9.276739', name: Linate, timezone: '1.00'}
-    model: flights.airport
-    pk: 532
 -   fields: {altitude: '374.00', city: 536, country: 29, iata: LIS, icao: LPPT, latitude: '38.781311',
         longitude: '-9.135919', name: Lisboa, timezone: '0.00'}
     model: flights.airport
@@ -440,42 +279,14 @@
         longitude: '-2.214722', name: Alderney, timezone: '0.00'}
     model: flights.airport
     pk: 547
--   fields: {altitude: '799.00', city: 542, country: 188, iata: HFT, icao: ENHF, latitude: '70.679722',
-        longitude: '23.668889', name: Hammerfest Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 549
--   fields: {altitude: '483.00', city: 549, country: 67, iata: KAJ, icao: EFKI, latitude: '64.285472',
-        longitude: '27.692414', name: Kajaani, timezone: '2.00'}
-    model: flights.airport
-    pk: 556
--   fields: {altitude: '866.00', city: 551, country: 67, iata: KAO, icao: EFKS, latitude: '65.987575',
-        longitude: '29.239381', name: Kuusamo, timezone: '2.00'}
-    model: flights.airport
-    pk: 558
--   fields: {altitude: '151.00', city: 558, country: 67, iata: KAU, icao: EFKA, latitude: '63.127078',
-        longitude: '23.051442', name: Kauhava, timezone: '2.00'}
-    model: flights.airport
-    pk: 565
 -   fields: {altitude: '312.00', city: 561, country: 66, iata: RHE, icao: LFSR, latitude: '49.310000',
         longitude: '4.050000', name: Champagne, timezone: '1.00'}
     model: flights.airport
     pk: 568
--   fields: {altitude: '24.00', city: 563, country: 131, iata: HFN, icao: BIHN, latitude: '64.295556',
-        longitude: '-15.227222', name: Hornafjordur, timezone: '0.00'}
-    model: flights.airport
-    pk: 570
 -   fields: {altitude: '270.00', city: 567, country: 19, iata: OXF, icao: EGTK, latitude: '51.836944',
         longitude: '-1.320000', name: Kidlington, timezone: '0.00'}
     model: flights.airport
     pk: 574
--   fields: {altitude: '262.00', city: 571, country: 38, iata: CZW, icao: EPRU, latitude: '50.884722',
-        longitude: '19.202222', name: 'RUDNIKI ', timezone: '1.00'}
-    model: flights.airport
-    pk: 579
--   fields: {altitude: '308.00', city: 588, country: 11, iata: ATH, icao: LGAV, latitude: '37.936358',
-        longitude: '23.944467', name: Eleftherios Venizelos Intl, timezone: '2.00'}
-    model: flights.airport
-    pk: 596
 -   fields: {altitude: '30.00', city: 597, country: 139, iata: CFN, icao: EIDL, latitude: '55.044192',
         longitude: '-8.341000', name: Donegal Airport, timezone: '0.00'}
     model: flights.airport
@@ -492,22 +303,10 @@
         longitude: '-8.626775', name: Vigo, timezone: '1.00'}
     model: flights.airport
     pk: 634
--   fields: {altitude: '387.00', city: 627, country: 161, iata: VGD, icao: ULWW, latitude: '59.281667',
-        longitude: '39.946667', name: Vologda Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 635
 -   fields: {altitude: '87.00', city: 638, country: 66, iata: FSC, icao: LFKF, latitude: '41.500557',
         longitude: '9.097777', name: Sud Corse, timezone: '1.00'}
     model: flights.airport
     pk: 646
--   fields: {altitude: '15.00', city: 646, country: 11, iata: ZTH, icao: LGZA, latitude: '37.750853',
-        longitude: '20.884250', name: Dionysios Solomos, timezone: '2.00'}
-    model: flights.airport
-    pk: 654
--   fields: {altitude: '0.00', city: 652, country: 184, iata: ZTR, icao: UKKV, latitude: '50.270556',
-        longitude: '28.738611', name: Zhytomyr, timezone: '2.00'}
-    model: flights.airport
-    pk: 660
 -   fields: {altitude: '0.00', city: 665, country: 110, iata: JHE, icao: \N, latitude: '56.041900',
         longitude: '12.691200', name: Helsingborg Cruise Port, timezone: '1.00'}
     model: flights.airport
@@ -520,10 +319,6 @@
         longitude: '4.634906', name: Tarare, timezone: '1.00'}
     model: flights.airport
     pk: 707
--   fields: {altitude: '11.00', city: 702, country: 161, iata: PWE, icao: UHMP, latitude: '69.783283',
-        longitude: '170.597006', name: Pevek, timezone: '12.00'}
-    model: flights.airport
-    pk: 710
 -   fields: {altitude: '1000.00', city: 320, country: 214, iata: BOX, icao: BOCH,
         latitude: '51.478506', longitude: '7.222200', name: Bochum HBF, timezone: '1.00'}
     model: flights.airport
@@ -532,58 +327,18 @@
         longitude: '2.370278', name: Bourges, timezone: '1.00'}
     model: flights.airport
     pk: 722
--   fields: {altitude: '1461.00', city: 714, country: 161, iata: NAL, icao: URMN,
-        latitude: '43.512900', longitude: '43.636600', name: Nalchik Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 723
 -   fields: {altitude: '38.00', city: 716, country: 19, iata: BOH, icao: EGHH, latitude: '50.780000',
         longitude: '-1.842500', name: Bournemouth, timezone: '0.00'}
     model: flights.airport
     pk: 725
--   fields: {altitude: '294.00', city: 718, country: 133, iata: NAP, icao: LIRN, latitude: '40.886033',
-        longitude: '14.290781', name: Capodichino, timezone: '1.00'}
-    model: flights.airport
-    pk: 727
--   fields: {altitude: '42.00', city: 723, country: 188, iata: BOO, icao: ENBO, latitude: '67.269167',
-        longitude: '14.365278', name: Bodo, timezone: '1.00'}
-    model: flights.airport
-    pk: 732
 -   fields: {altitude: '162.00', city: 727, country: 66, iata: BOD, icao: LFBD, latitude: '44.828335',
         longitude: '-0.715556', name: Merignac, timezone: '1.00'}
     model: flights.airport
     pk: 736
--   fields: {altitude: '622.00', city: 227, country: 161, iata: SVO, icao: UUEE, latitude: '55.972642',
-        longitude: '37.414589', name: Sheremetyevo, timezone: '4.00'}
-    model: flights.airport
-    pk: 741
--   fields: {altitude: '311.00', city: 732, country: 67, iata: SVL, icao: EFSA, latitude: '61.943064',
-        longitude: '28.945136', name: Savonlinna, timezone: '2.00'}
-    model: flights.airport
-    pk: 742
--   fields: {altitude: '27.00', city: 734, country: 188, iata: SVJ, icao: ENSH, latitude: '68.243300',
-        longitude: '14.669200', name: "Svolv\xE6r Helle Airport", timezone: '1.00'}
-    model: flights.airport
-    pk: 744
--   fields: {altitude: '29.00', city: 737, country: 188, iata: SVG, icao: ENZV, latitude: '58.876778',
-        longitude: '5.637856', name: Sola, timezone: '1.00'}
-    model: flights.airport
-    pk: 747
--   fields: {altitude: '764.00', city: 743, country: 161, iata: SVX, icao: USSS, latitude: '56.743108',
-        longitude: '60.802728', name: Koltsovo, timezone: '6.00'}
-    model: flights.airport
-    pk: 753
 -   fields: {altitude: '111.00', city: 747, country: 177, iata: SVQ, icao: LEZL, latitude: '37.418000',
         longitude: '-5.893106', name: Sevilla, timezone: '1.00'}
     model: flights.airport
     pk: 757
--   fields: {altitude: '78.00', city: 753, country: 188, iata: LKN, icao: ENLK, latitude: '68.152500',
-        longitude: '13.609400', name: Leknes Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 763
--   fields: {altitude: '25.00', city: 755, country: 188, iata: LKL, icao: ENNA, latitude: '70.068814',
-        longitude: '24.973489', name: Banak, timezone: '1.00'}
-    model: flights.airport
-    pk: 765
 -   fields: {altitude: '112.00', city: 762, country: 29, iata: FLW, icao: LPFL, latitude: '39.455272',
         longitude: '-31.131361', name: Flores, timezone: '-1.00'}
     model: flights.airport
@@ -600,26 +355,10 @@
         longitude: '-6.256667', name: Islay, timezone: '0.00'}
     model: flights.airport
     pk: 782
--   fields: {altitude: '373.00', city: 783, country: 184, iata: OZH, icao: UKDE, latitude: '47.867000',
-        longitude: '35.315700', name: Zaporizhzhia International Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 793
 -   fields: {altitude: '285.00', city: 747, country: 177, iata: OZP, icao: LEMO, latitude: '37.174917',
         longitude: '-5.615944', name: Moron Ab, timezone: '1.00'}
     model: flights.airport
     pk: 794
--   fields: {altitude: '184.00', city: 793, country: 184, iata: NLV, icao: UKON, latitude: '47.057900',
-        longitude: '31.919800', name: Mykolaiv International Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 804
--   fields: {altitude: '449.00', city: 802, country: 161, iata: UFA, icao: UWUU, latitude: '54.557511',
-        longitude: '55.874417', name: Ufa, timezone: '6.00'}
-    model: flights.airport
-    pk: 813
--   fields: {altitude: '326.00', city: 816, country: 131, iata: VEY, icao: BIVM, latitude: '63.424303',
-        longitude: '-20.278875', name: Vestmannaeyjar, timezone: '0.00'}
-    model: flights.airport
-    pk: 828
 -   fields: {altitude: '1302.00', city: 819, country: 66, iata: GNB, icao: LFLS, latitude: '45.362944',
         longitude: '5.329375', name: Saint Geoirs, timezone: '1.00'}
     model: flights.airport
@@ -628,10 +367,6 @@
         longitude: '24.053800', name: Hrodno Airport, timezone: '3.00'}
     model: flights.airport
     pk: 832
--   fields: {altitude: '404.00', city: 824, country: 38, iata: WRO, icao: EPWR, latitude: '51.102683',
-        longitude: '16.885836', name: Strachowice, timezone: '1.00'}
-    model: flights.airport
-    pk: 836
 -   fields: {altitude: '372.00', city: 829, country: 214, iata: ZRB, icao: \N, latitude: '50.107026',
         longitude: '8.662761', name: Frankfurt-Main Hauptbahnhof, timezone: '1.00'}
     model: flights.airport
@@ -640,10 +375,6 @@
         longitude: '8.549167', name: Zurich, timezone: '1.00'}
     model: flights.airport
     pk: 844
--   fields: {altitude: '47.00', city: 843, country: 161, iata: DKS, icao: UODD, latitude: '73.517807',
-        longitude: '80.379669', name: Dikson Airport, timezone: '8.00'}
-    model: flights.airport
-    pk: 855
 -   fields: {altitude: '14.00', city: 850, country: 173, iata: URE, icao: EEKE, latitude: '58.229883',
         longitude: '22.509494', name: Kuressaare, timezone: '2.00'}
     model: flights.airport
@@ -652,22 +383,6 @@
         longitude: '1.174800', name: Vallee De Seine, timezone: '1.00'}
     model: flights.airport
     pk: 866
--   fields: {altitude: '186.00', city: 855, country: 161, iata: URJ, icao: USHU, latitude: '60.100000',
-        longitude: '64.830000', name: Uraj, timezone: '6.00'}
-    model: flights.airport
-    pk: 867
--   fields: {altitude: '686.00', city: 857, country: 161, iata: URS, icao: UUOK, latitude: '51.750600',
-        longitude: '36.295600', name: Kursk East Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 869
--   fields: {altitude: '55.00', city: 862, country: 11, iata: PYR, icao: LGAD, latitude: '37.920708',
-        longitude: '21.292583', name: Andravida, timezone: '2.00'}
-    model: flights.airport
-    pk: 874
--   fields: {altitude: '1660.00', city: 868, country: 161, iata: PYJ, icao: UERP,
-        latitude: '66.400431', longitude: '112.030325', name: Poliarny Airport, timezone: '10.00'}
-    model: flights.airport
-    pk: 880
 -   fields: {altitude: '93.00', city: 882, country: 214, iata: HDF, icao: EDAH, latitude: '53.878706',
         longitude: '14.152347', name: Heringsdorf Airport, timezone: '1.00'}
     model: flights.airport
@@ -684,14 +399,6 @@
         longitude: '14.272778', name: Xewkija Heliport, timezone: '1.00'}
     model: flights.airport
     pk: 943
--   fields: {altitude: '1234.00', city: 957, country: 121, iata: LUX, icao: ELLX,
-        latitude: '49.626575', longitude: '6.211517', name: Luxembourg, timezone: '1.00'}
-    model: flights.airport
-    pk: 972
--   fields: {altitude: '203.00', city: 958, country: 38, iata: LUZ, icao: EPLB, latitude: '51.239333',
-        longitude: '22.714083', name: Lublin, timezone: '1.00'}
-    model: flights.airport
-    pk: 973
 -   fields: {altitude: '915.00', city: 962, country: 74, iata: LUG, icao: LSZA, latitude: '46.004275',
         longitude: '8.910578', name: Lugano, timezone: '1.00'}
     model: flights.airport
@@ -704,38 +411,18 @@
         longitude: '0.131940', name: Duxford Aerodrome, timezone: '0.00'}
     model: flights.airport
     pk: 987
--   fields: {altitude: '61.00', city: 977, country: 67, iata: KEM, icao: EFKE, latitude: '65.781889',
-        longitude: '24.599100', name: Kemi Tornio, timezone: '1.00'}
-    model: flights.airport
-    pk: 992
 -   fields: {altitude: '101.00', city: 978, country: 214, iata: KEL, icao: EDHK, latitude: '54.379500',
         longitude: '10.145167', name: Kiel Holtenau, timezone: '1.00'}
     model: flights.airport
     pk: 993
--   fields: {altitude: '863.00', city: 980, country: 161, iata: KEJ, icao: UNEE, latitude: '55.270094',
-        longitude: '86.107208', name: Kemerovo, timezone: '8.00'}
-    model: flights.airport
-    pk: 995
--   fields: {altitude: '171.00', city: 982, country: 131, iata: KEF, icao: BIKF, latitude: '63.985000',
-        longitude: '-22.605556', name: Keflavik International Airport, timezone: '0.00'}
-    model: flights.airport
-    pk: 997
 -   fields: {altitude: '1200.00', city: 985, country: 214, iata: KEX, icao: KEMP,
         latitude: '47.724000', longitude: '10.311000', name: Kempten HBF, timezone: '1.00'}
     model: flights.airport
     pk: 1000
--   fields: {altitude: '479.00', city: 987, country: 67, iata: KEV, icao: EFHA, latitude: '61.856050',
-        longitude: '24.786600', name: Halli, timezone: '2.00'}
-    model: flights.airport
-    pk: 1002
 -   fields: {altitude: '314.00', city: 996, country: 165, iata: OTP, icao: LROP, latitude: '44.572161',
         longitude: '26.102178', name: Henri Coanda, timezone: '2.00'}
     model: flights.airport
     pk: 1011
--   fields: {altitude: '24.00', city: 1005, country: 11, iata: AXD, icao: LGAL, latitude: '40.855869',
-        longitude: '25.956264', name: Dimokritos, timezone: '2.00'}
-    model: flights.airport
-    pk: 1020
 -   fields: {altitude: '1084.00', city: 1014, country: 66, iata: EPL, icao: LFSG,
         latitude: '48.324961', longitude: '6.069983', name: Mirecourt, timezone: '1.00'}
     model: flights.airport
@@ -744,26 +431,10 @@
         longitude: '6.131667', name: Frescaty, timezone: '1.00'}
     model: flights.airport
     pk: 1033
--   fields: {altitude: '46.00', city: 1025, country: 161, iata: VVO, icao: UHWW, latitude: '43.398953',
-        longitude: '132.148017', name: Knevichi, timezone: '11.00'}
-    model: flights.airport
-    pk: 1040
 -   fields: {altitude: '915.00', city: 1030, country: 66, iata: XMU, icao: LFHY, latitude: '46.534581',
         longitude: '3.423725', name: Montbeugny, timezone: '1.00'}
     model: flights.airport
     pk: 1045
--   fields: {altitude: '430.00', city: 1060, country: 67, iata: HYV, icao: EFHV, latitude: '60.654444',
-        longitude: '24.881111', name: Hyvinkaa, timezone: '2.00'}
-    model: flights.airport
-    pk: 1075
--   fields: {altitude: '604.00', city: 1064, country: 161, iata: VKT, icao: UUYW,
-        latitude: '67.488600', longitude: '63.993100', name: Vorkuta Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 1079
--   fields: {altitude: '685.00', city: 227, country: 161, iata: VKO, icao: UUWW, latitude: '55.591531',
-        longitude: '37.261486', name: Vnukovo, timezone: '4.00'}
-    model: flights.airport
-    pk: 1080
 -   fields: {altitude: '0.00', city: 1070, country: 19, iata: FWM, icao: \N, latitude: '56.816666',
         longitude: '-5.116667', name: Fort William Heliport, timezone: '0.00'}
     model: flights.airport
@@ -776,14 +447,6 @@
         latitude: '47.488917', longitude: '21.615333', name: Debrecen, timezone: '1.00'}
     model: flights.airport
     pk: 1105
--   fields: {altitude: '50.00', city: 1090, country: 161, iata: DEE, icao: YXCM, latitude: '43.573900',
-        longitude: '145.410700', name: Mendeleevo, timezone: '12.00'}
-    model: flights.airport
-    pk: 1108
--   fields: {altitude: '481.00', city: 1098, country: 67, iata: IVL, icao: EFIV, latitude: '68.607269',
-        longitude: '27.405328', name: Ivalo, timezone: '2.00'}
-    model: flights.airport
-    pk: 1116
 -   fields: {altitude: '47.00', city: 1102, country: 177, iata: ACE, icao: GCRR, latitude: '28.945464',
         longitude: '-13.605225', name: Lanzarote, timezone: '0.00'}
     model: flights.airport
@@ -797,46 +460,18 @@
         timezone: '1.00'}
     model: flights.airport
     pk: 1125
--   fields: {altitude: '400.00', city: 1112, country: 161, iata: NEZ, icao: \N, latitude: '57.479444',
-        longitude: '43.297500', name: Nezhitino, timezone: '4.00'}
-    model: flights.airport
-    pk: 1130
--   fields: {altitude: '427.00', city: 227, country: 161, iata: BKA, icao: UUBB, latitude: '55.617222',
-        longitude: '38.059999', name: Bykovo, timezone: '4.00'}
-    model: flights.airport
-    pk: 1143
 -   fields: {altitude: '311.00', city: 1136, country: 29, iata: SJZ, icao: LPSJ, latitude: '38.665500',
         longitude: '-28.175817', name: Sao Jorge, timezone: '-1.00'}
     model: flights.airport
     pk: 1158
--   fields: {altitude: '302.00', city: 1138, country: 67, iata: SJY, icao: EFSI, latitude: '62.692100',
-        longitude: '22.832300', name: "Sein\xE4joki Airport", timezone: '2.00'}
-    model: flights.airport
-    pk: 1160
 -   fields: {altitude: '1708.00', city: 1143, country: 145, iata: SJJ, icao: LQSA,
         latitude: '43.824583', longitude: '18.331467', name: Sarajevo, timezone: '1.00'}
     model: flights.airport
     pk: 1165
--   fields: {altitude: '574.00', city: 1157, country: 161, iata: GDX, icao: UHMM,
-        latitude: '59.910989', longitude: '150.720439', name: Sokol, timezone: '12.00'}
-    model: flights.airport
-    pk: 1179
--   fields: {altitude: '50.00', city: 1158, country: 161, iata: GDZ, icao: \N, latitude: '44.566667',
-        longitude: '38.016667', name: Gelendzik, timezone: '4.00'}
-    model: flights.airport
-    pk: 1181
 -   fields: {altitude: '3362.00', city: 1159, country: 66, iata: MEN, icao: LFNB,
         latitude: '44.502108', longitude: '3.532819', name: Brenoux, timezone: '1.00'}
     model: flights.airport
     pk: 1182
--   fields: {altitude: '41.00', city: 1160, country: 188, iata: MEH, icao: ENMR, latitude: '71.029722',
-        longitude: '27.826667', name: Mehamn, timezone: '1.00'}
-    model: flights.airport
-    pk: 1184
--   fields: {altitude: '489.00', city: 1168, country: 38, iata: GDN, icao: EPGD, latitude: '54.377569',
-        longitude: '18.466222', name: Lech Walesa, timezone: '1.00'}
-    model: flights.airport
-    pk: 1192
 -   fields: {altitude: '3.00', city: 1171, country: 187, iata: LWR, icao: EHLW, latitude: '53.228611',
         longitude: '5.760556', name: Leeuwarden, timezone: '1.00'}
     model: flights.airport
@@ -845,44 +480,10 @@
         longitude: '-1.243610', name: Lerwick / Tingwall Airport, timezone: '0.00'}
     model: flights.airport
     pk: 1198
--   fields: {altitude: '1071.00', city: 1176, country: 184, iata: LWO, icao: UKLL,
-        latitude: '49.812500', longitude: '23.956111', name: Lviv Intl, timezone: '2.00'}
-    model: flights.airport
-    pk: 1200
--   fields: {altitude: '220.00', city: 1181, country: 161, iata: KGP, icao: USRK,
-        latitude: '62.180000', longitude: '74.530000', name: Kogalym International,
-        timezone: '6.00'}
-    model: flights.airport
-    pk: 1206
--   fields: {altitude: '412.00', city: 1182, country: 11, iata: KGS, icao: LGKO, latitude: '36.793335',
-        longitude: '27.091667', name: Kos, timezone: '2.00'}
-    model: flights.airport
-    pk: 1207
 -   fields: {altitude: '125.00', city: 1189, country: 214, iata: QDU, icao: \N, latitude: '51.220278',
         longitude: '6.792778', name: Dusseldorf Hauptbahnhof, timezone: '1.00'}
     model: flights.airport
     pk: 1214
--   fields: {altitude: '42.00', city: 1191, country: 161, iata: KGD, icao: UMKK, latitude: '54.890050',
-        longitude: '20.592633', name: Khrabrovo, timezone: '3.00'}
-    model: flights.airport
-    pk: 1216
--   fields: {altitude: '510.00', city: 1199, country: 184, iata: KGO, icao: UKKG,
-        latitude: '48.540000', longitude: '32.290000', name: Kirovograd, timezone: '2.00'}
-    model: flights.airport
-    pk: 1224
--   fields: {altitude: '17.00', city: 1201, country: 213, iata: CPH, icao: EKCH, latitude: '55.617917',
-        longitude: '12.655972', name: Kastrup, timezone: '1.00'}
-    model: flights.airport
-    pk: 1226
--   fields: {altitude: '351.00', city: 1213, country: 161, iata: OVS, icao: USHS,
-        latitude: '61.320000', longitude: '63.604400', name: Sovetsky Tyumenskaya
-            Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 1239
--   fields: {altitude: '365.00', city: 1214, country: 161, iata: OVB, icao: UNNT,
-        latitude: '55.012622', longitude: '82.650656', name: Tolmachevo, timezone: '7.00'}
-    model: flights.airport
-    pk: 1240
 -   fields: {altitude: '416.00', city: 1216, country: 177, iata: OVD, icao: LEAS,
         latitude: '43.563567', longitude: '-6.034622', name: Asturias, timezone: '1.00'}
     model: flights.airport
@@ -891,10 +492,6 @@
         latitude: '60.957908', longitude: '14.511383', name: Mora, timezone: '1.00'}
     model: flights.airport
     pk: 1244
--   fields: {altitude: '767.00', city: 1223, country: 133, iata: MXP, icao: LIMC,
-        latitude: '45.630606', longitude: '8.728111', name: Malpensa, timezone: '1.00'}
-    model: flights.airport
-    pk: 1249
 -   fields: {altitude: '272.00', city: 1224, country: 66, iata: MXN, icao: LFRU, latitude: '48.603222',
         longitude: '-3.815783', name: Ploujean, timezone: '1.00'}
     model: flights.airport
@@ -911,30 +508,10 @@
         longitude: '11.555000', name: Munich Railway, timezone: '1.00'}
     model: flights.airport
     pk: 1261
--   fields: {altitude: '128.00', city: 1237, country: 133, iata: VIC, icao: LIPT,
-        latitude: '45.573411', longitude: '11.529550', name: Vicenza, timezone: '1.00'}
-    model: flights.airport
-    pk: 1265
--   fields: {altitude: '46.00', city: 1239, country: 133, iata: VIF, icao: \N, latitude: '41.885277',
-        longitude: '16.176945', name: Vieste Heliport, timezone: '1.00'}
-    model: flights.airport
-    pk: 1268
--   fields: {altitude: '600.00', city: 1241, country: 243, iata: VIE, icao: LOWW,
-        latitude: '48.110278', longitude: '16.569722', name: Schwechat, timezone: '1.00'}
-    model: flights.airport
-    pk: 1270
 -   fields: {altitude: '393.00', city: 1244, country: 110, iata: TYF, icao: ESST,
         latitude: '60.157622', longitude: '12.991269', name: Torsby Airport, timezone: '1.00'}
     model: flights.airport
     pk: 1273
--   fields: {altitude: '900.00', city: 1246, country: 184, iata: VIN, icao: UKWW,
-        latitude: '49.243300', longitude: '28.606300', name: Vinnitsa, timezone: '2.00'}
-    model: flights.airport
-    pk: 1275
--   fields: {altitude: '590.00', city: 1247, country: 161, iata: TYA, icao: \N, latitude: '54.142208',
-        longitude: '37.355619', name: Tula, timezone: '4.00'}
-    model: flights.airport
-    pk: 1276
 -   fields: {altitude: '1682.00', city: 1251, country: 177, iata: VIT, icao: LEVT,
         latitude: '42.882836', longitude: '-2.724469', name: Vitoria, timezone: '1.00'}
     model: flights.airport
@@ -963,31 +540,15 @@
         longitude: '-0.853850', name: Unst Airport, timezone: '0.00'}
     model: flights.airport
     pk: 1311
--   fields: {altitude: '311.00', city: 1298, country: 161, iata: OMS, icao: UNOO,
-        latitude: '54.967042', longitude: '73.310514', name: Omsk, timezone: '7.00'}
-    model: flights.airport
-    pk: 1329
 -   fields: {altitude: '465.00', city: 1299, country: 165, iata: OMR, icao: LROD,
         latitude: '47.025278', longitude: '21.902500', name: Oradea, timezone: '2.00'}
     model: flights.airport
     pk: 1330
--   fields: {altitude: '10.00', city: 1305, country: 213, iata: AAL, icao: EKYT, latitude: '57.092789',
-        longitude: '9.849164', name: Aalborg, timezone: '1.00'}
-    model: flights.airport
-    pk: 1336
 -   fields: {altitude: '570.00', city: 1308, country: 214, iata: AAH, icao: EDKA,
         latitude: '50.823194', longitude: '6.186389', name: Flugplatz Merzbrueck,
         timezone: '1.00'}
     model: flights.airport
     pk: 1339
--   fields: {altitude: '174.00', city: 1314, country: 161, iata: AAQ, icao: URKA,
-        latitude: '45.002097', longitude: '37.347272', name: Vityazevo, timezone: '4.00'}
-    model: flights.airport
-    pk: 1345
--   fields: {altitude: '82.00', city: 1315, country: 213, iata: AAR, icao: EKAH, latitude: '56.300017',
-        longitude: '10.619008', name: Aarhus, timezone: '1.00'}
-    model: flights.airport
-    pk: 1346
 -   fields: {altitude: '138.00', city: 1320, country: 177, iata: BIO, icao: LEBB,
         latitude: '43.301097', longitude: '-2.910608', name: Bilbao, timezone: '1.00'}
     model: flights.airport
@@ -1000,18 +561,10 @@
         longitude: '9.483731', name: Poretta, timezone: '1.00'}
     model: flights.airport
     pk: 1360
--   fields: {altitude: '26.00', city: 1333, country: 131, iata: BIU, icao: BIBD, latitude: '65.641389',
-        longitude: '-23.546111', name: Bildudalur Airport, timezone: '0.00'}
-    model: flights.airport
-    pk: 1364
 -   fields: {altitude: '245.00', city: 1336, country: 66, iata: BIQ, icao: LFBZ, latitude: '43.468419',
         longitude: '-1.523325', name: Anglet, timezone: '1.00'}
     model: flights.airport
     pk: 1367
--   fields: {altitude: '218.00', city: 1338, country: 161, iata: SLY, icao: USDD,
-        latitude: '66.590753', longitude: '66.611042', name: Salekhard Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 1369
 -   fields: {altitude: '2595.00', city: 1346, country: 177, iata: SLM, icao: LESA,
         latitude: '40.952117', longitude: '-5.501986', name: Salamanca, timezone: '1.00'}
     model: flights.airport
@@ -1024,10 +577,6 @@
         longitude: '7.416667', name: Monaco, timezone: '1.00'}
     model: flights.airport
     pk: 1391
--   fields: {altitude: '12.00', city: 1373, country: 161, iata: MCX, icao: URML, latitude: '42.816822',
-        longitude: '47.652294', name: Uytash, timezone: '4.00'}
-    model: flights.airport
-    pk: 1406
 -   fields: {altitude: '771.00', city: 1376, country: 66, iata: MCU, icao: LFLT, latitude: '46.352525',
         longitude: '2.570486', name: Domerat, timezone: '1.00'}
     model: flights.airport
@@ -1040,47 +589,22 @@
         latitude: '52.180878', longitude: '-9.523783', name: Kerry, timezone: '0.00'}
     model: flights.airport
     pk: 1420
--   fields: {altitude: '250.00', city: 1387, country: 184, iata: KIP, icao: KIEV,
-        latitude: '50.140300', longitude: '30.180800', name: KIEV  INTERNATIONAL AIRPORT,
-        timezone: '3.00'}
-    model: flights.airport
-    pk: 1421
 -   fields: {altitude: '399.00', city: 1389, country: 44, iata: KIV, icao: LUKK, latitude: '46.927744',
         longitude: '28.930978', name: Chisinau Intl, timezone: '2.00'}
     model: flights.airport
     pk: 1423
--   fields: {altitude: '1045.00', city: 1390, country: 11, iata: KIT, icao: LGKC,
-        latitude: '36.274258', longitude: '23.016978', name: Kithira, timezone: '2.00'}
-    model: flights.airport
-    pk: 1424
--   fields: {altitude: '420.00', city: 1400, country: 161, iata: KIE, icao: \N, latitude: '57.450000',
-        longitude: '42.150000', name: Kineshma, timezone: '4.00'}
-    model: flights.airport
-    pk: 1434
 -   fields: {altitude: '76.00', city: 1401, country: 110, iata: KID, icao: ESMK, latitude: '55.921686',
         longitude: '14.085536', name: Kristianstad, timezone: '1.00'}
     model: flights.airport
     pk: 1435
--   fields: {altitude: '521.00', city: 1403, country: 133, iata: CRV, icao: LIBC,
-        latitude: '38.997225', longitude: '17.080169', name: Crotone, timezone: '1.00'}
-    model: flights.airport
-    pk: 1438
 -   fields: {altitude: '626.00', city: 1408, country: 165, iata: CRA, icao: LRCV,
         latitude: '44.318139', longitude: '23.888611', name: Craiova, timezone: '2.00'}
     model: flights.airport
     pk: 1443
--   fields: {altitude: '614.00', city: 1413, country: 142, iata: CRL, icao: EBCI,
-        latitude: '50.459197', longitude: '4.453817', name: Brussels South, timezone: '1.00'}
-    model: flights.airport
-    pk: 1448
 -   fields: {altitude: '228.00', city: 1423, country: 29, iata: OPO, icao: LPPR, latitude: '41.248055',
         longitude: '-8.681389', name: Porto, timezone: '0.00'}
     model: flights.airport
     pk: 1459
--   fields: {altitude: '25.00', city: 1427, country: 161, iata: EYK, icao: USHQ, latitude: '63.683056',
-        longitude: '66.683056', name: Beloyarsky, timezone: '5.00'}
-    model: flights.airport
-    pk: 1463
 -   fields: {altitude: '172.00', city: 1432, country: 110, iata: LPI, icao: ESSL,
         latitude: '58.406150', longitude: '15.680508', name: Saab, timezone: '1.00'}
     model: flights.airport
@@ -1089,48 +613,15 @@
         longitude: '-1.110833', name: La Teste De Buch, timezone: '1.00'}
     model: flights.airport
     pk: 1476
--   fields: {altitude: '482.00', city: 1442, country: 161, iata: VOG, icao: URWW,
-        latitude: '48.782528', longitude: '44.345544', name: Gumrak, timezone: '4.00'}
-    model: flights.airport
-    pk: 1479
--   fields: {altitude: '83.00', city: 1443, country: 11, iata: VOL, icao: LGBL, latitude: '39.219619',
-        longitude: '22.794339', name: Nea Anchialos, timezone: '2.00'}
-    model: flights.airport
-    pk: 1480
 -   fields: {altitude: '353.00', city: 1445, country: 165, iata: CND, icao: LRCK,
         latitude: '44.362222', longitude: '28.488333', name: Mihail Kogalniceanu,
         timezone: '2.00'}
     model: flights.airport
     pk: 1482
--   fields: {altitude: '514.00', city: 1447, country: 161, iata: VOZ, icao: UUOO,
-        latitude: '51.814211', longitude: '39.229589', name: Chertovitskoye, timezone: '4.00'}
-    model: flights.airport
-    pk: 1484
--   fields: {altitude: '427.00', city: 1451, country: 133, iata: CIA, icao: LIRA,
-        latitude: '41.799361', longitude: '12.594936', name: Ciampino, timezone: '1.00'}
-    model: flights.airport
-    pk: 1488
 -   fields: {altitude: '280.00', city: 1458, country: 165, iata: CIO, icao: LRT2,
         latitude: '45.471009', longitude: '21.111967', name: Aeroclub Cioca, timezone: '2.00'}
     model: flights.airport
     pk: 1495
--   fields: {altitude: '252.00', city: 1480, country: 161, iata: ULY, icao: UWLW,
-        latitude: '54.401000', longitude: '48.802700', name: Ulyanovsk East Airport,
-        timezone: '4.00'}
-    model: flights.airport
-    pk: 1518
--   fields: {altitude: '463.00', city: 1480, country: 161, iata: ULV, icao: UWLL,
-        latitude: '54.268299', longitude: '48.226700', name: Barataevka, timezone: '4.00'}
-    model: flights.airport
-    pk: 1521
--   fields: {altitude: '843.00', city: 1484, country: 161, iata: ULK, icao: UERL,
-        latitude: '60.723000', longitude: '114.825000', name: Lensk, timezone: '10.00'}
-    model: flights.airport
-    pk: 1523
--   fields: {altitude: '531.00', city: 1497, country: 161, iata: IJK, icao: USII,
-        latitude: '56.828100', longitude: '53.457500', name: Izhevsk Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 1536
 -   fields: {altitude: '68.00', city: 1503, country: 110, iata: AGH, icao: ESTA, latitude: '56.296100',
         longitude: '12.847100', name: "\xC4ngelholm-Helsingborg Airport", timezone: '1.00'}
     model: flights.airport
@@ -1155,10 +646,6 @@
         longitude: '16.912189', name: Skavsta, timezone: '1.00'}
     model: flights.airport
     pk: 1552
--   fields: {altitude: '154.00', city: 1519, country: 11, iata: AGQ, icao: LGAG, latitude: '38.602022',
-        longitude: '21.351208', name: Agrinion, timezone: '2.00'}
-    model: flights.airport
-    pk: 1559
 -   fields: {altitude: '52.00', city: 1520, country: 177, iata: AGP, icao: LEMG, latitude: '36.674900',
         longitude: '-4.499106', name: Malaga, timezone: '1.00'}
     model: flights.airport
@@ -1172,14 +659,6 @@
         longitude: '-3.263667', name: Walney Island, timezone: '0.00'}
     model: flights.airport
     pk: 1567
--   fields: {altitude: '1776.00', city: 1530, country: 167, iata: BWK, icao: LDSB,
-        latitude: '43.285719', longitude: '16.679719', name: Brac, timezone: '1.00'}
-    model: flights.airport
-    pk: 1570
--   fields: {altitude: '95.00', city: 1532, country: 161, iata: BWO, icao: UWSB, latitude: '51.858300',
-        longitude: '47.745600', name: Balakovo Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 1572
 -   fields: {altitude: '46.00', city: 1538, country: 139, iata: SNN, icao: EINN, latitude: '52.701978',
         longitude: '-8.924817', name: Shannon, timezone: '0.00'}
     model: flights.airport
@@ -1200,10 +679,6 @@
         longitude: '-2.274950', name: Manchester, timezone: '0.00'}
     model: flights.airport
     pk: 1594
--   fields: {altitude: '84.00', city: 1555, country: 188, iata: EVE, icao: ENEV, latitude: '68.491300',
-        longitude: '16.678108', name: Evenes, timezone: '1.00'}
-    model: flights.airport
-    pk: 1596
 -   fields: {altitude: '1178.00', city: 1556, country: 110, iata: EVG, icao: ESND,
         latitude: '62.047811', longitude: '14.422950', name: Sveg, timezone: '1.00'}
     model: flights.airport
@@ -1212,22 +687,10 @@
         longitude: '-1.295556', name: Sumburgh, timezone: '0.00'}
     model: flights.airport
     pk: 1604
--   fields: {altitude: '154.00', city: 1570, country: 167, iata: LSZ, icao: LDLO,
-        latitude: '44.335700', longitude: '14.233500', name: Losinj Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 1612
--   fields: {altitude: '283.00', city: 1576, country: 188, iata: KKN, icao: ENKR,
-        latitude: '69.725781', longitude: '29.891295', name: Hoybuktmoen, timezone: '1.00'}
-    model: flights.airport
-    pk: 1618
 -   fields: {altitude: '1391.00', city: 1584, country: 66, iata: CTT, icao: LFMQ,
         latitude: '43.252506', longitude: '5.785189', name: Le Castellet, timezone: '1.00'}
     model: flights.airport
     pk: 1626
--   fields: {altitude: '39.00', city: 1590, country: 133, iata: CTA, icao: LICC, latitude: '37.466781',
-        longitude: '15.066400', name: Catania Fontanarossa, timezone: '1.00'}
-    model: flights.airport
-    pk: 1632
 -   fields: {altitude: '291.00', city: 28, country: 66, iata: ORY, icao: LFPO, latitude: '48.725278',
         longitude: '2.359444', name: Orly, timezone: '1.00'}
     model: flights.airport
@@ -1244,10 +707,6 @@
         latitude: '59.223733', longitude: '15.037956', name: Orebro, timezone: '1.00'}
     model: flights.airport
     pk: 1657
--   fields: {altitude: '60.00', city: 1619, country: 11, iata: MJT, icao: LGMT, latitude: '39.056667',
-        longitude: '26.598333', name: Mitilini, timezone: '2.00'}
-    model: flights.airport
-    pk: 1663
 -   fields: {altitude: '1893.00', city: 1623, country: 74, iata: ZIN, icao: LSMI,
         latitude: '46.676600', longitude: '7.879080', name: Air Base, timezone: '1.00'}
     model: flights.airport
@@ -1272,24 +731,6 @@
         longitude: '2.105080', name: Sabadell Airport, timezone: '1.00'}
     model: flights.airport
     pk: 1717
--   fields: {altitude: '123.00', city: 1674, country: 133, iata: QSR, icao: LIRI,
-        latitude: '40.620400', longitude: '14.911294', name: Salerno Pontecagnano
-            Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 1719
--   fields: {altitude: '121.00', city: 1678, country: 11, iata: PAS, icao: LGPA, latitude: '37.010278',
-        longitude: '25.127778', name: Paros, timezone: '2.00'}
-    model: flights.airport
-    pk: 1723
--   fields: {altitude: '152.00', city: 1683, country: 161, iata: CKL, icao: UUMU,
-        latitude: '55.878333', longitude: '38.061667', name: Chkalovsky Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 1728
--   fields: {altitude: '151.00', city: 1685, country: 161, iata: CKH, icao: UESO,
-        latitude: '70.623100', longitude: '147.902000', name: Chokurdakh Airport,
-        timezone: '12.00'}
-    model: flights.airport
-    pk: 1730
 -   fields: {altitude: '699.00', city: 1688, country: 214, iata: PAD, icao: EDLP,
         latitude: '51.614089', longitude: '8.616317', name: Paderborn Lippstadt, timezone: '1.00'}
     model: flights.airport
@@ -1298,18 +739,6 @@
         longitude: '2.289183', name: Mazamet, timezone: '1.00'}
     model: flights.airport
     pk: 1743
--   fields: {altitude: '100.00', city: 1699, country: 133, iata: DCI, icao: LIED,
-        latitude: '39.354222', longitude: '8.972481', name: Decimomannu, timezone: '1.00'}
-    model: flights.airport
-    pk: 1744
--   fields: {altitude: '69.00', city: 1711, country: 188, iata: AES, icao: ENAL, latitude: '62.560372',
-        longitude: '6.110164', name: Vigra, timezone: '1.00'}
-    model: flights.airport
-    pk: 1757
--   fields: {altitude: '6.00', city: 1715, country: 131, iata: AEY, icao: BIAR, latitude: '65.659994',
-        longitude: '-18.072703', name: Akureyri, timezone: '0.00'}
-    model: flights.airport
-    pk: 1761
 -   fields: {altitude: '1200.00', city: 1730, country: 214, iata: BUH, icao: BUCH,
         latitude: '48.041100', longitude: '10.715000', name: Buchloe BF, timezone: '1.00'}
     model: flights.airport
@@ -1323,22 +752,10 @@
         timezone: '1.00'}
     model: flights.airport
     pk: 1787
--   fields: {altitude: '0.00', city: 227, country: 161, iata: MOW, icao: \N, latitude: '55.755700',
-        longitude: '37.617600', name: MOW, timezone: '4.00'}
-    model: flights.airport
-    pk: 1789
--   fields: {altitude: '10.00', city: 1749, country: 188, iata: MOL, icao: ENML, latitude: '62.744722',
-        longitude: '7.262500', name: Aro, timezone: '1.00'}
-    model: flights.airport
-    pk: 1797
 -   fields: {altitude: '870.00', city: 1018, country: 66, iata: ETZ, icao: LFJL, latitude: '48.982142',
         longitude: '6.251319', name: Metz Nancy Lorraine, timezone: '1.00'}
     model: flights.airport
     pk: 1807
--   fields: {altitude: '446.00', city: 1762, country: 161, iata: KMW, icao: UUBD,
-        latitude: '57.796100', longitude: '41.020400', name: Sokerkino, timezone: '4.00'}
-    model: flights.airport
-    pk: 1811
 -   fields: {altitude: '728.00', city: 1771, country: 66, iata: QNX, icao: LFLM, latitude: '46.295103',
         longitude: '4.795767', name: Charnay, timezone: '1.00'}
     model: flights.airport
@@ -1363,10 +780,6 @@
         latitude: '45.396700', longitude: '6.634720', name: Courchevel Airport, timezone: '1.00'}
     model: flights.airport
     pk: 1832
--   fields: {altitude: '16.00', city: 1201, country: 213, iata: ZGH, icao: \N, latitude: '55.672778',
-        longitude: '12.564444', name: Central, timezone: '1.00'}
-    model: flights.airport
-    pk: 1841
 -   fields: {altitude: '45.00', city: 1815, country: 66, iata: GFR, icao: LFRF, latitude: '48.883057',
         longitude: '-1.564167', name: Granville, timezone: '1.00'}
     model: flights.airport
@@ -1379,27 +792,14 @@
         longitude: '16.633611', name: Vasteras, timezone: '1.00'}
     model: flights.airport
     pk: 1879
--   fields: {altitude: '636.00', city: 1826, country: 184, iata: VSG, icao: UKCW,
-        latitude: '48.417400', longitude: '39.374100', name: Luhansk International
-            Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 1882
 -   fields: {altitude: '72.00', city: 1827, country: 66, iata: RYN, icao: LFCY, latitude: '45.628056',
         longitude: '-0.972500', name: Medis, timezone: '1.00'}
     model: flights.airport
     pk: 1883
--   fields: {altitude: '174.00', city: 1831, country: 188, iata: RYG, icao: ENRY,
-        latitude: '59.378933', longitude: '10.785389', name: Moss, timezone: '1.00'}
-    model: flights.airport
-    pk: 1887
 -   fields: {altitude: '10.00', city: 1832, country: 19, iata: EOI, icao: EGED, latitude: '59.190600',
         longitude: '-2.772220', name: Eday Airport, timezone: '0.00'}
     model: flights.airport
     pk: 1888
--   fields: {altitude: '423.00', city: 1834, country: 161, iata: RYB, icao: UUBK,
-        latitude: '58.104200', longitude: '38.929400', name: Staroselye Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 1890
 -   fields: {altitude: '72.00', city: 301, country: 19, iata: QQK, icao: \N, latitude: '51.532600',
         longitude: '0.123300', name: London - Kings Cross, timezone: '0.00'}
     model: flights.airport
@@ -1428,14 +828,6 @@
         longitude: '-9.510900', name: Inisheer, timezone: '0.00'}
     model: flights.airport
     pk: 1923
--   fields: {altitude: '1906.00', city: 1865, country: 243, iata: INN, icao: LOWI,
-        latitude: '47.260219', longitude: '11.343964', name: Innsbruck, timezone: '1.00'}
-    model: flights.airport
-    pk: 1926
--   fields: {altitude: '648.00', city: 1868, country: 163, iata: INI, icao: LYNI,
-        latitude: '43.337289', longitude: '21.853722', name: Nis, timezone: '1.00'}
-    model: flights.airport
-    pk: 1929
 -   fields: {altitude: '101.00', city: 1879, country: 19, iata: GLO, icao: EGBJ, latitude: '51.894167',
         longitude: '-2.167222', name: Gloucestershire, timezone: '0.00'}
     model: flights.airport
@@ -1456,10 +848,6 @@
         latitude: '45.785597', longitude: '24.091342', name: Sibiu, timezone: '2.00'}
     model: flights.airport
     pk: 1982
--   fields: {altitude: '266.00', city: 1926, country: 161, iata: MMK, icao: ULMM,
-        latitude: '68.781672', longitude: '32.750822', name: Murmansk, timezone: '4.00'}
-    model: flights.airport
-    pk: 1989
 -   fields: {altitude: '120.00', city: 1928, country: 19, iata: MME, icao: EGNV, latitude: '54.509189',
         longitude: '-1.429406', name: Durham Tees Valley Airport, timezone: '0.00'}
     model: flights.airport
@@ -1472,10 +860,6 @@
         longitude: '-2.905000', name: Kirkwall, timezone: '0.00'}
     model: flights.airport
     pk: 1997
--   fields: {altitude: '84.00', city: 1935, country: 67, iata: KOK, icao: EFKK, latitude: '63.721172',
-        longitude: '23.143131', name: Kruunupyy, timezone: '2.00'}
-    model: flights.airport
-    pk: 1998
 -   fields: {altitude: '1000.00', city: 1944, country: 214, iata: KOX, icao: KOLN,
         latitude: '50.942500', longitude: '6.958056', name: Koln HBF, timezone: '1.00'}
     model: flights.airport
@@ -1484,10 +868,6 @@
         latitude: '50.979811', longitude: '10.958106', name: Erfurt, timezone: '1.00'}
     model: flights.airport
     pk: 2008
--   fields: {altitude: '93.00', city: 1957, country: 133, iata: QLT, icao: LIRL, latitude: '41.542436',
-        longitude: '12.909019', name: Latina, timezone: '1.00'}
-    model: flights.airport
-    pk: 2020
 -   fields: {altitude: '618.00', city: 1958, country: 19, iata: QLA, icao: EGHL, latitude: '51.187167',
         longitude: '-1.033500', name: Lasham, timezone: '0.00'}
     model: flights.airport
@@ -1496,18 +876,10 @@
         longitude: '7.013889', name: Essen Railway, timezone: '1.00'}
     model: flights.airport
     pk: 2034
--   fields: {altitude: '459.00', city: 1972, country: 67, iata: JYV, icao: EFJY, latitude: '62.399453',
-        longitude: '25.678253', name: Jyvaskyla, timezone: '2.00'}
-    model: flights.airport
-    pk: 2035
 -   fields: {altitude: '423.00', city: 28, country: 66, iata: XGB, icao: \N, latitude: '48.840000',
         longitude: '2.318611', name: Gare Montparnasse, timezone: '1.00'}
     model: flights.airport
     pk: 2049
--   fields: {altitude: '0.00', city: 1986, country: 133, iata: TQR, icao: '', latitude: '42.102500',
-        longitude: '15.488000', name: San Domino Island Heliport, timezone: '1.00'}
-    model: flights.airport
-    pk: 2052
 -   fields: {altitude: '1768.00', city: 1988, country: 177, iata: HSK, icao: LEHC,
         latitude: '42.080833', longitude: '-0.323333', name: Huesca-Pirineos Airport,
         timezone: '0.00'}
@@ -1533,16 +905,6 @@
         latitude: '49.022000', longitude: '12.111100', name: Regensburg HBF, timezone: '1.00'}
     model: flights.airport
     pk: 2081
--   fields: {altitude: '965.00', city: 2016, country: 161, iata: RGK, icao: UNBG,
-        latitude: '51.966667', longitude: '85.833333', name: Gorno-Altaysk Airport,
-        timezone: '7.00'}
-    model: flights.airport
-    pk: 2084
--   fields: {altitude: '220.00', city: 2021, country: 161, iata: LDG, icao: ULAL,
-        latitude: '64.895833', longitude: '45.722778', name: Leshukonskoye Airport,
-        timezone: '4.00'}
-    model: flights.airport
-    pk: 2089
 -   fields: {altitude: '1260.00', city: 2022, country: 66, iata: LDE, icao: LFBT,
         latitude: '43.178675', longitude: '-0.006439', name: Lourdes, timezone: '1.00'}
     model: flights.airport
@@ -1559,49 +921,20 @@
         longitude: '13.332500', name: Zoo, timezone: '1.00'}
     model: flights.airport
     pk: 2101
--   fields: {altitude: '614.00', city: 2038, country: 161, iata: PEZ, icao: UWPP,
-        latitude: '53.110600', longitude: '45.021100', name: Penza Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 2108
 -   fields: {altitude: '1000.00', city: 2040, country: 169, iata: PEV, icao: LHPP,
         latitude: '45.990928', longitude: '18.240983', name: "P\xE9cs-Pog\xE1ny Airport",
         timezone: '1.00'}
     model: flights.airport
     pk: 2111
--   fields: {altitude: '151.00', city: 2044, country: 161, iata: PES, icao: ULPB,
-        latitude: '61.885200', longitude: '34.154700', name: Petrozavodsk Airport,
-        timezone: '4.00'}
-    model: flights.airport
-    pk: 2115
--   fields: {altitude: '404.00', city: 2053, country: 161, iata: PEE, icao: USPP,
-        latitude: '57.914517', longitude: '56.021214', name: Bolshoye Savino, timezone: '6.00'}
-    model: flights.airport
-    pk: 2124
--   fields: {altitude: '693.00', city: 2055, country: 133, iata: PEG, icao: LIRZ,
-        latitude: '43.095906', longitude: '12.513222', name: Perugia, timezone: '1.00'}
-    model: flights.airport
-    pk: 2126
 -   fields: {altitude: '1020.00', city: 2056, country: 98, iata: ILZ, icao: LZZI,
         latitude: '49.231528', longitude: '18.613500', name: "\u017Dilina Airport",
         timezone: '1.00'}
     model: flights.airport
     pk: 2127
--   fields: {altitude: '1791.00', city: 2060, country: 133, iata: AOT, icao: LIMW,
-        latitude: '45.738456', longitude: '7.368719', name: Aosta Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 2131
 -   fields: {altitude: '354.00', city: 2062, country: 110, iata: OER, icao: ESNO,
         latitude: '63.408339', longitude: '18.990039', name: Ornskoldsvik, timezone: '1.00'}
     model: flights.airport
     pk: 2133
--   fields: {altitude: '595.00', city: 2090, country: 161, iata: NSK, icao: UOOO,
-        latitude: '69.311053', longitude: '87.332183', name: Alykel, timezone: '8.00'}
-    model: flights.airport
-    pk: 2163
--   fields: {altitude: '79.00', city: 2095, country: 133, iata: NSY, icao: LICZ, latitude: '37.401664',
-        longitude: '14.922358', name: Sigonella, timezone: '1.00'}
-    model: flights.airport
-    pk: 2168
 -   fields: {altitude: '16.00', city: 2102, country: 177, iata: SDR, icao: LEXJ, latitude: '43.427064',
         longitude: '-3.820006', name: Santander, timezone: '1.00'}
     model: flights.airport
@@ -1614,18 +947,10 @@
         longitude: '17.443928', name: Sundsvall Harnosand, timezone: '1.00'}
     model: flights.airport
     pk: 2185
--   fields: {altitude: '196.00', city: 2111, country: 188, iata: SDN, icao: ENSD,
-        latitude: '61.830000', longitude: '6.105830', name: Anda Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 2187
 -   fields: {altitude: '47.00', city: 2114, country: 173, iata: EPU, icao: EEPU, latitude: '58.419044',
         longitude: '24.472819', name: Parnu, timezone: '2.00'}
     model: flights.airport
     pk: 2190
--   fields: {altitude: '88.00', city: 2121, country: 188, iata: LYR, icao: ENSB, latitude: '78.246111',
-        longitude: '15.465556', name: Longyear, timezone: '1.00'}
-    model: flights.airport
-    pk: 2198
 -   fields: {altitude: '821.00', city: 2122, country: 66, iata: LYS, icao: LFLL, latitude: '45.726387',
         longitude: '5.090833', name: Saint Exupery, timezone: '1.00'}
     model: flights.airport
@@ -1658,18 +983,10 @@
         latitude: '52.060000', longitude: '23.530000', name: Brest, timezone: '3.00'}
     model: flights.airport
     pk: 2215
--   fields: {altitude: '638.00', city: 2139, country: 161, iata: BQS, icao: UHBB,
-        latitude: '50.425394', longitude: '127.412478', name: Ignatyevo, timezone: '10.00'}
-    model: flights.airport
-    pk: 2217
 -   fields: {altitude: '471.00', city: 2140, country: 159, iata: GME, icao: UMGG,
         latitude: '52.527022', longitude: '31.016692', name: Gomel, timezone: '3.00'}
     model: flights.airport
     pk: 2218
--   fields: {altitude: '28.00', city: 2146, country: 188, iata: OLA, icao: ENOL, latitude: '63.698908',
-        longitude: '9.604003', name: Orland, timezone: '1.00'}
-    model: flights.airport
-    pk: 2224
 -   fields: {altitude: '794.00', city: 2148, country: 214, iata: ZCA, icao: EDLA,
         latitude: '51.483333', longitude: '7.899333', name: Arnsberg Menden, timezone: '1.00'}
     model: flights.airport
@@ -1682,10 +999,6 @@
         longitude: '5.000000', name: Lyon Part-Dieu Railway, timezone: '1.00'}
     model: flights.airport
     pk: 2244
--   fields: {altitude: '59.00', city: 2174, country: 133, iata: TSF, icao: LIPH, latitude: '45.648400',
-        longitude: '12.194422', name: Treviso, timezone: '1.00'}
-    model: flights.airport
-    pk: 2253
 -   fields: {altitude: '236.00', city: 2185, country: 214, iata: GUT, icao: ETUO,
         latitude: '51.922833', longitude: '8.306333', name: Gutersloh, timezone: '1.00'}
     model: flights.airport
@@ -1702,30 +1015,10 @@
         longitude: '-0.350833', name: Humberside, timezone: '0.00'}
     model: flights.airport
     pk: 2284
--   fields: {altitude: '127.00', city: 2204, country: 11, iata: JTR, icao: LGSR, latitude: '36.399169',
-        longitude: '25.479333', name: Santorini, timezone: '2.00'}
-    model: flights.airport
-    pk: 2286
--   fields: {altitude: '7.00', city: 2212, country: 188, iata: RET, icao: ENRS, latitude: '67.527800',
-        longitude: '12.103300', name: "R\xF8st Airport", timezone: '1.00'}
-    model: flights.airport
-    pk: 2294
 -   fields: {altitude: '234.00', city: 2213, country: 177, iata: REU, icao: LERS,
         latitude: '41.147392', longitude: '1.167172', name: Reus, timezone: '1.00'}
     model: flights.airport
     pk: 2295
--   fields: {altitude: '387.00', city: 2215, country: 161, iata: REN, icao: UWOO,
-        latitude: '51.795786', longitude: '55.456744', name: Orenburg, timezone: '6.00'}
-    model: flights.airport
-    pk: 2297
--   fields: {altitude: '96.00', city: 2219, country: 133, iata: REG, icao: LICR, latitude: '38.071206',
-        longitude: '15.651556', name: Reggio Calabria, timezone: '1.00'}
-    model: flights.airport
-    pk: 2301
--   fields: {altitude: '15.00', city: 1451, country: 133, iata: FCO, icao: LIRF, latitude: '41.804475',
-        longitude: '12.250797', name: Fiumicino, timezone: '1.00'}
-    model: flights.airport
-    pk: 2308
 -   fields: {altitude: '0.00', city: 2227, country: 214, iata: QUA, icao: \N, latitude: '54.500000',
         longitude: '11.216700', name: Puttgarden, timezone: '1.00'}
     model: flights.airport
@@ -1742,10 +1035,6 @@
         longitude: '-5.686390', name: Campbeltown Airport, timezone: '0.00'}
     model: flights.airport
     pk: 2328
--   fields: {altitude: '13.00', city: 2247, country: 133, iata: CAG, icao: LIEE, latitude: '39.251469',
-        longitude: '9.054283', name: Elmas, timezone: '1.00'}
-    model: flights.airport
-    pk: 2332
 -   fields: {altitude: '144.00', city: 2249, country: 66, iata: PGF, icao: LFMP, latitude: '42.740442',
         longitude: '2.870667', name: Rivesaltes, timezone: '1.00'}
     model: flights.airport
@@ -1754,22 +1043,10 @@
         latitude: '48.369300', longitude: '7.827720', name: Lahr Airport, timezone: '1.00'}
     model: flights.airport
     pk: 2337
--   fields: {altitude: '194.00', city: 2255, country: 161, iata: DYR, icao: UHMA,
-        latitude: '64.734950', longitude: '177.741483', name: Ugolny Airport, timezone: '12.00'}
-    model: flights.airport
-    pk: 2341
 -   fields: {altitude: '328.00', city: 2259, country: 66, iata: PGX, icao: LFBX, latitude: '45.198055',
         longitude: '0.815556', name: Bassillac, timezone: '1.00'}
     model: flights.airport
     pk: 2346
--   fields: {altitude: '0.00', city: 2261, country: 188, iata: SOG, icao: ENSG, latitude: '61.156100',
-        longitude: '7.137780', name: Sogndal Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 2348
--   fields: {altitude: '1673.00', city: 2262, country: 161, iata: OGZ, icao: URMO,
-        latitude: '43.205100', longitude: '44.606600', name: Beslan Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 2349
 -   fields: {altitude: '1742.00', city: 2264, country: 144, iata: SOF, icao: LBSF,
         latitude: '42.695194', longitude: '23.406167', name: Sofia, timezone: '2.00'}
     model: flights.airport
@@ -1778,19 +1055,6 @@
         longitude: '5.708611', name: Volkel AB, timezone: '1.00'}
     model: flights.airport
     pk: 2357
--   fields: {altitude: '383.00', city: 2270, country: 184, iata: UDJ, icao: UKLU,
-        latitude: '48.634278', longitude: '22.263356', name: Uzhhorod International
-            Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 2358
--   fields: {altitude: '329.00', city: 2276, country: 67, iata: MIK, icao: EFMI, latitude: '61.686600',
-        longitude: '27.201794', name: Mikkeli, timezone: '2.00'}
-    model: flights.airport
-    pk: 2364
--   fields: {altitude: '402.00', city: 525, country: 133, iata: MIL, icao: \N, latitude: '45.463611',
-        longitude: '9.188056', name: All Airports, timezone: '1.00'}
-    model: flights.airport
-    pk: 2367
 -   fields: {altitude: '980.00', city: 2284, country: 214, iata: GHF, icao: ETEU,
         latitude: '49.648131', longitude: '9.966494', name: Giebelstadt Aaf, timezone: '1.00'}
     model: flights.airport
@@ -1807,34 +1071,14 @@
         longitude: '-4.995408', name: St Mawgan, timezone: '0.00'}
     model: flights.airport
     pk: 2390
--   fields: {altitude: '66.00', city: 2300, country: 11, iata: AOK, icao: LGKP, latitude: '35.421408',
-        longitude: '27.146008', name: Karpathos, timezone: '2.00'}
-    model: flights.airport
-    pk: 2391
--   fields: {altitude: '10.00', city: 2302, country: 133, iata: AOI, icao: LIPY, latitude: '43.616389',
-        longitude: '13.362222', name: Falconara, timezone: '1.00'}
-    model: flights.airport
-    pk: 2393
 -   fields: {altitude: '44.00', city: 2307, country: 19, iata: SOU, icao: EGHI, latitude: '50.950261',
         longitude: '-1.356803', name: Southampton, timezone: '0.00'}
     model: flights.airport
     pk: 2398
--   fields: {altitude: '602.00', city: 2310, country: 67, iata: SOT, icao: EFSO, latitude: '67.395033',
-        longitude: '26.619133', name: Sodankyla, timezone: '2.00'}
-    model: flights.airport
-    pk: 2401
 -   fields: {altitude: '157.00', city: 2315, country: 110, iata: SFT, icao: ESNS,
         latitude: '64.624772', longitude: '21.076892', name: Skelleftea, timezone: '1.00'}
     model: flights.airport
     pk: 2407
--   fields: {altitude: '204.00', city: 2331, country: 188, iata: KSU, icao: ENKB,
-        latitude: '63.111781', longitude: '7.824522', name: Kvernberget, timezone: '1.00'}
-    model: flights.airport
-    pk: 2424
--   fields: {altitude: '184.00', city: 2334, country: 161, iata: KSZ, icao: ULKK,
-        latitude: '61.235800', longitude: '46.697500', name: Kotlas Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 2427
 -   fields: {altitude: '352.00', city: 2335, country: 110, iata: KSD, icao: ESOK,
         latitude: '59.444700', longitude: '13.337400', name: Karlstad Airport, timezone: '1.00'}
     model: flights.airport
@@ -1847,30 +1091,14 @@
         longitude: '21.241112', name: Kosice, timezone: '1.00'}
     model: flights.airport
     pk: 2431
--   fields: {altitude: '2167.00', city: 2341, country: 11, iata: KSO, icao: LGKA,
-        latitude: '40.446294', longitude: '21.282186', name: Aristotelis, timezone: '2.00'}
-    model: flights.airport
-    pk: 2434
 -   fields: {altitude: '400.00', city: 2345, country: 110, iata: KSK, icao: ESKK,
         latitude: '59.345867', longitude: '14.495922', name: Karlskoga, timezone: '1.00'}
     model: flights.airport
     pk: 2438
--   fields: {altitude: '35.00', city: 2346, country: 11, iata: KSJ, icao: LGKS, latitude: '35.421358',
-        longitude: '26.910047', name: Kasos, timezone: '2.00'}
-    model: flights.airport
-    pk: 2439
 -   fields: {altitude: '19.00', city: 2371, country: 119, iata: VTS, icao: EVVA, latitude: '57.357778',
         longitude: '21.544167', name: Ventspils International Airport, timezone: '2.00'}
     model: flights.airport
     pk: 2468
--   fields: {altitude: '353.00', city: 2379, country: 167, iata: ZAG, icao: LDZA,
-        latitude: '45.742931', longitude: '16.068778', name: Zagreb, timezone: '1.00'}
-    model: flights.airport
-    pk: 2477
--   fields: {altitude: '289.00', city: 2380, country: 167, iata: ZAD, icao: LDZD,
-        latitude: '44.108269', longitude: '15.346697', name: Zadar, timezone: '1.00'}
-    model: flights.airport
-    pk: 2478
 -   fields: {altitude: '863.00', city: 2382, country: 177, iata: ZAZ, icao: LEZG,
         latitude: '41.666242', longitude: '-1.041553', name: Zaragoza Ab, timezone: '1.00'}
     model: flights.airport
@@ -1887,14 +1115,6 @@
         longitude: '7.055731', name: Verkehrslandeplatz Juist, timezone: '1.00'}
     model: flights.airport
     pk: 2487
--   fields: {altitude: '390.00', city: 2393, country: 67, iata: TMP, icao: EFTP, latitude: '61.414147',
-        longitude: '23.604392', name: Tampere Pirkkala, timezone: '2.00'}
-    model: flights.airport
-    pk: 2492
--   fields: {altitude: '177.00', city: 2414, country: 161, iata: NJC, icao: USNN,
-        latitude: '60.949272', longitude: '76.483617', name: Nizhnevartovsk, timezone: '6.00'}
-    model: flights.airport
-    pk: 2514
 -   fields: {altitude: '426.00', city: 2423, country: 19, iata: RCS, icao: EGTO, latitude: '51.351944',
         longitude: '0.502778', name: Rochester Airport, timezone: '0.00'}
     model: flights.airport
@@ -1903,30 +1123,14 @@
         longitude: '-0.983056', name: St Agnant, timezone: '1.00'}
     model: flights.airport
     pk: 2526
--   fields: {altitude: '253.00', city: 2427, country: 161, iata: EIE, icao: UNII,
-        latitude: '58.474200', longitude: '92.112500', name: Yeniseysk Airport, timezone: '8.00'}
-    model: flights.airport
-    pk: 2527
 -   fields: {altitude: '74.00', city: 2431, country: 187, iata: EIN, icao: EHEH, latitude: '51.450139',
         longitude: '5.374528', name: Eindhoven, timezone: '1.00'}
     model: flights.airport
     pk: 2531
--   fields: {altitude: '29.00', city: 2437, country: 188, iata: FAN, icao: ENLI, latitude: '58.099486',
-        longitude: '6.626050', name: Lista, timezone: '1.00'}
-    model: flights.airport
-    pk: 2538
--   fields: {altitude: '24.00', city: 2438, country: 29, iata: FAO, icao: LPFR, latitude: '37.014425',
-        longitude: '-7.965911', name: Faro, timezone: '0.00'}
-    model: flights.airport
-    pk: 2539
 -   fields: {altitude: '238.00', city: 2439, country: 19, iata: FAB, icao: EGLF, latitude: '51.275833',
         longitude: '-0.776333', name: Farnborough, timezone: '0.00'}
     model: flights.airport
     pk: 2540
--   fields: {altitude: '280.00', city: 2442, country: 71, iata: FAE, icao: EKVG, latitude: '62.063628',
-        longitude: '-7.277219', name: Vagar, timezone: '0.00'}
-    model: flights.airport
-    pk: 2543
 -   fields: {altitude: '1200.00', city: 1740, country: 214, iata: OAL, icao: MARK,
         latitude: '47.780000', longitude: '10.627000', name: Marktoberdorf BF, timezone: '1.00'}
     model: flights.airport
@@ -1947,10 +1151,6 @@
         longitude: '0.306666', name: Biard, timezone: '1.00'}
     model: flights.airport
     pk: 2578
--   fields: {altitude: '98.00', city: 2485, country: 131, iata: GJR, icao: BIGJ, latitude: '65.995278',
-        longitude: '-21.326944', name: Gjogur Airport, timezone: '0.00'}
-    model: flights.airport
-    pk: 2590
 -   fields: {altitude: '-11.00', city: 2504, country: 187, iata: AMS, icao: EHAM,
         latitude: '52.308613', longitude: '4.763889', name: Schiphol, timezone: '1.00'}
     model: flights.airport
@@ -1959,76 +1159,22 @@
         longitude: '1.282778', name: Norwich, timezone: '0.00'}
     model: flights.airport
     pk: 2611
--   fields: {altitude: '13.00', city: 2506, country: 161, iata: AMV, icao: ULDD, latitude: '69.763300',
-        longitude: '61.556400', name: Amderma Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 2612
--   fields: {altitude: '323.00', city: 2514, country: 67, iata: KUO, icao: EFKU, latitude: '63.007150',
-        longitude: '27.797756', name: Kuopio, timezone: '2.00'}
-    model: flights.airport
-    pk: 2620
 -   fields: {altitude: '256.00', city: 2515, country: 120, iata: KUN, icao: EYKA,
         latitude: '54.963919', longitude: '24.084778', name: Kaunas Intl, timezone: '2.00'}
     model: flights.airport
     pk: 2621
--   fields: {altitude: '0.00', city: 2520, country: 161, iata: KUF, icao: \N, latitude: '53.500000',
-        longitude: '50.150000', name: Kurumoch, timezone: '4.00'}
-    model: flights.airport
-    pk: 2627
--   fields: {altitude: '351.00', city: 2526, country: 184, iata: HMJ, icao: UKLH,
-        latitude: '49.366000', longitude: '26.933000', name: Khmeinitskiy, timezone: '2.00'}
-    model: flights.airport
-    pk: 2633
 -   fields: {altitude: '95.00', city: 2547, country: 19, iata: WLF, icao: \N, latitude: '52.104000',
         longitude: '0.166000', name: Whittlesford Parkway Rail Station, timezone: '0.00'}
     model: flights.airport
     pk: 2654
--   fields: {altitude: '376.00', city: 2555, country: 11, iata: JSH, icao: LGST, latitude: '35.216108',
-        longitude: '26.101325', name: Sitia, timezone: '2.00'}
-    model: flights.airport
-    pk: 2662
--   fields: {altitude: '54.00', city: 2556, country: 11, iata: JSI, icao: LGSK, latitude: '39.177100',
-        longitude: '23.503675', name: Alexandros Papadiamantis, timezone: '2.00'}
-    model: flights.airport
-    pk: 2663
--   fields: {altitude: '236.00', city: 2560, country: 11, iata: JSY, icao: LGSO, latitude: '37.422792',
-        longitude: '24.950936', name: Syros Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 2667
--   fields: {altitude: '659.00', city: 2561, country: 142, iata: XHN, icao: \N, latitude: '50.633300',
-        longitude: '5.566670', name: Liege-Guillemins Railway Station, timezone: '1.00'}
-    model: flights.airport
-    pk: 2668
 -   fields: {altitude: '149.00', city: 28, country: 66, iata: XHP, icao: \N, latitude: '48.876944',
         longitude: '2.359167', name: Gare de LEst, timezone: '1.00'}
     model: flights.airport
     pk: 2669
--   fields: {altitude: '31.00', city: 2563, country: 188, iata: TOS, icao: ENTC, latitude: '69.683333',
-        longitude: '18.918919', name: Langnes, timezone: '1.00'}
-    model: flights.airport
-    pk: 2671
 -   fields: {altitude: '2026.00', city: 1545, country: 177, iata: TOJ, icao: LETO,
         latitude: '40.496747', longitude: '-3.445872', name: Torrejon, timezone: '1.00'}
     model: flights.airport
     pk: 2676
--   fields: {altitude: '597.00', city: 2574, country: 161, iata: TOF, icao: UNTT,
-        latitude: '56.380278', longitude: '85.208333', name: Tomsk Bogashevo Airport,
-        timezone: '8.00'}
-    model: flights.airport
-    pk: 2683
--   fields: {altitude: '1060.00', city: 2591, country: 161, iata: '%u0', icao: '%u04',
-        latitude: '43.323815', longitude: '45.017761', name: Magas, timezone: '4.00'}
-    model: flights.airport
-    pk: 2701
--   fields: {altitude: '76.00', city: 2594, country: 131, iata: EGS, icao: BIEG, latitude: '65.283333',
-        longitude: '-14.401389', name: Egilsstadir, timezone: '0.00'}
-    model: flights.airport
-    pk: 2705
--   fields: {altitude: '735.00', city: 2598, country: 161, iata: EGO, icao: UUOB,
-        latitude: '50.643800', longitude: '36.590100', name: Belgorod International
-            Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 2709
 -   fields: {altitude: '171.00', city: 2601, country: 66, iata: EGC, icao: LFBE, latitude: '44.825279',
         longitude: '0.518611', name: Roumaniere, timezone: '1.00'}
     model: flights.airport
@@ -2065,35 +1211,10 @@
         longitude: '5.181667', name: Hilversum Railway Station, timezone: '1.00'}
     model: flights.airport
     pk: 2758
--   fields: {altitude: '144.00', city: 2645, country: 38, iata: QYD, icao: EPOK, latitude: '54.579700',
-        longitude: '18.517200', name: Gdynia, timezone: '1.00'}
-    model: flights.airport
-    pk: 2759
--   fields: {altitude: '919.00', city: 2653, country: 184, iata: IFO, icao: UKLI,
-        latitude: '48.884167', longitude: '24.686111', name: Ivano Frankivsk International
-            Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 2767
--   fields: {altitude: '8.00', city: 2654, country: 131, iata: IFJ, icao: BIIS, latitude: '66.058056',
-        longitude: '-23.135278', name: Isafjordur, timezone: '0.00'}
-    model: flights.airport
-    pk: 2768
 -   fields: {altitude: '45.00', city: 2656, country: 19, iata: CEG, icao: EGNR, latitude: '53.178056',
         longitude: '-2.977778', name: Hawarden, timezone: '0.00'}
     model: flights.airport
     pk: 2770
--   fields: {altitude: '769.00', city: 2667, country: 161, iata: CEK, icao: USCC,
-        latitude: '55.305836', longitude: '61.503333', name: Balandino, timezone: '6.00'}
-    model: flights.airport
-    pk: 2781
--   fields: {altitude: '446.00', city: 2668, country: 184, iata: CEJ, icao: UKRR,
-        latitude: '51.240000', longitude: '31.090000', name: Chernigov, timezone: '2.00'}
-    model: flights.airport
-    pk: 2782
--   fields: {altitude: '131.00', city: 2671, country: 161, iata: PKC, icao: UHPP,
-        latitude: '53.167889', longitude: '158.453669', name: Yelizovo, timezone: '12.00'}
-    model: flights.airport
-    pk: 2785
 -   fields: {altitude: '443.00', city: 2673, country: 66, iata: CET, icao: LFOU, latitude: '47.082136',
         longitude: '-0.877064', name: Le Pontreau, timezone: '1.00'}
     model: flights.airport
@@ -2102,10 +1223,6 @@
         longitude: '6.953478', name: Mandelieu, timezone: '1.00'}
     model: flights.airport
     pk: 2790
--   fields: {altitude: '2224.00', city: 2679, country: 11, iata: PKH, icao: LGHL,
-        latitude: '37.298792', longitude: '23.148986', name: Alexion, timezone: '2.00'}
-    model: flights.airport
-    pk: 2793
 -   fields: {altitude: '1200.00', city: 1234, country: 214, iata: MUQ, icao: MUNI,
         latitude: '48.140800', longitude: '11.555000', name: Munich HBF, timezone: '1.00'}
     model: flights.airport
@@ -2115,18 +1232,10 @@
         timezone: '1.00'}
     model: flights.airport
     pk: 2805
--   fields: {altitude: '20.00', city: 2699, country: 161, iata: NUX, icao: USMU, latitude: '66.041811',
-        longitude: '76.313938', name: Novyi Urengoy, timezone: '6.00'}
-    model: flights.airport
-    pk: 2816
 -   fields: {altitude: '1200.00', city: 2702, country: 214, iata: NUR, icao: NURN,
         latitude: '49.446000', longitude: '11.081944', name: Nurnberg HBF, timezone: '1.00'}
     model: flights.airport
     pk: 2819
--   fields: {altitude: '-65.00', city: 2708, country: 161, iata: ASF, icao: URWA,
-        latitude: '46.283333', longitude: '48.006278', name: Astrakhan, timezone: '6.00'}
-    model: flights.airport
-    pk: 2825
 -   fields: {altitude: '278.00', city: 2713, country: 19, iata: ASI, icao: \N, latitude: '-7.969597',
         longitude: '-14.393664', name: Wideawake Field, timezone: '0.00'}
     model: flights.airport
@@ -2139,15 +1248,6 @@
         latitude: '51.289453', longitude: '6.766775', name: Dusseldorf, timezone: '1.00'}
     model: flights.airport
     pk: 2843
--   fields: {altitude: '408.00', city: 2731, country: 184, iata: KWG, icao: UKDR,
-        latitude: '48.043300', longitude: '33.210000', name: Lozuvatka International
-            Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 2850
--   fields: {altitude: '36.00', city: 2744, country: 133, iata: FNU, icao: LIER, latitude: '39.895000',
-        longitude: '8.638300', name: Fenosu, timezone: '1.00'}
-    model: flights.airport
-    pk: 2863
 -   fields: {altitude: '192.00', city: 2753, country: 29, iata: FNC, icao: LPMA, latitude: '32.697889',
         longitude: '-16.774453', name: Madeira, timezone: '0.00'}
     model: flights.airport
@@ -2156,10 +1256,6 @@
         longitude: '-2.900280', name: Papa Westray Airport, timezone: '0.00'}
     model: flights.airport
     pk: 2899
--   fields: {altitude: '97.00', city: 2782, country: 188, iata: NVK, icao: ENNK, latitude: '68.435833',
-        longitude: '17.388056', name: Framnes, timezone: '1.00'}
-    model: flights.airport
-    pk: 2903
 -   fields: {altitude: '20.00', city: 2788, country: 43, iata: TIV, icao: LYTV, latitude: '42.404664',
         longitude: '18.723286', name: Tivat, timezone: '1.00'}
     model: flights.airport
@@ -2168,10 +1264,6 @@
         latitude: '41.414742', longitude: '19.720561', name: Tirana Rinas, timezone: '1.00'}
     model: flights.airport
     pk: 2926
--   fields: {altitude: '20.00', city: 2806, country: 161, iata: NNM, icao: ULAM, latitude: '67.380537',
-        longitude: '53.051016', name: Naryan-Mar, timezone: '4.00'}
-    model: flights.airport
-    pk: 2929
 -   fields: {altitude: '160.00', city: 2809, country: 144, iata: HKV, icao: LB14,
         latitude: '41.976375', longitude: '25.589817', name: Uzundzhovo, timezone: '2.00'}
     model: flights.airport
@@ -2196,26 +1288,6 @@
         latitude: '64.960894', longitude: '17.696583', name: Storuman Airport, timezone: '1.00'}
     model: flights.airport
     pk: 2947
--   fields: {altitude: '331.00', city: 2826, country: 161, iata: VUS, icao: ULWU,
-        latitude: '60.788333', longitude: '46.260000', name: Veliky Ustyug, timezone: '4.00'}
-    model: flights.airport
-    pk: 2950
--   fields: {altitude: '280.00', city: 2845, country: 161, iata: ROV, icao: URRR,
-        latitude: '47.258208', longitude: '39.818089', name: Rostov Na Donu, timezone: '4.00'}
-    model: flights.airport
-    pk: 2971
--   fields: {altitude: '17.00', city: 2850, country: 11, iata: RHO, icao: LGRP, latitude: '36.405419',
-        longitude: '28.086192', name: Rhodes Diagoras, timezone: '2.00'}
-    model: flights.airport
-    pk: 2976
--   fields: {altitude: '252.00', city: 2859, country: 188, iata: BDU, icao: ENDU,
-        latitude: '69.055758', longitude: '18.540356', name: Bardufoss, timezone: '1.00'}
-    model: flights.airport
-    pk: 2985
--   fields: {altitude: '47.00', city: 2863, country: 133, iata: BDS, icao: LIBR, latitude: '40.657633',
-        longitude: '17.947033', name: Casale, timezone: '1.00'}
-    model: flights.airport
-    pk: 2989
 -   fields: {altitude: '79.00', city: 2865, country: 66, iata: IDY, icao: LFEY, latitude: '46.718611',
         longitude: '-2.391111', name: "\xCEle d'Yeu Airport", timezone: '0.00'}
     model: flights.airport
@@ -2224,10 +1296,6 @@
         longitude: '-1.083333', name: Portsmouth Airport, timezone: '0.00'}
     model: flights.airport
     pk: 3009
--   fields: {altitude: '161.00', city: 2881, country: 133, iata: PMF, icao: LIMP,
-        latitude: '44.824483', longitude: '10.296367', name: Parma, timezone: '1.00'}
-    model: flights.airport
-    pk: 3010
 -   fields: {altitude: '24.00', city: 2890, country: 177, iata: PMI, icao: LEPA, latitude: '39.553610',
         longitude: '2.727778', name: Son Sant Joan, timezone: '1.00'}
     model: flights.airport
@@ -2248,14 +1316,6 @@
         longitude: '1.346111', name: Manston, timezone: '0.00'}
     model: flights.airport
     pk: 3040
--   fields: {altitude: '20.00', city: 2923, country: 161, iata: PEX, icao: \N, latitude: '65.070387',
-        longitude: '57.082045', name: Pechora, timezone: '4.00'}
-    model: flights.airport
-    pk: 3054
--   fields: {altitude: '2123.00', city: 2927, country: 161, iata: KYZ, icao: UNKY,
-        latitude: '51.669400', longitude: '94.400600', name: Kyzyl Airport, timezone: '8.00'}
-    model: flights.airport
-    pk: 3058
 -   fields: {altitude: '7.00', city: 2933, country: 139, iata: BYT, icao: EIBN, latitude: '51.668598',
         longitude: '-9.484170', name: Bantry Aerodrome, timezone: '0.00'}
     model: flights.airport
@@ -2264,35 +1324,10 @@
         latitude: '49.984428', longitude: '11.638569', name: Bayreuth, timezone: '1.00'}
     model: flights.airport
     pk: 3065
--   fields: {altitude: '49.00', city: 2947, country: 161, iata: NYM, icao: USMM, latitude: '65.480900',
-        longitude: '72.698900', name: Nadym Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 3079
--   fields: {altitude: '361.00', city: 2958, country: 161, iata: NYA, icao: USHN,
-        latitude: '62.110000', longitude: '65.615000', name: Nyagan Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 3091
--   fields: {altitude: '356.00', city: 2961, country: 133, iata: VBS, icao: LIPO,
-        latitude: '45.428889', longitude: '10.330556', name: Montichiari, timezone: '1.00'}
-    model: flights.airport
-    pk: 3095
 -   fields: {altitude: '164.00', city: 2963, country: 110, iata: VBY, icao: ESSV,
         latitude: '57.662797', longitude: '18.346211', name: Visby, timezone: '1.00'}
     model: flights.airport
     pk: 3097
--   fields: {altitude: '1789.00', city: 2975, country: 163, iata: PRN, icao: LYPR,
-        latitude: '42.572778', longitude: '21.035833', name: Pristina, timezone: '1.00'}
-    model: flights.airport
-    pk: 3111
--   fields: {altitude: '398.00', city: 2979, country: 67, iata: JOE, icao: EFJO, latitude: '62.662906',
-        longitude: '29.607550', name: Joensuu, timezone: '2.00'}
-    model: flights.airport
-    pk: 3115
--   fields: {altitude: '348.00', city: 2982, country: 161, iata: JOK, icao: UWKJ,
-        latitude: '56.700600', longitude: '47.904700', name: Yoshkar-Ola Airport,
-        timezone: '4.00'}
-    model: flights.airport
-    pk: 3118
 -   fields: {altitude: '7.00', city: 2991, country: 214, iata: PEF, icao: EDCP, latitude: '54.157778',
         longitude: '13.772778', name: Peenemunde Airfield, timezone: '1.00'}
     model: flights.airport
@@ -2301,34 +1336,14 @@
         latitude: '65.806111', longitude: '15.082778', name: Hemavan Airport, timezone: '1.00'}
     model: flights.airport
     pk: 3138
--   fields: {altitude: '713.00', city: 3004, country: 188, iata: HMR, icao: ENHA,
-        latitude: '60.818100', longitude: '11.068000', name: Stafsberg Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 3140
--   fields: {altitude: '161.00', city: 3008, country: 67, iata: TKU, icao: EFTU, latitude: '60.514142',
-        longitude: '22.262808', name: Turku, timezone: '2.00'}
-    model: flights.airport
-    pk: 3144
--   fields: {altitude: '76.00', city: 3014, country: 161, iata: HMA, icao: USHH, latitude: '61.028479',
-        longitude: '69.086067', name: Khanty Mansiysk Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 3150
 -   fields: {altitude: '645.00', city: 3020, country: 66, iata: DLE, icao: LFGJ, latitude: '47.039014',
         longitude: '5.427250', name: Tavaux, timezone: '1.00'}
     model: flights.airport
     pk: 3157
--   fields: {altitude: '56.00', city: 3035, country: 188, iata: SSJ, icao: ENST, latitude: '65.956828',
-        longitude: '12.468944', name: Stokka, timezone: '1.00'}
-    model: flights.airport
-    pk: 3173
 -   fields: {altitude: '776.00', city: 3042, country: 214, iata: RMS, icao: ETAR,
         latitude: '49.436911', longitude: '7.600283', name: Ramstein Ab, timezone: '1.00'}
     model: flights.airport
     pk: 3181
--   fields: {altitude: '978.00', city: 3047, country: 243, iata: LNZ, icao: LOWL,
-        latitude: '48.233219', longitude: '14.187511', name: Linz, timezone: '1.00'}
-    model: flights.airport
-    pk: 3186
 -   fields: {altitude: '404.00', city: 3048, country: 85, iata: ECN, icao: LCEN, latitude: '35.154700',
         longitude: '33.496100', name: Ercan International Airport, timezone: '2.00'}
     model: flights.airport
@@ -2337,10 +1352,6 @@
         latitude: '47.548900', longitude: '9.688000', name: Lindau HBF, timezone: '1.00'}
     model: flights.airport
     pk: 3199
--   fields: {altitude: '41.00', city: 3060, country: 133, iata: RMI, icao: LIPR, latitude: '44.020292',
-        longitude: '12.611747', name: Rimini, timezone: '1.00'}
-    model: flights.airport
-    pk: 3200
 -   fields: {altitude: '568.00', city: 3068, country: 214, iata: BBJ, icao: EDAB,
         latitude: '51.193531', longitude: '14.519747', name: Bautzen, timezone: '1.00'}
     model: flights.airport
@@ -2361,10 +1372,6 @@
         longitude: '-1.109444', name: Bembridge, timezone: '0.00'}
     model: flights.airport
     pk: 3219
--   fields: {altitude: '308.00', city: 3081, country: 38, iata: POZ, icao: EPPO, latitude: '52.421031',
-        longitude: '16.826325', name: Lawica, timezone: '1.00'}
-    model: flights.airport
-    pk: 3223
 -   fields: {altitude: '325.00', city: 3082, country: 66, iata: POX, icao: LFPT, latitude: '49.096647',
         longitude: '2.040833', name: Cormeilles En Vexin, timezone: '1.00'}
     model: flights.airport
@@ -2373,75 +1380,22 @@
         longitude: '13.614978', name: Portoroz, timezone: '1.00'}
     model: flights.airport
     pk: 3226
--   fields: {altitude: '20.00', city: 3086, country: 161, iata: CYX, icao: UESS, latitude: '68.740600',
-        longitude: '161.338000', name: Cherskiy Airport, timezone: '12.00'}
-    model: flights.airport
-    pk: 3228
--   fields: {altitude: '44.00', city: 3087, country: 67, iata: POR, icao: EFPO, latitude: '61.461686',
-        longitude: '21.799983', name: Pori, timezone: '2.00'}
-    model: flights.airport
-    pk: 3229
 -   fields: {altitude: '407.00', city: 3107, country: 214, iata: FKB, icao: EDSB,
         latitude: '48.779300', longitude: '8.080480', name: Baden Airpark, timezone: '1.00'}
     model: flights.airport
     pk: 3249
--   fields: {altitude: '1431.00', city: 3115, country: 161, iata: MQF, icao: USCM,
-        latitude: '53.393131', longitude: '58.755661', name: Magnitogorsk, timezone: '6.00'}
-    model: flights.airport
-    pk: 3257
--   fields: {altitude: '229.00', city: 3119, country: 188, iata: MQN, icao: ENRA,
-        latitude: '66.363900', longitude: '14.301400', name: "R\xF8ssvoll Airport",
-        timezone: '1.00'}
-    model: flights.airport
-    pk: 3261
--   fields: {altitude: '328.00', city: 3132, country: 161, iata: VLU, icao: ULOL,
-        latitude: '56.381667', longitude: '30.610000', name: Velikiye Luki, timezone: '4.00'}
-    model: flights.airport
-    pk: 3275
 -   fields: {altitude: '0.00', city: 2504, country: 187, iata: ZYA, icao: \N, latitude: '52.787300',
         longitude: '4.900740', name: Amsterdam Centraal, timezone: '1.00'}
     model: flights.airport
     pk: 3287
--   fields: {altitude: '180.00', city: 3144, country: 142, iata: ZYR, icao: \N, latitude: '50.800000',
-        longitude: '4.400000', name: Brussels Gare du Midi, timezone: '1.00'}
-    model: flights.airport
-    pk: 3289
--   fields: {altitude: '14.00', city: 3148, country: 188, iata: RVK, icao: ENRM, latitude: '64.838300',
-        longitude: '11.146100', name: Ryum Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 3294
--   fields: {altitude: '642.00', city: 3149, country: 67, iata: RVN, icao: EFRO, latitude: '66.564822',
-        longitude: '25.830411', name: Rovaniemi, timezone: '2.00'}
-    model: flights.airport
-    pk: 3295
 -   fields: {altitude: '159.00', city: 1666, country: 66, iata: XSH, icao: \N, latitude: '47.385626',
         longitude: '0.723347', name: Saint-Pierre-des-Corps, timezone: '1.00'}
     model: flights.airport
     pk: 3306
--   fields: {altitude: '405.00', city: 3167, country: 11, iata: JMK, icao: LGMK, latitude: '37.435128',
-        longitude: '25.348103', name: Mikonos, timezone: '2.00'}
-    model: flights.airport
-    pk: 3318
--   fields: {altitude: '39.00', city: 3173, country: 133, iata: SUF, icao: LICA, latitude: '38.905394',
-        longitude: '16.242269', name: Lamezia Terme, timezone: '1.00'}
-    model: flights.airport
-    pk: 3324
 -   fields: {altitude: '405.00', city: 3179, country: 165, iata: SUJ, icao: LRSM,
         latitude: '47.703275', longitude: '22.885700', name: Satu Mare, timezone: '2.00'}
     model: flights.airport
     pk: 3330
--   fields: {altitude: '23.00', city: 3192, country: 213, iata: TED, icao: EKTS, latitude: '57.068800',
-        longitude: '8.705225', name: Thisted, timezone: '1.00'}
-    model: flights.airport
-    pk: 3343
--   fields: {altitude: '50.00', city: 3198, country: 161, iata: NBC, icao: UWKE, latitude: '55.340000',
-        longitude: '52.060000', name: Begishevo, timezone: '4.00'}
-    model: flights.airport
-    pk: 3349
--   fields: {altitude: '98.00', city: 3199, country: 161, iata: NBB, icao: USHB, latitude: '63.924100',
-        longitude: '65.048700', name: Berezovo, timezone: '6.00'}
-    model: flights.airport
-    pk: 3350
 -   fields: {altitude: '180.00', city: 3200, country: 29, iata: TER, icao: LPLA, latitude: '38.761842',
         longitude: '-27.090797', name: Lajes, timezone: '-1.00'}
     model: flights.airport
@@ -2450,11 +1404,6 @@
         longitude: '-3.025833', name: Dundee, timezone: '0.00'}
     model: flights.airport
     pk: 3355
--   fields: {altitude: '481.00', city: 3209, country: 184, iata: DNK, icao: UKDD,
-        latitude: '48.357222', longitude: '35.100556', name: Dnipropetrovsk Intl,
-        timezone: '2.00'}
-    model: flights.airport
-    pk: 3360
 -   fields: {altitude: '219.00', city: 3211, country: 66, iata: DNR, icao: LFRD, latitude: '48.587683',
         longitude: '-2.079958', name: Pleurtuit, timezone: '1.00'}
     model: flights.airport
@@ -2463,14 +1412,6 @@
         longitude: '-0.166014', name: Coningsby, timezone: '0.00'}
     model: flights.airport
     pk: 3366
--   fields: {altitude: '48.00', city: 3218, country: 131, iata: RKV, icao: BIRK, latitude: '64.130000',
-        longitude: '-21.940556', name: Reykjavik, timezone: '0.00'}
-    model: flights.airport
-    pk: 3369
--   fields: {altitude: '146.00', city: 1201, country: 213, iata: RKE, icao: EKRK,
-        latitude: '55.585567', longitude: '12.131428', name: Roskilde, timezone: '1.00'}
-    model: flights.airport
-    pk: 3377
 -   fields: {altitude: '885.00', city: 3225, country: 66, iata: EAP, icao: \N, latitude: '47.589583',
         longitude: '7.529914', name: EuroAirport, timezone: '1.00'}
     model: flights.airport
@@ -2479,14 +1420,6 @@
         longitude: '-1.790611', name: San Sebastian, timezone: '1.00'}
     model: flights.airport
     pk: 3379
--   fields: {altitude: '412.00', city: 3237, country: 243, iata: HOJ, icao: LOIH,
-        latitude: '47.385000', longitude: '9.700000', name: Hohenems, timezone: '1.00'}
-    model: flights.airport
-    pk: 3390
--   fields: {altitude: '242.00', city: 3240, country: 188, iata: HOV, icao: ENOV,
-        latitude: '62.180000', longitude: '6.074200', name: Hovden, timezone: '1.00'}
-    model: flights.airport
-    pk: 3393
 -   fields: {altitude: '118.00', city: 3243, country: 29, iata: HOR, icao: LPHR, latitude: '38.519894',
         longitude: '-28.715872', name: Horta, timezone: '-1.00'}
     model: flights.airport
@@ -2523,18 +1456,10 @@
         longitude: '9.685078', name: Hannover, timezone: '1.00'}
     model: flights.airport
     pk: 3442
--   fields: {altitude: '771.00', city: 3292, country: 11, iata: JKL, icao: LGKY, latitude: '36.963333',
-        longitude: '26.940556', name: Kalymnos Island, timezone: '2.00'}
-    model: flights.airport
-    pk: 3454
 -   fields: {altitude: '231.00', city: 3301, country: 19, iata: WTN, icao: EGXW, latitude: '53.166167',
         longitude: '-0.523811', name: Waddington, timezone: '0.00'}
     model: flights.airport
     pk: 3463
--   fields: {altitude: '51.00', city: 3309, country: 142, iata: ZWE, icao: \N, latitude: '51.217222',
-        longitude: '4.421111', name: Centraal, timezone: '1.00'}
-    model: flights.airport
-    pk: 3473
 -   fields: {altitude: '200.00', city: 504, country: 214, iata: ZWS, icao: \N, latitude: '48.783611',
         longitude: '9.181667', name: Stuttgart Railway Station, timezone: '1.00'}
     model: flights.airport
@@ -2543,26 +1468,10 @@
         latitude: '51.956944', longitude: '4.437222', name: Rotterdam, timezone: '1.00'}
     model: flights.airport
     pk: 3481
--   fields: {altitude: '152.00', city: 3315, country: 161, iata: RTW, icao: UWSS,
-        latitude: '51.334366', longitude: '46.022952', name: Central, timezone: '6.00'}
-    model: flights.airport
-    pk: 3482
 -   fields: {altitude: '70.00', city: 3325, country: 19, iata: ISC, icao: \N, latitude: '49.919000',
         longitude: '-6.307500', name: ISLES OF SCILLY, timezone: '0.00'}
     model: flights.airport
     pk: 3492
--   fields: {altitude: '71.00', city: 3331, country: 161, iata: PVS, icao: UHMD, latitude: '64.378139',
-        longitude: '-173.243306', name: Provideniya Bay, timezone: '12.00'}
-    model: flights.airport
-    pk: 3498
--   fields: {altitude: '15.00', city: 3336, country: 11, iata: JKH, icao: LGHI, latitude: '38.343175',
-        longitude: '26.140572', name: Chios, timezone: '2.00'}
-    model: flights.airport
-    pk: 3503
--   fields: {altitude: '11.00', city: 3339, country: 11, iata: PVK, icao: LGPZ, latitude: '38.925467',
-        longitude: '20.765311', name: Aktio, timezone: '2.00'}
-    model: flights.airport
-    pk: 3507
 -   fields: {altitude: '741.00', city: 3340, country: 110, iata: JKG, icao: ESGJ,
         latitude: '57.757594', longitude: '14.068731', name: Jonkoping, timezone: '1.00'}
     model: flights.airport
@@ -2575,34 +1484,10 @@
         longitude: '6.733333', name: Frejus Saint Raphael, timezone: '1.00'}
     model: flights.airport
     pk: 3515
--   fields: {altitude: '37.00', city: 3348, country: 188, iata: FRO, icao: ENFL, latitude: '61.583611',
-        longitude: '5.024722', name: Floro, timezone: '1.00'}
-    model: flights.airport
-    pk: 3517
--   fields: {altitude: '97.00', city: 3350, country: 133, iata: FRL, icao: LIPK, latitude: '44.194753',
-        longitude: '12.070094', name: Forli, timezone: '1.00'}
-    model: flights.airport
-    pk: 3519
--   fields: {altitude: '59.00', city: 3356, country: 161, iata: UUS, icao: UHSS, latitude: '46.888672',
-        longitude: '142.717531', name: Khomutovo, timezone: '11.00'}
-    model: flights.airport
-    pk: 3525
--   fields: {altitude: '1690.00', city: 3358, country: 161, iata: UUD, icao: UIUU,
-        latitude: '51.807764', longitude: '107.437644', name: Mukhino, timezone: '9.00'}
-    model: flights.airport
-    pk: 3527
--   fields: {altitude: '991.00', city: 3359, country: 161, iata: UUA, icao: UWKB,
-        latitude: '54.640000', longitude: '52.801700', name: Bugulma Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 3528
 -   fields: {altitude: '299.00', city: 3367, country: 19, iata: SWS, icao: EGFH, latitude: '51.605333',
         longitude: '-4.067833', name: Swansea, timezone: '0.00'}
     model: flights.airport
     pk: 3536
--   fields: {altitude: '164.00', city: 3368, country: 161, iata: SWT, icao: UNSS,
-        latitude: '60.716667', longitude: '77.650000', name: Strezhevoy, timezone: '7.00'}
-    model: flights.airport
-    pk: 3537
 -   fields: {altitude: '141.00', city: 3381, country: 43, iata: TGD, icao: LYPG, latitude: '42.359392',
         longitude: '19.251894', name: Podgorica, timezone: '1.00'}
     model: flights.airport
@@ -2629,10 +1514,6 @@
         longitude: '9.988228', name: Hamburg, timezone: '1.00'}
     model: flights.airport
     pk: 3586
--   fields: {altitude: '21.00', city: 3412, country: 188, iata: HAA, icao: ENHK, latitude: '70.486675',
-        longitude: '22.139744', name: Hasvik, timezone: '1.00'}
-    model: flights.airport
-    pk: 3589
 -   fields: {altitude: '101.00', city: 3414, country: 110, iata: HAD, icao: ESMT,
         latitude: '56.691128', longitude: '12.820211', name: Halmstad, timezone: '1.00'}
     model: flights.airport
@@ -2641,18 +1522,6 @@
         longitude: '7.096944', name: Hauptbahnhof, timezone: '1.00'}
     model: flights.airport
     pk: 3595
--   fields: {altitude: '25.00', city: 3420, country: 188, iata: BNN, icao: ENBN, latitude: '65.461111',
-        longitude: '12.217500', name: Bronnoy, timezone: '1.00'}
-    model: flights.airport
-    pk: 3597
--   fields: {altitude: '86.00', city: 3424, country: 188, iata: HAU, icao: ENHD, latitude: '59.345267',
-        longitude: '5.208364', name: Karmoy, timezone: '1.00'}
-    model: flights.airport
-    pk: 3601
--   fields: {altitude: '266.00', city: 3432, country: 133, iata: FOG, icao: LIBF,
-        latitude: '41.432917', longitude: '15.535028', name: Gino Lisa, timezone: '1.00'}
-    model: flights.airport
-    pk: 3610
 -   fields: {altitude: '0.00', city: 3433, country: 19, iata: FOA, icao: '', latitude: '60.121000',
         longitude: '-2.052000', name: Foula Airport, timezone: '0.00'}
     model: flights.airport
@@ -2661,14 +1530,6 @@
         latitude: '46.223686', longitude: '14.457611', name: Ljubljana, timezone: '1.00'}
     model: flights.airport
     pk: 3615
--   fields: {altitude: '127.00', city: 3456, country: 188, iata: VDS, icao: ENVD,
-        latitude: '70.065000', longitude: '29.844000', name: Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 3635
--   fields: {altitude: '2697.00', city: 3461, country: 188, iata: VDB, icao: ENFG,
-        latitude: '61.015556', longitude: '9.288056', name: Leirin, timezone: '1.00'}
-    model: flights.airport
-    pk: 3640
 -   fields: {altitude: '103.00', city: 3462, country: 177, iata: VDE, icao: GCHI,
         latitude: '27.814847', longitude: '-17.887056', name: Hierro, timezone: '0.00'}
     model: flights.airport
@@ -2689,14 +1550,6 @@
         longitude: '-5.166667', name: Ronda Airport, timezone: '1.00'}
     model: flights.airport
     pk: 3657
--   fields: {altitude: '2054.00', city: 3479, country: 188, iata: RRS, icao: ENRO,
-        latitude: '62.578411', longitude: '11.342347', name: Roros, timezone: '1.00'}
-    model: flights.airport
-    pk: 3659
--   fields: {altitude: '20.00', city: 3482, country: 161, iata: USK, icao: \N, latitude: '66.000770',
-        longitude: '57.221113', name: Usinsk, timezone: '4.00'}
-    model: flights.airport
-    pk: 3662
 -   fields: {altitude: '475.00', city: 3489, country: 66, iata: XWG, icao: \N, latitude: '48.585068',
         longitude: '7.734547', name: Gare de Strasbourg, timezone: '1.00'}
     model: flights.airport
@@ -2709,55 +1562,23 @@
         latitude: '46.219592', longitude: '7.326764', name: Sion, timezone: '1.00'}
     model: flights.airport
     pk: 3676
--   fields: {altitude: '639.00', city: 3498, country: 184, iata: SIP, icao: UKFF,
-        latitude: '45.052222', longitude: '33.975139', name: Simferopol Intl, timezone: '2.00'}
-    model: flights.airport
-    pk: 3678
 -   fields: {altitude: '1451.00', city: 1920, country: 165, iata: SIB, icao: \N, latitude: '45.464900',
         longitude: '24.053000', name: Aeroclub Sibiu, timezone: '2.00'}
     model: flights.airport
     pk: 3682
--   fields: {altitude: '10.00', city: 3505, country: 131, iata: SIJ, icao: BISI, latitude: '66.133333',
-        longitude: '-18.916667', name: Siglufjordur, timezone: '0.00'}
-    model: flights.airport
-    pk: 3688
 -   fields: {altitude: '2356.00', city: 3507, country: 98, iata: TAT, icao: LZTT,
         latitude: '49.073594', longitude: '20.241142', name: Tatry, timezone: '1.00'}
     model: flights.airport
     pk: 3691
--   fields: {altitude: '215.00', city: 3509, country: 133, iata: TAR, icao: LIBG,
-        latitude: '40.517514', longitude: '17.403212', name: Grottaglie, timezone: '1.00'}
-    model: flights.airport
-    pk: 3693
 -   fields: {altitude: '219.00', city: 3511, country: 173, iata: TAY, icao: EETU,
         latitude: '58.307461', longitude: '26.690428', name: Tartu, timezone: '2.00'}
     model: flights.airport
     pk: 3695
--   fields: {altitude: '79.00', city: 3527, country: 11, iata: JIK, icao: LGIK, latitude: '37.682717',
-        longitude: '26.347061', name: Ikaria, timezone: '2.00'}
-    model: flights.airport
-    pk: 3712
 -   fields: {altitude: '424.00', city: 3536, country: 169, iata: QGY, icao: LHPR,
         latitude: '47.627097', longitude: '17.808347', name: "Gy\u0151r-P\xE9r International
             Airport", timezone: '1.00'}
     model: flights.airport
     pk: 3721
--   fields: {altitude: '477.00', city: 2520, country: 161, iata: KBY, icao: UWWW,
-        latitude: '53.504858', longitude: '50.164336', name: Kurumoch, timezone: '6.00'}
-    model: flights.airport
-    pk: 3725
--   fields: {altitude: '427.00', city: 3542, country: 184, iata: KBP, icao: UKBB,
-        latitude: '50.345000', longitude: '30.894722', name: Boryspil Intl, timezone: '2.00'}
-    model: flights.airport
-    pk: 3728
--   fields: {altitude: '123.00', city: 3553, country: 133, iata: BLQ, icao: LIPE,
-        latitude: '44.535444', longitude: '11.288667', name: Bologna, timezone: '1.00'}
-    model: flights.airport
-    pk: 3739
--   fields: {altitude: '247.00', city: 3554, country: 213, iata: BLL, icao: EKBI,
-        latitude: '55.740322', longitude: '9.151778', name: Billund, timezone: '1.00'}
-    model: flights.airport
-    pk: 3741
 -   fields: {altitude: '34.00', city: 3557, country: 19, iata: BLK, icao: EGNH, latitude: '53.771667',
         longitude: '-3.028611', name: Blackpool, timezone: '0.00'}
     model: flights.airport
@@ -2774,10 +1595,6 @@
         longitude: '5.090000', name: Longvic, timezone: '1.00'}
     model: flights.airport
     pk: 3754
--   fields: {altitude: '47.00', city: 3568, country: 67, iata: OUL, icao: EFOU, latitude: '64.930061',
-        longitude: '25.354564', name: Oulu, timezone: '2.00'}
-    model: flights.airport
-    pk: 3755
 -   fields: {altitude: '36.00', city: 3573, country: 66, iata: LTQ, icao: LFAT, latitude: '50.517385',
         longitude: '1.620587', name: Le Touquet Paris Plage, timezone: '1.00'}
     model: flights.airport
@@ -2814,26 +1631,14 @@
         longitude: '0.207000', name: Stevenage Railway Station, timezone: '0.00'}
     model: flights.airport
     pk: 3814
--   fields: {altitude: '1391.00', city: 3637, country: 243, iata: ZSB, icao: \N, latitude: '47.813056',
-        longitude: '13.046667', name: Hauptbahnhof, timezone: '1.00'}
-    model: flights.airport
-    pk: 3828
 -   fields: {altitude: '184.00', city: 3638, country: 214, iata: ZSN, icao: EDOV,
         latitude: '52.627778', longitude: '11.818333', name: Stendal Borstel, timezone: '1.00'}
     model: flights.airport
     pk: 3829
--   fields: {altitude: '250.00', city: 3641, country: 161, iata: RAT, icao: USNR,
-        latitude: '62.158600', longitude: '77.328900', name: Raduzhny Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 3832
 -   fields: {altitude: '545.00', city: 3646, country: 98, iata: PZY, icao: LZPP, latitude: '48.625247',
         longitude: '17.828444', name: Piestany, timezone: '1.00'}
     model: flights.airport
     pk: 3837
--   fields: {altitude: '410.00', city: 3647, country: 161, iata: IWA, icao: UUBI,
-        latitude: '56.939444', longitude: '40.940833', name: Yuzhny, timezone: '4.00'}
-    model: flights.airport
-    pk: 3838
 -   fields: {altitude: '14.00', city: 3654, country: 19, iata: PZE, icao: EGHK, latitude: '50.128100',
         longitude: '-5.518450', name: Penzance Heliport, timezone: '0.00'}
     model: flights.airport
@@ -2842,42 +1647,14 @@
         latitude: '42.569583', longitude: '27.515236', name: Burgas, timezone: '2.00'}
     model: flights.airport
     pk: 3853
--   fields: {altitude: '44.00', city: 3663, country: 11, iata: SKU, icao: LGSY, latitude: '38.967553',
-        longitude: '24.487228', name: Skiros, timezone: '2.00'}
-    model: flights.airport
-    pk: 3855
 -   fields: {altitude: '781.00', city: 3666, country: 54, iata: SKP, icao: LWSK, latitude: '41.961622',
         longitude: '21.621381', name: Skopje, timezone: '1.00'}
     model: flights.airport
     pk: 3858
--   fields: {altitude: '141.00', city: 3667, country: 213, iata: SKS, icao: EKSP,
-        latitude: '55.225553', longitude: '9.263931', name: Skrydstrup, timezone: '1.00'}
-    model: flights.airport
-    pk: 3859
--   fields: {altitude: '676.00', city: 3669, country: 161, iata: SKX, icao: UWPS,
-        latitude: '54.125100', longitude: '45.212300', name: Saransk Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 3861
--   fields: {altitude: '463.00', city: 3671, country: 188, iata: SKE, icao: ENSN,
-        latitude: '59.185000', longitude: '9.566944', name: Geiteryggen, timezone: '1.00'}
-    model: flights.airport
-    pk: 3863
--   fields: {altitude: '22.00', city: 3673, country: 11, iata: SKG, icao: LGTS, latitude: '40.519725',
-        longitude: '22.970950', name: Makedonia, timezone: '2.00'}
-    model: flights.airport
-    pk: 3865
--   fields: {altitude: '11.00', city: 3678, country: 188, iata: SKN, icao: ENSK, latitude: '68.580833',
-        longitude: '15.026111', name: Skagen, timezone: '1.00'}
-    model: flights.airport
-    pk: 3871
 -   fields: {altitude: '5636.00', city: 379, country: 66, iata: MFX, icao: LFKX, latitude: '45.406900',
         longitude: '6.580560', name: Meribel Airport, timezone: '1.00'}
     model: flights.airport
     pk: 3896
--   fields: {altitude: '681.00', city: 3702, country: 188, iata: GEN, icao: \N, latitude: '60.193900',
-        longitude: '11.100400', name: Gardermoen Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 3901
 -   fields: {altitude: '18.00', city: 3714, country: 173, iata: KDL, icao: EEKA, latitude: '58.990756',
         longitude: '22.830733', name: Kardla, timezone: '2.00'}
     model: flights.airport
@@ -2886,10 +1663,6 @@
         longitude: '8.643610', name: Egelsbach, timezone: '1.00'}
     model: flights.airport
     pk: 3918
--   fields: {altitude: '115.00', city: 3728, country: 11, iata: HER, icao: LGIR, latitude: '35.339719',
-        longitude: '25.180297', name: Nikos Kazantzakis, timezone: '2.00'}
-    model: flights.airport
-    pk: 3927
 -   fields: {altitude: '68.00', city: 3733, country: 19, iata: NDY, icao: EGES, latitude: '59.250300',
         longitude: '-2.576670', name: Sanday Airport, timezone: '0.00'}
     model: flights.airport
@@ -2902,26 +1675,10 @@
         longitude: '17.098056', name: Soderhamn Airport, timezone: '1.00'}
     model: flights.airport
     pk: 3936
--   fields: {altitude: '179.00', city: 3737, country: 67, iata: HEL, icao: EFHK, latitude: '60.317222',
-        longitude: '24.963333', name: Helsinki Vantaa, timezone: '2.00'}
-    model: flights.airport
-    pk: 3937
--   fields: {altitude: '57.00', city: 3737, country: 67, iata: HEM, icao: EFHF, latitude: '60.254558',
-        longitude: '25.042828', name: Helsinki Malmi, timezone: '2.00'}
-    model: flights.airport
-    pk: 3938
--   fields: {altitude: '7.00', city: 3737, country: 67, iata: HEN, icao: EFHE, latitude: '60.147800',
-        longitude: '24.924400', name: Hernesaari Heliport, timezone: '2.00'}
-    model: flights.airport
-    pk: 3939
 -   fields: {altitude: '7.00', city: 3740, country: 214, iata: HEI, icao: EDXB, latitude: '54.153300',
         longitude: '8.901670', name: "Heide-B\xFCsum Airport", timezone: '1.00'}
     model: flights.airport
     pk: 3942
--   fields: {altitude: '490.00', city: 3742, country: 188, iata: BJF, icao: ENBS,
-        latitude: '70.600278', longitude: '29.692500', name: Batsfjord, timezone: '1.00'}
-    model: flights.airport
-    pk: 3944
 -   fields: {altitude: '609.00', city: 3756, country: 177, iata: BJZ, icao: LEBZ,
         latitude: '38.891250', longitude: '-6.821333', name: Talavera La Real, timezone: '1.00'}
     model: flights.airport
@@ -2943,10 +1700,6 @@
         longitude: '9.406000', name: Solenzara, timezone: '1.00'}
     model: flights.airport
     pk: 3997
--   fields: {altitude: '142.00', city: 3811, country: 133, iata: FLR, icao: LIRQ,
-        latitude: '43.809953', longitude: '11.205100', name: Firenze, timezone: '1.00'}
-    model: flights.airport
-    pk: 4017
 -   fields: {altitude: '817.00', city: 3812, country: 66, iata: VHY, icao: LFLV, latitude: '46.169689',
         longitude: '3.403736', name: Charmeil, timezone: '1.00'}
     model: flights.airport
@@ -2980,30 +1733,14 @@
         latitude: '49.302776', longitude: '8.451195', name: Speyer, timezone: '1.00'}
     model: flights.airport
     pk: 4036
--   fields: {altitude: '114.00', city: 3828, country: 184, iata: CKC, icao: UKKE,
-        latitude: '49.416666', longitude: '32.133300', name: Cherkassy, timezone: '2.00'}
-    model: flights.airport
-    pk: 4037
--   fields: {altitude: '48.00', city: 3837, country: 131, iata: HZK, icao: BIHU, latitude: '65.952328',
-        longitude: '-17.425978', name: Husavik, timezone: '0.00'}
-    model: flights.airport
-    pk: 4047
 -   fields: {altitude: '29.00', city: 3841, country: 19, iata: WRY, icao: EGEW, latitude: '59.350300',
         longitude: '-2.950000', name: Westray Airport, timezone: '0.00'}
     model: flights.airport
     pk: 4051
--   fields: {altitude: '9.00', city: 3842, country: 188, iata: ALF, icao: ENAT, latitude: '69.976111',
-        longitude: '23.371667', name: Alta, timezone: '1.00'}
-    model: flights.airport
-    pk: 4052
 -   fields: {altitude: '142.00', city: 3846, country: 177, iata: ALC, icao: LEAL,
         latitude: '38.282169', longitude: '-0.558156', name: Alicante, timezone: '1.00'}
     model: flights.airport
     pk: 4056
--   fields: {altitude: '63.00', city: 3857, country: 188, iata: NTB, icao: ENNO, latitude: '59.565683',
-        longitude: '9.212222', name: Notodden, timezone: '1.00'}
-    model: flights.airport
-    pk: 4070
 -   fields: {altitude: '90.00', city: 3858, country: 66, iata: NTE, icao: LFRS, latitude: '47.153189',
         longitude: '-1.610725', name: Nantes Atlantique, timezone: '1.00'}
     model: flights.airport
@@ -3012,10 +1749,6 @@
         latitude: '46.534075', longitude: '9.884106', name: Samedan, timezone: '1.00'}
     model: flights.airport
     pk: 4077
--   fields: {altitude: '19.00', city: 3873, country: 11, iata: SMI, icao: LGSM, latitude: '37.689999',
-        longitude: '26.911667', name: Samos, timezone: '2.00'}
-    model: flights.airport
-    pk: 4086
 -   fields: {altitude: '308.00', city: 3876, country: 29, iata: SMA, icao: LPAZ, latitude: '36.971390',
         longitude: '-25.170639', name: Santa Maria, timezone: '-1.00'}
     model: flights.airport
@@ -3036,14 +1769,6 @@
         longitude: '10.629400', name: 'Fliegerhost ', timezone: '1.00'}
     model: flights.airport
     pk: 4121
--   fields: {altitude: '64.00', city: 3907, country: 142, iata: QKT, icao: EBKT, latitude: '50.817222',
-        longitude: '3.204722', name: Wevelgem, timezone: '1.00'}
-    model: flights.airport
-    pk: 4124
--   fields: {altitude: '831.00', city: 3908, country: 161, iata: ABA, icao: UNAA,
-        latitude: '53.740000', longitude: '91.385000', name: Abakan, timezone: '8.00'}
-    model: flights.airport
-    pk: 4125
 -   fields: {altitude: '15.00', city: 2636, country: 19, iata: BHD, icao: EGAC, latitude: '54.618056',
         longitude: '-5.872500', name: Belfast City, timezone: '0.00'}
     model: flights.airport
@@ -3068,18 +1793,10 @@
         longitude: '21.096944', name: Liepaja Intl, timezone: '2.00'}
     model: flights.airport
     pk: 4169
--   fields: {altitude: '349.00', city: 3952, country: 67, iata: LPP, icao: EFLP, latitude: '61.044553',
-        longitude: '28.144397', name: Lappeenranta, timezone: '2.00'}
-    model: flights.airport
-    pk: 4175
 -   fields: {altitude: '80.00', city: 3955, country: 19, iata: LPL, icao: EGGP, latitude: '53.333611',
         longitude: '-2.849722', name: Liverpool, timezone: '0.00'}
     model: flights.airport
     pk: 4178
--   fields: {altitude: '584.00', city: 3956, country: 161, iata: LPK, icao: UUOL,
-        latitude: '52.702800', longitude: '39.537800', name: Lipetsk Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 4179
 -   fields: {altitude: '78.00', city: 3960, country: 177, iata: LPA, icao: GCLP, latitude: '27.931886',
         longitude: '-15.386586', name: Gran Canaria, timezone: '0.00'}
     model: flights.airport
@@ -3089,10 +1806,6 @@
         timezone: '1.00'}
     model: flights.airport
     pk: 4186
--   fields: {altitude: '0.00', city: 3962, country: 161, iata: CSH, icao: ULAS, latitude: '65.030000',
-        longitude: '35.733300', name: Solovki Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 4187
 -   fields: {altitude: '291.00', city: 3964, country: 66, iata: CSF, icao: LFPC, latitude: '49.253547',
         longitude: '2.519139', name: Creil, timezone: '1.00'}
     model: flights.airport
@@ -3105,18 +1818,10 @@
         latitude: '45.420000', longitude: '22.253333', name: Caransebes, timezone: '2.00'}
     model: flights.airport
     pk: 4193
--   fields: {altitude: '558.00', city: 3968, country: 161, iata: CSY, icao: UWKS,
-        latitude: '56.090300', longitude: '47.347300', name: Cheboksary Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 4194
 -   fields: {altitude: '650.00', city: 3971, country: 74, iata: ZJI, icao: LSZL, latitude: '46.160800',
         longitude: '8.878610', name: Locarno Airport, timezone: '1.00'}
     model: flights.airport
     pk: 4197
--   fields: {altitude: '89.00', city: 3972, country: 161, iata: AER, icao: URSS, latitude: '43.449928',
-        longitude: '39.956589', name: Sochi, timezone: '4.00'}
-    model: flights.airport
-    pk: 4198
 -   fields: {altitude: '440.00', city: 3975, country: 66, iata: VNE, icao: LFRV, latitude: '47.723303',
         longitude: '-2.718561', name: Meucon, timezone: '1.00'}
     model: flights.airport
@@ -3129,18 +1834,6 @@
         longitude: '20.282758', name: Umea, timezone: '1.00'}
     model: flights.airport
     pk: 4220
--   fields: {altitude: '26.00', city: 3995, country: 161, iata: IKS, icao: UEST, latitude: '71.697700',
-        longitude: '128.903000', name: Tiksi Airport, timezone: '10.00'}
-    model: flights.airport
-    pk: 4222
--   fields: {altitude: '37.00', city: 3997, country: 133, iata: OLB, icao: LIEO, latitude: '40.898661',
-        longitude: '9.517628', name: Olbia Costa Smeralda, timezone: '1.00'}
-    model: flights.airport
-    pk: 4224
--   fields: {altitude: '1675.00', city: 4001, country: 161, iata: IKT, icao: UIII,
-        latitude: '52.268028', longitude: '104.388975', name: Irkutsk, timezone: '9.00'}
-    model: flights.airport
-    pk: 4228
 -   fields: {altitude: '226.00', city: 4016, country: 19, iata: FZO, icao: EGTG, latitude: '51.519444',
         longitude: '-2.590833', name: Bristol Filton, timezone: '0.00'}
     model: flights.airport
@@ -3150,10 +1843,6 @@
             Airport", timezone: '1.00'}
     model: flights.airport
     pk: 4250
--   fields: {altitude: '16.00', city: 4029, country: 188, iata: SOJ, icao: ENSR, latitude: '69.786800',
-        longitude: '20.959400', name: Sorkjosen Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 4258
 -   fields: {altitude: '876.00', city: 4038, country: 100, iata: MBX, icao: LJMB,
         latitude: '46.479861', longitude: '15.686131', name: Maribor, timezone: '1.00'}
     model: flights.airport
@@ -3174,101 +1863,31 @@
         longitude: '14.333000', name: Comino Airport, timezone: '1.00'}
     model: flights.airport
     pk: 4279
--   fields: {altitude: '244.00', city: 4055, country: 161, iata: KHV, icao: UHHH,
-        latitude: '48.528044', longitude: '135.188361', name: Novy, timezone: '11.00'}
-    model: flights.airport
-    pk: 4285
--   fields: {altitude: '152.00', city: 4061, country: 184, iata: KHC, icao: UKFK,
-        latitude: '45.372869', longitude: '36.402761', name: Kerch Intl, timezone: '-2.00'}
-    model: flights.airport
-    pk: 4291
--   fields: {altitude: '148.00', city: 4063, country: 184, iata: KHE, icao: UKOH,
-        latitude: '46.675800', longitude: '32.506400', name: Chernobayevka Airport,
-        timezone: '2.00'}
-    model: flights.airport
-    pk: 4293
--   fields: {altitude: '79.00', city: 4068, country: 161, iata: BVV, icao: \N, latitude: '44.920000',
-        longitude: '147.621667', name: Burevestnik Airport, timezone: '11.00'}
-    model: flights.airport
-    pk: 4298
 -   fields: {altitude: '359.00', city: 4072, country: 66, iata: BVA, icao: LFOB, latitude: '49.454444',
         longitude: '2.112778', name: Tille, timezone: '1.00'}
     model: flights.airport
     pk: 4302
--   fields: {altitude: '43.00', city: 4073, country: 188, iata: BVG, icao: ENBV, latitude: '70.866667',
-        longitude: '29.000000', name: Berlevag, timezone: '1.00'}
-    model: flights.airport
-    pk: 4303
 -   fields: {altitude: '379.00', city: 4074, country: 66, iata: BVE, icao: LFBV, latitude: '45.150833',
         longitude: '1.469167', name: La Roche, timezone: '1.00'}
     model: flights.airport
     pk: 4304
--   fields: {altitude: '7.00', city: 4077, country: 188, iata: OSY, icao: ENNM, latitude: '64.472200',
-        longitude: '11.578600', name: "Namsos H\xF8knes\xF8ra Airport", timezone: '1.00'}
-    model: flights.airport
-    pk: 4307
--   fields: {altitude: '111.00', city: 4078, country: 38, iata: OSZ, icao: EPKO, latitude: '54.041000',
-        longitude: '16.266000', name: Koszalin - Zegrze Pomorskie Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 4308
--   fields: {altitude: '217.00', city: 4079, country: 38, iata: OSP, icao: EPSK, latitude: '54.478889',
-        longitude: '17.107500', name: Redzikowo, timezone: '1.00'}
-    model: flights.airport
-    pk: 4309
--   fields: {altitude: '13.00', city: 4082, country: 142, iata: OST, icao: EBOS, latitude: '51.198889',
-        longitude: '2.862222', name: Oostende, timezone: '1.00'}
-    model: flights.airport
-    pk: 4313
--   fields: {altitude: '909.00', city: 4083, country: 161, iata: OSW, icao: UWOR,
-        latitude: '51.072500', longitude: '58.595600', name: Orsk Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 4314
--   fields: {altitude: '290.00', city: 4084, country: 167, iata: OSI, icao: LDOS,
-        latitude: '45.462667', longitude: '18.810156', name: Osijek, timezone: '1.00'}
-    model: flights.airport
-    pk: 4315
 -   fields: {altitude: '96.00', city: 4086, country: 110, iata: OSK, icao: ESMO, latitude: '57.350453',
         longitude: '16.497972', name: Oskarshamn, timezone: '1.00'}
     model: flights.airport
     pk: 4317
--   fields: {altitude: '681.00', city: 3702, country: 188, iata: OSL, icao: ENGM,
-        latitude: '60.193917', longitude: '11.100361', name: Gardermoen, timezone: '1.00'}
-    model: flights.airport
-    pk: 4318
 -   fields: {altitude: '1233.00', city: 4091, country: 110, iata: OSD, icao: ESNZ,
         latitude: '63.194400', longitude: '14.500300', name: "\xD6stersund Airport",
         timezone: '1.00'}
     model: flights.airport
     pk: 4323
--   fields: {altitude: '241.00', city: 4095, country: 11, iata: LRA, icao: LGLR, latitude: '39.650253',
-        longitude: '22.465500', name: Larisa, timezone: '2.00'}
-    model: flights.airport
-    pk: 4328
 -   fields: {altitude: '74.00', city: 4098, country: 66, iata: LRH, icao: LFBH, latitude: '46.179200',
         longitude: '-1.195280', name: La Rochelle-Ile de Re, timezone: '1.00'}
     model: flights.airport
     pk: 4332
--   fields: {altitude: '39.00', city: 4101, country: 11, iata: LRS, icao: LGLE, latitude: '37.184903',
-        longitude: '26.800289', name: Leros, timezone: '2.00'}
-    model: flights.airport
-    pk: 4335
 -   fields: {altitude: '160.00', city: 4104, country: 66, iata: LRT, icao: LFRH, latitude: '47.760555',
         longitude: '-3.440000', name: Lann Bihoue, timezone: '1.00'}
     model: flights.airport
     pk: 4338
--   fields: {altitude: '1267.00', city: 4112, country: 133, iata: CUF, icao: LIMZ,
-        latitude: '44.547019', longitude: '7.623217', name: Levaldigi, timezone: '1.00'}
-    model: flights.airport
-    pk: 4346
--   fields: {altitude: '377.00', city: 4123, country: 161, iata: CEE, icao: ULBC,
-        latitude: '59.273600', longitude: '38.015800', name: Cherepovets Airport,
-        timezone: '4.00'}
-    model: flights.airport
-    pk: 4357
--   fields: {altitude: '154.00', city: 4124, country: 161, iata: PKV, icao: ULOO,
-        latitude: '57.783917', longitude: '28.395614', name: Kresty, timezone: '4.00'}
-    model: flights.airport
-    pk: 4358
 -   fields: {altitude: '857.00', city: 4126, country: 66, iata: XBK, icao: LFHS, latitude: '46.200890',
         longitude: '5.292028', name: Ceyzeriat, timezone: '1.00'}
     model: flights.airport
@@ -3285,55 +1904,18 @@
         latitude: '39.489314', longitude: '-0.481625', name: Valencia, timezone: '1.00'}
     model: flights.airport
     pk: 4372
--   fields: {altitude: '23.00', city: 4143, country: 133, iata: TTB, icao: LIET, latitude: '39.918761',
-        longitude: '9.682981', name: Tortoli, timezone: '1.00'}
-    model: flights.airport
-    pk: 4379
--   fields: {altitude: '2033.00', city: 4151, country: 161, iata: UKX, icao: UITT,
-        latitude: '56.850000', longitude: '105.716700', name: Ust-Kut, timezone: '9.00'}
-    model: flights.airport
-    pk: 4387
--   fields: {altitude: '344.00', city: 4153, country: 184, iata: UKS, icao: UKFB,
-        latitude: '44.691431', longitude: '33.575670', name: Belbek Sevastopol International
-            Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 4389
--   fields: {altitude: '774.00', city: 4155, country: 184, iata: UKC, icao: UKLC,
-        latitude: '50.683300', longitude: '25.483300', name: Lutsk, timezone: '2.00'}
-    model: flights.airport
-    pk: 4391
 -   fields: {altitude: '13.00', city: 4165, country: 139, iata: IIA, icao: EIMN, latitude: '53.091944',
         longitude: '-9.570000', name: Inishmaan Aerodrome, timezone: '0.00'}
     model: flights.airport
     pk: 4401
--   fields: {altitude: '675.00', city: 4170, country: 38, iata: RZE, icao: EPRZ, latitude: '50.109958',
-        longitude: '22.019000', name: Jasionka, timezone: '1.00'}
-    model: flights.airport
-    pk: 4406
--   fields: {altitude: '8.00', city: 4176, country: 131, iata: SAK, icao: BIKR, latitude: '65.731667',
-        longitude: '-19.572778', name: Saudarkrokur, timezone: '0.00'}
-    model: flights.airport
-    pk: 4413
--   fields: {altitude: '634.00', city: 4183, country: 133, iata: SAY, icao: LIQS,
-        latitude: '43.256286', longitude: '11.255036', name: Ampugnano, timezone: '1.00'}
-    model: flights.airport
-    pk: 4422
 -   fields: {altitude: '314.00', city: 4190, country: 139, iata: CHE, icao: \N, latitude: '51.933334',
         longitude: '-10.233333', name: Reeroe Airport, timezone: '0.00'}
     model: flights.airport
     pk: 4431
--   fields: {altitude: '490.00', city: 4195, country: 11, iata: CHQ, icao: LGSA, latitude: '35.531747',
-        longitude: '24.149678', name: Souda, timezone: '2.00'}
-    model: flights.airport
-    pk: 4440
 -   fields: {altitude: '529.00', city: 4196, country: 66, iata: CHR, icao: LFLX, latitude: '46.862194',
         longitude: '1.730667', name: Deols, timezone: '1.00'}
     model: flights.airport
     pk: 4441
--   fields: {altitude: '527.00', city: 4212, country: 167, iata: DBV, icao: LDDU,
-        latitude: '42.561353', longitude: '18.268244', name: Dubrovnik, timezone: '1.00'}
-    model: flights.airport
-    pk: 4459
 -   fields: {altitude: '336.00', city: 4217, country: 15, iata: GCI, icao: EGJB, latitude: '49.434956',
         longitude: '-2.601969', name: Guernsey, timezone: '0.00'}
     model: flights.airport
@@ -3342,14 +1924,6 @@
         longitude: '17.212667', name: M R Stefanik, timezone: '1.00'}
     model: flights.airport
     pk: 4480
--   fields: {altitude: '1610.00', city: 4235, country: 161, iata: BTK, icao: UIBB,
-        latitude: '56.370556', longitude: '101.698331', name: Bratsk, timezone: '9.00'}
-    model: flights.airport
-    pk: 4487
--   fields: {altitude: '940.00', city: 4240, country: 161, iata: KJA, icao: UNKL,
-        latitude: '56.180000', longitude: '92.475000', name: Emelyanovo, timezone: '8.00'}
-    model: flights.airport
-    pk: 4492
 -   fields: {altitude: '1046.00', city: 2385, country: 214, iata: NUE, icao: EDDN,
         latitude: '49.498700', longitude: '11.066897', name: Nurnberg, timezone: '1.00'}
     model: flights.airport
@@ -3358,36 +1932,14 @@
         longitude: '-3.343333', name: Cardiff, timezone: '0.00'}
     model: flights.airport
     pk: 4501
--   fields: {altitude: '826.00', city: 4250, country: 184, iata: CWC, icao: UKLN,
-        latitude: '48.259322', longitude: '25.980831', name: Chernivtsi International
-            Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 4503
 -   fields: {altitude: '177.00', city: 4252, country: 214, iata: ZFR, icao: \N, latitude: '52.336944',
         longitude: '14.547222', name: Frankfurt Oder Hbf, timezone: '1.00'}
     model: flights.airport
     pk: 4506
--   fields: {altitude: '115.00', city: 4262, country: 161, iata: NFG, icao: USRN,
-        latitude: '61.108300', longitude: '72.650000', name: Nefteyugansk Airport,
-        timezone: '6.00'}
-    model: flights.airport
-    pk: 4517
 -   fields: {altitude: '1.00', city: 523, country: 66, iata: XDB, icao: \N, latitude: '50.563333',
         longitude: '3.088050', name: Lille, timezone: '1.00'}
     model: flights.airport
     pk: 4519
--   fields: {altitude: '36.00', city: 4276, country: 188, iata: VRY, icao: ENVR, latitude: '67.666700',
-        longitude: '12.683300', name: "V\xE6r\xF8y Heliport", timezone: '1.00'}
-    model: flights.airport
-    pk: 4532
--   fields: {altitude: '286.00', city: 4282, country: 67, iata: VRK, icao: EFVR, latitude: '62.171111',
-        longitude: '27.868611', name: Varkaus, timezone: '2.00'}
-    model: flights.airport
-    pk: 4538
--   fields: {altitude: '239.00', city: 4285, country: 133, iata: VRN, icao: LIPX,
-        latitude: '45.395706', longitude: '10.888533', name: Villafranca, timezone: '1.00'}
-    model: flights.airport
-    pk: 4541
 -   fields: {altitude: '1805.00', city: 4287, country: 29, iata: VRL, icao: LPVR,
         latitude: '41.274334', longitude: '-7.720472', name: Vila Real, timezone: '0.00'}
     model: flights.airport
@@ -3400,22 +1952,10 @@
         longitude: '4.469444', name: Centraal, timezone: '1.00'}
     model: flights.airport
     pk: 4562
--   fields: {altitude: '0.00', city: 4310, country: 161, iata: OHO, icao: UHOO, latitude: '59.410100',
-        longitude: '143.057000', name: Okhotsk Airport, timezone: '11.00'}
-    model: flights.airport
-    pk: 4569
--   fields: {altitude: '100.00', city: 4311, country: 161, iata: OHH, icao: \N, latitude: '53.583333',
-        longitude: '142.933333', name: Okha Airport, timezone: '11.00'}
-    model: flights.airport
-    pk: 4570
 -   fields: {altitude: '2313.00', city: 4312, country: 54, iata: OHD, icao: LWOH,
         latitude: '41.179956', longitude: '20.742325', name: Ohrid, timezone: '1.00'}
     model: flights.airport
     pk: 4571
--   fields: {altitude: '0.00', city: 4314, country: 161, iata: UIK, icao: UIBS, latitude: '58.135000',
-        longitude: '102.566000', name: Ust-Ilimsk, timezone: '9.00'}
-    model: flights.airport
-    pk: 4573
 -   fields: {altitude: '24.00', city: 4316, country: 139, iata: IOR, icao: EIIM, latitude: '53.106700',
         longitude: '-9.653610', name: Inishmore Airport, timezone: '0.00'}
     model: flights.airport
@@ -3428,10 +1968,6 @@
         longitude: '-4.623889', name: Isle Of Man, timezone: '0.00'}
     model: flights.airport
     pk: 4579
--   fields: {altitude: '1558.00', city: 4321, country: 11, iata: IOA, icao: LGIO,
-        latitude: '39.696388', longitude: '20.822500', name: Ioannina, timezone: '2.00'}
-    model: flights.airport
-    pk: 4581
 -   fields: {altitude: '1058.00', city: 4326, country: 214, iata: SCN, icao: EDDR,
         latitude: '49.214553', longitude: '7.109508', name: Saarbrucken, timezone: '1.00'}
     model: flights.airport
@@ -3456,10 +1992,6 @@
         longitude: '8.572878', name: Bremerhaven, timezone: '1.00'}
     model: flights.airport
     pk: 4652
--   fields: {altitude: '184.00', city: 3144, country: 142, iata: BRU, icao: EBBR,
-        latitude: '50.901389', longitude: '4.484444', name: Brussels Natl, timezone: '1.00'}
-    model: flights.airport
-    pk: 4653
 -   fields: {altitude: '622.00', city: 4016, country: 19, iata: BRS, icao: EGGD, latitude: '51.382669',
         longitude: '-2.719089', name: Bristol, timezone: '0.00'}
     model: flights.airport
@@ -3472,10 +2004,6 @@
         latitude: '46.914100', longitude: '7.497153', name: Bern Belp, timezone: '1.00'}
     model: flights.airport
     pk: 4659
--   fields: {altitude: '177.00', city: 4397, country: 133, iata: BRI, icao: LIBD,
-        latitude: '41.138856', longitude: '16.760594', name: Bari, timezone: '1.00'}
-    model: flights.airport
-    pk: 4663
 -   fields: {altitude: '14.00', city: 4398, country: 214, iata: BRE, icao: EDDW, latitude: '53.047500',
         longitude: '8.786667', name: Neuenland, timezone: '1.00'}
     model: flights.airport
@@ -3484,10 +2012,6 @@
         longitude: '6.482000', name: "La M\xF4le Airport", timezone: '1.00'}
     model: flights.airport
     pk: 4668
--   fields: {altitude: '469.00', city: 4403, country: 161, iata: KLD, icao: UUEM,
-        latitude: '56.824736', longitude: '35.757678', name: Migalovo, timezone: '4.00'}
-    model: flights.airport
-    pk: 4669
 -   fields: {altitude: '424.00', city: 1971, country: 214, iata: ESS, icao: EDLE,
         latitude: '51.402333', longitude: '6.937333', name: Essen Mulheim, timezone: '1.00'}
     model: flights.airport
@@ -3496,23 +2020,10 @@
         latitude: '51.451389', longitude: '7.013800', name: Essen HBF, timezone: '1.00'}
     model: flights.airport
     pk: 4680
--   fields: {altitude: '452.00', city: 4413, country: 243, iata: KLU, icao: LOWK,
-        latitude: '46.642514', longitude: '14.337739', name: Woerthersee International
-            Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 4681
 -   fields: {altitude: '17.00', city: 4418, country: 110, iata: KLR, icao: ESMQ, latitude: '56.685531',
         longitude: '16.287578', name: Kalmar, timezone: '1.00'}
     model: flights.airport
     pk: 4686
--   fields: {altitude: '501.00', city: 4422, country: 161, iata: ESL, icao: URWI,
-        latitude: '46.373900', longitude: '44.330900', name: Elista Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 4690
--   fields: {altitude: '26.00', city: 4423, country: 11, iata: KLX, icao: LGKL, latitude: '37.068319',
-        longitude: '22.025525', name: Kalamata, timezone: '2.00'}
-    model: flights.airport
-    pk: 4691
 -   fields: {altitude: '7.00', city: 4425, country: 19, iata: ESH, icao: EGKA, latitude: '50.835556',
         longitude: '-0.297222', name: Shoreham, timezone: '0.00'}
     model: flights.airport
@@ -3521,14 +2032,6 @@
         latitude: '41.857800', longitude: '-6.707125', name: Braganca, timezone: '0.00'}
     model: flights.airport
     pk: 4695
--   fields: {altitude: '170.00', city: 4429, country: 188, iata: BGO, icao: ENBR,
-        latitude: '60.293386', longitude: '5.218142', name: Flesland, timezone: '1.00'}
-    model: flights.airport
-    pk: 4698
--   fields: {altitude: '342.00', city: 4430, country: 161, iata: SCW, icao: UUYY,
-        latitude: '61.647050', longitude: '50.845050', name: Syktyvkar, timezone: '4.00'}
-    model: flights.airport
-    pk: 4699
 -   fields: {altitude: '1375.00', city: 4431, country: 165, iata: SCV, icao: LRSV,
         latitude: '47.687500', longitude: '26.354056', name: Stefan Cel Mare, timezone: '2.00'}
     model: flights.airport
@@ -3541,34 +2044,14 @@
         longitude: '9.837025', name: Hamburg Finkenwerder, timezone: '1.00'}
     model: flights.airport
     pk: 4714
--   fields: {altitude: '0.00', city: 4449, country: 131, iata: VPN, icao: BIVO, latitude: '65.720600',
-        longitude: '-14.850600', name: "Vopnafj\xF6r\xF0ur Airport", timezone: '0.00'}
-    model: flights.airport
-    pk: 4722
--   fields: {altitude: '46.00', city: 4455, country: 11, iata: GPA, icao: LGRX, latitude: '38.151111',
-        longitude: '21.425556', name: Araxos, timezone: '2.00'}
-    model: flights.airport
-    pk: 4728
 -   fields: {altitude: '1000.00', city: 4469, country: 169, iata: QPJ, icao: \N, latitude: '46.070833',
         longitude: '18.233056', name: Pecs, timezone: '1.00'}
     model: flights.airport
     pk: 4742
--   fields: {altitude: '44.00', city: 4470, country: 133, iata: QPA, icao: LIPU, latitude: '45.395767',
-        longitude: '11.847903', name: Padova, timezone: '1.00'}
-    model: flights.airport
-    pk: 4743
--   fields: {altitude: '456.00', city: 4472, country: 133, iata: QPZ, icao: LIMS,
-        latitude: '44.913055', longitude: '9.723333', name: Piacenza, timezone: '1.00'}
-    model: flights.airport
-    pk: 4745
 -   fields: {altitude: '110.00', city: 61, country: 214, iata: QPP, icao: \N, latitude: '52.524930',
         longitude: '13.369630', name: Berlin Hauptbahnhof, timezone: '1.00'}
     model: flights.airport
     pk: 4747
--   fields: {altitude: '24.00', city: 4483, country: 133, iata: TPS, icao: LICT, latitude: '37.911403',
-        longitude: '12.487961', name: Trapani Birgi, timezone: '1.00'}
-    model: flights.airport
-    pk: 4760
 -   fields: {altitude: '1000.00', city: 4488, country: 214, iata: WZB, icao: WURZ,
         latitude: '49.799900', longitude: '9.955550', name: Wurzburg HBF, timezone: '1.00'}
     model: flights.airport
@@ -3577,10 +2060,6 @@
         longitude: '6.230458', name: Essey, timezone: '1.00'}
     model: flights.airport
     pk: 4775
--   fields: {altitude: '1005.00', city: 4500, country: 67, iata: ENF, icao: EFET,
-        latitude: '68.362586', longitude: '23.424322', name: Enontekio, timezone: '2.00'}
-    model: flights.airport
-    pk: 4778
 -   fields: {altitude: '155.00', city: 4503, country: 19, iata: ENK, icao: EGAB, latitude: '54.398889',
         longitude: '-7.651667', name: St Angelo, timezone: '0.00'}
     model: flights.airport
@@ -3605,26 +2084,10 @@
         latitude: '43.282900', longitude: '17.845878', name: Mostar, timezone: '1.00'}
     model: flights.airport
     pk: 4826
--   fields: {altitude: '517.00', city: 3542, country: 184, iata: GML, icao: UKKM,
-        latitude: '50.603611', longitude: '30.191944', name: Gostomel Antonov, timezone: '2.00'}
-    model: flights.airport
-    pk: 4835
--   fields: {altitude: '256.00', city: 4556, country: 161, iata: GOJ, icao: UWGG,
-        latitude: '56.230119', longitude: '43.784042', name: Nizhny Novgorod, timezone: '4.00'}
-    model: flights.airport
-    pk: 4842
 -   fields: {altitude: '885.00', city: 3225, country: 66, iata: MLH, icao: LFSB, latitude: '47.589583',
         longitude: '7.529914', name: Bale Mulhouse, timezone: '1.00'}
     model: flights.airport
     pk: 4844
--   fields: {altitude: '13.00', city: 4559, country: 133, iata: GOA, icao: LIMJ, latitude: '44.413333',
-        longitude: '8.837500', name: Genova Sestri, timezone: '1.00'}
-    model: flights.airport
-    pk: 4846
--   fields: {altitude: '12.00', city: 4560, country: 11, iata: MLO, icao: LGML, latitude: '36.696111',
-        longitude: '24.477500', name: Milos, timezone: '2.00'}
-    model: flights.airport
-    pk: 4847
 -   fields: {altitude: '506.00', city: 4567, country: 110, iata: GOT, icao: ESGG,
         latitude: '57.662836', longitude: '12.279819', name: Landvetter, timezone: '1.00'}
     model: flights.airport
@@ -3645,26 +2108,10 @@
         longitude: '7.230247', name: Norderney, timezone: '1.00'}
     model: flights.airport
     pk: 4867
--   fields: {altitude: '0.00', city: 4580, country: 142, iata: KNO, icao: EBKW, latitude: '51.322200',
-        longitude: '3.293060', name: Knokke-Heist Westkapelle Heliport, timezone: '-1.00'}
-    model: flights.airport
-    pk: 4871
 -   fields: {altitude: '75.00', city: 4582, country: 19, iata: KNF, icao: EGYM, latitude: '52.648353',
         longitude: '0.550692', name: Marham, timezone: '0.00'}
     model: flights.airport
     pk: 4873
--   fields: {altitude: '14.00', city: 4592, country: 11, iata: LXS, icao: LGLM, latitude: '39.917072',
-        longitude: '25.236308', name: Limnos, timezone: '2.00'}
-    model: flights.airport
-    pk: 4883
--   fields: {altitude: '325.00', city: 4603, country: 161, iata: YKS, icao: UEEE,
-        latitude: '62.093250', longitude: '129.770672', name: Yakutsk, timezone: '10.00'}
-    model: flights.airport
-    pk: 4894
--   fields: {altitude: '362.00', city: 4617, country: 38, iata: WAW, icao: EPWA, latitude: '52.165750',
-        longitude: '20.967122', name: Okecie, timezone: '1.00'}
-    model: flights.airport
-    pk: 4911
 -   fields: {altitude: '119.00', city: 4619, country: 139, iata: WAT, icao: EIWF,
         latitude: '52.187200', longitude: '-7.086964', name: Waterford, timezone: '0.00'}
     model: flights.airport
@@ -3685,78 +2132,26 @@
         longitude: '-8.599206', name: Sligo, timezone: '0.00'}
     model: flights.airport
     pk: 4925
--   fields: {altitude: '600.00', city: 4646, country: 161, iata: KLF, icao: UUBS,
-        latitude: '54.550000', longitude: '36.367000', name: Grabtsevo, timezone: '3.00'}
-    model: flights.airport
-    pk: 4949
--   fields: {altitude: '339.00', city: 4647, country: 67, iata: QVY, icao: EFUT, latitude: '60.896394',
-        longitude: '26.938353', name: Utti, timezone: '2.00'}
-    model: flights.airport
-    pk: 4950
--   fields: {altitude: '989.00', city: 4651, country: 133, iata: TRN, icao: LIMF,
-        latitude: '45.200761', longitude: '7.649631', name: Torino, timezone: '1.00'}
-    model: flights.airport
-    pk: 4955
 -   fields: {altitude: '38.00', city: 4653, country: 19, iata: TRE, icao: EGPU, latitude: '56.499167',
         longitude: '-6.869167', name: Tiree, timezone: '0.00'}
     model: flights.airport
     pk: 4957
--   fields: {altitude: '56.00', city: 4654, country: 188, iata: TRD, icao: ENVA, latitude: '63.457556',
-        longitude: '10.924250', name: Vaernes, timezone: '1.00'}
-    model: flights.airport
-    pk: 4958
--   fields: {altitude: '286.00', city: 4656, country: 188, iata: TRF, icao: ENTO,
-        latitude: '59.186703', longitude: '10.258628', name: Torp, timezone: '1.00'}
-    model: flights.airport
-    pk: 4960
--   fields: {altitude: '37.00', city: 4658, country: 133, iata: TRS, icao: LIPQ, latitude: '45.827500',
-        longitude: '13.472222', name: Ronchi Dei Legionari, timezone: '1.00'}
-    model: flights.airport
-    pk: 4962
--   fields: {altitude: '95.00', city: 4663, country: 161, iata: HTG, icao: UOHH, latitude: '71.978058',
-        longitude: '102.490514', name: Khatanga Airport, timezone: '8.00'}
-    model: flights.airport
-    pk: 4967
 -   fields: {altitude: '254.00', city: 4664, country: 19, iata: HTF, icao: \N, latitude: '51.765000',
         longitude: '-0.248330', name: Hatfield, timezone: '0.00'}
     model: flights.airport
     pk: 4968
--   fields: {altitude: '2272.00', city: 4665, country: 161, iata: HTA, icao: UIAA,
-        latitude: '52.026317', longitude: '113.305556', name: Kadala, timezone: '10.00'}
-    model: flights.airport
-    pk: 4969
--   fields: {altitude: '172.00', city: 4676, country: 184, iata: ODS, icao: UKOO,
-        latitude: '46.426767', longitude: '30.676464', name: Odesa Intl, timezone: '2.00'}
-    model: flights.airport
-    pk: 4982
 -   fields: {altitude: '405.00', city: 4677, country: 19, iata: ODH, icao: EGVO, latitude: '51.234139',
         longitude: '-0.942825', name: Odiham, timezone: '0.00'}
     model: flights.airport
     pk: 4983
--   fields: {altitude: '940.00', city: 4679, country: 161, iata: ODO, icao: UIKB,
-        latitude: '57.513700', longitude: '114.134800', name: Bodaibo, timezone: '9.00'}
-    model: flights.airport
-    pk: 4985
 -   fields: {altitude: '297.00', city: 4681, country: 177, iata: ODB, icao: LEBA,
         latitude: '37.842006', longitude: '-4.848878', name: Cordoba, timezone: '1.00'}
     model: flights.airport
     pk: 4987
--   fields: {altitude: '56.00', city: 4682, country: 213, iata: ODE, icao: EKOD, latitude: '55.476664',
-        longitude: '10.330933', name: Odense, timezone: '1.00'}
-    model: flights.airport
-    pk: 4988
 -   fields: {altitude: '1910.00', city: 4694, country: 66, iata: RDZ, icao: LFCR,
         latitude: '44.407869', longitude: '2.482672', name: Marcillac, timezone: '1.00'}
     model: flights.airport
     pk: 5000
--   fields: {altitude: '78.00', city: 4707, country: 161, iata: LED, icao: ULLI, latitude: '59.800292',
-        longitude: '30.262503', name: Pulkovo, timezone: '4.00'}
-    model: flights.airport
-    pk: 5016
--   fields: {altitude: '56.00', city: 3702, country: 188, iata: FBU, icao: ENFB, latitude: '59.883333',
-        longitude: '10.616667', name: Fornebu, timezone: '1.00'}
-    model: flights.airport
-    pk: 5017
 -   fields: {altitude: '312.00', city: 4708, country: 66, iata: LEH, icao: LFOH, latitude: '49.533889',
         longitude: '0.088056', name: Octeville, timezone: '1.00'}
     model: flights.airport
@@ -3793,38 +2188,14 @@
         longitude: '8.652500', name: Heidelberg, timezone: '1.00'}
     model: flights.airport
     pk: 5035
--   fields: {altitude: '200.00', city: 4734, country: 161, iata: SGC, icao: USRR,
-        latitude: '61.343694', longitude: '73.401842', name: Surgut, timezone: '6.00'}
-    model: flights.airport
-    pk: 5047
--   fields: {altitude: '24.00', city: 4735, country: 213, iata: SGD, icao: EKSB, latitude: '54.964367',
-        longitude: '9.791731', name: Sonderborg, timezone: '1.00'}
-    model: flights.airport
-    pk: 5048
 -   fields: {altitude: '102.00', city: 4743, country: 66, iata: CNG, icao: LFBG, latitude: '45.658333',
         longitude: '-0.317500', name: Chateaubernard, timezone: '1.00'}
     model: flights.airport
     pk: 5059
--   fields: {altitude: '2812.00', city: 4747, country: 161, iata: CNN, icao: UELL,
-        latitude: '56.913900', longitude: '124.914000', name: Chulman, timezone: '10.00'}
-    model: flights.airport
-    pk: 5063
--   fields: {altitude: '92.00', city: 4748, country: 213, iata: CNL, icao: EKSN, latitude: '57.503525',
-        longitude: '10.229372', name: Sindal Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 5064
--   fields: {altitude: '11.00', city: 4751, country: 131, iata: PFJ, icao: BIPA, latitude: '65.555833',
-        longitude: '-23.965000', name: Patreksfjordur, timezone: '0.00'}
-    model: flights.airport
-    pk: 5069
 -   fields: {altitude: '41.00', city: 4753, country: 85, iata: PFO, icao: LCPH, latitude: '34.718039',
         longitude: '32.485731', name: Pafos Intl, timezone: '2.00'}
     model: flights.airport
     pk: 5071
--   fields: {altitude: '237.00', city: 4759, country: 188, iata: MJF, icao: ENMS,
-        latitude: '65.783997', longitude: '13.214914', name: Kjaerstad, timezone: '1.00'}
-    model: flights.airport
-    pk: 5079
 -   fields: {altitude: '11.00', city: 4770, country: 177, iata: MJV, icao: LELC, latitude: '37.774972',
         longitude: '-0.812389', name: Murcia San Javier, timezone: '1.00'}
     model: flights.airport
@@ -3833,42 +2204,18 @@
         longitude: '-5.349664', name: Gibraltar, timezone: '1.00'}
     model: flights.airport
     pk: 5093
--   fields: {altitude: '1156.00', city: 4774, country: 161, iata: MJZ, icao: UERR,
-        latitude: '62.534689', longitude: '114.038928', name: Mirny, timezone: '10.00'}
-    model: flights.airport
-    pk: 5095
--   fields: {altitude: '87.00', city: 4780, country: 133, iata: AHO, icao: LIEA, latitude: '40.632133',
-        longitude: '8.290772', name: Alghero, timezone: '1.00'}
-    model: flights.airport
-    pk: 5103
 -   fields: {altitude: '129.00', city: 28, country: 66, iata: PLY, icao: \N, latitude: '48.844722',
         longitude: '2.373611', name: Gare de Lyon, timezone: '1.00'}
     model: flights.airport
     pk: 5107
--   fields: {altitude: '126.00', city: 4812, country: 161, iata: TBW, icao: UUOT,
-        latitude: '52.810000', longitude: '41.480000', name: Tambow, timezone: '4.00'}
-    model: flights.airport
-    pk: 5137
 -   fields: {altitude: '125.00', city: 4813, country: 214, iata: MGL, icao: EDLN,
         latitude: '51.230356', longitude: '6.504494', name: Monchengladbach, timezone: '1.00'}
     model: flights.airport
     pk: 5138
--   fields: {altitude: '1411.00', city: 3637, country: 243, iata: SZG, icao: LOWS,
-        latitude: '47.793304', longitude: '13.004333', name: Salzburg, timezone: '1.00'}
-    model: flights.airport
-    pk: 5156
--   fields: {altitude: '154.00', city: 4827, country: 38, iata: SZZ, icao: EPSC, latitude: '53.584731',
-        longitude: '14.902206', name: Goleniow, timezone: '1.00'}
-    model: flights.airport
-    pk: 5157
 -   fields: {altitude: '166.00', city: 4830, country: 214, iata: SZW, icao: EDOP,
         latitude: '53.426997', longitude: '11.783436', name: Schwerin Parchim, timezone: '1.00'}
     model: flights.airport
     pk: 5160
--   fields: {altitude: '165.00', city: 4831, country: 11, iata: JTY, icao: LGPL, latitude: '36.579886',
-        longitude: '26.375822', name: Astypalaia, timezone: '2.00'}
-    model: flights.airport
-    pk: 5161
 -   fields: {altitude: '499.00', city: 4844, country: 66, iata: TLS, icao: LFBO, latitude: '43.629075',
         longitude: '1.363819', name: Blagnac, timezone: '1.00'}
     model: flights.airport
@@ -3893,14 +2240,6 @@
         latitude: '59.413317', longitude: '24.832844', name: Tallinn, timezone: '2.00'}
     model: flights.airport
     pk: 5198
--   fields: {altitude: '46.00', city: 4866, country: 188, iata: HVG, icao: ENHV, latitude: '70.990000',
-        longitude: '25.830000', name: Valan, timezone: '1.00'}
-    model: flights.airport
-    pk: 5203
--   fields: {altitude: '100.00', city: 4871, country: 161, iata: UCT, icao: \N, latitude: '63.340297',
-        longitude: '53.482592', name: Ukhta, timezone: '4.00'}
-    model: flights.airport
-    pk: 5208
 -   fields: {altitude: '1148.00', city: 4872, country: 177, iata: ILD, icao: LEDA,
         latitude: '41.727778', longitude: '0.535833', name: Lleida-Alguaire Airport,
         timezone: '1.00'}
@@ -3910,10 +2249,6 @@
         longitude: '7.497780', name: Langeoog Airport, timezone: '1.00'}
     model: flights.airport
     pk: 5227
--   fields: {altitude: '659.00', city: 2561, country: 142, iata: LGG, icao: EBLG,
-        latitude: '50.637417', longitude: '5.443222', name: Liege, timezone: '1.00'}
-    model: flights.airport
-    pk: 5232
 -   fields: {altitude: '202.00', city: 301, country: 19, iata: LGW, icao: EGKK, latitude: '51.148056',
         longitude: '-0.190278', name: Gatwick, timezone: '0.00'}
     model: flights.airport
@@ -3922,18 +2257,10 @@
         longitude: '23.425800', name: Aeroclub Cluj, timezone: '2.00'}
     model: flights.airport
     pk: 5240
--   fields: {altitude: '82.00', city: 4904, country: 161, iata: IAA, icao: UOII, latitude: '67.437200',
-        longitude: '86.621900', name: Igarka Airport, timezone: '8.00'}
-    model: flights.airport
-    pk: 5250
 -   fields: {altitude: '397.00', city: 4906, country: 165, iata: IAS, icao: LRIA,
         latitude: '47.178492', longitude: '27.620631', name: Iasi, timezone: '2.00'}
     model: flights.airport
     pk: 5253
--   fields: {altitude: '270.00', city: 4907, country: 161, iata: IAR, icao: UUDL,
-        latitude: '57.560667', longitude: '40.157369', name: Tunoshna, timezone: '4.00'}
-    model: flights.airport
-    pk: 5254
 -   fields: {altitude: '59.00', city: 4567, country: 110, iata: GSE, icao: ESGP, latitude: '57.774722',
         longitude: '11.870372', name: Save, timezone: '1.00'}
     model: flights.airport
@@ -3954,10 +2281,6 @@
         latitude: '53.864472', longitude: '27.539683', name: Minsk 1, timezone: '3.00'}
     model: flights.airport
     pk: 5287
--   fields: {altitude: '17.00', city: 4937, country: 67, iata: MHQ, icao: EFMA, latitude: '60.122203',
-        longitude: '19.898156', name: Mariehamn, timezone: '2.00'}
-    model: flights.airport
-    pk: 5288
 -   fields: {altitude: '194.00', city: 4939, country: 66, iata: ANE, icao: LFJR, latitude: '47.560300',
         longitude: '-0.312222', name: Angers-Loire Airport, timezone: '1.00'}
     model: flights.airport
@@ -3970,30 +2293,6 @@
         longitude: '3.113333', name: Fourchambault, timezone: '1.00'}
     model: flights.airport
     pk: 5293
--   fields: {altitude: '39.00', city: 3309, country: 142, iata: ANR, icao: EBAW, latitude: '51.189444',
-        longitude: '4.460278', name: Deurne, timezone: '1.00'}
-    model: flights.airport
-    pk: 5304
--   fields: {altitude: '43.00', city: 4953, country: 188, iata: ANX, icao: ENAN, latitude: '69.292500',
-        longitude: '16.144167', name: Andenes, timezone: '1.00'}
-    model: flights.airport
-    pk: 5306
--   fields: {altitude: '118.00', city: 4959, country: 161, iata: KRR, icao: URKK,
-        latitude: '45.034689', longitude: '39.170539', name: Pashkovskiy, timezone: '4.00'}
-    model: flights.airport
-    pk: 5312
--   fields: {altitude: '57.00', city: 4960, country: 188, iata: KRS, icao: ENCN, latitude: '58.204214',
-        longitude: '8.085369', name: Kjevik, timezone: '1.00'}
-    model: flights.airport
-    pk: 5313
--   fields: {altitude: '170.00', city: 4961, country: 213, iata: KRP, icao: EKKA,
-        latitude: '56.297458', longitude: '9.124628', name: Karup, timezone: '1.00'}
-    model: flights.airport
-    pk: 5314
--   fields: {altitude: '791.00', city: 4965, country: 38, iata: KRK, icao: EPKK, latitude: '50.077731',
-        longitude: '19.784836', name: Balice, timezone: '1.00'}
-    model: flights.airport
-    pk: 5318
 -   fields: {altitude: '221.00', city: 4966, country: 19, iata: KRH, icao: EGKR, latitude: '51.213612',
         longitude: '-0.138610', name: Redhill Aerodrome, timezone: '0.00'}
     model: flights.airport
@@ -4002,10 +2301,6 @@
         latitude: '67.821986', longitude: '20.336764', name: Kiruna, timezone: '1.00'}
     model: flights.airport
     pk: 5321
--   fields: {altitude: '240.00', city: 4969, country: 161, iata: KRO, icao: USUU,
-        latitude: '55.475300', longitude: '65.415600', name: Kurgan Airport, timezone: '6.00'}
-    model: flights.airport
-    pk: 5322
 -   fields: {altitude: '34.00', city: 4972, country: 110, iata: KRF, icao: ESNK, latitude: '63.048597',
         longitude: '17.768856', name: Kramfors Solleftea, timezone: '1.00'}
     model: flights.airport
@@ -4014,10 +2309,6 @@
         longitude: '-4.433056', name: Glasgow, timezone: '0.00'}
     model: flights.airport
     pk: 5348
--   fields: {altitude: '341.00', city: 4617, country: 38, iata: WMI, icao: EPMO, latitude: '52.451111',
-        longitude: '20.651667', name: Warsaw Modlin, timezone: '1.00'}
-    model: flights.airport
-    pk: 5353
 -   fields: {altitude: '1411.00', city: 5002, country: 74, iata: GVA, icao: LSGG,
         latitude: '46.238064', longitude: '6.108950', name: Geneve Cointrin, timezone: '1.00'}
     model: flights.airport
@@ -4026,18 +2317,10 @@
         longitude: '2.106189', name: Toussus Le Noble, timezone: '1.00'}
     model: flights.airport
     pk: 5370
--   fields: {altitude: '1073.00', city: 5011, country: 184, iata: TNL, icao: UKLT,
-        latitude: '49.310000', longitude: '25.420000', name: Ternopol, timezone: '2.00'}
-    model: flights.airport
-    pk: 5374
 -   fields: {altitude: '1649.00', city: 5025, country: 214, iata: HHN, icao: EDFH,
         latitude: '49.948672', longitude: '7.263892', name: Frankfurt Hahn, timezone: '1.00'}
     model: flights.airport
     pk: 5390
--   fields: {altitude: '0.00', city: 5026, country: 213, iata: ROD, icao: \N, latitude: '54.566700',
-        longitude: '11.283300', name: Rodby, timezone: '1.00'}
-    model: flights.airport
-    pk: 5391
 -   fields: {altitude: '65.00', city: 5034, country: 110, iata: LLA, icao: ESPA, latitude: '65.543758',
         longitude: '22.121989', name: Kallax, timezone: '1.00'}
     model: flights.airport
@@ -4078,18 +2361,6 @@
         longitude: '27.781500', name: Balti International Airport, timezone: '3.00'}
     model: flights.airport
     pk: 5463
--   fields: {altitude: '235.00', city: 5088, country: 38, iata: BZG, icao: EPBY, latitude: '53.096800',
-        longitude: '17.977700', name: Bydgoszcz Ignacy Jan Paderewski Airport, timezone: '1.00'}
-    model: flights.airport
-    pk: 5464
--   fields: {altitude: '789.00', city: 5093, country: 133, iata: BZO, icao: LIPB,
-        latitude: '46.460194', longitude: '11.326383', name: Bolzano, timezone: '1.00'}
-    model: flights.airport
-    pk: 5469
--   fields: {altitude: '663.00', city: 5096, country: 161, iata: BZK, icao: UUBP,
-        latitude: '53.214194', longitude: '34.176447', name: Bryansk, timezone: '4.00'}
-    model: flights.airport
-    pk: 5472
 -   fields: {altitude: '637.00', city: 5099, country: 159, iata: MVQ, icao: UMOO,
         latitude: '53.954900', longitude: '30.095100', name: Mogilev Airport, timezone: '3.00'}
     model: flights.airport
@@ -4098,23 +2369,6 @@
         latitude: '45.820800', longitude: '6.652220', name: Megeve Airport, timezone: '1.00'}
     model: flights.airport
     pk: 5481
--   fields: {altitude: '1030.00', city: 5106, country: 131, iata: MVA, icao: BIRL,
-        latitude: '65.655800', longitude: '-16.918100', name: Reykjahlid Airport,
-        timezone: '0.00'}
-    model: flights.airport
-    pk: 5484
--   fields: {altitude: '148.00', city: 5113, country: 133, iata: ALL, icao: LIMG,
-        latitude: '44.050608', longitude: '8.127428', name: Albenga, timezone: '1.00'}
-    model: flights.airport
-    pk: 5491
--   fields: {altitude: '644.00', city: 5135, country: 67, iata: KTT, icao: EFKT, latitude: '67.701022',
-        longitude: '24.846850', name: Kittila, timezone: '2.00'}
-    model: flights.airport
-    pk: 5515
--   fields: {altitude: '995.00', city: 5137, country: 38, iata: KTW, icao: EPKT, latitude: '50.474253',
-        longitude: '19.080019', name: Pyrzowice, timezone: '1.00'}
-    model: flights.airport
-    pk: 5517
 -   fields: {altitude: '63.00', city: 5163, country: 187, iata: WOE, icao: EHWO, latitude: '51.449092',
         longitude: '4.342031', name: Woensdrecht, timezone: '1.00'}
     model: flights.airport
@@ -4123,10 +2377,6 @@
         latitude: '50.865917', longitude: '7.142744', name: Koln Bonn, timezone: '1.00'}
     model: flights.airport
     pk: 5551
--   fields: {altitude: '65.00', city: 5170, country: 133, iata: PMO, icao: LICJ, latitude: '38.175958',
-        longitude: '13.091019', name: Palermo, timezone: '1.00'}
-    model: flights.airport
-    pk: 5559
 -   fields: {altitude: '1027.00', city: 5176, country: 110, iata: GEV, icao: ESNG,
         latitude: '67.132408', longitude: '20.814636', name: Gallivare, timezone: '1.00'}
     model: flights.airport
@@ -4139,19 +2389,10 @@
         longitude: '13.389444', name: Gesundbrunnen, timezone: '1.00'}
     model: flights.airport
     pk: 5581
--   fields: {altitude: '782.00', city: 5191, country: 133, iata: BGY, icao: LIME,
-        latitude: '45.673889', longitude: '9.704166', name: Bergamo Orio Al Serio,
-        timezone: '1.00'}
-    model: flights.airport
-    pk: 5585
 -   fields: {altitude: '610.00', city: 5194, country: 110, iata: VXO, icao: ESMX,
         latitude: '56.929144', longitude: '14.727994', name: Kronoberg, timezone: '1.00'}
     model: flights.airport
     pk: 5590
--   fields: {altitude: '65.00', city: 5201, country: 131, iata: THO, icao: BITN, latitude: '66.218500',
-        longitude: '-15.335600', name: Thorshofn Airport, timezone: '0.00'}
-    model: flights.airport
-    pk: 5597
 -   fields: {altitude: '137.00', city: 5202, country: 110, iata: THN, icao: ESGT,
         latitude: '58.318056', longitude: '12.345000', name: Trollhattan Vanersborg,
         timezone: '1.00'}
@@ -4173,10 +2414,6 @@
         longitude: '-0.401503', name: Souche, timezone: '1.00'}
     model: flights.airport
     pk: 5616
--   fields: {altitude: '1034.00', city: 5219, country: 188, iata: FDE, icao: \N, latitude: '61.392000',
-        longitude: '5.763000', name: Forde Bringeland, timezone: '1.00'}
-    model: flights.airport
-    pk: 5618
 -   fields: {altitude: '1367.00', city: 5221, country: 214, iata: FDH, icao: EDNY,
         latitude: '47.671317', longitude: '9.511486', name: Friedrichshafen, timezone: '1.00'}
     model: flights.airport
@@ -4189,18 +2426,6 @@
         longitude: '-0.556405', name: Angers St Laud, timezone: '1.00'}
     model: flights.airport
     pk: 5624
--   fields: {altitude: '479.00', city: 5226, country: 38, iata: QXR, icao: EPRA, latitude: '51.231978',
-        longitude: '21.124183', name: RADOM, timezone: '1.00'}
-    model: flights.airport
-    pk: 5625
--   fields: {altitude: '59.00', city: 5227, country: 11, iata: EFL, icao: LGKF, latitude: '38.120069',
-        longitude: '20.500481', name: Kefallinia, timezone: '2.00'}
-    model: flights.airport
-    pk: 5626
--   fields: {altitude: '52.00', city: 5231, country: 213, iata: RNN, icao: EKRN, latitude: '55.063267',
-        longitude: '14.759558', name: Bornholm Ronne, timezone: '1.00'}
-    model: flights.airport
-    pk: 5631
 -   fields: {altitude: '191.00', city: 5234, country: 110, iata: RNB, icao: ESDF,
         latitude: '56.266667', longitude: '15.265000', name: Ronneby, timezone: '1.00'}
     model: flights.airport
@@ -4213,10 +2438,6 @@
         latitude: '43.302061', longitude: '-8.377256', name: A Coruna, timezone: '1.00'}
     model: flights.airport
     pk: 5638
--   fields: {altitude: '156.00', city: 5239, country: 133, iata: LCC, icao: LIBN,
-        latitude: '40.239228', longitude: '18.133325', name: Lecce, timezone: '1.00'}
-    model: flights.airport
-    pk: 5640
 -   fields: {altitude: '8.00', city: 5240, country: 85, iata: LCA, icao: LCLK, latitude: '34.875117',
         longitude: '33.624850', name: Larnaca, timezone: '2.00'}
     model: flights.airport
@@ -4225,11 +2446,6 @@
         longitude: '-1.734794', name: St Jacques, timezone: '1.00'}
     model: flights.airport
     pk: 5642
--   fields: {altitude: '604.00', city: 5244, country: 38, iata: LCJ, icao: EPLL, latitude: '51.721881',
-        longitude: '19.398133', name: "\u0141\xF3d\u017A W\u0142adys\u0142aw Reymont
-            Airport", timezone: '1.00'}
-    model: flights.airport
-    pk: 5645
 -   fields: {altitude: '615.00', city: 5250, country: 165, iata: DVA, icao: \N, latitude: '45.515300',
         longitude: '22.581300', name: Aeroclub Deva, timezone: '2.00'}
     model: flights.airport
@@ -4242,22 +2458,10 @@
         latitude: '48.081364', longitude: '11.283067', name: Oberpfaffenhofen, timezone: '1.00'}
     model: flights.airport
     pk: 5656
--   fields: {altitude: '586.00', city: 3542, country: 184, iata: IEV, icao: UKKK,
-        latitude: '50.401694', longitude: '30.449697', name: Zhuliany Intl, timezone: '2.00'}
-    model: flights.airport
-    pk: 5658
 -   fields: {altitude: '923.00', city: 5259, country: 66, iata: OBS, icao: LFHO, latitude: '44.544236',
         longitude: '4.372192', name: Ardeche Meridionale, timezone: '1.00'}
     model: flights.airport
     pk: 5662
--   fields: {altitude: '194.00', city: 5260, country: 38, iata: IEG, icao: EPZG, latitude: '52.138517',
-        longitude: '15.798556', name: Babimost, timezone: '1.00'}
-    model: flights.airport
-    pk: 5663
--   fields: {altitude: '333.00', city: 5262, country: 184, iata: PLV, icao: UKHP,
-        latitude: '49.342610', longitude: '34.235510', name: Poltava, timezone: '3.00'}
-    model: flights.airport
-    pk: 5665
 -   fields: {altitude: '392.00', city: 28, country: 66, iata: CDG, icao: LFPG, latitude: '49.012779',
         longitude: '2.550000', name: Charles De Gaulle, timezone: '1.00'}
     model: flights.airport
@@ -4278,41 +2482,415 @@
         latitude: '46.176550', longitude: '21.262022', name: Arad, timezone: '2.00'}
     model: flights.airport
     pk: 5715
--   fields: {altitude: '19.00', city: 2021, country: 161, iata: ARH, icao: ULAA, latitude: '64.360281',
-        longitude: '40.430167', name: Talagi, timezone: '4.00'}
-    model: flights.airport
-    pk: 5721
 -   fields: {altitude: '137.00', city: 496, country: 110, iata: ARN, icao: ESSA, latitude: '59.651944',
         longitude: '17.918611', name: Arlanda, timezone: '1.00'}
     model: flights.airport
     pk: 5725
--   fields: {altitude: '508.00', city: 5315, country: 184, iata: HRK, icao: UKHH,
-        latitude: '49.924786', longitude: '36.289986', name: Osnova International
-            Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 5726
 -   fields: {altitude: '324.00', city: 5320, country: 110, iata: KVB, icao: ESGR,
         latitude: '58.456400', longitude: '13.972672', name: Skovde, timezone: '1.00'}
     model: flights.airport
     pk: 5732
--   fields: {altitude: '18.00', city: 5322, country: 11, iata: KVA, icao: LGKV, latitude: '40.913306',
-        longitude: '24.619223', name: Megas Alexandros Intl, timezone: '2.00'}
-    model: flights.airport
-    pk: 5734
--   fields: {altitude: '515.00', city: 5324, country: 161, iata: KVK, icao: ULMK,
-        latitude: '67.463300', longitude: '33.588300', name: Kirovsk-Apatity Airport,
-        timezone: '4.00'}
-    model: flights.airport
-    pk: 5736
--   fields: {altitude: '479.00', city: 5326, country: 161, iata: KVX, icao: USKK,
-        latitude: '58.503300', longitude: '49.348300', name: Pobedilovo Airport, timezone: '4.00'}
-    model: flights.airport
-    pk: 5738
 -   fields: {altitude: '126.00', city: 5345, country: 19, iata: WIC, icao: EGPC, latitude: '58.458889',
         longitude: '-3.093056', name: Wick, timezone: '0.00'}
     model: flights.airport
     pk: 5758
--   fields: {altitude: '69.00', city: 588, country: 11, iata: HEW, icao: \N, latitude: '37.893300',
-        longitude: '23.726100', name: Athen Helenikon Airport, timezone: '2.00'}
-    model: flights.airport
-    pk: 5763
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 20:50:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 5637, departure_time: null, flight_no: 27,
+        stops: 0}
+    model: flights.flight
+    pk: 1138
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 1641, departure_time: null, flight_no: 26,
+        stops: 0}
+    model: flights.flight
+    pk: 1139
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 17:10:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 5637, departure_time: null, flight_no: 23,
+        stops: 0}
+    model: flights.flight
+    pk: 1140
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 1641, departure_time: null, flight_no: 26,
+        stops: 0}
+    model: flights.flight
+    pk: 1141
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 11:15:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 5637, departure_time: null, flight_no: 19,
+        stops: 0}
+    model: flights.flight
+    pk: 1142
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 1641, departure_time: null, flight_no: 26,
+        stops: 0}
+    model: flights.flight
+    pk: 1143
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 13:55:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 5637, departure_time: null, flight_no: 31,
+        stops: 0}
+    model: flights.flight
+    pk: 1144
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 1641, departure_time: null, flight_no: 26,
+        stops: 0}
+    model: flights.flight
+    pk: 1145
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 09:55:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 332,
+        stops: 0}
+    model: flights.flight
+    pk: 1146
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 08:35:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 1641, departure_time: null, flight_no: 331,
+        stops: 0}
+    model: flights.flight
+    pk: 1147
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 22:50:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 326,
+        stops: 0}
+    model: flights.flight
+    pk: 1148
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1149
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 14:25:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 334,
+        stops: 0}
+    model: flights.flight
+    pk: 1150
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 08:35:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 1641, departure_time: null, flight_no: 331,
+        stops: 0}
+    model: flights.flight
+    pk: 1151
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 21:35:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 338,
+        stops: 0}
+    model: flights.flight
+    pk: 1152
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 08:35:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 1641, departure_time: null, flight_no: 331,
+        stops: 0}
+    model: flights.flight
+    pk: 1153
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 18:55:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 336,
+        stops: 0}
+    model: flights.flight
+    pk: 1154
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 08:35:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 1641, departure_time: null, flight_no: 331,
+        stops: 0}
+    model: flights.flight
+    pk: 1155
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 13:05:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 308,
+        stops: 0}
+    model: flights.flight
+    pk: 1156
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1157
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 15:55:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 314,
+        stops: 0}
+    model: flights.flight
+    pk: 1158
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1159
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 09:40:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 304,
+        stops: 0}
+    model: flights.flight
+    pk: 1160
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1161
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 11:15:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 306,
+        stops: 0}
+    model: flights.flight
+    pk: 1162
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1163
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 17:20:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 316,
+        stops: 0}
+    model: flights.flight
+    pk: 1164
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1165
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 18:15:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 3413, departure_time: null, flight_no: 1781,
+        stops: 0}
+    model: flights.flight
+    pk: 1166
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 20:30:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 5667, departure_time: null, flight_no: 1380,
+        stops: 0}
+    model: flights.flight
+    pk: 1167
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 09:00:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 3413, departure_time: null, flight_no: 1381,
+        stops: 0}
+    model: flights.flight
+    pk: 1168
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 19:20:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 5667, departure_time: null, flight_no: 1180,
+        stops: 0}
+    model: flights.flight
+    pk: 1169
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 22:20:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 3413, departure_time: null, flight_no: 1181,
+        stops: 0}
+    model: flights.flight
+    pk: 1170
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 20:30:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 5667, departure_time: null, flight_no: 1380,
+        stops: 0}
+    model: flights.flight
+    pk: 1171
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 17:10:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 5637, departure_time: null, flight_no: 5081,
+        stops: 0}
+    model: flights.flight
+    pk: 1172
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 1641, departure_time: null, flight_no: 5082,
+        stops: 0}
+    model: flights.flight
+    pk: 1173
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 13:55:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 5637, departure_time: null, flight_no: 5085,
+        stops: 0}
+    model: flights.flight
+    pk: 1174
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 1641, departure_time: null, flight_no: 5082,
+        stops: 0}
+    model: flights.flight
+    pk: 1175
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 20:15:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 322,
+        stops: 0}
+    model: flights.flight
+    pk: 1176
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1177
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 20:50:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 5637, departure_time: null, flight_no: 27,
+        stops: 0}
+    model: flights.flight
+    pk: 1178
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 1641, departure_time: null, flight_no: 26,
+        stops: 0}
+    model: flights.flight
+    pk: 1179
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 17:10:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 5637, departure_time: null, flight_no: 23,
+        stops: 0}
+    model: flights.flight
+    pk: 1180
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 1641, departure_time: null, flight_no: 26,
+        stops: 0}
+    model: flights.flight
+    pk: 1181
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 11:15:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 5637, departure_time: null, flight_no: 19,
+        stops: 0}
+    model: flights.flight
+    pk: 1182
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 1641, departure_time: null, flight_no: 26,
+        stops: 0}
+    model: flights.flight
+    pk: 1183
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 13:55:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 5637, departure_time: null, flight_no: 31,
+        stops: 0}
+    model: flights.flight
+    pk: 1184
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: WX, departure_airport: 1641, departure_time: null, flight_no: 26,
+        stops: 0}
+    model: flights.flight
+    pk: 1185
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 09:55:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 332,
+        stops: 0}
+    model: flights.flight
+    pk: 1186
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 08:35:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 1641, departure_time: null, flight_no: 331,
+        stops: 0}
+    model: flights.flight
+    pk: 1187
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 22:50:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 326,
+        stops: 0}
+    model: flights.flight
+    pk: 1188
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1189
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 14:25:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 334,
+        stops: 0}
+    model: flights.flight
+    pk: 1190
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 08:35:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 1641, departure_time: null, flight_no: 331,
+        stops: 0}
+    model: flights.flight
+    pk: 1191
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 21:35:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 338,
+        stops: 0}
+    model: flights.flight
+    pk: 1192
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 08:35:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 1641, departure_time: null, flight_no: 331,
+        stops: 0}
+    model: flights.flight
+    pk: 1193
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 18:55:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 336,
+        stops: 0}
+    model: flights.flight
+    pk: 1194
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 08:35:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 1641, departure_time: null, flight_no: 331,
+        stops: 0}
+    model: flights.flight
+    pk: 1195
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 13:05:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 308,
+        stops: 0}
+    model: flights.flight
+    pk: 1196
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1197
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 15:55:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 314,
+        stops: 0}
+    model: flights.flight
+    pk: 1198
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1199
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 09:40:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 304,
+        stops: 0}
+    model: flights.flight
+    pk: 1200
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1201
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 11:15:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 306,
+        stops: 0}
+    model: flights.flight
+    pk: 1202
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1203
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 17:20:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 316,
+        stops: 0}
+    model: flights.flight
+    pk: 1204
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1205
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 18:15:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 3413, departure_time: null, flight_no: 1781,
+        stops: 0}
+    model: flights.flight
+    pk: 1206
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 20:30:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 5667, departure_time: null, flight_no: 1380,
+        stops: 0}
+    model: flights.flight
+    pk: 1207
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 09:00:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 3413, departure_time: null, flight_no: 1381,
+        stops: 0}
+    model: flights.flight
+    pk: 1208
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 19:20:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 5667, departure_time: null, flight_no: 1180,
+        stops: 0}
+    model: flights.flight
+    pk: 1209
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 22:20:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 3413, departure_time: null, flight_no: 1181,
+        stops: 0}
+    model: flights.flight
+    pk: 1210
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 20:30:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 5667, departure_time: null, flight_no: 1380,
+        stops: 0}
+    model: flights.flight
+    pk: 1211
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 17:10:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 5637, departure_time: null, flight_no: 5081,
+        stops: 0}
+    model: flights.flight
+    pk: 1212
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 1641, departure_time: null, flight_no: 5082,
+        stops: 0}
+    model: flights.flight
+    pk: 1213
+-   fields: {arrival_airport: 1641, arrival_date: ! '2015-05-29 13:55:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 5637, departure_time: null, flight_no: 5085,
+        stops: 0}
+    model: flights.flight
+    pk: 1214
+-   fields: {arrival_airport: 5637, arrival_date: ! '2015-05-31 13:25:00+00:00', arrival_time: null,
+        carrier_code: AF, departure_airport: 1641, departure_time: null, flight_no: 5082,
+        stops: 0}
+    model: flights.flight
+    pk: 1215
+-   fields: {arrival_airport: 5667, arrival_date: ! '2015-05-29 20:15:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 3413, departure_time: null, flight_no: 322,
+        stops: 0}
+    model: flights.flight
+    pk: 1216
+-   fields: {arrival_airport: 3413, arrival_date: ! '2015-05-31 07:45:00+00:00', arrival_time: null,
+        carrier_code: BA, departure_airport: 5667, departure_time: null, flight_no: 303,
+        stops: 0}
+    model: flights.flight
+    pk: 1217
