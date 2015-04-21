@@ -3,7 +3,9 @@ from .models import Flight, Airport, Slice, HistoricSlice
 
 class AirportAdmin(admin.ModelAdmin):
     list_display = ('name', 'city', 'country')
-    search_fields =('name', 'iata')
+    search_fields =('name',
+                    'iata',
+                    'country__name')
 
 class FlightAdmin(admin.ModelAdmin):
     list_display =('departure_airport', 'arrival_airport')

@@ -270,15 +270,25 @@ def get_flight_prices(origin, destination, dates):
     r = requests.post(url, data = rendered, headers =headers)
     process_qpx(r.content, dates)
 
-def flight_price_lookup_logic():
+def flight_price_lookup_logic(limit=50, city=None):
     """Here we put the logic that dictates which city pairs for which dates the QPX API should be called for"""
-    slices = Slice.objects.all().order_by('price')[:50]
-    where_to_go =[]
-    for slice in slices:
-        data ={}
-        data['origin_city']:slice.origin,
-        data['destination']:slice.destination,
-        data['dates']:slice.dates
-        where_to_go.append(data)
-    return data
+    if city is None:
+        slices = Slice.objects.all().order_by('price')[:limit]
+        where_to_go =[]
+        for slice in slices:
+            data ={}
+            data['origin_city']= slice.origin,
+            data['destination']= slice.destination,
+            data['dates']= slice.dates
+            where_to_go.append(data)
+    else:
+        slices = Slice.objects.filter(origin=city).order_by('price')[:limit]
+        where_to_go =[]
+        for slice in slices:
+            data ={}
+            data['origin_city']= slice.origin,
+            data['destination']= slice.destination,
+            data['dates']= slice.dates
+            where_to_go.append(data)
+    return where_to_go
 

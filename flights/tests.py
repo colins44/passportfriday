@@ -11,7 +11,7 @@ from weekend.models import Dates
 from flights.models import Flight, Airport, Slice, HistoricSlice
 from location.models import City
 from datetime import timedelta, datetime
-from flights.utils import process_qpx
+from flights.utils import process_qpx, flight_price_lookup_logic
 from flights.qpx import flight_data, trip_dates, no_data
 from django.utils import timezone
 import json
@@ -127,6 +127,11 @@ class FixturesTest(TestCase):
         self.assertEqual(r.status_code, 201)
         self.assertEqual(Slice.objects.count(), 20)
         self.assertEqual(HistoricSlice.objects.count(), 0)
+
+    def test_flight_price_lookup_logic(self):
+        results = flight_price_lookup_logic()
+        self.assertEqual(results, 1)
+
 
 
 
