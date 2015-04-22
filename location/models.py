@@ -82,6 +82,9 @@ class Destinations(models.Model):
     def __unicode__(self):
         return self.origin.name
 
+    class Meta:
+        ordering = ('dates',)
+
 
 class Category(models.Model):
     name = models.CharField(blank=True, null=True, max_length=150, unique=True)

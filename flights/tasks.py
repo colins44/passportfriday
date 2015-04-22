@@ -1,12 +1,12 @@
 from __future__ import absolute_import
 from datetime import timedelta
-from flights.models import Flight
-from flights.utils import TemplateEmailer
+from flights.models import Flight, Slice
+from flights.utils import TemplateEmailer, get_flight_prices
 from celery import shared_task
 from flights.utils import get_flight_data
 from django.utils import timezone
+from location.models import City, Destinations
 from weekend.models import Dates
-from location.models import City
 
 
 @shared_task
@@ -31,30 +31,9 @@ def test_email():
                 )
         email.send()
 
-
-@shared_task
-def get_weekend_dates(days_from_now=120):
-    #TODO thes has to be better logic for this
-    now = timezone.now()
-    future = now + timedelta(days=days_from_now)
-    cut_off = now + timedelta(days=(days_from_now+4))
-    future_weekend = Dates.objects.get(departure_date__gte=future, departure_date__lte=cut_off)
-    return future_weekend
-
-
-@shared_task
-def get_airport_flight(airports = ['LHR', 'LGW'], hours = [18, 19, 20, 21, 22, 23], dates=None):
-    """get the inbound and outbound flight times for airports
-    this task should be run every week
-    first the function that gets the dates for that weekend should be called
-    Then this function can be called"""
-    if not dates:
-        #we will get the flights 120 days from now
-        future = (timezone.now())+timedelta(days=120)
-        dates = Dates.objects.filter(departure_date__gte=future)[:1][0]
-    for airport in airports:
-        for hour in hours:
-            get_flight_data(airport, dates, hour)
+def get_dates(days):
+    future_date = timezone.now()+timedelta(days=days)
+    return Dates.objects.filter(departure_date__gte=future_date)[:1][0]
 
 @shared_task
 def delete_old_flights():
@@ -67,13 +46,27 @@ def delete_old_flights():
         flight.delete()
 
 @shared_task
-def get_possible_destinations(dates, city=None):
+def get_upcoming_flights(days=120, airports = ['LHR', 'LGW'], hours = [18, 19, 20, 21, 22, 23]):
+    """get the inbound and outbound flight times for airports
+    this task should be run every week
+    first the function that gets the dates for that weekend should be called
+    Then this function can be called"""
+
+    dates = get_dates(days)
+    for airport in airports:
+        for hour in hours:
+            get_flight_data(airport, dates, hour)
+
+
+@shared_task
+def get_possible_destinations(days=120, city=None):
     '''pass a city code to this function to find and save a list of possible destinations
     this task should be run once a week on wednesdays to take into account for public holidays
     after this task the get flight prices should run to get prices for all these destinations
 
     This function should only be run once flight data for this weekend has been populated
-    So first run the task get_airport flight for that weekend, then runn this task'''
+    So first run the task get_airport flight for that weekend, then run this task'''
+    dates = get_dates(days)
     if city is None:
         city = City.objects.get(name='London', country__name='United Kingdom')
     else:
@@ -82,23 +75,19 @@ def get_possible_destinations(dates, city=None):
 
 
 @shared_task
-def flight_prices_lookup_logic():
-    #maybe here goes the logic as to how to lookup the flight and what is important to us
-    pass
-
-
-@shared_task
-def get_flight_prices(slice):
-    '''call the get flight prices function call here and update the slice prices'''
-    print 'colin'
-
+def get_inital_flight_prices(days=120):
+    dates = get_dates(days)
+    destinations = Destinations.objects.get(dates=dates)
+    cites = destinations.destinations.all()
+    for city in cites:
+        get_flight_prices(destinations.origin, city, dates)
 
 @shared_task
-def add():
-    print 'colin'
-    print '$$$$$$$$$$$$$$$$'
-    print '$$$$$$$$$$$$$$$$'
-    print '$$$$$$$$$$$$$$$$'
+def update_flight_prices(limit):
+    slices = Slice.objects.all().order_by('price')[:limit]
+    for slice in slices:
+        get_flight_prices(slice.origin, slice.destination, slice.dates)
+
 
 
 
