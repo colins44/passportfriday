@@ -9,9 +9,10 @@ Replace this with more appropriate tests for your application.
 from django.test import TestCase
 from weekend.models import Dates
 from flights.models import Flight, Airport, Slice, HistoricSlice
-from location.models import City
+from location.models import City, Destinations
 from datetime import timedelta, datetime
-from flights.utils import process_qpx, flight_price_lookup_logic
+from flights.utils import process_qpx, flight_price_lookup_logic, get_flight_data
+from flights.tasks import get_dates
 from flights.qpx import flight_data, trip_dates, no_data
 from django.utils import timezone
 import json
@@ -94,6 +95,8 @@ class FixturesTest(TestCase):
         self.assertEqual(results[0], london)
         self.assertEqual(results[2], self.weekend)
         self.assertEqual(len(results[1]), 5)
+        dest = Destinations.objects.get(origin=results[0], dates=results[2])
+        self.assertEqual(len(dest.destinations.all()), 5)
 
 
     def test_process_qpx(self):
@@ -131,6 +134,25 @@ class FixturesTest(TestCase):
     def test_flight_price_lookup_logic(self):
         results = flight_price_lookup_logic()
         self.assertEqual(results, 1)
+
+    def test_get_flight_data(self):
+        #going to get flights from Glasgow between 9 and 11
+        dates = get_dates(120)
+        hours = [9,10]
+        airport = Airport.objects.get(iata='GLA')
+        for hour in hours:
+            get_flight_data(airport.iata, dates, hour)
+        outbound_flights = Flight.objects.filter(departure_airport=airport, departure_date=dates.departure_date)
+        inbound_flights = Flight.objects.filter(arrival_airport=airport, departure_date=dates.return_date)
+        outbound_flight = outbound_flights[0]
+        inbound_flight = inbound_flights[0]
+        self.assertEqual(outbound_flight.departure_airport, airport)
+        self.assertEqual(outbound_flight.departure_time.date(), dates.departure_date)
+        self.assertEqual(inbound_flight.departure_airport, airport)
+        self.assertEqual(inbound_flight.departure_time.date(), dates.return_date)
+
+
+
 
 
 

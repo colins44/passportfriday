@@ -9,7 +9,12 @@ class AirportAdmin(admin.ModelAdmin):
 
 class FlightAdmin(admin.ModelAdmin):
     list_display =('departure_airport', 'arrival_airport')
-    search_fields = ('departure_airport__name', 'arrival_airport__name', 'flight_no', 'carrier_code')
+    search_fields = ('departure_airport__name',
+                     'departure_airport__city__name',
+                     'arrival_airport__name',
+                     'arrival_airport__city__name',
+                     'flight_no',
+                     'carrier_code')
     list_filter = ('departure_time',)
 
 class SliceAdmin(admin.ModelAdmin):

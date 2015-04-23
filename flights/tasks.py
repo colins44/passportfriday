@@ -39,11 +39,12 @@ def get_dates(days):
 def delete_old_flights():
     """delete old flights to save DB space"""
     #TODO set up con job to run this every week
-    now = timezone.now
+    now = timezone.now()
     one_week_ago = now - timedelta(days=7)
     flights = Flight.objects.filter(departure_time__lte=one_week_ago)
     for flight in flights:
         flight.delete()
+    print 'flights deleted'
 
 @shared_task
 def get_upcoming_flights(days=120, airports = ['LHR', 'LGW'], hours = [18, 19, 20, 21, 22, 23]):
@@ -56,6 +57,10 @@ def get_upcoming_flights(days=120, airports = ['LHR', 'LGW'], hours = [18, 19, 2
     for airport in airports:
         for hour in hours:
             get_flight_data(airport, dates, hour)
+    print '$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$'
 
 
 @shared_task
@@ -72,6 +77,9 @@ def get_possible_destinations(days=120, city=None):
     else:
         pass
     city.possible_destinations(dates)
+    print '$$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$$'
 
 
 @shared_task
@@ -84,10 +92,23 @@ def get_inital_flight_prices(days=120):
 
 @shared_task
 def update_flight_prices(limit):
+    print '###################'
+    print '###################'
+    print '###################'
     slices = Slice.objects.all().order_by('price')[:limit]
     for slice in slices:
+        print slice.origin.name
+        print slice.dates.departure_date
+        print slice.dates.return_date
+        print slice.destination.name
         get_flight_prices(slice.origin, slice.destination, slice.dates)
 
+@shared_task
+def add():
+    print '$$$$$$$$$$$'
+    print '$$$$$$$$$$$'
+    print '$$$$$$$$$$$'
+    print '$$$$$$$$$$$'
 
 
 

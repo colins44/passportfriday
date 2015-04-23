@@ -47,12 +47,14 @@ class City(models.Model):
         from flights.models import Flight
         '''pass a dates object to this function and it will return a list of cities you will be able
             to fly to for the week in question'''
-        outbound_flights = Flight.objects.filter(departure_airport__city=self,
+        outbound_flights = Flight.objects.filter(
+                                                departure_airport__city=self,
                                                  departure_time__year=dates.departure_date.year,
                                                  departure_time__month=dates.departure_date.month,
                                                  departure_time__day=dates.departure_date.day,
                                                  ).exclude(arrival_airport__country=self.country)
-        inbound_flights = Flight.objects.filter(arrival_airport__city=self,
+        inbound_flights = Flight.objects.filter(
+                                                arrival_airport__city=self,
                                                 departure_time__year=dates.return_date.year,
                                                 departure_time__month=dates.return_date.month,
                                                 departure_time__day=dates.return_date.day,
@@ -69,7 +71,8 @@ class City(models.Model):
         cites = set(outbound_cities).intersection(inbound_cites)
         destinations, created = Destinations.objects.get_or_create(origin=self,
                                                                    dates=dates)
-        destinations.destinations = cites
+        for city in cites:
+            destinations.destinations.add(city)
         destinations.save()
         return self, cites, dates
 

@@ -7,11 +7,7 @@ db:
 # redis container
 redis:
   image: redis:2.8.19
-#flower container
-#flower:
-#  image: image_name
-#  posts:
-#    - "5000:5000"
+
 # rabbitmq container
 rabbitmq:
   image: tutum/rabbitmq
@@ -44,7 +40,6 @@ worker:
     - db:db
     - rabbitmq:rabbit
     - redis:redis
-#    - flower:flower
 
 
 

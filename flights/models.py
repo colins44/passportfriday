@@ -25,7 +25,7 @@ class Flight(models.Model):
     arrival_time = models.DateTimeField(blank=True, null=True)
     flight_no = models.IntegerField(blank=True, null=True)
     carrier_code = models.CharField(max_length=5, blank=True, null=True)
-    arrival_date = models.DateTimeField(blank=True, null=True)
+    # arrival_date = models.DateTimeField(blank=True, null=True)
     stops = models.IntegerField(blank=True, null=True, default=0)
 
     def get_outbound_flights(self):

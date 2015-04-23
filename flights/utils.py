@@ -193,12 +193,11 @@ def get_flight_data(airport, dates, hour):
 
         for flight in outbound_flights['scheduledFlights']:
             if flight["isCodeshare"] is False:
-
                 Airport.objects.get_or_create(iata=flight['departureAirportFsCode'])
                 Airport.objects.get_or_create(iata=flight['arrivalAirportFsCode'])
 
-                departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
-                arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
+                departure_date = datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
+                arrival_date = datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
                 departure_airport = Airport.objects.get(iata=flight['departureAirportFsCode'])
                 arrival_airport = Airport.objects.get(iata=flight['arrivalAirportFsCode'])
                 Flight.objects.create(departure_airport=departure_airport,
@@ -237,8 +236,8 @@ def get_flight_data(airport, dates, hour):
                 Airport.objects.get_or_create(iata=flight['departureAirportFsCode'])
                 Airport.objects.get_or_create(iata=flight['arrivalAirportFsCode'])
 
-                departure_date = datetime.datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
-                arrival_date = datetime.datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
+                departure_date = datetime.strptime(flight['departureTime'], '%Y-%m-%dT%H:%M:%S.000')
+                arrival_date = datetime.strptime(flight['arrivalTime'], '%Y-%m-%dT%H:%M:%S.000')
                 departure_airport = Airport.objects.get(iata=flight['departureAirportFsCode'])
                 arrival_airport = Airport.objects.get(iata=flight['arrivalAirportFsCode'])
                 Flight.objects.create(departure_airport=departure_airport,

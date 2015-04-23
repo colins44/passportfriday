@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import City, Country, Currency, Activity, Category
+from .models import City, Country, Currency, Activity, Category, Destinations
 
 admin.site.register(Activity)
 
@@ -22,5 +22,6 @@ class CurrencyAdmin(admin.ModelAdmin):
     list_display = ('name', 'symbol', 'code')
 
 admin.site.register(Currency, CurrencyAdmin)
+admin.site.register(Destinations)
 
 # Register your models here.
