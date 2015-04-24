@@ -11,7 +11,7 @@ from weekend.models import Dates
 from flights.models import Flight, Airport, Slice, HistoricSlice
 from location.models import City, Destinations
 from datetime import timedelta, datetime
-from flights.utils import process_qpx, flight_price_lookup_logic, get_flight_data
+from flights.utils import process_qpx, flight_price_lookup_logic, get_flight_data, get_flight_prices
 from flights.tasks import get_dates
 from flights.qpx import flight_data, trip_dates, no_data
 from django.utils import timezone
@@ -131,9 +131,6 @@ class FixturesTest(TestCase):
         self.assertEqual(Slice.objects.count(), 20)
         self.assertEqual(HistoricSlice.objects.count(), 0)
 
-    # def test_flight_price_lookup_logic(self):
-    #     results = flight_price_lookup_logic()
-    #     self.assertEqual(results, 1)
 
     def test_get_flight_data(self):
         #going to get flights from LHR between 9 and 10
@@ -161,6 +158,17 @@ class FixturesTest(TestCase):
         self.assertEqual(inbound_flight.arrival_airport, airport)
         self.assertEqual(inbound_flight.arrival_time.date(), dates.return_date)
 
+
+    def test_get_flight_prices(self):
+        """get the flight prices from london to paris 10 days from now, then find those slices in the DB"""
+        London = City.objects.get(name ='London', country__name="United Kingdom")
+        Paris = City.objects.get(name='Paris')
+        dates = get_dates(10)
+        get_flight_prices(London, Paris, dates)
+        slices = Slice.objects.filter(origin=London, destination=Paris)
+        self.assertEqual(slices[0].origin, London)
+        self.assertEqual(slices[0].destination, Paris)
+        self.assertEqual(slices[0].dates, dates)
 
 
 

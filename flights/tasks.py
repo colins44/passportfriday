@@ -85,9 +85,11 @@ def get_possible_destinations(days=120, city=None):
 @shared_task
 def get_inital_flight_prices(days=120):
     dates = get_dates(days)
-    destinations = Destinations.objects.get(dates=dates)[:1]
+    destinations = Destinations.objects.filter(dates=dates)[:1][0]
     cites = destinations.destinations.all()
-    for city in cites:
+    for city in cites[:50]:
+        print city.name
+        print city.country
         get_flight_prices(destinations.origin, city, dates)
 
 @shared_task

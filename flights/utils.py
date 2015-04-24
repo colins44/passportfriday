@@ -28,7 +28,7 @@ template ="""{
       },
       {
         "origin": "{{ destination.code }}",
-        "destination": "{{ rorigin.code }}",
+        "destination": "{{ origin.code }}",
         "date": "{{ dates.return_date|date:"c" }}",
         "maxStops": 0,
         "permittedDepartureTime": {
@@ -118,6 +118,15 @@ def process_qpx(qpx_data, dates):
         returned_data = qpx_data
     #first you have to find all the other slices for that destination for that date and delete there
     #this is cause prices will go up, but before we delete the slice we should log the price between the two cites
+    print '$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$'
+    print qpx_data
+    print '$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$'
+    print '$$$$$$$$$$$$$'
     trip_data = returned_data.get('trips').get('data')
     try:
         origin_city = trip_data.get('city')[0]
@@ -267,6 +276,15 @@ def get_flight_prices(origin, destination, dates):
     headers ={'Content-type': 'application/json'}
     url = 'https://www.googleapis.com/qpxExpress/v1/trips/search?key=%s' % QPX_APIKEY
     r = requests.post(url, data = rendered, headers =headers)
+    print '!!!!!!!!!!!!!'
+    print '!!!!!!!!!!!!!'
+    print '!!!!!!!!!!!!!'
+    print '!!!!!!!!!!!!!'
+    print rendered
+    print '!!!!!!!!!!!!!'
+    print '!!!!!!!!!!!!!'
+    print '!!!!!!!!!!!!!'
+    print '!!!!!!!!!!!!!'
     process_qpx(r.content, dates)
 
 def flight_price_lookup_logic(limit=50, city=None):
