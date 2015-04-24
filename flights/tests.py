@@ -131,25 +131,35 @@ class FixturesTest(TestCase):
         self.assertEqual(Slice.objects.count(), 20)
         self.assertEqual(HistoricSlice.objects.count(), 0)
 
-    def test_flight_price_lookup_logic(self):
-        results = flight_price_lookup_logic()
-        self.assertEqual(results, 1)
+    # def test_flight_price_lookup_logic(self):
+    #     results = flight_price_lookup_logic()
+    #     self.assertEqual(results, 1)
 
     def test_get_flight_data(self):
-        #going to get flights from Glasgow between 9 and 11
+        #going to get flights from LHR between 9 and 10
         dates = get_dates(120)
-        hours = [9,10]
-        airport = Airport.objects.get(iata='GLA')
+        hours = [9,]
+        airport = Airport.objects.get(iata='LHR')
         for hour in hours:
             get_flight_data(airport.iata, dates, hour)
-        outbound_flights = Flight.objects.filter(departure_airport=airport, departure_date=dates.departure_date)
-        inbound_flights = Flight.objects.filter(arrival_airport=airport, departure_date=dates.return_date)
+        outbound_flights = Flight.objects.filter(
+            departure_airport=airport,
+            departure_time__year=dates.departure_date.year,
+            departure_time__month=dates.departure_date.month,
+            departure_time__day=dates.departure_date.day,
+        )
+        inbound_flights = Flight.objects.filter(
+            arrival_airport=airport,
+            departure_time__year=dates.return_date.year,
+            departure_time__month=dates.return_date.month,
+            departure_time__day=dates.return_date.day,
+        )
         outbound_flight = outbound_flights[0]
         inbound_flight = inbound_flights[0]
         self.assertEqual(outbound_flight.departure_airport, airport)
         self.assertEqual(outbound_flight.departure_time.date(), dates.departure_date)
-        self.assertEqual(inbound_flight.departure_airport, airport)
-        self.assertEqual(inbound_flight.departure_time.date(), dates.return_date)
+        self.assertEqual(inbound_flight.arrival_airport, airport)
+        self.assertEqual(inbound_flight.arrival_time.date(), dates.return_date)
 
 
 

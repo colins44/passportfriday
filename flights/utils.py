@@ -220,9 +220,9 @@ def get_flight_data(airport, dates, hour):
                 city.save()
 
         url = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/%s/arriving/%s/%s/%s/%d?appId=%s&appKey=%s" % (airport,
-                                                                                                                        dates.departure_date.year,
-                                                                                                                        dates.departure_date.month,
-                                                                                                                        dates.departure_date.day,
+                                                                                                                        dates.return_date.year,
+                                                                                                                        dates.return_date.month,
+                                                                                                                        dates.return_date.day,
                                                                                                                         hour,
                                                                                                                         settings.FLIGHTSTATS_APPID,
                                                                                                                         settings.FLIGHTSTATS_APPKEY)

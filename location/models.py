@@ -44,37 +44,42 @@ class City(models.Model):
         return self.name
 
     def possible_destinations(self, dates):
-        from flights.models import Flight
         '''pass a dates object to this function and it will return a list of cities you will be able
-            to fly to for the week in question'''
-        outbound_flights = Flight.objects.filter(
-                                                departure_airport__city=self,
-                                                 departure_time__year=dates.departure_date.year,
-                                                 departure_time__month=dates.departure_date.month,
-                                                 departure_time__day=dates.departure_date.day,
-                                                 ).exclude(arrival_airport__country=self.country)
-        inbound_flights = Flight.objects.filter(
-                                                arrival_airport__city=self,
-                                                departure_time__year=dates.return_date.year,
-                                                departure_time__month=dates.return_date.month,
-                                                departure_time__day=dates.return_date.day,
-                                                ).exclude(departure_airport__country=self.country)
-        #make two lists of all the cities
-        outbound_cities = []
-        inbound_cites = []
-        for flight in outbound_flights:
-            outbound_cities.append(flight.arrival_airport.city)
-        for flight in inbound_flights:
-            inbound_cites.append(flight.departure_airport.city)
-
-        # compare the lists and get the cites that match
-        cites = set(outbound_cities).intersection(inbound_cites)
+                to fly to for the week in question'''
+        from flights.models import Flight
         destinations, created = Destinations.objects.get_or_create(origin=self,
                                                                    dates=dates)
-        for city in cites:
-            destinations.destinations.add(city)
-        destinations.save()
-        return self, cites, dates
+        if created:
+            outbound_flights = Flight.objects.filter(
+                departure_airport__city=self,
+                departure_time__year=dates.departure_date.year,
+                departure_time__month=dates.departure_date.month,
+                departure_time__day=dates.departure_date.day,
+            ).exclude(arrival_airport__country=self.country)
+            inbound_flights = Flight.objects.filter(
+                arrival_airport__city=self,
+                departure_time__year=dates.return_date.year,
+                departure_time__month=dates.return_date.month,
+                departure_time__day=dates.return_date.day,
+            ).exclude(departure_airport__country=self.country)
+            #make two lists of all the cities
+            outbound_cities = []
+            inbound_cites = []
+            for flight in outbound_flights:
+                outbound_cities.append(flight.arrival_airport.city)
+            for flight in inbound_flights:
+                inbound_cites.append(flight.departure_airport.city)
+
+            # compare the lists and get the cites that match
+            cites = set(outbound_cities).intersection(inbound_cites)
+            destinations, created = Destinations.objects.get_or_create(origin=self,
+                                                                       dates=dates)
+            for city in cites:
+                destinations.destinations.add(city)
+            destinations.save()
+            return self, cites, dates
+        else:
+            return destinations
 
 class Destinations(models.Model):
     '''There is probs a better model name for this'''
