@@ -13,6 +13,7 @@ apt-get -y install postgresql libpq-dev python-dev python-pip git \
 # environment specific packages
 apt-get -y install ack-grep python-pygraphviz
 
+
 update-rc.d elasticsearch defaults 95 10
 /etc/init.d/elasticsearch start
 

@@ -29,21 +29,31 @@ settings.CELERYBEAT_SCHEDULE = {
     #second get the upcoming flights schedule from all london airports
     'get_upcoming_flights': {
         'task': 'flights.tasks.get_upcoming_flights',
-        'schedule': crontab(minute=23),
+        'schedule': crontab(53),
         'args': ()
     },
     # #Third find possible destinations
     'get_possible_destinations': {
         'task': 'flights.tasks.get_possible_destinations',
-        'schedule': crontab(minute=27),
+        'schedule': crontab(minute=57),
         'args': ()
     },
-    # # #Fourth get the flight prices for the possible destinations
+    # # # #Fourth get the flight prices for the possible destinations
     'get_flight_prices': {
         'task': 'flights.tasks.get_inital_flight_prices',
-        'schedule': crontab(minute=59),
+        'schedule': crontab(minute=05),
         'args': ()
     },
+    # 'add-every-minute': {
+    #     'task': 'flights.tasks.add',
+    #     'schedule': crontab(),
+    #     'args': ()
+    # },
+    #     'count-every-minute': {
+    #     'task': 'flights.tasks.count',
+    #     'schedule': crontab(),
+    #     'args': ()
+    # },
     #Once the above tasks have been run we can uses our qpx daily quota to look up flight prices on the other week days
     #this setting updates the 10 cheapest slices 5 times a day, except for the day we get intial prices
     # 'update_flight_prices': {

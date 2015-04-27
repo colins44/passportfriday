@@ -355,6 +355,8 @@ INSTALLED_APPS = (
     'location',
     'accommodation',
     'genericadmin',
+    'djcelery',
+    'kombu.transport.django',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -377,6 +379,10 @@ ROOT_URLCONF = 'passportfridays.urls'
 WSGI_APPLICATION = 'passportfridays.wsgi.application'
 
 AUTH_USER_MODEL = 'email_user.EmailUser'
+
+import djcelery
+djcelery.setup_loader()
+BROKER_URL = 'django://'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
@@ -507,34 +513,34 @@ LOGGING = {
 
 # Redis
 
-REDIS_PORT = 6379
-REDIS_DB = 0
-REDIS_HOST = os.environ.get('REDIS_PORT_6379_TCP_ADDR', '127.0.0.1')
-
-RABBIT_HOSTNAME = os.environ.get('RABBIT_PORT_5672_TCP', 'localhost:5672')
-
-
-if RABBIT_HOSTNAME.startswith('tcp://'):
-    RABBIT_HOSTNAME = RABBIT_HOSTNAME.split('//')[1]
-
-BROKER_URL = os.environ.get('BROKER_URL',
-                            '')
-if not BROKER_URL:
-    BROKER_URL = 'amqp://{user}:{password}@{hostname}/{vhost}/'.format(
-        user=os.environ.get('RABBIT_ENV_USER', 'admin'),
-        password=os.environ.get('RABBIT_ENV_RABBITMQ_PASS', 'mypass'),
-        hostname=RABBIT_HOSTNAME,
-        vhost=os.environ.get('RABBIT_ENV_VHOST', ''))
-
-
+# REDIS_PORT = 6379
+# REDIS_DB = 0
+# REDIS_HOST = os.environ.get('REDIS_PORT_6379_TCP_ADDR', '127.0.0.1')
+#
+# RABBIT_HOSTNAME = os.environ.get('RABBIT_PORT_5672_TCP', 'localhost:5672')
+#
+#
+# if RABBIT_HOSTNAME.startswith('tcp://'):
+#     RABBIT_HOSTNAME = RABBIT_HOSTNAME.split('//')[1]
+#
+# BROKER_URL = os.environ.get('BROKER_URL',
+#                             '')
+# if not BROKER_URL:
+#     BROKER_URL = 'amqp://{user}:{password}@{hostname}/{vhost}/'.format(
+#         user=os.environ.get('RABBIT_ENV_USER', 'admin'),
+#         password=os.environ.get('RABBIT_ENV_RABBITMQ_PASS', 'mypass'),
+#         hostname=RABBIT_HOSTNAME,
+#         vhost=os.environ.get('RABBIT_ENV_VHOST', ''))
 
 
-BROKER_HEARTBEAT = '?heartbeat=30'
-if not BROKER_URL.endswith(BROKER_HEARTBEAT):
-    BROKER_URL += BROKER_HEARTBEAT
-
-BROKER_POOL_LIMIT = 1
-BROKER_CONNECTION_TIMEOUT = 10
+#
+#
+# BROKER_HEARTBEAT = '?heartbeat=30'
+# if not BROKER_URL.endswith(BROKER_HEARTBEAT):
+#     BROKER_URL += BROKER_HEARTBEAT
+#
+# BROKER_POOL_LIMIT = 1
+# BROKER_CONNECTION_TIMEOUT = 10
 
 # Celery configuration
 
