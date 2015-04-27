@@ -18,6 +18,7 @@ Vagrant.configure("2") do |config|
 
     # run provisioner, based on environment
     # TODO: replace scripts with proper Puppet recipes
+    config.vm.network "forwarded_port", guest: 8000, host: 8000
     config.vm.provision "shell", path: "conf/#{BUILD_ENVIRONMENT}/provision.sh"
 
 end

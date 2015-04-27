@@ -21,7 +21,7 @@ ssh-keyscan github.com > /etc/ssh/ssh_known_hosts
 # TODO: check if the default username and database already exist
 #       so we can re-run provision repeatedly
 sudo -u postgres createuser -d vagrant || true
-sudo -u postgres createdb skylark || true
+sudo -u postgres createdb passportfridays || true
 
 cd /vagrant
 

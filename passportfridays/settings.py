@@ -381,13 +381,24 @@ AUTH_USER_MODEL = 'email_user.EmailUser'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-#docker DB setup
+# #docker DB setup
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'HOST': 'db',
+#         'PORT': 5432,
+#     }
+# }
+#vagrant DB setup
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
+        'NAME': 'passportfridays',
+        'USER': 'devuser',
+        'PASSWORD': 'clownshoes',
+        'HOST': 'localhost',
         'PORT': 5432,
     }
 }
