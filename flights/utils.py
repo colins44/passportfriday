@@ -11,7 +11,7 @@ from weekend.models import Dates
 from datetime import datetime
 from time import sleep
 from django.template import Context, Template, loader
-from passportfridays.settings import QPX_APIKEY
+from django.conf import settings
 
 template ="""{
   "request": {
@@ -274,7 +274,7 @@ def get_flight_prices(origin, destination, dates):
     t = Template(template)
     rendered = t.render(Context({'origin':origin, 'destination':destination, 'dates':dates}))
     headers ={'Content-type': 'application/json'}
-    url = 'https://www.googleapis.com/qpxExpress/v1/trips/search?key=%s' % QPX_APIKEY
+    url = 'https://www.googleapis.com/qpxExpress/v1/trips/search?key=%s' % settings.QPX_APIKEY
     r = requests.post(url, data = rendered, headers =headers)
     print '!!!!!!!!!!!!!'
     print '!!!!!!!!!!!!!'
