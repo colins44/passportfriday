@@ -1,36 +1,36 @@
 """
-Django settings for pf2 project.
+django settings for pf2 project.
 
-For more information on this file, see
+for more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
 
-For the full list of settings and their values, see
+for the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# build paths inside the project like this: os.path.join(base_dir, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-from kombu import Exchange, Queue
+base_dir = os.path.dirname(os.path.dirname(__file__))
+# from kombu import exchange, queue
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
+# quick-start development settings - unsuitable for production
+# see https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# security warning: keep the secret key used in production secret!
 SECRET_KEY = 'cmhz2hig9o-^va1y=8oeg-_xf54(40=6x+3%qnf0ttd+mgeoxh'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# security warning: don't run with debug turned on in production!
+debug = True
 
-TEMPLATE_DEBUG = True
+template_debug = True
 
-ALLOWED_HOSTS = []
+allowed_hosts = []
 
 
-# Application definition
+# application definition
 
-INSTALLED_APPS = (
+installed_apps = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,185 +46,186 @@ INSTALLED_APPS = (
     'genericadmin',
     'djcelery',
     'kombu.transport.django',
+    'gunicorn',
 )
 
-MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+middleware_classes = (
+    'django.contrib.sessions.middleware.sessionmiddleware',
+    'django.middleware.common.commonmiddleware',
+    'django.middleware.csrf.csrfviewmiddleware',
+    'django.contrib.auth.middleware.authenticationmiddleware',
+    'django.contrib.auth.middleware.sessionauthenticationmiddleware',
+    'django.contrib.messages.middleware.messagemiddleware',
+    'django.middleware.clickjacking.xframeoptionsmiddleware',
 )
 
-AUTHENTICATION_BACKENDS = (
-        # 'email_user.backends.EmailUserAuth',
-        'django.contrib.auth.backends.ModelBackend',
+authentication_backends = (
+        # 'email_user.backends.emailuserauth',
+        'django.contrib.auth.backends.modelbackend',
 )
 
-ROOT_URLCONF = 'passportfridays.urls'
+root_urlconf = 'passportfridays.urls'
 
-WSGI_APPLICATION = 'passportfridays.wsgi.application'
+wsgi_application = 'passportfridays.wsgi.application'
 
-AUTH_USER_MODEL = 'email_user.EmailUser'
+auth_user_model = 'email_user.emailuser'
 
-import djcelery
-djcelery.setup_loader()
-BROKER_URL = 'django://'
+# import djcelery
+# djcelery.setup_loader()
+# broker_url = 'django://'
 
 
-#vagrant DB setup
-DATABASES = {
+#vagrant db setup
+databases = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'passportfridays',
-        'USER': 'devuser',
-        'PASSWORD': 'clownshoes',
-        'HOST': 'localhost',
-        'PORT': 5432,
+        'engine': 'django.db.backends.postgresql_psycopg2',
+        'name': 'passportfridays',
+        'user': 'devuser',
+        'password': 'clownshoes',
+        'host': 'localhost',
+        'port': 5432,
     }
 }
 
-#Covers regular testing and django-coverage
+#covers regular testing and django-coverage
 import sys
 if 'test' in sys.argv or 'test_coverage' in sys.argv:
-    DATABASES['default']['engine'] = 'sqlite3'
+    databases['default']['engine'] = 'sqlite3'
 
-# Internationalization
+# internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
+ROOT_URLCONF = 'passportfridays.urls'
+email_backend = 'django.core.mail.backends.smtp.emailbackend'
+# email_backend = 'django.core.mail.backends.console.emailbackend'
+email_use_tls = True
+email_host = 'smtp.gmail.com'
+email_port = 587
+email_host_user = 'colin.pringle-wood@ostmodern.co.uk'
+email_host_password = 'thisisthepassword'
+default_from_email = 'colin.pringle-wood@ostmodern.co.uk'
+default_to_email = 'colin.pringle-wood@ostmodern.co.uk'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'colin.pringle-wood@ostmodern.co.uk'
-EMAIL_HOST_PASSWORD = 'thisisthepassword'
-DEFAULT_FROM_EMAIL = 'colin.pringle-wood@ostmodern.co.uk'
-DEFAULT_TO_EMAIL = 'colin.pringle-wood@ostmodern.co.uk'
+default_from_email = 'the passport fridays team <noreply@passportfridays.com>'
+default_from_name = 'the passport fridays team'
 
-DEFAULT_FROM_EMAIL = 'The Passport Fridays Team <noreply@passportfridays.com>'
-DEFAULT_FROM_NAME = 'The Passport Fridays Team'
+login_redirect_url = '/account/'
+logout_redirect_url = '/'
 
-LOGIN_REDIRECT_URL = '/account/'
-LOGOUT_REDIRECT_URL = '/'
+# redis
 
-# Redis
+redis_port = 6379
+redis_db = 0
+redis_host = os.environ.get('redis_port_6379_tcp_addr', '127.0.0.1')
 
-REDIS_PORT = 6379
-REDIS_DB = 0
-REDIS_HOST = os.environ.get('REDIS_PORT_6379_TCP_ADDR', '127.0.0.1')
+rabbit_hostname = os.environ.get('rabbit_port_5672_tcp', 'localhost:5672')
 
-RABBIT_HOSTNAME = os.environ.get('RABBIT_PORT_5672_TCP', 'localhost:5672')
+language_code = 'en-us'
 
-LANGUAGE_CODE = 'en-us'
+time_zone = 'utc'
 
-TIME_ZONE = 'UTC'
+use_i18n = True
 
-USE_I18N = True
+use_l10n = True
 
-USE_L10N = True
-
-USE_TZ = True
+use_tz = True
 
 
-# Static files (CSS, JavaScript, Images)
+# static files (css, javascript, images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
+static_url = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+static_root = os.path.join(base_dir, 'static')
 
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
+# absolute filesystem path to the directory that will hold user-uploaded files.
+# example: "/var/www/example.com/media/"
+media_root = ''
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# url that handles the media served from media_root. make sure to use a
 # trailing slash.
-# Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = '/static/media/'
+# examples: "http://example.com/media/", "http://media.example.com/"
+media_url = '/static/media/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "passportfridays/project_static"),
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+staticfiles_dirs = (
+    os.path.join(base_dir, "passportfridays/project_static"),
+    # put strings here, like "/home/html/static" or "c:/www/django/static".
+    # always use forward slashes, even on windows.
+    # don't forget to use absolute paths, not relative paths.
 )
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+staticfiles_finders = (
+    'django.contrib.staticfiles.finders.filesystemfinder',
+    'django.contrib.staticfiles.finders.appdirectoriesfinder',
+#    'django.contrib.staticfiles.finders.defaultstoragefinder',
 )
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, "templates"),
+template_dirs = (
+    os.path.join(base_dir, "templates"),
 )
 
-FLIGHTSTATS_APPID = '92c5179a'
-FLIGHTSTATS_APPKEY = 'c4d1675d8482e35d11d7af0000618e78'
-QPX_APIKEY ='AIzaSyCyEO6Vp6MxuKYnEOlvVJV-TyaAgXyZJZc'
+flightstats_appid = '92c5179a'
+flightstats_appkey = 'c4d1675d8482e35d11d7af0000618e78'
+qpx_apikey ='aizasycyeo6vp6mxukyneolvvjv-tyaagxyzjzc'
 
-CELERY_ALWAYS_EAGER = True
+celery_always_eager = True
 
-# A sample logging configuration. The only tangible logging
+# a sample logging configuration. the only tangible logging
 # performed by this configuration is to send an email to
-# the site admins on every HTTP 500 error when DEBUG=False.
-# See http://docs.djangoproject.com/en/dev/topics/logging for
+# the site admins on every http 500 error when debug=false.
+# see http://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
-LOGGING = {
+logging = {
     'version': 1,
     'disable_existing_loggers': False,
     'filters': {
         'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
+            '()': 'django.utils.log.requiredebugfalse'
         }
     },
     'handlers': {
         'mail_admins': {
-            'level': 'ERROR',
+            'level': 'error',
             'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
+            'class': 'django.utils.log.adminemailhandler'
         }
     },
     'loggers': {
         'django.request': {
             'handlers': ['mail_admins'],
-            'level': 'ERROR',
+            'level': 'error',
             'propagate': True,
         },
     }
 }
 
-# Celery configuration
+# celery configuration
 
 # configure queues, currently we have only one
-CELERY_DEFAULT_QUEUE = 'default'
-CELERY_QUEUES = (
-    Queue('default', Exchange('default'), routing_key='default'),
-)
+# celery_default_queue = 'default'
+# celery_queues = (
+#     queue('default', exchange('default'), routing_key='default'),
+# )
 
-# Sensible settings for celery
-CELERY_ALWAYS_EAGER = False
-CELERY_ACKS_LATE = True
-CELERY_TASK_PUBLISH_RETRY = True
-CELERY_DISABLE_RATE_LIMITS = False
+# sensible settings for celery
+celery_always_eager = False
+celery_acks_late = True
+celery_task_publish_retry = True
+celery_disable_rate_limits = False
 
-# By default we will ignore result
-# If you want to see results and try out tasks interactively, change it to False
-# Or change this setting on tasks level
-CELERY_IGNORE_RESULT = True
-CELERY_SEND_TASK_ERROR_EMAILS = False
-CELERY_TASK_RESULT_EXPIRES = 600
+# by default we will ignore result
+# if you want to see results and try out tasks interactively, change it to false
+# or change this setting on tasks level
+celery_ignore_result = True
+celery_send_task_error_emails = False
+celery_task_result_expires = 600
 
-# Set redis as celery result backend
-CELERY_RESULT_BACKEND = 'redis://%s:%d/%d' % (REDIS_HOST, REDIS_PORT, REDIS_DB)
-CELERY_REDIS_MAX_CONNECTIONS = 1
+# set redis as celery result backend
+celery_result_backend = 'redis://%s:%d/%d' % (redis_host, redis_port, redis_db)
+celery_redis_max_connections = 1
 
-# Don't use pickle as serializer, json is much safer
-CELERY_TASK_SERIALIZER = "json"
-CELERY_ACCEPT_CONTENT = ['application/json']
+# don't use pickle as serializer, json is much safer
+celery_task_serializer = "json"
+celery_accept_content = ['application/json']
 
-CELERYD_HIJACK_ROOT_LOGGER = False
-CELERYD_PREFETCH_MULTIPLIER = 1
-CELERYD_MAX_TASKS_PER_CHILD = 1000
+celeryd_hijack_root_logger = False
+celeryd_prefetch_multiplier = 1
+celeryd_max_tasks_per_child = 1000
