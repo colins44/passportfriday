@@ -86,8 +86,8 @@ def get_possible_destinations(days=120, city=None):
 def get_inital_flight_prices(days=120):
     dates = get_dates(days)
     destinations = Destinations.objects.filter(dates=dates)[:1][0]
-    cites = destinations.destinations.all()[:10]
-    for city in cites[:50]:
+    cites = destinations.destinations.all()[:5]
+    for city in cites:
         print city.name
         print city.country
         get_flight_prices(destinations.origin, city, dates)
@@ -106,7 +106,8 @@ def update_flight_prices(limit):
         get_flight_prices(slice.origin, slice.destination, slice.dates)
 
 @shared_task
-def add():
+def add(a, b):
+    print a+b
     print '$$$$$$$$$$$'
     print '$$$$$$$$$$$'
     print '$$$$$$$$$$$'

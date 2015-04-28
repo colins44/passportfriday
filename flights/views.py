@@ -17,15 +17,16 @@ from .forms import EmailSignUpForms
 
 class Index(ListView):
 
-    context_object_name = 'routes'
-    queryset = Slice.objects.all().order_by('outbound_flights__price')[:10]
+    context_object_name = 'slices'
+    queryset = Slice.objects.order_by('destination', 'price', 'dates').distinct('destination')
+    # queryset = Slice.objects.values_list('destination', 'dates').distinct('destination', 'dates')
     template_name = "flights/home.html"
-    paginate_by = 2
+    paginate_by = 10
 
 
 class Filter(ListView):
 
-    # context_object_name = 'routes'
+    #context_object_name = 'slices'
     template_name = 'flights/home.html'
     pageinate_by =10
     model = Slice
@@ -35,18 +36,17 @@ class Filter(ListView):
         if 'price' in self.kwargs:
             print self.kwargs['price']
             context['title'] = 'filtered on price'
-            context['routes'] = Slice.objects.filter(outbound_flights__price__lte=self.kwargs['price']).order_by('outbound_flights__price')
-            print context['routes']
+            context['slices'] = Slice.objects.order_by('dates', 'destination').distinct('dates', 'destination')
 
         if 'leavingDate' in self.kwargs:
             date_object = datetime.strptime(self.kwargs['leavingDate'], '%Y-%m-%d')
             next_day = date_object + timedelta(days=+1)
             print next_day
-            # context['title'] = 'filtered by weekend'
-            context['routes'] = Slice.objects.filter(outbound_flights__departure_time__gt=date_object,
+            context['title'] = 'filtered by weekend'
+            context['slices'] = Slice.objects.filter(outbound_flights__departure_time__gt=date_object,
                                                      outbound_flights__departure_time__lt=next_day).order_by('outbound_flights__price')
         if 'city' in self.kwargs:
-            context['routes'] = Slice.objects.filter(airport__code=self.kwargs['city'])
+            context['routes'] = Slice.objects.filter(airport__city__name=self.kwargs['city'])
         return context
 
 
