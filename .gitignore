@@ -44,6 +44,8 @@ coverage.xml
 # IDEs
 .idea
 
+.vagrant
+
 # Translations
 *.mo
 *.pot
