@@ -10,7 +10,9 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # build paths inside the project like this: os.path.join(base_dir, ...)
 import os
-base_dir = os.path.dirname(os.path.dirname(__file__))
+from unipath import Path
+BASE_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
+print BASE_DIR
 # from kombu import exchange, queue
 
 
@@ -135,7 +137,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(base_dir, 'static')
+STATIC_ROOT = Path(BASE_DIR, 'static')
 
 # absolute filesystem path to the directory that will hold user-uploaded files.
 # example: "/var/www/example.com/media/"
@@ -147,11 +149,12 @@ MEDIA_ROOT = ''
 MEDIA_URL = '/static/media/'
 
 STATICFILE_DIRS = (
-    os.path.join(base_dir, "passportfridays/project_static"),
+    Path(BASE_DIR, "project_static"),
     # put strings here, like "/home/html/static" or "c:/www/django/static".
     # always use forward slashes, even on windows.
     # don't forget to use absolute paths, not relative paths.
 )
+print STATICFILE_DIRS
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -159,7 +162,7 @@ STATICFILES_FINDERS = (
 )
 
 TEMPLATE_DIRS = (
-    os.path.join(base_dir, "templates"),
+    Path(BASE_DIR.parent, "templates"),
 )
 
 flightstats_appid = '92c5179a'

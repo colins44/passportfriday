@@ -34,4 +34,4 @@ urlpatterns = patterns('',
     url(r'^thanks',TemplateView.as_view(template_name='flights/generic.html'),name='thanks'),
     url(r'^account',login_required(TemplateView.as_view(template_name='flights/generic.html')),name='thanks'),
 
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+ ) #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
