@@ -22,24 +22,24 @@ secret_key = 'cmhz2hig9o-^va1y=8oeg-_xf54(40=6x+3%qnf0ttd+mgeoxh'
 SECRET_KEY = 'cmhz2hig9o-^va1y=8oeg-_xf54(40=6x+3%qnf0ttd+mgeoxh'
 
 # security warning: don't run with debug turned on in production!
-debug = True
+DEBUG = True
 
-template_debug = True
+TEMPLATE_DEBUG = True
 
-allowed_hosts = []
+ALLOWED_HOSTS = []
 
 
 # application definition
 
-installed_apps = (
+INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'flights',
     'email_user',
+    'flights',
     'weekend',
     'django_extensions',
     'location',
@@ -50,54 +50,54 @@ installed_apps = (
     'gunicorn',
 )
 
-middleware_classes = (
-    'django.contrib.sessions.middleware.sessionmiddleware',
-    'django.middleware.common.commonmiddleware',
-    'django.middleware.csrf.csrfviewmiddleware',
-    'django.contrib.auth.middleware.authenticationmiddleware',
-    'django.contrib.auth.middleware.sessionauthenticationmiddleware',
-    'django.contrib.messages.middleware.messagemiddleware',
-    'django.middleware.clickjacking.xframeoptionsmiddleware',
+MIDDLEWARE_CLASSES = (
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-authentication_backends = (
-        # 'email_user.backends.emailuserauth',
-        'django.contrib.auth.backends.modelbackend',
+AUTHENTICATION_BACKENDS= (
+        'email_user.backends.EmailUserAuth',
 )
 
-root_urlconf = 'passportfridays.urls'
+ROOT_URLCONF = 'passportfridays.urls'
 
-wsgi_application = 'passportfridays.wsgi.application'
+WSGI_APPLICATION = 'passportfridays.wsgi.application'
 
-auth_user_model = 'email_user.emailuser'
+# auth_user_model = 'email_user.emailuser'
 
 # import djcelery
 # djcelery.setup_loader()
 # broker_url = 'django://'
 
+AUTH_USER_MODEL = 'email_user.EmailUser'
 
 #vagrant db setup
-databases = {
+DATABASES = {
     'default': {
-        'engine': 'django.db.backends.postgresql_psycopg2',
-        'name': 'passportfridays',
-        'user': 'devuser',
-        'password': 'clownshoes',
-        'host': 'localhost',
-        'port': 5432,
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'passportfridays',
+        'USER': 'dirtypunit',
+        'PASSWORD': 'downsouth69',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
 #covers regular testing and django-coverage
 import sys
 if 'test' in sys.argv or 'test_coverage' in sys.argv:
-    databases['default']['engine'] = 'sqlite3'
+    DATABASES['default']['engine'] = 'sqlite3'
 
 # internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 ROOT_URLCONF = 'passportfridays.urls'
-email_backend = 'django.core.mail.backends.smtp.emailbackend'
-# email_backend = 'django.core.mail.backends.console.emailbackend'
+# email_backend = 'django.core.mail.backends.smtp.emailbackend'
+email_backend = 'django.core.mail.backends.console.emailbackend'
 email_use_tls = True
 email_host = 'smtp.gmail.com'
 email_port = 587
@@ -120,46 +120,46 @@ redis_host = os.environ.get('redis_port_6379_tcp_addr', '127.0.0.1')
 
 rabbit_hostname = os.environ.get('rabbit_port_5672_tcp', 'localhost:5672')
 
-language_code = 'en-us'
+LANGUAGE_CODE = 'en-us'
 
-time_zone = 'utc'
+TIME_ZONE = 'UTC'
 
-use_i18n = True
+USE_I18N = True
 
-use_l10n = True
+USE_L10N = True
 
-use_tz = True
+USE_TZ = True
 
 
 # static files (css, javascript, images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-static_url = '/static/'
+STATIC_URL = '/static/'
 
-static_root = os.path.join(base_dir, 'static')
+STATIC_ROOT = os.path.join(base_dir, 'static')
 
 # absolute filesystem path to the directory that will hold user-uploaded files.
 # example: "/var/www/example.com/media/"
-media_root = ''
+MEDIA_ROOT = ''
 
 # url that handles the media served from media_root. make sure to use a
 # trailing slash.
 # examples: "http://example.com/media/", "http://media.example.com/"
-media_url = '/static/media/'
+MEDIA_URL = '/static/media/'
 
-staticfiles_dirs = (
+STATICFILE_DIRS = (
     os.path.join(base_dir, "passportfridays/project_static"),
     # put strings here, like "/home/html/static" or "c:/www/django/static".
     # always use forward slashes, even on windows.
     # don't forget to use absolute paths, not relative paths.
 )
 
-staticfiles_finders = (
-    'django.contrib.staticfiles.finders.filesystemfinder',
-    'django.contrib.staticfiles.finders.appdirectoriesfinder',
-#    'django.contrib.staticfiles.finders.defaultstoragefinder',
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder"
 )
-template_dirs = (
+
+TEMPLATE_DIRS = (
     os.path.join(base_dir, "templates"),
 )
 
@@ -198,13 +198,7 @@ logging = {
     }
 }
 
-# celery configuration
 
-# configure queues, currently we have only one
-# celery_default_queue = 'default'
-# celery_queues = (
-#     queue('default', exchange('default'), routing_key='default'),
-# )
 
 # sensible settings for celery
 celery_always_eager = False
@@ -230,3 +224,5 @@ celery_accept_content = ['application/json']
 celeryd_hijack_root_logger = False
 celeryd_prefetch_multiplier = 1
 celeryd_max_tasks_per_child = 1000
+
+

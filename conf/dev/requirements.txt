@@ -1,8 +1,0 @@
-# testing tools
-coverage
-nose-progressive
-
-# development tools
-pygraphviz
-pyparsing==1.5.7
-pydot
