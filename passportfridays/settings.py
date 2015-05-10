@@ -11,14 +11,13 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # build paths inside the project like this: os.path.join(base_dir, ...)
 import os
 base_dir = os.path.dirname(os.path.dirname(__file__))
-from kombu import exchange, queue
+#from kombu import exchange, queue
 
 
 # quick-start development settings - unsuitable for production
 # see https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # security warning: keep the secret key used in production secret!
-secret_key = 'cmhz2hig9o-^va1y=8oeg-_xf54(40=6x+3%qnf0ttd+mgeoxh'
 SECRET_KEY = 'cmhz2hig9o-^va1y=8oeg-_xf54(40=6x+3%qnf0ttd+mgeoxh'
 
 # security warning: don't run with debug turned on in production!
@@ -148,7 +147,7 @@ MEDIA_ROOT = ''
 MEDIA_URL = '/static/media/'
 
 STATICFILE_DIRS = (
-    os.path.join(base_dir, "passportfridays/project_static"),
+    os.path.join(base_dir, "passportfridays/static"),
     # put strings here, like "/home/html/static" or "c:/www/django/static".
     # always use forward slashes, even on windows.
     # don't forget to use absolute paths, not relative paths.
