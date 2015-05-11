@@ -10,10 +10,15 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # build paths inside the project like this: os.path.join(base_dir, ...)
 import os
+<<<<<<< HEAD
 from unipath import Path
 BASE_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
 print BASE_DIR
 # from kombu import exchange, queue
+=======
+base_dir = os.path.dirname(os.path.dirname(__file__))
+#from kombu import exchange, queue
+>>>>>>> a77c6c3a20a93d5fee5c78323bebf6e364c951bc
 
 
 # quick-start development settings - unsuitable for production
@@ -149,7 +154,11 @@ MEDIA_ROOT = ''
 MEDIA_URL = '/static/media/'
 
 STATICFILE_DIRS = (
+<<<<<<< HEAD
     Path(BASE_DIR, "project_static"),
+=======
+    os.path.join(base_dir, "passportfridays/static"),
+>>>>>>> a77c6c3a20a93d5fee5c78323bebf6e364c951bc
     # put strings here, like "/home/html/static" or "c:/www/django/static".
     # always use forward slashes, even on windows.
     # don't forget to use absolute paths, not relative paths.
