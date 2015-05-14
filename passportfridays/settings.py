@@ -10,15 +10,9 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # build paths inside the project like this: os.path.join(base_dir, ...)
 import os
-<<<<<<< HEAD
-from unipath import Path
-BASE_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
-print BASE_DIR
-# from kombu import exchange, queue
-=======
-base_dir = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 #from kombu import exchange, queue
->>>>>>> a77c6c3a20a93d5fee5c78323bebf6e364c951bc
+
 
 
 # quick-start development settings - unsuitable for production
@@ -137,12 +131,12 @@ USE_L10N = True
 USE_TZ = True
 
 
-# static files (css, javascript, images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
+# project_static files (css, javascript, images)
+# https://docs.djangoproject.com/en/1.7/howto/project_static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/project_static/'
 
-STATIC_ROOT = Path(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'project_static')
 
 # absolute filesystem path to the directory that will hold user-uploaded files.
 # example: "/var/www/example.com/media/"
@@ -151,28 +145,26 @@ MEDIA_ROOT = ''
 # url that handles the media served from media_root. make sure to use a
 # trailing slash.
 # examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = '/static/media/'
+MEDIA_URL = '/project_static/media/'
 
-STATICFILE_DIRS = (
-<<<<<<< HEAD
-    Path(BASE_DIR, "project_static"),
-=======
-    os.path.join(base_dir, "passportfridays/static"),
->>>>>>> a77c6c3a20a93d5fee5c78323bebf6e364c951bc
-    # put strings here, like "/home/html/static" or "c:/www/django/static".
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "passportfridays/project_static"),
+    # put strings here, like "/home/html/project_static" or "c:/www/django/project_static".
     # always use forward slashes, even on windows.
     # don't forget to use absolute paths, not relative paths.
 )
-print STATICFILE_DIRS
+
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder"
 )
 
-TEMPLATE_DIRS = (
-    Path(BASE_DIR.parent, "templates"),
-)
+
+# TEMPLATE_DIRS = (
+#     Path(BASE_DIR.parent, "templates"),
+# )
+TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
 
 flightstats_appid = '92c5179a'
 flightstats_appkey = 'c4d1675d8482e35d11d7af0000618e78'

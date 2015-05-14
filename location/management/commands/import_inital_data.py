@@ -17,24 +17,28 @@ class Command(BaseCommand):
         years =[2015, 2016, 2017, 2018, 2019, 2020]
 
         for currency in currencies:
-            Currency.objects.get_or_create(symbol = currencies.get(currency).get('symbol'),
-                                           name = currencies.get(currency).get('name'),
-                                           symbol_native= currencies.get(currency).get('symbol_native'),
-                                           decimal_digits= currencies.get(currency).get('decimal_digits'),
-                                           rounding = currencies.get(currency).get('rounding'),
-                                           code = currencies.get(currency).get('code'),
-                                           name_plural=currencies.get(currency).get('name_plural'))
+            Currency.objects.get_or_create(
+                symbol=currencies.get(currency).get('symbol'),
+                name=currencies.get(currency).get('name'),
+                symbol_native=currencies.get(currency).get('symbol_native'),
+                decimal_digits=currencies.get(currency).get('decimal_digits'),
+                rounding=currencies.get(currency).get('rounding'),
+                code=currencies.get(currency).get('code'),
+                name_plural=currencies.get(currency).get('name_plural')
+            )
 
         for country in countries.get('countries'):
             try:
                 currency = Currency.objects.get(code = countries.get('countries').get(country).get('currency'))
             except ObjectDoesNotExist:
                 currency = Currency.objects.get(code ="USD")
-            Country.objects.get_or_create(currency=currency,
-                                          name = countries.get('countries').get(country).get('name'),
-                                          phone = countries.get('countries').get(country).get('phone'),
-                                          continent = countries.get('countries').get(country).get('continent'),
-                                          capital = countries.get('countries').get(country).get('capital'))
+            Country.objects.get_or_create(
+                currency=currency,
+                name=countries.get('countries').get(country).get('name'),
+                phone=countries.get('countries').get(country).get('phone'),
+                continent=countries.get('countries').get(country).get('continent'),
+                capital=countries.get('countries').get(country).get('capital')
+            )
 
             for country in country_codes:
                 try:

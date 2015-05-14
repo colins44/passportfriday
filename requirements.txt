@@ -13,5 +13,6 @@ flower==0.8.1
 pyyaml==3.11
 django-celery==3.1.16
 gunicorn==19.3.0
+boto==2.38.0
 
 

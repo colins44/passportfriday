@@ -1222,7 +1222,7 @@
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("/static/images/london_background.jpg"), url("/static/images/london_background.jpg");
+		background-image: url("/project_static/images/london_background.jpg"), url("/project_static/images/london_background.jpg");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;

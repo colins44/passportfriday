@@ -1,6 +1,6 @@
 
 # This file specifies your Python application's runtime configuration
-# including URL routing, versions, static file uploads, etc. See
+# including URL routing, versions, project_static file uploads, etc. See
 # https://developers.google.com/appengine/docs/python/config/appconfig
 # for details.
 
@@ -61,8 +61,8 @@ handlers:
   static_dir: django/contrib/admin/media
   expiration: '0'
 
-- url: /static/admin
-  static_dir: django/contrib/admin/static/admin
+- url: /project_static/admin
+  static_dir: django/contrib/admin/project_static/admin
   expiration: '0'
 
 # This handler catches all requests that don't match a previous handler.
