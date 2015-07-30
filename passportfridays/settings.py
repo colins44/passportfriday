@@ -167,7 +167,7 @@ STATICFILES_FINDERS = (
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
 
 flightstats_appid = '92c517ssss'
-flightstats_appkey = 'c4d1675d8482e35d11d7af000061asd'
+flightstats_appkey = 'you_dont_think_these_are_real_keys'
 qpx_apikey ='aizasycyeo6vp6mxukyneolvvjv-tyaagxasdasd'
 
 celery_always_eager = True
