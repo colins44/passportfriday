@@ -3,7 +3,9 @@ from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.utils.translation import ugettext_lazy as _
+
 from .models import EmailUser
+
 
 class EmailUserUpdateForm(forms.ModelForm):
     current_password = forms.CharField(
@@ -52,12 +54,12 @@ class EmailUserUpdateForm(forms.ModelForm):
 
 
 class EmailUserCreationForm(forms.ModelForm):
-
     """ A form for creating new users.
 
     Includes all the required fields, plus a repeated password.
 
     """
+
     def __init__(self, *args, **kwargs):
         self.user = EmailUser
         super(EmailUserCreationForm, self).__init__(*args, **kwargs)
@@ -125,9 +127,7 @@ class EmailUserCreationForm(forms.ModelForm):
         fields = ("email",)
 
 
-
 class EmailUserChangeForm(forms.ModelForm):
-
     """ A form for updating users.
 
     Includes all the fields on the user, but replaces the password field

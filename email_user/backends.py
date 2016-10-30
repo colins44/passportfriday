@@ -1,23 +1,24 @@
-from .models import EmailUser
 from django.conf import settings
-from django.core.exceptions import ImproperlyConfigured, PermissionDenied
-from django.utils.module_loading import import_by_path
-from django.middleware.csrf import rotate_token
 from django.contrib.auth.backends import ModelBackend
+from django.core.exceptions import ImproperlyConfigured
 from django.db.models import get_model
-
+from django.utils.module_loading import import_by_path
 
 
 def load_backend(path):
     return import_by_path(path)()
+
 
 def get_backends():
     backends = []
     for backend_path in settings.AUTHENTICATION_BACKENDS:
         backends.append(load_backend(backend_path))
     if not backends:
-        raise ImproperlyConfigured('No authentication backends have been defined. Does AUTHENTICATION_BACKENDS contain anything?')
+        raise ImproperlyConfigured(
+            'No authentication backends have been defined. Does AUTHENTICATION_BACKENDS contain '
+            'anything?')
     return backends
+
 
 class EmailUserAuth(ModelBackend):
     def authenticate(self, username=None, password=None):
