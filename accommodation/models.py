@@ -1,10 +1,12 @@
-from django.db import models
-from location.models import City, Currency
 from datetime import datetime
 
+from django.db import models
 
-ACCOMMODATION_CHOICES =(('1', 'hotel'),
-                        ('5', 'bed and breakfast'),)
+from location.models import City, Currency
+
+ACCOMMODATION_CHOICES = (('1', 'hotel'),
+                         ('5', 'bed and breakfast'),)
+
 
 class Accommodation(models.Model):
     city = models.ForeignKey(City)
@@ -20,6 +22,7 @@ class Accommodation(models.Model):
 
     def __unicode__(self):
         return '%s in %s' % (self.name, self.city)
+
 
 class RoomRate(models.Model):
     hotel = models.ForeignKey(Accommodation)
