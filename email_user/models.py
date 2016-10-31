@@ -1,26 +1,22 @@
 """ User models."""
-import hashlib
-import random
 # import re
 # import datetime
 
-from django.conf import settings
-from django.contrib.auth import get_user_model
 from django.contrib.auth.models import (
     AbstractBaseUser, BaseUserManager, PermissionsMixin)
-from django.contrib.sites.models import Site, RequestSite
+from django.contrib.sites.models import Site
 from django.core.mail import send_mail
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-from flights.tasks import send_email
+
+
 # from django.db.models.deletion import Collector
 # from django.db import (router, transaction, DatabaseError,
 #     DEFAULT_DB_ALIAS)
 
 
 class EmailUserManager(BaseUserManager):
-
     """ Custom manager for EmailUser."""
 
     def _create_user(self, email, password,
@@ -84,7 +80,6 @@ class EmailUser(AbstractBaseUser, PermissionsMixin):
 
     objects = EmailUserManager()
 
-
     USERNAME_FIELD = 'email'
 
     def get_full_name(self):
@@ -100,4 +95,4 @@ class EmailUser(AbstractBaseUser, PermissionsMixin):
         send_mail(subject, message, from_email, [self.email])
 
 
-#http://stackoverflow.com/questions/21508485/django-authentication-user-returns-none
+        # http://stackoverflow.com/questions/21508485/django-authentication-user-returns-none
